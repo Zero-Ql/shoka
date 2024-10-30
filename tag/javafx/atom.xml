@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;javafx&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2023-05-02T09:53:25.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/MyCodingBook/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</id>
+        <title>JavaFx使用Maven打包及运行</title>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/"/>
+        <content type="html">&lt;h4 id=&#34;javafx使用maven打包依赖及运行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javafx使用maven打包依赖及运行&#34;&gt;#&lt;/a&gt; javafx 使用 maven 打包依赖及运行&lt;/h4&gt;
+&lt;p&gt;1. 先照图打包&lt;br&gt;
+&lt;img data-src=&#34;https://s1.ax1x.com/2023/04/07/ppTPAZ6.png&#34; alt=&#34;1&#34;&gt;&lt;br&gt;
+2. 在 target 下会生成 app 文件夹和压缩包，进入 app/bin/ 目录，里面有 app.bat 批处理文件，双击即可运行&lt;br&gt;
+ 3. 可以在 app 目录下写一个脚本文件来运行 app.bat，以便隐藏 cmd 命令窗口&lt;br&gt;
+&lt;img data-src=&#34;https://s1.ax1x.com/2023/04/07/ppTP6FU.png&#34; alt=&#34;3&#34;&gt;&lt;br&gt;
+4. 脚本代码&lt;br&gt;
+&lt;img data-src=&#34;https://s1.ax1x.com/2023/04/07/ppTP5ex.png&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vbscript&#34;&gt;set ws=WScript.CreateObject(&amp;quot;WScript.Shell&amp;quot;)
+ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="java" />
+        <category term="javafx" />
+        <updated>2023-05-02T09:53:25.000Z</updated>
+    </entry>
+</feed>

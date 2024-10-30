@@ -1,0 +1,736 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="上善若水" href="http://yunyat.cloud/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="上善若水" href="http://yunyat.cloud/atom.xml" />
+<link rel="alternate" type="application/json" title="上善若水" href="http://yunyat.cloud/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="原创,Docker" />
+
+
+<link rel="canonical" href="http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+
+
+
+  <title>
+Docker之nginx的负载均衡 - Docker - Linux |
+QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">Docker之nginx的负载均衡
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-09-12 18:49:35">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-09-12T18:49:35+08:00">2023-09-12</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>1.7k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>2 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QSky Yun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?937638"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?118525"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?632061"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?95021"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?4353"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?778971"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/linux/" itemprop="item" rel="index" title="分类于 Linux"><span itemprop="name">Linux</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/linux/Docker/" itemprop="item" rel="index" title="分类于 Docker"><span itemprop="name">Docker</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/wa.jpg">
+    <meta itemprop="name" content="清天">
+    <meta itemprop="description" content="=我真的很想喜欢你们，可是你们没有人喜欢我。=, 若能避开猛烈的欢喜，自然也不会有悲痛的来袭.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="上善若水">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h4 id="使用docker部署nginx的负载均衡"><a class="markdownIt-Anchor" href="#使用docker部署nginx的负载均衡">#</a> 使用 docker 部署 nginx 的负载均衡</h4>
+<ol>
+<li>下载 nginx 和 tomcat 镜像</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">docker</span> pull nginx <span class="token punctuation">;</span> <span class="token function">docker</span> pull tomcat</pre></td></tr></table></figure><p><img data-src="https://s1.ax1x.com/2023/09/12/pP2Vg10.png" alt="pP2Vg10.png"></p>
+<ol start="2">
+<li>新建 tomcat 网页</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /root/www1/ROOT <span class="token punctuation">;</span> <span class="token function">mkdir</span> <span class="token parameter variable">-p</span> /root/www2/ROOT</pre></td></tr></table></figure><p><img data-src="https://s1.ax1x.com/2023/09/12/pP2VhBF.png" alt="pP2VhBF.png"></p>
+<ol start="3">
+<li>进入刚创建的 www1/ROOT 目录里</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">cd</span> /root/www1/ROOT</pre></td></tr></table></figure><ol start="4">
+<li>使用 vim 创建 index.jsp 文件</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">vim</span> index.jsp</pre></td></tr></table></figure><p>输入以下内容：</p>
+<pre><code class="language-jsp">&lt;html&gt;
+    &lt;head&gt;
+           &lt;title&gt;Tomcat1&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;	
+           &lt;%
+                  out.println(&quot;this is Tomcat1&quot;);
+           %&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><img data-src="https://s1.ax1x.com/2023/09/12/pP2VoN9.png" alt="pP2VoN9.png"></p>
+<p>在 /root/www2/ROOT/ 下同样创建 index.jsp 文件，输入内容同上，将 Tomcat1 改为 Tomcat2 即可</p>
+<ol start="5">
+<li>运行 tomcat1 和 tomcat2 ，并且将 docker 的 /root/www1 和 /root/www2 与容器的 /usr/local/webapps 目录映射</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">--name</span> tomcat1 <span class="token parameter variable">-p</span> <span class="token number">32769</span>:8080 <span class="token parameter variable">-v</span> /root/www1:/usr/local/tomcat/webapps tomcat:latest <span class="token punctuation">;</span> <span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">--name</span> tomcat2 <span class="token parameter variable">-p</span> <span class="token number">32770</span>:8080 <span class="token parameter variable">-v</span> /root/www2:/usr/local/tomcat/webapps tomcat:latest</pre></td></tr></table></figure><p>注：上面是一条命令</p>
+<p><img data-src="https://s1.ax1x.com/2023/09/12/pP2Z3uT.png" alt="pP2Z3uT.png"></p>
+<ol start="6">
+<li>在浏览器分别输入以下语句：</li>
+</ol>
+<blockquote>
+<p>你的 ip:32769</p>
+<p>你的 ip:32770</p>
+<p>示例：</p>
+<p><span class="exturl" data-url="aHR0cDovLzguMjIyLjE1My45MTozMjc2OQ==">tomcat1</span></p>
+<p><span class="exturl" data-url="aHR0cDovLzguMjIyLjE1My45MTozMjc3MA==">tomcat2</span></p>
+</blockquote>
+<ol start="7">
+<li>运行 nginx</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">docker</span> run <span class="token parameter variable">-itd</span> <span class="token parameter variable">--name</span> nginx <span class="token parameter variable">-p</span> <span class="token number">25567</span>:80 nginx:latest</pre></td></tr></table></figure><ol start="8">
+<li>在 /root 目录下使用 vim 创建 nginx.conf 文件</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">cd</span> /root <span class="token punctuation">;</span> <span class="token function">vim</span> nginx.conf</pre></td></tr></table></figure><p>填入以下内容：</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre>user  nginx<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>worker_processes  <span class="token number">1</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre></pre></td></tr><tr><td data-num="4"></td><td><pre>error_log  /var/log/nginx/error.log warn<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>pid        /var/run/nginx.pid<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>events <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>    worker_connections  <span class="token number">1024</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre>http <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    include       /etc/nginx/mime.types<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    default_type  application/octet-stream<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre>    log_format  main  <span class="token string">'$remote_addr - $remote_user [$time_local] "$request" '</span></pre></td></tr><tr><td data-num="18"></td><td><pre>                      <span class="token string">'$status $body_bytes_sent "$http_referer" '</span></pre></td></tr><tr><td data-num="19"></td><td><pre>                      <span class="token string">'"$http_user_agent" "$http_x_forwarded_for"'</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>    access_log  /var/log/nginx/access.log  main<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="22"></td><td><pre></pre></td></tr><tr><td data-num="23"></td><td><pre>    sendfile        on<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>    <span class="token comment">#tcp_nopush     on;</span></pre></td></tr><tr><td data-num="25"></td><td><pre></pre></td></tr><tr><td data-num="26"></td><td><pre>    keepalive_timeout  <span class="token number">65</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre></pre></td></tr><tr><td data-num="28"></td><td><pre>    <span class="token comment">#gzip  on;</span></pre></td></tr><tr><td data-num="29"></td><td><pre></pre></td></tr><tr><td data-num="30"></td><td><pre>    include /etc/nginx/conf.d/*.conf<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>    </pre></td></tr><tr><td data-num="32"></td><td><pre>    upstream tomcat <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>        server <span class="token number">192.168</span>.100.100:32772<span class="token punctuation">;</span>   </pre></td></tr><tr><td data-num="34"></td><td><pre>        server <span class="token number">192.168</span>.100.100:32773<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>    server <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="37"></td><td><pre>        listen <span class="token number">80</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>        server_name <span class="token number">192.168</span>.100.100<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="39"></td><td><pre></pre></td></tr><tr><td data-num="40"></td><td><pre>        location / <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>                proxy_pass http://tomcat<span class="token punctuation">;</span>   </pre></td></tr><tr><td data-num="42"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="43"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="44"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>其中 server 后面的 ip 改为你的 ip 加端口号，server_name 同理</p>
+<p><img data-src="https://s1.ax1x.com/2023/09/12/pP2eKde.png" alt="pP2eKde.png"></p>
+<ol start="9">
+<li>将 nginx.conf 文件 cp 到你的容器里</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">docker</span> <span class="token function">cp</span> nginx.conf e11dd26a3930:/etc/nginx/nginx.conf</pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 记住，容器 id 改为自己的 nginx 容器的 id</span></pre></td></tr></table></figure><p><img data-src="https://s1.ax1x.com/2023/09/12/pP2MeET.png" alt="pP2MeET.png"></p>
+<ol start="10">
+<li>重启 nginx 容器</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">docker</span> restart 你的nginx容器id</pre></td></tr></table></figure><ol start="11">
+<li>浏览器访问你服务器的 ip，因为我的 80 端口被占用，所以使用 25567 代替</li>
+</ol>
+<p><img data-src="https://s1.ax1x.com/2023/09/12/pP2MmUU.png" alt="pP2MmUU.png"></p>
+<p>刷新会在 tomcat1 和 tomcat2 切换</p>
+<p>示例：<span class="exturl" data-url="aHR0cDovLzguMjIyLjE1My45MToyNTU2Nw==">tomcat1 or tomcat2</span></p>
+<hr>
+<p>END</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/Docker/" rel="tag"><i class="ic i-tag"></i> Docker</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-06-22 15:11:06" itemprop="dateModified" datetime="2024-06-22T15:11:06+08:00">2024-06-22</time>
+  </span>
+  <span id="linux/docker/Docker之nginx的负载均衡/" class="item leancloud_visitors" data-flag-title="Docker之nginx的负载均衡" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="清天 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="清天 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="清天 QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文博主： </strong>清天 <i class="ic i-at"><em>@</em></i>上善若水
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="Docker之nginx的负载均衡">http://yunyat.cloud/linux/docker/Docker之nginx的负载均衡/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?321625" title="harbor本地仓库搭建">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Linux</span>
+  <h3>harbor本地仓库搭建</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?565700" title="Linux2023.9.15作业">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Linux</span>
+  <h3>Linux2023.9.15作业</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8docker%E9%83%A8%E7%BD%B2nginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1"><span class="toc-number">1.</span> <span class="toc-text"> 使用 docker 部署 nginx 的负载均衡</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" rel="bookmark" title="Docker部署">Docker部署</a></li><li><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/" rel="bookmark" title="Docker的使用-壹">Docker的使用-壹</a></li><li><a href="/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/" rel="bookmark" title="Docker的使用-贰">Docker的使用-贰</a></li><li><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/" rel="bookmark" title="Docker的使用-叁">Docker的使用-叁</a></li><li><a href="/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/" rel="bookmark" title="Docker构建镜像及使用的笔记">Docker构建镜像及使用的笔记</a></li><li class="active"><a href="/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" rel="bookmark" title="Docker之nginx的负载均衡">Docker之nginx的负载均衡</a></li><li><a href="/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/" rel="bookmark" title="使用cAdvisor+Prometheus+Grafana监控Docker容器">使用cAdvisor+Prometheus+Grafana监控Docker容器</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="清天"
+      data-src="/images/wa.jpg">
+  <p class="name" itemprop="name">清天</p>
+  <div class="description" itemprop="description">若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">66</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">18</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">53</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1plcm8tUWw=" title="https:&#x2F;&#x2F;github.com&#x2F;Zero-Ql"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9ncmF2YXRhci5jb20vcXNreTFhNGRjYzYyZmI4" title="https:&#x2F;&#x2F;gravatar.com&#x2F;qsky1a4dcc62fb8"><i class="ic i-address-card"></i></span>
+      <a href="mailto:qsky@yunyat.cloud" title="mailto:qsky@yunyat.cloud" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL1FTa3lZdW4=" title="https:&#x2F;&#x2F;t.me&#x2F;QSkyYun"><i class="ic i-paper-plane"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly95Lm11c2ljLjE2My5jb20vbS91c2VyP2lkPTIwNjM1MjA5Mzk=" title="https:&#x2F;&#x2F;y.music.163.com&#x2F;m&#x2F;user?id&#x3D;2063520939"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6bGl2ZTouY2lkLjdmYTYyZWIyZDhmMzQzYzI/Y2FsbHxjaGF0" title="skype:live:.cid.7fa62eb2d8f343c2?call|chat"><i class="ic i-skype"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83OTI2ODg4OTUw" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7926888950"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/site/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/gallery/" rel="section"><i class="ic i-loop"></i>Wo的足迹</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-magic"></i>链圈</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-link"></i>links</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/websitemap/" rel="section"><i class="ic i-sitemap"></i>网站Map</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+</div>
+
+    <span><a href="/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/" title="搭建问题集合">搭建问题集合</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
+</div>
+
+    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/" title="shell脚本笔记-1">shell脚本笔记-1</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/test/" title="分类于 测试">测试</a>
+</div>
+
+    <span><a href="/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/" title="Mermaid画图测试">Mermaid画图测试</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
+</div>
+
+    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/" title="shell脚本笔记 - 2">shell脚本笔记 - 2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+</div>
+
+    <span><a href="/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="服务器搭建教程">服务器搭建教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/" title="Xmind破解">Xmind破解</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/Spring-ResponseEntity/" title="Spring-ResponseEntity">Spring-ResponseEntity</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/JavaWeb/" title="JavaWeb">JavaWeb</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
+</div>
+
+    <span><a href="/hexo/hello-world/" title="Hello World">Hello World</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="Docker之nginx的负载均衡">Docker之nginx的负载均衡</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">134k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:02</span>
+  </div>
+  <div class="icp-info">
+    <span class="icp-img">
+      <a class="post-meta-item-icon" target="_blank" rel="noopener" href="https://icp.gov.moe"><img title="https://icp.gov.moe" src="images/icon120.png" width="18" style="vertical-align:middle"></a>
+    </span>
+    <span class="icp-text">
+      <span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDIzMTAxMw==">萌ICP备20231013号</span>
+    </span>
+  </div>
+
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">清天 @ QSky Yun</span>
+  </div>
+  <div class="start-time">
+    <span>本站已平稳运行</span>
+    <span id="display_live_time"> 0 天 0 小时 0 分 0 秒</span>
+      <script>function blog_live_time(){
+          setTimeout(blog_live_time,1e3);
+          const e = new Date("2023-04-28T00:00:00"),
+          t=(new Date).getTime()-e.getTime(),
+          i=Math.floor(t/864e5),
+          o=Math.floor(t%864e5/60/60/1e3),
+          l=Math.floor(t%36e5/60/1e3),
+          _=Math.floor(t%6e4/1e3);
+          display_live_time.innerHTML=` ${i} 天 ${o} 小时 ${l} 分 ${_} 秒`
+        }
+        blog_live_time()
+      </script>
+    <span>ヽ(○´∀`)ﾉ♪</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'linux/docker/Docker之nginx的负载均衡/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看不见我看不见我"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="/js/typed.js"></script>
+    <script type="text/javascript">
+        var str = { "hitokoto": "=我真的很想喜欢你们，可是你们没有人喜欢我。=" };
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&min_length=15')
+        .then(response => {
+            if (!response.ok) {
+                return str;
+            } else {
+                return response.json();
+            }
+        }).then(data => {
+            typedfun(data.hitokoto);
+        }).catch(error => {
+            typedfun(str.hitokoto);
+        });
+        function typedfun(data) {
+            var msg = "=" + data  + "=^1500";
+            typed = new Typed(".say-subtitle", {
+                strings: msg.split(),
+                typeSpeed: 70,
+                loop: true,
+                loopCount: Infinity,
+                backDelay: 70,
+                backSpeed: 100,
+                smartBackspace: true
+            });
+        }
+    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

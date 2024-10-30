@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;windows&#34; category</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 29 Nov 2023 14:37:53 +0800</pubDate>
+        <lastBuildDate>Wed, 29 Nov 2023 14:37:53 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid>
+            <title>windows重装系统重制版</title>
+            <link>http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</link>
+            <category>原创</category>
+            <category>电脑技术</category>
+            <pubDate>Wed, 29 Nov 2023 14:37:53 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：在阅读本文章前请确保你已拥有以下技能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;学会正常使用搜索引擎&lt;/li&gt;
+&lt;li&gt;拥有基本的动手能力&lt;/li&gt;
+&lt;li&gt;拥有义务教育阶段要求的知识水平&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果没有以上技能，请立即停止阅读本文章并关闭浏览器。&lt;/p&gt;
+&lt;p&gt;如果你有以上技能，并在完整阅读本文章内容后出现疑问，请先阅读提问的智慧再向我提问，否则别问我问题，我只会忽略你。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;提问的智慧：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hc2suaWNvZGVxLmNvbS8=&#34;&gt;提问的智慧 (中文版)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;正文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#正文&#34;&gt;#&lt;/a&gt; 正文&lt;/h3&gt;
+&lt;h4 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h4&gt;
+&lt;p&gt;重装系统有很多方法，本次使用的是使用 Wepe 工具箱将 U 盘 做成 pe 启动盘来重装系统。&lt;/p&gt;
+&lt;h5 id=&#34;微pe下载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微pe下载&#34;&gt;#&lt;/a&gt; 微 pe 下载&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2VwZS5jb20uY24=&#34;&gt;官网&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;直接去它官网下载，具体怎么把 U 盘做成系统启动盘请自行百度，网上一搜一大把教程。&lt;/p&gt;
+&lt;h4 id=&#34;重装&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#重装&#34;&gt;#&lt;/a&gt; 重装&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先去下载你要重装系统的镜像，在哪下载请自行浏览器搜索。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将 U 盘插入已经下载了镜像的电脑，并将镜像移入 U 盘中的 F 盘。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：下图的 EFI 盘是系统盘，请不要将任何文件放入其中，如果你没有，请忽略。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDrqe0.jpg&#34; alt=&#34;0&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将 U 盘插入要重装系统的电脑，然后重启电脑，并在重启过程中不断的按 F2 键以进入系统 BIOS，不同的电脑进入的方法或快捷键不一样，请自行浏览器搜索你自己电脑进入的方法，本文所使用的电脑为华硕天选 2。&lt;/li&gt;
+&lt;li&gt;进入 BIOS 后，在下图右边所示位置应该有两个盘，将下面的 UEFI 盘移动到 Windows Boot 盘的上面，有可能你的盘名字和我的不一样，但是名字应该都是差不多的。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDX2d.jpg&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;重启电脑进入 wepe 桌面，点击桌面上的分区工具。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDHUO.jpg&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;然后选择你要分盘的硬盘，之后选上面的快速分区。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDb5D.jpg&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;将你的分区表类型改为 GPI (GUID)，一般是默认的。&lt;/li&gt;
+&lt;li&gt;分区数目就是你要分几个磁盘就选几个分区，一般两个磁盘就够了，在右边可以设置每个分区 (磁盘) 的大小，第一个硬盘一般都是 C 盘，建议将大小设置为 120 G 。&lt;/li&gt;
+&lt;li&gt;然后将创建新 ESP 分区勾选上，勾选不了的就将上面的保留现有的 ESP 分区取消勾选。&lt;/li&gt;
+&lt;li&gt;对齐分区到此扇区数的整数倍选择 4096 扇区。&lt;/li&gt;
+&lt;li&gt;最后点击确定。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDLPe.jpg&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;回到桌面，点击 Windows 安装器。&lt;/li&gt;
+&lt;li&gt;进入之后先选择你在 U 盘里的镜像，然后选择你要安装系统的位置，一般安装到 C 盘。&lt;/li&gt;
+&lt;li&gt;最后点击安装。&lt;/li&gt;
+&lt;li&gt;在一切完毕之后重启电脑就 ok 了。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDO8H.jpg&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;免责声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#免责声明&#34;&gt;#&lt;/a&gt; 免责声明&lt;/h3&gt;
+&lt;p&gt;本文的内容仅供读者参考，不构成任何投资、法律或其他方面的建议。本文的信息和数据来自公开渠道，作者不保证其准确性和完整性。读者在阅读本文后，应自行判断其适用性和可靠性，并自行承担由此可能产生的所有风险和责任。作者对读者因阅读本文而造成的任何直接或间接的损失或损害概不负责。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</guid>
+            <title>任意版本win远程桌面使用内网穿透连接</title>
+            <link>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</link>
+            <category>原创</category>
+            <category>frp</category>
+            <pubDate>Tue, 28 Nov 2023 22:56:44 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;重要&lt;/b&gt;：请不要问我为什么不能访问 GitHub 网站这种问题&lt;/p&gt;
+&lt;p&gt;win 系统并不能使用 ssh 来连接，但是可以使用 win 自带的远程桌面来连接。&lt;/p&gt;
+&lt;p&gt;但是，这时候就出现了一个问题，只有专业版的 win 系统能被远程连接，家庭版的并不行，但是不要方，GitHub 有大佬开源了 win 远程桌面的补丁，使得家庭版的 win 系统也能被远程连接。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;下载补丁&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载补丁&#34;&gt;#&lt;/a&gt; 下载补丁&lt;/h3&gt;
+&lt;p&gt;补丁存储库：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3N0YXNjb3JwL3JkcHdyYXAvcmVsZWFzZXM=&#34;&gt;Releases · stascorp/rdpwrap (github.com)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;直接下载 zip 压缩包即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;运行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运行&#34;&gt;#&lt;/a&gt; 运行&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;解压下载的补丁压缩包&lt;/li&gt;
+&lt;li&gt;以管理员权限运行  &lt;code&gt;install.bat&lt;/code&gt; ，不会运行的右键，然后点击 “以管理员身份运行” 。&lt;/li&gt;
+&lt;li&gt;此时打开补丁文件夹里的  &lt;code&gt;RDPConf.exe&lt;/code&gt; ，不出意外的话会显示如下图所示的红色字体。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/28/piDMKUK.jpg&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;按键盘的  &lt;code&gt;win + x&lt;/code&gt;  组合键，然后选择计算机管理或按  &lt;code&gt;G&lt;/code&gt;  键，依次点击  &lt;code&gt;服务和应用程序 -&amp;gt; 服务&lt;/code&gt; ，然后在里面找到  &lt;code&gt;Remote Desktop Services&lt;/code&gt; （如下图所示），先点击 “停止” 。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/28/piDMM4O.jpg&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;为了方便，我写了一个自动部署的脚本，运行  &lt;code&gt;run.bat&lt;/code&gt;  即可，在弹出的 UAC 窗口点击是。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d2R0LmxhbnpvdXQuY29tL2lWcWJyMWc5M2I4ag==&#34;&gt;点击下载脚本&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;运行完脚本按照步骤 4 重新启动一下服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启完服务然后打开  &lt;code&gt;RDPConf.exe&lt;/code&gt; ，如果全部变绿了就已经弄好了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/28/piDMuE6.jpg&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;frp-内网穿透&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#frp-内网穿透&#34;&gt;#&lt;/a&gt; frp 内网穿透&lt;/h3&gt;
+&lt;p&gt;frp 内穿我之前写过教程，这里只需要在需要内穿的客户端配置就行。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先下载 win 系统的 frp 压缩包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZhdGVkaWVyL2ZycC9yZWxlYXNlcw==&#34;&gt;下载地址&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意，不要下错了，下载 windows_amd64 的，arm64 是给手机处理器用的。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;下载完之后，解压打开 frpc.toml 配置文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;照着我的配置文件写就行。&lt;/p&gt;
+&lt;figure class=&#34;highlight toml&#34;&gt;&lt;figcaption data-lang=&#34;TOML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 填你公网服务器的 ip 地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;serverAddr&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;127.0.0.1&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 填你公网服务器上的 frps 配置文件里写的端口号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;serverPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 设置了 token 的可以填一下&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# token&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token table class-name&#34;&gt;proxies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要内穿的服务名，随便填，你自己认识就行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;desktop&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务使用的协议，一般默认就行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;tcp&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务所在的机器的 ip ，默认就行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;localIP&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;127.0.0.1&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务所使用的端口号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;localPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3389&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你服务器监听的端口号，&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;remotePort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;弄好之后在当前目录右键，在终端中打开，输入以下命令。&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;frpc &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;c &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;frpc&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;显示下面的代码就是启动好了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:54 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[root.go:139]&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt; frpc service &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; config file &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;\frpc&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toml&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:56 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[service.go:299]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt; login to server success&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; get run id &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:56 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[proxy_manager.go:156]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt; proxy added: &lt;span class=&#34;token namespace&#34;&gt;[desktop]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:56 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[control.go:173]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[desktop]&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt; proxy success&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;之后让别人直接通过你服务器 ip+ 监听的端口来远程连接你电脑就行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

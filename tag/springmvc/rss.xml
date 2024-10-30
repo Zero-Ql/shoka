@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;springmvc&#34; tag</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 16 Apr 2024 12:09:09 +0800</pubDate>
+        <lastBuildDate>Tue, 16 Apr 2024 12:09:09 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/SpringMVC/</guid>
+            <title>SpringMVC</title>
+            <link>http://yunyat.cloud/MyCodingBook/java/frame/SpringMVC/</link>
+            <category>原创</category>
+            <category>java</category>
+            <category>springmvc</category>
+            <pubDate>Tue, 16 Apr 2024 12:09:09 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;spring-mvc原理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-mvc原理&#34;&gt;#&lt;/a&gt; Spring MVC 原理&lt;/h3&gt;
+&lt;h4 id=&#34;spring-mvc工作原理图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-mvc工作原理图&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Spring MVC工作原理图&lt;/code&gt;&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/17/pFxTxC6.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在没有使用 SpringMVC 之前我们都是使用 Servlet 在做 Web 开发。但是使用 Servlet 开发在接收请求参数，数据共享，页面跳转等操作相对比较复杂。servlet 是 java 进行 web 开发的标准，既然 springMVC 是对 servlet 的封装，那么很显然&lt;strong&gt; SpringMVC 底层就是 Servlet，SpringMVC 就是对 Servlet 进行深层次的封装&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDA3MjM1ODE=&#34;&gt;SpringMVC【入门篇】 - 知乎 (zhihu.com)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;mvc模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mvc模式&#34;&gt;#&lt;/a&gt; MVC 模式&lt;/h3&gt;
+&lt;p&gt;MVC 模式 ( &lt;code&gt;Model&lt;/code&gt; - &lt;code&gt;View&lt;/code&gt; - &lt;code&gt;Controller&lt;/code&gt; )：解决页面代码和后台代码的分离&lt;/p&gt;
+&lt;p&gt;MVC 分别是：模型 &lt;code&gt;model(javabean)&lt;/code&gt; 、视图 &lt;code&gt;view(jsp/img)&lt;/code&gt; 、控制器 &lt;code&gt;Controller(Action/servlet)&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;C 存在的目的就是为了保证 M 和 V 的一致性，当 M 发生改变时，C 可以把 M 中的新内容更新到 V 中&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

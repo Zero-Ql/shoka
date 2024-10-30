@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;springboot&#34; tag</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 22 Apr 2024 11:50:17 +0800</pubDate>
+        <lastBuildDate>Mon, 22 Apr 2024 11:50:17 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</guid>
+            <title>springboot多模块开发</title>
+            <link>http://yunyat.cloud/MyCodingBook/java/frame/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</link>
+            <category>原创</category>
+            <category>java</category>
+            <category>springboot</category>
+            <pubDate>Mon, 22 Apr 2024 11:50:17 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h3&gt;
+&lt;p&gt;为了解决项目越来越大的问题，使用了多模块开发来使层次更加清晰。&lt;/p&gt;
+&lt;p&gt;架构大致如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/15/pFvWf3j.png&#34; alt=&#34;springboot多模块开发1&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;流程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#流程&#34;&gt;#&lt;/a&gt; 流程&lt;/h3&gt;
+&lt;p&gt;（1）新建  &lt;code&gt;springboot&lt;/code&gt;  项目；&lt;br&gt;
+（2）在新建后的  &lt;code&gt;springboot&lt;/code&gt;  项目中新建多个  &lt;code&gt;module(模块)&lt;/code&gt; ；&lt;br&gt;
+（3）修改  &lt;code&gt;pom&lt;/code&gt;  文件以及删除多余的文件及文件夹；&lt;br&gt;
+（4）将原项目的代码放进去；&lt;/p&gt;
+&lt;h3 id=&#34;多模块开发的坑&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#多模块开发的坑&#34;&gt;#&lt;/a&gt; 多模块开发的坑&lt;/h3&gt;
+&lt;p&gt;由于第一次使用多模块开发，并不熟练，所以踩了很多坑，这里记录一下&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;访问后台接口报 &lt;code&gt;404&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	访问所有接口都报 404，这是由于 &lt;code&gt;spring&lt;/code&gt;  没有扫描到你写的 &lt;code&gt;bean&lt;/code&gt;  所导致的，一般来说， &lt;code&gt;spring&lt;/code&gt;  容器只会扫描启动类所在的包以及其下的子包中的所有类，但是开发不会将所有的模块都放在一个包下面，所以如果你 &lt;code&gt;service&lt;/code&gt; 、 &lt;code&gt;dao&lt;/code&gt;  等模块放在了启动类所在的包之外，那么 &lt;code&gt;spring&lt;/code&gt;  就不会去扫描注册这些 &lt;code&gt;bean&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	解决方法是在启动类的 &lt;code&gt;@SpringBootApplication&lt;/code&gt;  注解上面加上 &lt;code&gt;scanBasePackages=&amp;#123;&amp;quot;xxx.xxxxx.*&amp;quot;&amp;#125;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	 &lt;code&gt;xxx.xxxxx&lt;/code&gt;  是你所共有的包，就比如说我所有的模块都是以  &lt;code&gt;com.example.xxx&lt;/code&gt;  开始。&lt;/p&gt;
+&lt;p&gt;​	如：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/15/pFvfnqP.png&#34; alt=&#34;springboot多模块开发2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;​	要查看  &lt;code&gt;spring&lt;/code&gt;  有没有注册你的  &lt;code&gt;bean&lt;/code&gt;  可以到服务的  &lt;code&gt;Actuator&lt;/code&gt;  中查看&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/15/pFv5css.png&#34; alt=&#34;springboot多模块开发3&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;springboot&lt;/code&gt;  多模块的 &lt;code&gt;@Resource&lt;/code&gt; 、 &lt;code&gt;@Autowired&lt;/code&gt;  注入为 &lt;code&gt;NULL&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;方法一：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;​	导致注入失败的原因是因为使用了  &lt;code&gt;new&lt;/code&gt;  去使用这个方法，只需要将此类自动注入即可解决问题&lt;/p&gt;
+&lt;p&gt;报错的代码:&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RestController&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;GetStudentController&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;path &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/GetStudent&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; method &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RequestMethod&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;GET&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;JsonResult&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; studentInformation &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;JsonResult&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;studentInformation&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;修改之后的：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RestController&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;GetStudentController&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@Resource&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    getStudent studentInformation&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;path &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/GetStudent&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; method &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RequestMethod&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;GET&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;JsonResult&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;JsonResult&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;studentInformation&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;​	方法二：&lt;/p&gt;
+&lt;p&gt;​	封装一个  &lt;code&gt;StaticMethodGetBean&lt;/code&gt;  的类，此类实现了  &lt;code&gt;ApplicationContextAware&lt;/code&gt;  接口&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Component&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StaticMethodGetBean&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;implements&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ApplicationContextAware&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// Spring 应用上下文，用于访问应用上下文中的 bean&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ApplicationContext&lt;/span&gt; applicationContext&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 设置应用上下文。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * @param applicationContext Spring 应用上下文实例&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@Override&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;setApplicationContext&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;ApplicationContext&lt;/span&gt; applicationContext&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;StaticMethodGetBean&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;applicationContext &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; applicationContext&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 通过类类型获取应用上下文中的 bean。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * @param clazz 要获取的 bean 的类类型&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * @return 返回 bean 的实例，如果不存在则返回 null&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * @param &amp;lt;T&gt; bean 的类型&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;T&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getBean&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Class&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;T&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; clazz&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 尝试获取 bean 实例，如果不存在则返回 null&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; applicationContext&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBean&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;clazz&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;?&lt;/span&gt; applicationContext&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBean&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;clazz&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;null&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后在要使用的地方直接调用  &lt;code&gt;getBean&lt;/code&gt;  方法获取即可&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RestController&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;GetStudentController&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;path &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;/GetStudent&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; method &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;RequestMethod&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;GET&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;JsonResult&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; studentInformation &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;StaticMethodGetBean&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getBean&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;getStudent&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;JsonResult&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;studentInformation&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getStudent&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3lhbmd5aWZhbjAvYXJ0aWNsZS9kZXRhaWxzLzEzMDU3MDA1MQ==&#34;&gt;SpringBoot 简单多模块构建_springboot 创建多模块项目&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/SpringBoot%E5%9F%BA%E7%A1%80/</guid>
+            <title>SpringBoot基础</title>
+            <link>http://yunyat.cloud/MyCodingBook/java/frame/SpringBoot%E5%9F%BA%E7%A1%80/</link>
+            <category>原创</category>
+            <category>java</category>
+            <category>springboot</category>
+            <pubDate>Tue, 16 Apr 2024 12:03:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;springboot-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot-简介&#34;&gt;#&lt;/a&gt; &lt;em&gt;Springboot&lt;/em&gt; 简介&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;​	&lt;em&gt;Spring Boot&lt;/em&gt; 是由&lt;em&gt; Pivotal&lt;/em&gt; 团队提供的全新框架，其设计目的是用来简化新&lt;em&gt; Spring&lt;/em&gt; 应用的初始搭建以及开发过程。该框架使用了特定的方式来进行配置，从而使开发人员不再需要定义样板化的配置。通过这种方式，&lt;em&gt;Spring Boot&lt;/em&gt; 致力于在蓬勃发展的快速应用开发领域 (&lt;em&gt;rapid application development&lt;/em&gt;) 成为领导者。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引用自百度百科&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;总结：使用 &lt;em&gt;springboot&lt;/em&gt; 可以很快的创建一个&lt;em&gt; springweb&lt;/em&gt; 项目，极大的简化&lt;em&gt; spring&lt;/em&gt; 的配置，让你专注于后端开发而不用关心繁琐的配置。&lt;/p&gt;
+&lt;h3 id=&#34;springboot-项目结构&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot-项目结构&#34;&gt;#&lt;/a&gt; &lt;em&gt;Springboot&lt;/em&gt; 项目结构&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;resources&lt;/em&gt; 资源文件夹
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;static&lt;/em&gt; 保存所有静态资源（&lt;em&gt;js、css、images&lt;/em&gt; 等）&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;templates&lt;/em&gt; 保存所有模板页面&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;application.properties&lt;/em&gt; 文件，用来编写一些服务器配置文件。但是更推荐使用 &lt;em&gt;yaml&lt;/em&gt; 后缀来配置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;jsr303-校验&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#jsr303-校验&#34;&gt;#&lt;/a&gt; &lt;em&gt;JSR303&lt;/em&gt; 校验&lt;/h3&gt;
+&lt;p&gt;使用 &lt;em&gt;JSR303&lt;/em&gt; 校验可以很轻松的在后端完成数据校验工作，只需要在要校验的实体类上加入相应的注解即可。&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;th colspan=&#34;2&#34;&gt;&lt;b&gt;空检查&lt;/b&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;&lt;b&gt;注解&lt;/b&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;b&gt;说明&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@Null&lt;/td&gt;
+        &lt;td&gt;验证对象是否为null&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@NotNull&lt;/td&gt;
+        &lt;td&gt;验证对象是否不为null，无法检查长度为0的字符串&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@NotBlank&lt;/td&gt;
+        &lt;td&gt;检查约束字符串是不是Null还有被Trim的长度是否大于0，只对字符串，且会去掉前后空格&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@NotEmpty&lt;/td&gt;
+        &lt;td&gt;检查约束元素是否为Null或者是EMPTY&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;th colspan=&#34;2&#34;&gt;&lt;b&gt;Booelan检查&lt;/b&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;&lt;b&gt;注解&lt;/b&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;b&gt;说明&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@AssertTrue&lt;/td&gt;
+        &lt;td&gt;验证Boolean对象是否为true&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@AssertFalse&lt;/td&gt;
+        &lt;td&gt;验证Boolean对象是否为false&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;th colspan=&#34;2&#34;&gt;&lt;b&gt;长度检查&lt;/b&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;&lt;b&gt;注解&lt;/b&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;b&gt;说明&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@Size(min=,max=)&lt;/td&gt;
+        &lt;td&gt;验证对象(Array,Collection,Map,String)大小是否在给定范围之内&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@Length(min=,max=)&lt;/td&gt;
+        &lt;td&gt;验证对象的长度是否在给定范围内&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;table&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;th colspan=&#34;2&#34;&gt;&lt;b&gt;日期检查&lt;/b&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;&lt;b&gt;注解&lt;/b&gt;&lt;/td&gt;
+        &lt;td&gt;&lt;b&gt;说明&lt;/b&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@Past&lt;/td&gt;
+        &lt;td&gt;验证Date和Calendar对象是否在当前时间之前&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@Future&lt;/td&gt;
+        &lt;td&gt;验证Date和Calendar对象是否在当前时间之后&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr align=&#34;center&#34;&gt;
+        &lt;td&gt;@Pattern&lt;/td&gt;
+        &lt;td&gt;验证String对象是否符合正则表达式的规则&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;除了上面的注解标签，还可以自定义数据校验规则&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

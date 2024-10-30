@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;测试&#34; category</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Sat, 15 Jun 2024 15:32:45 +0800</pubDate>
+        <lastBuildDate>Sat, 15 Jun 2024 15:32:45 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/test/Test/</guid>
+            <title>Test</title>
+            <link>http://yunyat.cloud/test/Test/</link>
+            <category>测试</category>
+            <pubDate>Sat, 15 Jun 2024 15:32:45 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;​	测试&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/Test/20240615210453.jpeg&#34; alt=&#34;test&#34; title=&#34;这是图片的 title&#34;&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</guid>
+            <title>Mermaid画图测试</title>
+            <link>http://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</link>
+            <category>markdown</category>
+            <category>mermaid</category>
+            <pubDate>Sat, 29 Apr 2023 20:20:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;流程图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#流程图&#34;&gt;#&lt;/a&gt; 流程图&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;graph&lt;/code&gt;  表示声明一张流程图  &lt;code&gt;TD&lt;/code&gt;  表示方向 T (top)-D (down) 由上至下  &lt;code&gt;()&lt;/code&gt;  表示圆形框  &lt;code&gt;&amp;#123;&amp;#125;&lt;/code&gt;  表示菱形框&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;graph&lt;/span&gt; TD&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;B&lt;span class=&#34;token text string&#34;&gt;(B)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;C&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	B&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;D&lt;span class=&#34;token text string&#34;&gt;&amp;#123;D&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	流程图&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;时序图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#时序图&#34;&gt;#&lt;/a&gt; 时序图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;-&amp;gt;&amp;gt;代表实线箭头&lt;/code&gt;    &lt;code&gt;--&amp;gt;&amp;gt;代表虚线箭头&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;sequenceDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;J&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; hello J!&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	J&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&gt;&lt;/span&gt;A&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; good!&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;状态图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#状态图&#34;&gt;#&lt;/a&gt; 状态图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;[*]代表开始或结束&lt;/code&gt;  如果在箭头右边则表示结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;stateDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token text string&#34;&gt;[*]&lt;/span&gt; &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt; s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	s &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;&lt;span class=&#34;token text string&#34;&gt;[*]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;类图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类图&#34;&gt;#&lt;/a&gt; 类图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;&amp;lt;|--&lt;/code&gt;  表示继承  &lt;code&gt;+&lt;/code&gt;  表示 &lt;code&gt;public&lt;/code&gt;   &lt;code&gt;-&lt;/code&gt;  表示 &lt;code&gt;private&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;classDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token arrow operator&#34;&gt;&amp;lt;|--&lt;/span&gt; D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token arrow operator&#34;&gt;&amp;lt;|--&lt;/span&gt; F&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; + int a&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; + toString&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; D&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		+ String S&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		+ setS&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; F&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		- char c&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		- getC&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;饼图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#饼图&#34;&gt;#&lt;/a&gt; 饼图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释：饼图使用 &lt;code&gt;pie&lt;/code&gt;  表示 标题下面分别是区域名称及其所占百分比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;pie&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	title 每日时间分配&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;睡觉&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 40&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;学习&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 25&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;吃饭刷视频&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 15&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;生活杂事&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 20&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

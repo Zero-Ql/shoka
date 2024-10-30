@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;ssh&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2023-09-09T15:30:41.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</id>
+        <title>Win至Linux的免密登录</title>
+        <link rel="alternate" href="http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
+        <content type="html">&lt;h4 id=&#34;配置-windows-端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-windows-端&#34;&gt;#&lt;/a&gt; 配置 Windows 端&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先在 Windows 下生成公钥文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用 win+R 打开运行对话框，输入 cmd 打开命令提示符（或者随便打开一个文件夹 --&amp;gt; 右键 --&amp;gt; 在终端中打开）&lt;/p&gt;
+&lt;p&gt;输入以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh-keygen &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;t rsa&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;之后无脑回车确定&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/09/pPcuprT.png&#34; alt=&#34;powershell1&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;找到你默认存放公钥的位置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/09/pPcuPZF.png&#34; alt=&#34;powershell2&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将你生成的公钥文件传到 Linux 服务器上&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;scp 你公钥存放的位置&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh/id_rsa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pub  你要登录的用户名@你服务器的ip:~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;上传完毕之后 Windows 端的配置就完成了&lt;/p&gt;
+&lt;h4 id=&#34;配置-linux-端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-linux-端&#34;&gt;#&lt;/a&gt; 配置 Linux 端&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先登录到 Linux 服务器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh root@你服务器的ip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在输入密码后就能登录上去&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在当前用户家目录下找到  &lt;code&gt;.ssh&lt;/code&gt;  文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用以下命令查看：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-a&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后使用以下命令将  &lt;code&gt;id_rsa.pub&lt;/code&gt;  文件的内容追加到  &lt;code&gt;authorized_keys&lt;/code&gt;  中&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; id_rsa.pub &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; authorized_keys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;然后用  &lt;code&gt;chmod&lt;/code&gt;  修改文件的权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;600&lt;/span&gt; .ssh/authorized_keys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;700&lt;/span&gt; .ssh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;修改ssh的配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改ssh的配置文件&#34;&gt;#&lt;/a&gt; 修改 SSH 的配置文件&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;使用以下命令进入  &lt;code&gt;ssh&lt;/code&gt;  的配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/ssh/sshd_config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;找到下面的三句不被注释掉，没有直接添加&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;温馨提示：可以使用  &lt;code&gt;斜杠“/”&lt;/code&gt;  来快速查找&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RSAAuthentication &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;PubkeyAuthentication &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;AuthorizedKeysFile .ssh/authorized_keys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后  &lt;code&gt;:wq&lt;/code&gt;  保存并退出&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用以下命令重启 SSH 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;service&lt;/span&gt; sshd restart&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;测试免密登录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#测试免密登录&#34;&gt;#&lt;/a&gt; 测试免密登录&lt;/h4&gt;
+&lt;p&gt;在 Windows 的 power shell 上输入以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh root@你服务器的ip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/09/pPcQcQI.png&#34; alt=&#34;powershell3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，直接连上了服务器，到这你的免密登录就成功了&lt;/p&gt;
+&lt;h4 id=&#34;使用指定端口登录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用指定端口登录&#34;&gt;#&lt;/a&gt; 使用指定端口登录&lt;/h4&gt;
+&lt;p&gt;一般来说，为了服务器的安全起见，我们都会更改 SSH 的默认登录端口&lt;/p&gt;
+&lt;p&gt;可以在服务器 ip 后加 -p 参数来指定要使用的端口&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="电脑技术" />
+        <category term="SSH" />
+        <updated>2023-09-09T15:30:41.000Z</updated>
+    </entry>
+</feed>

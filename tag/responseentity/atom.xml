@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;responseentity&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2024-04-22T03:39:54.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/MyCodingBook/java/frame/Spring-ResponseEntity/</id>
+        <title>Spring-ResponseEntity</title>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/frame/Spring-ResponseEntity/"/>
+        <content type="html">&lt;h3 id=&#34;responseentity&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#responseentity&#34;&gt;#&lt;/a&gt; &lt;em&gt;ResponseEntity&lt;/em&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;ResponseEntity&lt;/em&gt; 是 &lt;em&gt;Spring Web MVC&lt;/em&gt; 框架中提供的一个类，用于封装 &lt;em&gt;HTTP&lt;/em&gt; 响应的详细信息。它允许开发者不仅定义返回给客户端的数据（通常作为请求处理的结果），还能够控制响应的状态码、头部信息以及主体内容的类型。&lt;/p&gt;
+&lt;h4 id=&#34;主要属性和功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主要属性和功能&#34;&gt;#&lt;/a&gt; 主要属性和功能：&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;em&gt;HTTP&lt;/em&gt; 状态码（&lt;em&gt;HttpStatus&lt;/em&gt;）：通过指定一个 &lt;em&gt;HttpStatus&lt;/em&gt; 枚举值（如 &lt;code&gt;OK&lt;/code&gt; ,  &lt;code&gt;CREATED&lt;/code&gt; ,  &lt;code&gt;BAD_REQUEST&lt;/code&gt; ,  &lt;code&gt;NOT_FOUND&lt;/code&gt; , 等），可以明确设置响应的状态码，以表明请求的处理结果是成功还是存在某种错误。&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;HTTP&lt;/em&gt; 头部（&lt;em&gt;HttpHeaders&lt;/em&gt;）：可以通过 &lt;em&gt;ResponseEntity&lt;/em&gt; 构造器或其 &lt;em&gt;headers&lt;/em&gt; () 方法来设置或修改响应的头部字段，如  &lt;code&gt;Content-Type&lt;/code&gt; 、 &lt;code&gt;Cache-Control&lt;/code&gt; 、 &lt;code&gt;Location&lt;/code&gt;  等，以便控制客户端如何解析响应内容、缓存策略、重定向位置等。&lt;/li&gt;
+&lt;li&gt;响应主体（&lt;em&gt;body&lt;/em&gt;）：&lt;em&gt;ResponseEntity&lt;/em&gt; 的主体可以承载任何类型的数据，如字符串、 &lt;code&gt;JSON&lt;/code&gt;  对象、 &lt;code&gt;XML&lt;/code&gt;  文档、自定义 &lt;code&gt;Java&lt;/code&gt;  对象等。这些数据将作为 &lt;code&gt;HTTP&lt;/code&gt;  响应的正文发送给客户端。主体类型可以与 &lt;code&gt;Content-Type&lt;/code&gt;  头部字段对应，确保客户端能正确解析。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;典型用法：&lt;/p&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Log4j2&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RestControllerAdvice&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;GlobalExceptionHandler&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;/**&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * 处理所有未被其他异常处理器捕获的异常。&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     *&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * @param e 抛出的异常对象&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     * @return 返回一个包含错误信息的 ResponseEntity 对象，状态码为 500（内部服务器错误）&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     */&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@ExceptionHandler&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token annotation punctuation&#34;&gt;@ResponseStatus&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;HttpStatus&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;INTERNAL_SERVER_ERROR&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ResponseEntity&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;handleException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Exception&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 记录异常信息&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        log&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;系统异常：&amp;#123;&amp;#125;&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 构建响应体，包含错误状态码、自定义错误信息和异常信息&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;ResponseEntity&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;status&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;HttpStatus&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;INTERNAL_SERVER_ERROR&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;headers&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;httpheaders &lt;span class=&#34;token operator&#34;&gt;-&gt;&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token comment&#34;&gt;// 设置响应头内容类型为 JSON&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    httpheaders&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;setContentType&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;MediaType&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token constant&#34;&gt;APPLICATION_JSON&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    &lt;span class=&#34;token comment&#34;&gt;// 这里硬编码了 access-token，实际应用中应根据需求设置&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                    httpheaders&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;set&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;access-token&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;123456&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token comment&#34;&gt;// 将错误信息封装成 JSON 格式作为响应体的内容&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;body&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Result&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;error&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;500&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;系统异常&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; e&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getMessage&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;toString&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/22/pkpf0zD.png&#34; alt=&#34;headers&#34;&gt;&lt;/p&gt;
+&lt;p&gt;从 &lt;em&gt;ResponseEntity&lt;/em&gt; 类的源码中可以看到，&lt;em&gt;headers&lt;/em&gt; 方法返回的是 &lt;em&gt;this&lt;/em&gt; 也就是类本身，所以可以进行链式调用&lt;/p&gt;
+&lt;p&gt;而 &lt;em&gt;headers&lt;/em&gt; 方法接收一个  &lt;code&gt;Consumer&amp;lt;HttpHeaders&amp;gt;&lt;/code&gt;  类型的参数  &lt;code&gt;headersConsumer&lt;/code&gt; ，该参数是一个函数接口，使用 &lt;em&gt;lambda&lt;/em&gt; 表达式进行了匿名实现&lt;/p&gt;
+&lt;p&gt;更多用法请参考：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9zcHJpbmdkb2MuY24vc3ByaW5nLXJlc3BvbnNlLWVudGl0eS8=&#34;&gt;使用 Spring ResponseEntity 处理 HTTP 响应 - spring 中文网 (springdoc.cn)&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="java" />
+        <category term="spring" />
+        <category term="ResponseEntity" />
+        <updated>2024-04-22T03:39:54.000Z</updated>
+    </entry>
+</feed>

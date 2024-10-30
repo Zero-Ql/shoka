@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;frp&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2023-11-28T14:56:44.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>
+        <title>任意版本win远程桌面使用内网穿透连接</title>
+        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/"/>
+        <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
+&lt;p&gt;&lt;b&gt;重要&lt;/b&gt;：请不要问我为什么不能访问 GitHub 网站这种问题&lt;/p&gt;
+&lt;p&gt;win 系统并不能使用 ssh 来连接，但是可以使用 win 自带的远程桌面来连接。&lt;/p&gt;
+&lt;p&gt;但是，这时候就出现了一个问题，只有专业版的 win 系统能被远程连接，家庭版的并不行，但是不要方，GitHub 有大佬开源了 win 远程桌面的补丁，使得家庭版的 win 系统也能被远程连接。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;下载补丁&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载补丁&#34;&gt;#&lt;/a&gt; 下载补丁&lt;/h3&gt;
+&lt;p&gt;补丁存储库：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL3N0YXNjb3JwL3JkcHdyYXAvcmVsZWFzZXM=&#34;&gt;Releases · stascorp/rdpwrap (github.com)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;直接下载 zip 压缩包即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;运行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运行&#34;&gt;#&lt;/a&gt; 运行&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;解压下载的补丁压缩包&lt;/li&gt;
+&lt;li&gt;以管理员权限运行  &lt;code&gt;install.bat&lt;/code&gt; ，不会运行的右键，然后点击 “以管理员身份运行” 。&lt;/li&gt;
+&lt;li&gt;此时打开补丁文件夹里的  &lt;code&gt;RDPConf.exe&lt;/code&gt; ，不出意外的话会显示如下图所示的红色字体。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/28/piDMKUK.jpg&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;按键盘的  &lt;code&gt;win + x&lt;/code&gt;  组合键，然后选择计算机管理或按  &lt;code&gt;G&lt;/code&gt;  键，依次点击  &lt;code&gt;服务和应用程序 -&amp;gt; 服务&lt;/code&gt; ，然后在里面找到  &lt;code&gt;Remote Desktop Services&lt;/code&gt; （如下图所示），先点击 “停止” 。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/28/piDMM4O.jpg&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;为了方便，我写了一个自动部署的脚本，运行  &lt;code&gt;run.bat&lt;/code&gt;  即可，在弹出的 UAC 窗口点击是。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d2R0LmxhbnpvdXQuY29tL2lWcWJyMWc5M2I4ag==&#34;&gt;点击下载脚本&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;运行完脚本按照步骤 4 重新启动一下服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重启完服务然后打开  &lt;code&gt;RDPConf.exe&lt;/code&gt; ，如果全部变绿了就已经弄好了。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/28/piDMuE6.jpg&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;frp-内网穿透&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#frp-内网穿透&#34;&gt;#&lt;/a&gt; frp 内网穿透&lt;/h3&gt;
+&lt;p&gt;frp 内穿我之前写过教程，这里只需要在需要内穿的客户端配置就行。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;先下载 win 系统的 frp 压缩包。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZhdGVkaWVyL2ZycC9yZWxlYXNlcw==&#34;&gt;下载地址&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注意，不要下错了，下载 windows_amd64 的，arm64 是给手机处理器用的。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;下载完之后，解压打开 frpc.toml 配置文件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;照着我的配置文件写就行。&lt;/p&gt;
+&lt;figure class=&#34;highlight toml&#34;&gt;&lt;figcaption data-lang=&#34;TOML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 填你公网服务器的 ip 地址&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;serverAddr&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;127.0.0.1&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 填你公网服务器上的 frps 配置文件里写的端口号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;serverPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 设置了 token 的可以填一下&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# token&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token table class-name&#34;&gt;proxies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要内穿的服务名，随便填，你自己认识就行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;desktop&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务使用的协议，一般默认就行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;tcp&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务所在的机器的 ip ，默认就行&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;localIP&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;127.0.0.1&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务所使用的端口号&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;localPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;3389&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你服务器监听的端口号，&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;remotePort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;6000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;弄好之后在当前目录右键，在终端中打开，输入以下命令。&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;frpc &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;c &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;frpc&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;显示下面的代码就是启动好了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:54 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[root.go:139]&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt; frpc service &lt;span class=&#34;token keyword&#34;&gt;for&lt;/span&gt; config file &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;\frpc&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;toml&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:56 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[service.go:299]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt; login to server success&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; get run id &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:56 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[proxy_manager.go:156]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt; proxy added: &lt;span class=&#34;token namespace&#34;&gt;[desktop]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;2023/11/28 22:51:56 &lt;span class=&#34;token namespace&#34;&gt;[I]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[control.go:173]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[c18837c64f3317f9]&lt;/span&gt; &lt;span class=&#34;token namespace&#34;&gt;[desktop]&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;start&lt;/span&gt; proxy success&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;之后让别人直接通过你服务器 ip+ 监听的端口来远程连接你电脑就行。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="frp" />
+        <updated>2023-11-28T14:56:44.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+        <title>frp之内网穿透</title>
+        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+        <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/01/p98QaIP.jpg&#34; alt=&#34;p98QaIP.jpg&#34;&gt;&lt;/p&gt;
+&lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
+&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
+&lt;hr&gt;
+&lt;p&gt;众所周知，在我大内网环境里，你没有公网 ip 想要别人能够访问你电脑的内容是不可能的（除非你利用一些第三方的软件，但是第三方软件往往有一些限制，比如带宽啊，流量啊，收费啊等等）&lt;/p&gt;
+&lt;p&gt;而你利用 frp 反向代理就可以在你没有公网 ip 的情况下实现别人访问你电脑的内容。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;frp 是什么&lt;/p&gt;
+&lt;p&gt;用百度百科的解释&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;高性能反向代理应用&lt;br&gt;
+ frp 是一个高性能的反向代理应用，支持 tcp, udp, http, https 协议。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是官方的解释&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;frp 是一个专注于内网穿透的高性能的反向代理应用，支持 TCP、UDP、HTTP、HTTPS 等多种协议。可以将内网服务以安全、便捷的方式通过具有公网 IP 节点的中转暴露到公网。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;官方的解释往往有些不是很通俗易懂（毕竟是官方嘛）&lt;/p&gt;
+&lt;p&gt;其实 &lt;code&gt;frp&lt;/code&gt;  就是利用一台有公网 &lt;code&gt;ip&lt;/code&gt;  的服务器来进行端口转发（所以说使用 &lt;code&gt;frp&lt;/code&gt;  前你要有一台云服务器或 &lt;code&gt;vps&lt;/code&gt; ，因为云服务器或 &lt;code&gt;vps&lt;/code&gt;  一般都有公网 &lt;code&gt;ip&lt;/code&gt; ），这么说吧，你首先要在云服务器装一个 &lt;code&gt;frps&lt;/code&gt; （服务器端的程序），然后再本地装一个 &lt;code&gt;frpc&lt;/code&gt; （客户端程序，本地指的是你要访问的内网机器），之后你再配置好他们的端口映射关系（比如说你把云服务器端的 &lt;code&gt;23333&lt;/code&gt;  端口开放了，然后在本地把你要访问的服务的端口也打开，就比如说 &lt;code&gt;http&lt;/code&gt;  的 &lt;code&gt;80&lt;/code&gt;  端口，然后在程序里将它们的映射关系 配置好），这个时候你访问有公网 &lt;code&gt;ip&lt;/code&gt;  的服务器的指定端口（上面开放的 &lt;code&gt;23333&lt;/code&gt; ），服务器端的程序 &lt;code&gt;frps&lt;/code&gt;  就会把这个访问请求转发到它映射到客户端的端口（上面说的 &lt;code&gt;80&lt;/code&gt; ），这个时候你就实现了在没有公网 &lt;code&gt;ip&lt;/code&gt;  的情况下让别人访问你电脑的内容。&lt;/p&gt;
+&lt;p&gt;有人会说你云服务器不是有公网 &lt;code&gt;ip&lt;/code&gt;  嘛，为什么不用？&lt;/p&gt;
+&lt;p&gt;首先，你对这个服务器的公网 &lt;code&gt;ip&lt;/code&gt;  没有使用权，你有使用这个服务器的权力，这个公网 &lt;code&gt;ip&lt;/code&gt;  的使用权在服务器手里。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;具体如何操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#具体如何操作&#34;&gt;#&lt;/a&gt; 具体如何操作&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2023.5.22 更新，最近是真的懒，一点都不想动&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1. 首先你要前往它的官方 GitHub 库下载最新的程序（&lt;s&gt;废话&lt;/s&gt;）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2ZhdGVkaWVyL2ZycC9yZWxlYXNlcw==&#34;&gt;Releases · fatedier/frp (github.com)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/22/p9I2ZnJ.png&#34; alt=&#34;p9I2ZnJ.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，有很多版本，至于下哪个，看你要穿透的内网主机和当作穿透服务器的云服务器是什么 &lt;code&gt;cpu&lt;/code&gt;  架构了，比如我电脑 &lt;code&gt;windows&lt;/code&gt;  系统， &lt;code&gt;cpu&lt;/code&gt;  是 &lt;code&gt;x64&lt;/code&gt;  架构的，那就选 &lt;code&gt;windows_amd64的&lt;/code&gt; ，而我的服务器是装的 &lt;code&gt;Linux&lt;/code&gt; ， &lt;code&gt;cpu&lt;/code&gt;  是 &lt;code&gt;x86_64&lt;/code&gt;  架构，那就选 &lt;code&gt;Linux_amd64&lt;/code&gt; ，至于 &lt;code&gt;macos&lt;/code&gt;  的，我身边也没有人用 &lt;code&gt;macos&lt;/code&gt;  系统的，所以请自行查阅资料吧&lt;/p&gt;
+&lt;p&gt;在命令行使用命令查看&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Windows&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在 &lt;code&gt;cmd&lt;/code&gt; （命令提示框中）中输入： &lt;code&gt;systeminfo&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/22/p9IREPP.png&#34; alt=&#34;p9IREPP.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Linux&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;同样在命令行中输入： &lt;code&gt;lscpu&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/22/p9I4tYR.png&#34; alt=&#34;p9I4tYR.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;至于 &lt;code&gt;x64&lt;/code&gt;  和 &lt;code&gt;x86_64&lt;/code&gt; ，它们其实是指 &lt;code&gt;cpu&lt;/code&gt;  的指令集架构， &lt;code&gt;cpu&lt;/code&gt;  指令集目前主要是分为两大类&lt;/p&gt;
+&lt;p&gt;​	1. 复杂指令集&lt;/p&gt;
+&lt;p&gt;​		复杂指令集主要是 &lt;code&gt;Intel&lt;/code&gt;  和 &lt;code&gt;AMD&lt;/code&gt;  的 &lt;code&gt;cpu&lt;/code&gt;  在使用，复杂指令集分为 &lt;code&gt;x86&lt;/code&gt; 、 &lt;code&gt;x64&lt;/code&gt; ，如果你的电脑是 &lt;code&gt;32&lt;/code&gt;  位操作系统（现在应该没有用 &lt;code&gt;32&lt;/code&gt;  位系统的吧），那就是 &lt;code&gt;x86&lt;/code&gt;  的（为什么叫 &lt;code&gt;x86&lt;/code&gt;  而不是 &lt;code&gt;x32&lt;/code&gt; , 那是因为早期的处理器名称都是以数字 &lt;code&gt;86&lt;/code&gt;  结尾，因此其架构被称为 &lt;code&gt;x86&lt;/code&gt; ），如果是 &lt;code&gt;64&lt;/code&gt;  位系统，那就是 &lt;code&gt;x64&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​		现在复杂指令集架构的 &lt;code&gt;cpu&lt;/code&gt;  大多应用在 &lt;code&gt;pc&lt;/code&gt;  机上，包括 &lt;code&gt;Windows&lt;/code&gt; 、 &lt;code&gt;Linux&lt;/code&gt; 、 &lt;code&gt;MacOS&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;​	2. 简单指令集&lt;/p&gt;
+&lt;p&gt;​		简单指令集是 &lt;code&gt;arm&lt;/code&gt;  的一种架构，这种架构的 &lt;code&gt;cpu&lt;/code&gt;  主要是应用在手机上，包括安卓和苹果&lt;/p&gt;
+&lt;p&gt;知道改下哪个架构的程序之后就可以下载了，但是注意，程序下载下来之后是包含服务器端和客户端的， &lt;code&gt;frps&lt;/code&gt;  是服务器端的程序， &lt;code&gt;frpc&lt;/code&gt;  是客户端的程序&lt;/p&gt;
+&lt;p&gt;比如说你下载了 &lt;code&gt;windouws&lt;/code&gt;  的程序，它里面是包含服务器端程序和客户端程序，看你需要哪一端的程序吧，另外一端可以删了（当时我也是在这卡了一会儿）&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/22/p9Ior0U.png&#34; alt=&#34;p9Ior0U.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;关于配置问题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#关于配置问题&#34;&gt;#&lt;/a&gt; 关于配置问题&lt;/h4&gt;
+&lt;p&gt;&lt;b&gt;注意：由于官方配置文件发生改变，以下配置文件仅供参考&lt;/b&gt;&lt;/p&gt;
+&lt;p&gt;配置文件是 *.ini 为结尾的文件，服务器端的程序和客户端的程序都要配置&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nb2ZycC5vcmcvemgtY24vZG9jcy9leGFtcGxlcy9zc2gv&#34;&gt;通过 SSH 访问内网机器 | frp (gofrp.org&lt;/span&gt; 官方配置参考&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;客户端配置&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/22/p9I7Us0.png&#34; alt=&#34;p9I7Us0.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;服务器端配置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/22/p9I72sx.png&#34; alt=&#34;p9I72sx.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;新版配置文件模板&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#新版配置文件模板&#34;&gt;#&lt;/a&gt; 新版配置文件模板&lt;/h4&gt;
+&lt;p&gt;服务器端（frps.toml）:&lt;/p&gt;
+&lt;figure class=&#34;highlight toml&#34;&gt;&lt;figcaption data-lang=&#34;TOML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# bindPort 是 frp 程序通信使用的端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;bindPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# token 用于验证客户端的正确性&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;123456&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;客户端（frpc.toml）：&lt;/p&gt;
+&lt;figure class=&#34;highlight toml&#34;&gt;&lt;figcaption data-lang=&#34;TOML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# serverAddr 是你公网服务器的 IP&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;serverAddr&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;x.x.x.x&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# serverPort 是客户端和服务器端的通信端口，客户端和服务器端要保持一致&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;serverPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;7000&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# token 填和服务器端相同的 token&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;token&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;123456&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token table class-name&#34;&gt;proxies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 你要穿透的服务的名称，如：ssh&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;name&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ssh&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 穿透使用的协议 tcp or udp&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;type&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;tcp&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 本机 ip，默认即可&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;localIP&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;127.0.0.1&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 本机的要穿透服务端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;localPort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;22&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 服务器的访问端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token key property&#34;&gt;remotePort&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;8022&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 可以配置多个服务，只需更改客户端即可&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 多个服务之间 name 的名字需要不同，localPort 和 remotePort 都需要与之前的不同&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# [[proxies]]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# name = &#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# type = &#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# localIP = &#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# localPort = &#34;&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# remotePort =&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;启动-frp&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#启动-frp&#34;&gt;#&lt;/a&gt; 启动 frp&lt;/h4&gt;
+&lt;h5 id=&#34;frps&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#frps&#34;&gt;#&lt;/a&gt; frps&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;安装  &lt;code&gt;systemd&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用 yum 安装，适用于 CentOS 和 RHEL&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; systemd&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用 apt 安装，适用于 Debian 和 Ubuntu&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;apt&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; systemd&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;创建 frps.service 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用 vim 在 /etc/systemd/system/ 下创建&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/systemd/system/frps.service&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 如报错可以试一下取消 sudo&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后写入以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;Unit&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 服务名称，可自定义&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Description &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; frp server&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;After &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; network.target syslog.target&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Wants &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; network.target&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;Service&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;Type &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; simple&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 启动 frps 的命令，需修改为您的 frps 的安装路径，如：/root/frp/frps -c /root/frp/frps.toml&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ExecStart &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; /path/to/frps &lt;span class=&#34;token parameter variable&#34;&gt;-c&lt;/span&gt; /path/to/frps.toml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;Install&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;WantedBy &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; multi-user.target&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;配置完之后就可以直接使用  &lt;code&gt;systemctl start frps&lt;/code&gt;  来启动  &lt;code&gt;frps&lt;/code&gt;  服务&lt;/p&gt;
+&lt;h5 id=&#34;frpc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#frpc&#34;&gt;#&lt;/a&gt; frpc&lt;/h5&gt;
+&lt;p&gt;在 &lt;code&gt;frp&lt;/code&gt;  的安装目录下输入以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./frpc &lt;span class=&#34;token parameter variable&#34;&gt;-c&lt;/span&gt; ./frpc.toml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 如果出现了 Illegal instruction 报错那就是你版本没选对&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;常用的-systemctl-命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用的-systemctl-命令&#34;&gt;#&lt;/a&gt; 常用的  &lt;code&gt;systemctl &lt;/code&gt;  命令：&lt;/h4&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 启动程序&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl start frps&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 查看程序状态&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl status frps&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 停止程序&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl stop frps&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 重新启动&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl restart frps&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 开机自启&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl &lt;span class=&#34;token builtin class-name&#34;&gt;enable&lt;/span&gt; frps&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 关闭开机启动&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl disable frps&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="frp" />
+        <updated>2023-05-08T04:12:18.000Z</updated>
+    </entry>
+</feed>

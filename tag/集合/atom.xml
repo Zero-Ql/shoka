@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;集合&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2023-05-14T13:45:06.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</id>
+        <title>集合接口的继承及实现概览</title>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/"/>
+        <content type="html">&lt;h5 id=&#34;map-根接口包含键和值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map-根接口包含键和值&#34;&gt;#&lt;/a&gt; Map    -- 根接口 (包含键和值)&lt;/h5&gt;
+&lt;p&gt;直接继承的接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Bindings&lt;/li&gt;
+&lt;li&gt;ConcurrentMap
+&lt;ul&gt;
+&lt;li&gt;ConcurrentNavigableMap&amp;lt;K,V&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;SoredMap
+&lt;ul&gt;
+&lt;li&gt;NavigableMap&amp;lt;K,V&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有实现 Map 接口的类&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AbstractMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Attributes&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;AuthProvider&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ConcurrentHashMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ConcurrentSkipListMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;EnumMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;HashMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Hashtable&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Headers&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;IdentityHashMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;LinkedHashMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;PrinterStateReasons&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Properties&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Provider&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;RenderingHints&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;SimpleBindings&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;TabularDataSupport&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;TreeMap&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;UIDefaults&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;WeakHashMap&lt;/code&gt;&lt;/p&gt;
+&lt;h5 id=&#34;collection-根接口只有元素&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#collection-根接口只有元素&#34;&gt;#&lt;/a&gt; Collection    -- 根接口 (只有元素)&lt;/h5&gt;
+&lt;p&gt;直接继承的接口&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;BeanContext
+&lt;ul&gt;
+&lt;li&gt;BeanContextServices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Queue&lt;E&gt;
+&lt;ul&gt;
+&lt;li&gt;BlockingQueue&lt;E&gt;
+&lt;ul&gt;
+&lt;li&gt;BlockingDeque&lt;E&gt;&lt;/li&gt;
+&lt;li&gt;TransferQueue&lt;E&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Deque&lt;E&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;List&lt;E&gt;&lt;/li&gt;
+&lt;li&gt;Set&lt;E&gt;
+&lt;ul&gt;
+&lt;li&gt;EventSet&lt;/li&gt;
+&lt;li&gt;SortedSet&lt;E&gt;
+&lt;ul&gt;
+&lt;li&gt;NavigableSet&lt;E&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;所有实现 Collection 的类&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;AbstractCollection&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;AbstractList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;AbstractQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;AbstractSequentialList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;AbstractSet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ArrayBlockingQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ArrayDeque&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ArrayList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;AttributeList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;BeanContextServicesSupport&lt;/code&gt; ,  &lt;code&gt;BeanContextSupport&lt;/code&gt; ,  &lt;code&gt;ConcurrentHashMap.KeySetView&lt;/code&gt; ,  &lt;code&gt;ConcurrentLinkedDeque&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ConcurrentLinkedQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;ConcurrentSkipListSet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;CopyOnWriteArrayList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;CopyOnWriteArraySet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;DelayQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;EnumSet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;HashSet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;JobStateReasons&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;LinkedBlockingDeque&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;LinkedBlockingQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;LinkedHashSet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;LinkedList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;LinkedTransferQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;PriorityBlockingQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;PriorityQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;RoleList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;RoleUnresolvedList&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Stack&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;SynchronousQueue&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;TreeSet&lt;/code&gt; ,&lt;br&gt;
+ &lt;code&gt;Vector&lt;/code&gt;&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="java" />
+        <category term="集合" />
+        <updated>2023-05-14T13:45:06.000Z</updated>
+    </entry>
+    <entry>
+        <id>http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/</id>
+        <title>集合-Map</title>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/"/>
+        <content type="html">&lt;h4 id=&#34;map接口双列队列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map接口双列队列&#34;&gt;#&lt;/a&gt; Map 接口 (双列队列)&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;HashMap&lt;/code&gt;  和 &lt;code&gt;LinkedHashMap&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;HashMap&lt;/code&gt;  实现了 &lt;code&gt;Map&lt;/code&gt;  接口，而 &lt;code&gt;LinkedHashMap&lt;/code&gt;  继承自 &lt;code&gt;HashMap&lt;/code&gt;  类&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hashmap&lt;/code&gt;  和 &lt;code&gt;linkedhashmap&lt;/code&gt;  的区别
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;hashmap&lt;/code&gt;  采用了哈希表实现 &lt;code&gt;map&lt;/code&gt;  接口，但是它的存储是无序的&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;linkedhashmap&lt;/code&gt;  同样也采用了哈希表实现，但不同的是它同时采用了链表结构，这使得它的存储是有序的&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;hashmap构造方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hashmap构造方法&#34;&gt;#&lt;/a&gt; HashMap 构造方法&lt;/h5&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 其他构造方法都是在此基础上衍生而来&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;HashMap&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;int&lt;/span&gt; initialCapacity&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;float&lt;/span&gt; loadFactor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token comment&#34;&gt;//initialCapacity 初始容量&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    	&lt;span class=&#34;token comment&#34;&gt;//loadFactor 初始系数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;initialCapacity &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Illegal initial capacity: &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                                               initialCapacity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;initialCapacity &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; &lt;span class=&#34;token constant&#34;&gt;MAXIMUM_CAPACITY&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            initialCapacity &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token constant&#34;&gt;MAXIMUM_CAPACITY&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;loadFactor &lt;span class=&#34;token operator&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;||&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Float&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;isNaN&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;loadFactor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token keyword&#34;&gt;throw&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;IllegalArgumentException&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;Illegal load factor: &#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;+&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                                               loadFactor&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;loadFactor &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; loadFactor&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;threshold &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tableSizeFor&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;initialCapacity&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;hashmap的常用方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#hashmap的常用方法&#34;&gt;#&lt;/a&gt; HashMap 的常用方法&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt; &lt;code&gt;get()&lt;/code&gt; &lt;/em&gt;、&lt;em&gt; &lt;code&gt;put()&lt;/code&gt; &lt;/em&gt;、&lt;em&gt; &lt;code&gt;remove()&lt;/code&gt; &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;get()&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回指定键的键值&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;put()&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将指定的键值装入列表&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;remove()&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;删除指定健的键值，删除后健的值为 &lt;code&gt;null&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 初始容量为 5，初始系数为 0.75&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 可以使用泛型指定存储类型&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		&lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; hashmap &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;HashMap&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;0.75&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//key 为键值 1，value 为 1&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;put&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;键值1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 返回键为 “键值 1” 的对应键值 value&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 注意：此 value 为 Object 类型，输出会自动调用 toString 方法将值转换为 String&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;get&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;键值1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 删除键为 “键值 1” 的对应值 value，删除后键 “键值 1” 的值为 null&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;remove&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;键值1&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;LinkedHashMap&lt;/code&gt;  的构造方法同 &lt;code&gt;HashMap&lt;/code&gt;  相同&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt; &lt;code&gt;containsKey&lt;/code&gt; &lt;/em&gt;、&lt;em&gt; &lt;code&gt;containsValue&lt;/code&gt; &lt;/em&gt;、&lt;em&gt; &lt;code&gt;isEmpty&lt;/code&gt; &lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;containskey&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果此列表中包含指定的键就返回 true，反之 false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;containsValue&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果此列表将一个或多个健映射到此键值就返回 true，反之 false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;isEmpty&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果此列表不包含健和键值就返回 true，反之 false&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;var&lt;/span&gt; hashmap &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;HashMap&lt;/span&gt;&lt;span class=&#34;token generics&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;put&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;键值&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 查看 hashmap 中是否包含健 &#34;键值&#34;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;       	&lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; b1 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;containskey&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;键值&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 查看 hashmap 中是否有指定值的映射&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; b2 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;containsValue&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;// 查看 hashmap 中是否包含键值对&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;boolean&lt;/span&gt; b3 &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; hashmap&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;isEmpty&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;程序执行结果为&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;b1=true&lt;/code&gt;   &lt;code&gt;b2=true&lt;/code&gt;   &lt;code&gt;b3=false&lt;/code&gt;&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="java" />
+        <category term="集合" />
+        <updated>2023-05-02T09:58:51.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,1516 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;linux&#34; category</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Thu, 26 Oct 2023 19:30:24 +0800</pubDate>
+        <lastBuildDate>Thu, 26 Oct 2023 19:30:24 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <title>Git的使用</title>
+            <link>http://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <category>Git</category>
+            <pubDate>Thu, 26 Oct 2023 19:30:24 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;git概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git概念&#34;&gt;#&lt;/a&gt; Git 概念&lt;/h4&gt;
+&lt;p&gt;git 分为工作区、暂存区和版本库&lt;/p&gt;
+&lt;p&gt;工作区：就是你能直接看见的文件&lt;/p&gt;
+&lt;p&gt;暂存区：暂存区位于 .git/index 文件中，暂存区中存储的都是索引&lt;/p&gt;
+&lt;p&gt;版本库：整个 .git 文件夹即为版本库&lt;/p&gt;
+&lt;p&gt;在版本库中还存有 master 分支所代表的目录树&lt;/p&gt;
+&lt;p&gt;一般用 HEAD 来代指当前分支，HEAD 是一个指向 master 分支的指针&lt;/p&gt;
+&lt;h5 id=&#34;推送流程&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#推送流程&#34;&gt;#&lt;/a&gt; 推送流程&lt;/h5&gt;
+&lt;p&gt;git add . # 将当前目录下的所有内容添加到暂存区，此时并不会 commit 到版本库&lt;/p&gt;
+&lt;p&gt;git commit -m “update” # 将暂存区的文件提交到版本库，后面的字符串为提交说明&lt;/p&gt;
+&lt;p&gt;git push git 仓库位置 # 此时会将版本库中的文件提交到远程 git 仓库&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git add  》 git commit  》git push&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;图解：&lt;/p&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;sequenceDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	工作区&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;暂存区&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; add # 添加&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	暂存区&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;版本库&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; commit # 提交&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	版本库&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;远程仓库&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; push # 推送&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	远程仓库&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;版本库&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; clone # 克隆&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	远程仓库&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;工作区&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; pull # 拉取&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	版本库&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;工作区&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; checkout # 分支切换&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;p&gt;add ：添加文件到暂存区&lt;/p&gt;
+&lt;p&gt;commit ：提交文件到版本库 / 本地仓库&lt;/p&gt;
+&lt;p&gt;push：推送文件到远程仓库&lt;/p&gt;
+&lt;p&gt;clone：将一个项目克隆到本地仓库&lt;/p&gt;
+&lt;p&gt;pull：拉取一个仓库到本地&lt;/p&gt;
+&lt;p&gt;checkout：切换分支&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;git-的基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git-的基本操作&#34;&gt;#&lt;/a&gt; Git 的基本操作&lt;/h4&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;命令&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;git init&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;[file]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;初始化仓库&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git status&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;[-s]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看仓库当前的状态，显示有变更的文件，加 -s 参数使其简短输出&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;git diff&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;[--cached]&lt;/code&gt;   &lt;code&gt;[HEAD]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;比较文件的不同，即暂存区和工作区的差异，可以使用 --cachaed 显示已缓存的改动，使用 HEAD 显示所有已缓存和未缓存的改动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git reset&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;[HEAD~1]&lt;/code&gt;   &lt;code&gt;[file]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;回退版本，回退到添加或提交之前，或使用 --soft HEAD~3 参数指定回退到上上上个版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;git rm&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将文件从暂存区和工作区删除&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;git mv&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;[-f] [file] [newfile]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;移动或重命名工作区文件，添加 -f 参数来重命名文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;git switch&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;branch-name&amp;gt;&lt;/code&gt;   &lt;code&gt;[-c] &amp;lt;new-branch-name&amp;gt;&lt;/code&gt;   &lt;code&gt;tags/&amp;lt;tag-name&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;更清晰的切换分支，切换到指定分支。使用 -c 创建分支并切换到新创建的分支。使用 tags/ 切换到标签所指向的提交状态&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;git restore&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;file&amp;gt;&lt;/code&gt;   &lt;code&gt;--staged &amp;lt;file&amp;gt;&lt;/code&gt;   &lt;code&gt;--source=&amp;lt;commit&amp;gt; &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;恢复或撤销文件的更改。指定文件名将其恢复至最新的提交状态，丢弃所有未提交的更改。使用 --staged 将文件还原到添加到暂存区之前。使用 --source 将文件还原到指定的历史版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;git branch&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;[new-branch-name]&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看可用分支和标签。加参数新建分支&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;git-分支管理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git-分支管理&#34;&gt;#&lt;/a&gt; Git 分支管理&lt;/h4&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;graph&lt;/span&gt; LR&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;B&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	B&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;D&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	D&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;E&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	E&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;F&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	B&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;B1&lt;span class=&#34;token text string&#34;&gt;(b1)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	B1&lt;span class=&#34;token text string&#34;&gt;(b1)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;B2&lt;span class=&#34;token text string&#34;&gt;(b2)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	E&lt;span class=&#34;token text string&#34;&gt;(master)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;E1&lt;span class=&#34;token text string&#34;&gt;(e1)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	E1&lt;span class=&#34;token text string&#34;&gt;(e1)&lt;/span&gt;&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;E2&lt;span class=&#34;token text string&#34;&gt;(e2)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	HEAD&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;E2&lt;span class=&#34;token text string&#34;&gt;(head)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	图解&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;合并分支-删除分支&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并分支-删除分支&#34;&gt;#&lt;/a&gt; 合并分支 &amp;amp; 删除分支&lt;/h5&gt;
+&lt;p&gt;如上图所示，创建一个分支之后就是从那个提交历史节点 clone 一个新的节点，在此节点上所做的任何更改都不会影响到主分支。主分支所做的改动同样也不会影响到别的分支节点，但是要注意，可以使用以下命令来将指定的分支合并到主分支&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;git merge &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;在分支被合并之后就可以删除此分支&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;git branch -d &amp;lt;branch-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;合并冲突&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#合并冲突&#34;&gt;#&lt;/a&gt; 合并冲突&lt;/h5&gt;
+&lt;p&gt;当你在主分支更改了一个文件并且将更改提交到了版本库，又在另一个分支上同样更改了这个文件并且也提交到了版本库时，这个时候假设你想要将这个分支合并到主分支上，此时会出现合并冲突问题，这需要我们去手动解决&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;## Decimal-conversion
+进制转换
+- 按照提示输入即可
+
+&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD
+hello world
+=======
+你好世界
+&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt;&amp;gt; master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在上面的文件 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL1JFQURNRS5tZA==&#34;&gt;README.md&lt;/span&gt; 中，我们在主分支中添加了 hello world 内容。在 master 分支中添加了 你好世界 内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;解决冲突只需要将 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL1JFQURNRS5tZA==&#34;&gt;README.md&lt;/span&gt; 中的标记删除然后重新添加和提交即可&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;## Decimal-conversion
+进制转换
+- 按照提示输入即可
+
+hello world
+你好世界
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;修改之后用 git add 添加和 git commit 提交&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;查看-git-的提交历史&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看-git-的提交历史&#34;&gt;#&lt;/a&gt; 查看 Git 的提交历史&lt;/h4&gt;
+&lt;h5 id=&#34;git-log&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git-log&#34;&gt;#&lt;/a&gt; Git log&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;git log&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用此命令会显示从最新到最旧的所有提交信息，包括提交的哈希值、作者、提交日期、提交说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;命令语法：&lt;/p&gt;
+&lt;p&gt;​	 &lt;code&gt;git log [选项] [分支名/提交哈希]&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;选项&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-p&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示提交的具体更改&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--oneline&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;以简洁的一行格式显示提交信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--graph&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;以图形化的方式显示分支和合并历史&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--decorate&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示分支和标签指向的提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--author=&amp;lt;作者&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只显示指定的作者的提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--since=&amp;lt;时间&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只显示特定时间之后的提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--until=&amp;lt;时间&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只显示特定时间之前的提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--grep=&amp;lt;模式&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只显示包含特定模式的提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--no-merges&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不显示合并提交&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--stat&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示简略统计信息，包括修改的文件和行数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--abbrev-commit&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;使用短提交哈希值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--pretty=&amp;lt;格式&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;使用自定义的提交信息的显示格式&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--reverse&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;逆向显示所有日志&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用  &lt;code&gt;git log&lt;/code&gt;  命令会输出以下内容&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git log
+commit 0c98d56e9822f23406758d2339833ffec7af0c1a (HEAD -&amp;gt; main)
+Merge: 434acee e6e3e72
+Author: 清天 &amp;lt;2704984649@qq.com&amp;gt;
+Date:   Thu Oct 26 11:11:19 2023 +0800
+
+	test3
+
+commit e6e3e72d10cf8b1218e0118beac857af06ff57cd (master)
+Author: 清天 &amp;lt;2704984649@qq.com&amp;gt;
+Date:   Thu Oct 26 10:59:53 2023 +0800
+
+	test2
+
+commit 434aceeb3a6fbac0ec94fdbedb15d74455528f2f
+Author: 清天 &amp;lt;2704984649@qq.com&amp;gt;
+Date:   Thu Oct 26 10:58:50 2023 +0800
+
+	 test
+
+commit 33e6c64449e0e094e19d7aea162bfddc23a10832
+Author: 清天 &amp;lt;2704984649@qq.com&amp;gt;
+Date:   Wed Oct 25 10:29:18 2023 +0800
+
+	README.md
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;使用  &lt;code&gt;git log --oneline --graph&lt;/code&gt;  以图形化的方式显示简洁的一行提交信息&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git log --oneline --graph
+*   0c98d56 (HEAD -&amp;gt; main) test3
+|\
+| * e6e3e72 (master) test2
+* | 434acee test
+|/
+* 33e6c64 README.md
+* 4fa856d README.md
+* aaba7d0 (origin/main, origin/HEAD) Create README.md
+* 76836c5 Delete .gitignore
+* 4e6c20b Add files via upload
+* cb5ab48 Initial commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;此时可以清晰的看见何时工作分叉，又何时合并分支&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;可以使用  &lt;code&gt;git log --help&lt;/code&gt;  查看帮助信息&lt;/p&gt;
+&lt;h5 id=&#34;git-blame&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git-blame&#34;&gt;#&lt;/a&gt; Git blame&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;git blame&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用此命令可以查看指定文件的每一行代码是由谁在什么时候引入或修改的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;命令语法：&lt;/p&gt;
+&lt;p&gt;​	 &lt;code&gt;git blame [选项] &amp;lt;文件路径&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;选项&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-L &amp;lt;起始行号&amp;gt;,&amp;lt;结束行号&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只显示指定行号范围内的代码注释&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-C&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对于重命名或拷贝的代码行，也进行代码行溯源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-M&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对于移动的代码行，也进行代码行溯源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-C -C&lt;/code&gt;  or  &lt;code&gt;-M -M&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对于较多改动的代码行，进行更进一步的溯源&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;--show-stats&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示包含每个作者的行数统计信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;更多用法可以使用  &lt;code&gt;git blame --help&lt;/code&gt;  查看帮助文档&lt;/p&gt;
+&lt;h4 id=&#34;git-标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git-标签&#34;&gt;#&lt;/a&gt; Git 标签&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;git tag -a &amp;lt;标签名&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在发布版本的时候，可以使用 tag 来给本次提交打上标签。使用 -a 参数来创建一个带注解的标签，加上这个参数它会记录此标签是何时打的，谁打的，以及让你添加一个标签的注解&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git tag -a &amp;lt;标签名&amp;gt; &amp;lt;提交哈希&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;你可以使用上面的命令给以前的提交追加 tag 标签。我给  &lt;code&gt;e6e3e72&lt;/code&gt;  这个提交追加了  &lt;code&gt;v0.9&lt;/code&gt;  的标签&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git tag -a v0.9 e6e3e72
+*   0c98d56 (HEAD -&amp;gt; main, tag: v1.0) test3
+|\
+| * e6e3e72 (tag: v0.9, master) test2 	# 此处显示了追加的标签
+* | 434acee test
+|/
+* 33e6c64 README.md
+* 4fa856d README.md
+* aaba7d0 (origin/main, origin/HEAD) Create README.md
+* 76836c5 Delete .gitignore
+* 4e6c20b Add files via upload
+* cb5ab48 Initial commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;git log --decorate&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用此命令来查看我们打的标签&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ git log --oneline --decorate --graph
+*   0c98d56 (HEAD -&amp;gt; main, tag: v1.0) test3
+|\
+| * e6e3e72 (tag: v0.9, master) test2
+* | 434acee test
+|/
+* 33e6c64 README.md
+* 4fa856d README.md
+* aaba7d0 (origin/main, origin/HEAD) Create README.md
+* 76836c5 Delete .gitignore
+* 4e6c20b Add files via upload
+* cb5ab48 Initial commit
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;也可以使用  &lt;code&gt;git tag&lt;/code&gt;  来查看所有的标签&lt;/p&gt;
+&lt;p&gt;指定标签信息的命令：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git tag -a &amp;lt;标签名&amp;gt; -m &amp;lt;标签信息&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;PGP 签名标签命令：&lt;br&gt;
+ &lt;code&gt;git tag -s &amp;lt;标签名&amp;gt; -m &amp;lt;标签信息&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;gti tag -d v0.9&lt;/code&gt; &lt;br&gt;
+ 使用上面的命令删除指定的标签&lt;/p&gt;
+&lt;h4 id=&#34;git-远程仓库操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git-远程仓库操作&#34;&gt;#&lt;/a&gt; Git 远程仓库操作&lt;/h4&gt;
+&lt;h5 id=&#34;添加远程仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#添加远程仓库&#34;&gt;#&lt;/a&gt; 添加远程仓库&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git remote add &amp;lt;仓库别名&amp;gt; &amp;lt;仓库的 ssh url 地址&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用以上命令可以添加一个远程仓库并设置别名，别名在推送时会用的上&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;推送&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#推送&#34;&gt;#&lt;/a&gt; 推送&lt;/h5&gt;
+&lt;p&gt;推送代码到仓库里有两种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;然后使用  &lt;code&gt;git push -u &amp;lt;仓库别名&amp;gt; master&lt;/code&gt;  来将本地的 master 分支推送到 origin 的 master 分支上&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;也可以使用  &lt;code&gt;git push &amp;lt;仓库地址&amp;gt;&lt;/code&gt;  来推送你的当前分支&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;这两种方法的区别是第一种方法来推送是将本地的 master 分支推送到 origin 主机的 master 分支，并且指定 你所设置的仓库别名所代表的主机为默认主机，这样在以后推送时就可以不加任何参数的使用  &lt;code&gt;git push&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二种方法只是单纯的将本地的当前分支上传到指定的远程仓库地址，并不会指定默认主机，也不会创建或更改远程分支，只是简单的上传代码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;查看当前配置有哪些仓库，可以加上 -v 参数来显示所有的仓库别名的实际连接地址&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git remote [-v]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;提取远程仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#提取远程仓库&#34;&gt;#&lt;/a&gt; 提取远程仓库&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;先使用  &lt;code&gt;git fetch [仓库名] [分支名]&lt;/code&gt;  将远程仓库的分支下载到本地主机，因为时拉取，所以需要指定远程仓库名和分支名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ git fetch origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 996 bytes | 90.00 KiB/s, done.
+From gitee.com:Zero_Li_Fun/Decimal-conversion
+ * branch            main       -&amp;gt; FETCH_HEAD
+   dfb4d6e..9d5cf43  main       -&amp;gt; origin/main
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;然后使用  &lt;code&gt;git merge [origin/master]&lt;/code&gt;  来合并远程分支到本地的当前分支，合并分支要指定被合并的分支名&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre&gt;&lt;code&gt;$ git merge origin/main
+Updating dfb4d6e..9d5cf43
+Fast-forward
+ README.md | 1 +
+ 1 file changed, 1 insertion(+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h5 id=&#34;删除远程仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#删除远程仓库&#34;&gt;#&lt;/a&gt; 删除远程仓库&lt;/h5&gt;
+&lt;p&gt;&lt;code&gt;git remote rm &amp;lt;仓库别名&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</guid>
+            <title>Git同时部署多个仓库</title>
+            <link>http://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</link>
+            <category>Git</category>
+            <pubDate>Thu, 26 Oct 2023 11:20:32 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;私有仓库的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#私有仓库的配置&#34;&gt;#&lt;/a&gt; 私有仓库的配置&lt;/h4&gt;
+&lt;p&gt;刚需：先在服务器端创建 git 用户，并且配置用户密码&lt;/p&gt;
+&lt;p&gt;可以使用下面的命令创建和修改&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;useradd git&lt;/p&gt;
+&lt;p&gt;passwd git&lt;/p&gt;
+&lt;p&gt;#注：密码要输入两次确认&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;服务器端配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#服务器端配置&#34;&gt;#&lt;/a&gt; 服务器端配置：&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;su git 	# 切换到 git 用户&lt;/p&gt;
+&lt;p&gt;cd 	# 进入用户家目录&lt;/p&gt;
+&lt;p&gt;mkdir .ssh ; cd .ssh  	# 创建 .ssh 配置目录并进入&lt;/p&gt;
+&lt;p&gt;touch authorized_keys 	# 创建 authorized_keys 来存放公钥&lt;/p&gt;
+&lt;p&gt;chmod 700 /home/git/.ssh/ ; chmod 600 /home/git/.ssh/authorized_keys 	# 修改 .ssh 及 authorized_keys 的权限&lt;/p&gt;
+&lt;p&gt;vim /etc/ssh/sshd_config&lt;/p&gt;
+&lt;p&gt;#在此文件中查找以下字段是否存在或取消注释&lt;/p&gt;
+&lt;p&gt;#1. RSAAuthentication yes&lt;/p&gt;
+&lt;p&gt;#2. PubkeyAuthentication yes&lt;/p&gt;
+&lt;p&gt;#3. AuthorizedkeysFile .ssh/authorized_keys&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;客户端生成公钥&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#客户端生成公钥&#34;&gt;#&lt;/a&gt; 客户端生成公钥：&lt;/h5&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh-keygen -t rsa -f “id_rsa_git” 	# 使用 -f 来区分生成的公钥文件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;配置-github-和-gitee-仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-github-和-gitee-仓库&#34;&gt;#&lt;/a&gt; 配置 Github 和 Gitee 仓库&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh-keygen -t rsa -C “&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOjI3MDQ5ODQ2NDlAcXEuY29t&#34;&gt;2704984649@qq.com&lt;/span&gt;” -f “id_rsa_gitee”&lt;/p&gt;
+&lt;p&gt;ssh-keygen -t rsa -C “&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOjI3MDQ5ODQ2NDlAcXEuY29t&#34;&gt;2704984649@qq.com&lt;/span&gt;” -f “id_rsa_github”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;注：生成公钥请在 C:\Users\ 用户名 \ .ssh\ 这个目录下的终端里进行，文件名为 .pub 后缀的文件为公钥文件&lt;/p&gt;
+&lt;p&gt;然后将不同仓库的公钥里的值分别添加到不同的仓库里即可&lt;/p&gt;
+&lt;p&gt;私有仓库则将值添加到 git 用户的 .ssh/authorized_keys 里&lt;/p&gt;
+&lt;p&gt;注：可以使用 echo “值” &amp;gt;&amp;gt; authorized_keys 将值追加到文件里，这样可以防止覆盖以前配置的 ssh 公钥，防止其他用户无法使用免密登录&lt;/p&gt;
+&lt;p&gt;然后配置本地主机的 C:\Users\ 用户名 \ .ssh\ 这个目录下的 config.config 文件来解决 ssh 冲突问题 ，没有就创建一个，然后填入以下内容&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;#git 用户&lt;/p&gt;
+&lt;p&gt;Host githost 	# 别名&lt;br&gt;
+ HostName 8.222.153.91 	# 主机地址&lt;br&gt;
+ Post 5213 	# 端口&lt;br&gt;
+ User git 	# 用户名&lt;br&gt;
+ IdentityFile ~/.ssh/id_rsa.pub 	# 公钥位置，一般位于 C:\\Users\qingtian\.ssh\ 下&lt;/p&gt;
+&lt;p&gt;#root 用户&lt;/p&gt;
+&lt;p&gt;Host roothost&lt;br&gt;
+HostName 8.222.153.91&lt;br&gt;
+Post 5213&lt;br&gt;
+User root&lt;br&gt;
+IdentityFile ~/.ssh/id_rsa.pub&lt;/p&gt;
+&lt;p&gt;#git 登录 github&lt;/p&gt;
+&lt;p&gt;Host &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGh1Yi5jb20=&#34;&gt;github.com&lt;/span&gt;&lt;br&gt;
+HostName &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGh1Yi5jb20=&#34;&gt;github.com&lt;/span&gt;&lt;br&gt;
+User git&lt;br&gt;
+IdentityFile ~/.ssh/id_rsa_github.pub&lt;/p&gt;
+&lt;p&gt;#git 登录 gitee&lt;/p&gt;
+&lt;p&gt;Host &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGVlLmNvbQ==&#34;&gt;gitee.com&lt;/span&gt;&lt;br&gt;
+HostName &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2dpdGVlLmNvbQ==&#34;&gt;gitee.com&lt;/span&gt;&lt;br&gt;
+User git&lt;br&gt;
+IdentityFile ~/.ssh/id_rsa_gitee.pub&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;也可以在使用 ssh 的时候在后面使用 -p 参数指定端口&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEA4LjIyMi4xNTMuOTE=&#34;&gt;git@8.222.153.91&lt;/span&gt; -p 5213&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;然后可以使用下面的命令测试登录：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh -T &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRlZS5jb20=&#34;&gt;git@gitee.com&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;ssh -T &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRodWIuY29t&#34;&gt;git@github.com&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;查看-git-的-push-模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#查看-git-的-push-模式&#34;&gt;#&lt;/a&gt; 查看 git 的 push 模式&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;git remote -v&lt;/p&gt;
+&lt;p&gt;git remote set-url origin 你的仓库地址 	# 修改不同的模式用不同的仓库地址&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;坑&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#坑&#34;&gt;#&lt;/a&gt; 坑&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;如果使用 ssh -T &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRlZS5jb20=&#34;&gt;git@gitee.com&lt;/span&gt; 或者 ssh -T &lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRodWIuY29t&#34;&gt;git@github.com&lt;/span&gt; 来测试登录显示如下报错：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;bWFpbHRvOmdpdEBnaXRlZS5jb20=&#34;&gt;git@gitee.com&lt;/span&gt;: Permission denied (publickey).&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h5 id=&#34;解决&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决&#34;&gt;#&lt;/a&gt; 解决&lt;/h5&gt;
+&lt;p&gt;如果检查公钥配置没有问题，使用下面的命令将本机的 git 仓库与相对应的 SSH Key 关联上即可&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ssh-agent bash 	# 打开身份代理验证连接&lt;/p&gt;
+&lt;p&gt;ssh-add ~/.ssh/id_rsa_gitee 	# 你的 gitee 私钥文件位置&lt;/p&gt;
+&lt;p&gt;ssh-add ~/.ssh/id_rsa_github 	# 你的 github 私钥文件位置&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在关闭 git bash 窗口后要重新添加关联，暂无解决办法&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</guid>
+            <title>使用cAdvisor+Prometheus+Grafana监控Docker容器</title>
+            <link>http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</link>
+            <category>Docker</category>
+            <category>cAdvisor</category>
+            <category>Prometheus</category>
+            <category>Grafana</category>
+            <pubDate>Tue, 26 Sep 2023 23:22:58 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;10-下载镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-下载镜像&#34;&gt;#&lt;/a&gt; 1.0 下载镜像&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先使用下面的命令下载必要的镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull google/cadvisor &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull prom/prometheus &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull grafana/grafana&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHGeun.png&#34; alt=&#34;pPHGeun.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;20-cadvisor-的部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#20-cadvisor-的部署&#34;&gt;#&lt;/a&gt; 2.0 cAdvisor 的部署&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用下面的命令将本地的 根目录、/sys、/var/lib/docker、/dev/disk 等目录以只读形式挂载到容器里，然后使用 -p 将本地端口映射到容器，使用 --privileged 给予容器特权模式，使用 --device=/dev/kmsg 将主机的 /dev/kmsg 设备文件添加到容器中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /:/rootfs:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /var/run:/var/run:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /sys:/sys:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /var/lib/docker/:/var/lib/docker:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /dev/disk/:/dev/disk:ro &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25571&lt;/span&gt;:8080 &lt;span class=&#34;token parameter variable&#34;&gt;--detach&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;true &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;cadvisor &lt;span class=&#34;token parameter variable&#34;&gt;--privileged&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--device&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/dev/kmsg google/cadvisor&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHwpYq.png&#34; alt=&#34;pPHwpYq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在浏览器输入  &lt;code&gt;你的ip:25571/containers/docker&lt;/code&gt;  即可访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHwilT.png&#34; alt=&#34;pPHwilT.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;30-prometheus-的部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#30-prometheus-的部署&#34;&gt;#&lt;/a&gt; 3.0 Prometheus 的部署&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先创建配置文件存放的目录，然后使用 vim 创建并编辑  &lt;code&gt;prometheus.yml&lt;/code&gt;  配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; /etc/prometheus &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/prometheus/prometheus.yml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;然后在 prometheus.yml 文件中写入以下内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将 ip 地址跟端口号改为自己的就行&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;global:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   scrape_interval: 15s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   evaluation_interval: 15s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; alerting:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  alertmanagers:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  - static_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - targets:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; rule_files:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; scrape_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   - job_name: &lt;span class=&#34;token string&#34;&gt;&#39;prometheus&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     static_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     - targets: &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;192.168.234.128:25572&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   - job_name: &lt;span class=&#34;token string&#34;&gt;&#39;cadvisor&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     static_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     - targets: &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;192.168.234.128:25571&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：缩进一定要跟我的一样，错一个字符都不行，因为我容器已经运行起来了才截的图，所以你们现在应该是没有这个容器的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHw9f0.png&#34; alt=&#34;pPHw9f0.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用 run 将容器运行起来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议先使用 docker ps -a 查看容器有没有真正运行起来，有时候会出现成功创建但是没有运行起来的情况，这种情况一般都是配置文件有问题导致的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;prometheus &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25572&lt;/span&gt;:9090 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus &lt;span class=&#34;token parameter variable&#34;&gt;--config.file&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/etc/prometheus/prometheus.yml --web.enable-lifecycle&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;在浏览器输入你的 ip:25572/targets 来访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHwPpV.png&#34; alt=&#34;pPHwPpV.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;40-grafana-的部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#40-grafana-的部署&#34;&gt;#&lt;/a&gt; 4.0 Grafana 的部署&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;因为之前已经把所有的镜像都已经下载了，所以直接用 run 来运行就行了，之后在浏览器中使用 你的 IP:25573/login 来访问即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;grafana &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25573&lt;/span&gt;:3000 grafana/grafana&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyPpR.png&#34; alt=&#34;pPHyPpR.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;默认账号及密码都为 admin ，登录之后网站会强制你更新密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyZ7D.png&#34; alt=&#34;pPHyZ7D.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;进入管理界面之后点击 DATA SOURCES 来创建数据源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyV0O.png&#34; alt=&#34;pPHyV0O.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;选择第一个数据源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyuhd.png&#34; alt=&#34;pPHyuhd.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;在 HTTP 的 URL 栏填入你的 Prometheus 访问地址，然后选 Save &amp;amp; test 保存并退出&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如：&lt;/p&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token header&#34;&gt;&lt;span class=&#34;token header-name keyword&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token header-value&#34;&gt;//192.168.234.128:25572/targets&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHy8nf.png&#34; alt=&#34;pPHy8nf.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;点击左边工具栏的 ‘+’ 号，然后点击 Import ，输入 193 ，点击后面的 Import&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHytAg.png&#34; alt=&#34;pPHytAg.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;在 Prometheus 列选择数据源，之后点击 Import&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHy0cq.png&#34; alt=&#34;pPHy0cq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;之后就可以看到仪表盘显示的数据了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHycEF.png&#34; alt=&#34;pPHycEF.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</guid>
+            <title>Linux2023-9-18作业</title>
+            <link>http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</link>
+            <category>原创</category>
+            <category>Linux</category>
+            <pubDate>Mon, 18 Sep 2023 14:40:30 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;题目要求：&lt;/p&gt;
+&lt;p&gt;1、破解 centos7 操作系统密码为 flectrag&lt;/p&gt;
+&lt;p&gt;2、查找系统中文件，要求将文件大小大于 5M 小于 10M 的文件查找出来放置 /findfile 目录下&lt;/p&gt;
+&lt;p&gt;3、查找文件 /usr/share/xml/iso-codes/iso_639_3.xml 中包含字符串 ng 的所有行。&lt;br&gt;
+将所有这些行的副本按原始顺序放在文件 /root/list 中。/root/list 不得包含空行，&lt;br&gt;
+且所有行必须是 /usr/share/xml/iso-codes/iso_639_3.xml 中原始行的确切副本&lt;/p&gt;
+&lt;p&gt;4、新建用户 student，设置密码为 flectrag&lt;/p&gt;
+&lt;p&gt;5、修改 student 用户策略，允许 student 组成员 sudo 时不需要密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;10-破解-centos7-操作系统的-root-用户密码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-破解-centos7-操作系统的-root-用户密码&#34;&gt;#&lt;/a&gt; 1.0 破解 centos7 操作系统的 root 用户密码&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先重启虚拟机，在如下图的界面按 e 键进入 edit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4i8FH.jpg&#34; alt=&#34;pP4i8FH.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4iJfA.jpg&#34; alt=&#34;pP4iJfA.jpg&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;找到 linux16 字段，把里面的  &lt;code&gt;ro rhgb quiet&lt;/code&gt;  改为  &lt;code&gt;rw init=/bin/sh&lt;/code&gt; ，之后按 ctrl+x 进入单用户模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4iNlt.jpg&#34; alt=&#34;pP4iNlt.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4itSI.jpg&#34; alt=&#34;pP4itSI.jpg&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在该模式下输入  &lt;code&gt;passwd root&lt;/code&gt;  来更改 root 密码，之后输入 touch /.autorelabel 创建文件，然后输入 exec /sbin/init 正常启动 init 进程即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4iGYd.jpg&#34; alt=&#34;pP4iGYd.jpg&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;20-查找文件1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#20-查找文件1&#34;&gt;#&lt;/a&gt; 2.0 查找文件 1&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;首先要在根目录创建一个  &lt;code&gt;findfile&lt;/code&gt;  文件夹，然后使用下面的命令来查找并复制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; /findfile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;find&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-type&lt;/span&gt; f &lt;span class=&#34;token parameter variable&#34;&gt;-size&lt;/span&gt; +5M &lt;span class=&#34;token parameter variable&#34;&gt;-size&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-10M&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-exec&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; /findfile &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4kyMq.png&#34; alt=&#34;pP4kyMq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;可以使用  &lt;code&gt;ll&lt;/code&gt;  命令验证大小&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4ApQI.png&#34; alt=&#34;pP4ApQI.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;30-查找文件2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#30-查找文件2&#34;&gt;#&lt;/a&gt; 3.0 查找文件 2&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先在用户的家目录下用  &lt;code&gt;touch&lt;/code&gt;  命令创建  &lt;code&gt;list&lt;/code&gt;  文件，然后使用下面的命令完成要求，最后使用  &lt;code&gt;cat list&lt;/code&gt;  来验证&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;touch&lt;/span&gt; list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ng&#34;&lt;/span&gt; /usr/share/xml/iso-codes/iso_639_3.xml &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tr&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;\r&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; /root/list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4AGY4.png&#34; alt=&#34;pP4AGY4.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;40-创建用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#40-创建用户&#34;&gt;#&lt;/a&gt; 4.0 创建用户&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用下面的命令创建 student 用户并指定其密码，使用普通用户 sir 登录测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;openssl &lt;span class=&#34;token function&#34;&gt;passwd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-1&lt;/span&gt; flectrag&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt; student&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4e3uR.png&#34; alt=&#34;pP4e3uR.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;50-修改用户策略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#50-修改用户策略&#34;&gt;#&lt;/a&gt; 5.0 修改用户策略&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先使用下面的命令将 student 用户添加到 /etc/sudoers 文件中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;%student ALL=(ALL) NOPASSWD: ALL&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; /etc/sudoers&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后切换到 student 用户，之后使用 sudo passwd root 来试着更改 root 用户的密码，可以看到，可以直接更改，不需要输入密码，然后切到 sir 普通用户，同样试着更改 root 用户的密码，可以看到，无法更改&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4e8D1.png&#34; alt=&#34;pP4e8D1.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</guid>
+            <title>Linux2023.9.15作业</title>
+            <link>http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</link>
+            <category>原创</category>
+            <category>Linux</category>
+            <pubDate>Fri, 15 Sep 2023 14:18:57 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;题目要求：&lt;/p&gt;
+&lt;p&gt;1、创建用户和用户组&lt;/p&gt;
+&lt;p&gt;请按照以下要求创建用户、用户组：&lt;/p&gt;
+&lt;p&gt;新建一个名为 adminuser 的组，组 id 为 40000&lt;/p&gt;
+&lt;p&gt;新建一个名为 natasha 的用户，并将 adminuser 作为其附属组&lt;/p&gt;
+&lt;p&gt;新建一个名为 harry 的用户，并将 adminuser 作为其附属组&lt;/p&gt;
+&lt;p&gt;新建一个名为 sarah 的用户，其不属于 adminuser 组，并将其 shell 设置为不可登陆 shell&lt;/p&gt;
+&lt;p&gt;natasha、harry 和 sarah 三个用户的密码均设置为 glegunge&lt;/p&gt;
+&lt;p&gt;2、复制文件 /etc/fstab 到 /var/tmp 目录下，并按照以下要求配置 /var/tmp/fstab 文件的权限:&lt;/p&gt;
+&lt;p&gt;该文件的所属人为 root&lt;/p&gt;
+&lt;p&gt;该文件的所属组为 root&lt;/p&gt;
+&lt;p&gt;该文件对任何人均没有执行权限&lt;/p&gt;
+&lt;p&gt;用户 natasha 对该文件有读和写的权限&lt;/p&gt;
+&lt;p&gt;用户 harry 对该文件既不能读也不能写&lt;/p&gt;
+&lt;p&gt;所有其他用户（包括当前已有用户及未来创建的用户）对该文件都有读的权限&lt;/p&gt;
+&lt;p&gt;3、打包文件&lt;/p&gt;
+&lt;p&gt;请对 /etc/sysconfig 目录进行打包并用 bzip2 压缩，生成的文件保存为 /root/sysconfig.tar.bz2&lt;/p&gt;
+&lt;p&gt;4、创建一个大小为 500M 的分区，永久挂载到 /test 目录下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;创建用户和用户组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建用户和用户组&#34;&gt;#&lt;/a&gt; 创建用户和用户组&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;新建一个名为 adminuser 的组，组 id 为 40000&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;groupadd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;40000&lt;/span&gt; adminuser&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;新建一个名为 natasha 的用户，并将 adminuser 作为其附属组&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-G&lt;/span&gt; adminuser natasha&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;新建一个名为 harry 的用户，并将 adminuser 作为其附属组&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-G&lt;/span&gt; adminuser harry&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;新建一个名为 sarah 的用户，其不属于 adminuser 组，并将其 shell 设置为不可登陆 shell&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; /usr/sbin/nologin sarah&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWsWAf.png&#34; alt=&#34;pPWsWAf.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;natasha、harry 和 sarah 三个用户的密码均设置为 glegunge&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;passwd&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;用户名&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWsfN8.png&#34; alt=&#34;pPWsfN8.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;测试：&lt;/p&gt;
+&lt;p&gt;查看组 id 及附属组&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWs2HP.png&#34; alt=&#34;pPWs2HP.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;测试 sarah 的 shell 登录&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWsqH0.png&#34; alt=&#34;pPWsqH0.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;复制文件etcfstab到vartmp目录下并按照以下要求配置vartmpfstab文件的权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#复制文件etcfstab到vartmp目录下并按照以下要求配置vartmpfstab文件的权限&#34;&gt;#&lt;/a&gt; 复制文件 /etc/fstab 到 /var/tmp 目录下，并按照以下要求配置 /var/tmp/fstab 文件的权限:&lt;/h5&gt;
+&lt;p&gt;先复制&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; /etc/fstab /var/tmp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol&gt;
+&lt;li&gt;该文件的所属人为 root，该文件的所属组为 root&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW6pi8.png&#34; alt=&#34;pPW6pi8.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;该文件对任何人均没有执行权限，用户 natasha 对该文件有读和写的权限，用户 harry 对该文件既不能读也不能写&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW69JS.png&#34; alt=&#34;pPW69JS.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;所有其他用户（包括当前已有用户及未来创建的用户）对该文件都有读的权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWyxdP.png&#34; alt=&#34;pPWyxdP.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;打包文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包文件&#34;&gt;#&lt;/a&gt; 打包文件&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;请对 /etc/sysconfig 目录进行打包并用 bzip2 压缩，生成的文件保存为 /root/sysconfig.tar.bz2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWyzIf.png&#34; alt=&#34;pPWyzIf.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;创建分区&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建分区&#34;&gt;#&lt;/a&gt; 创建分区&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个大小为 500M 的分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW26T1.png&#34; alt=&#34;pPW26T1.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用 mkfs 将 sda4 格式化为 ext4 文件系统&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW2wSU.png&#34; alt=&#34;pPW2wSU.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将分区挂载到 /test 目录，如果没有请自行创建&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW2aWT.png&#34; alt=&#34;pPW2aWT.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;使用开机自启实现永久挂载目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW2UYV.png&#34; alt=&#34;pPW2UYV.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
+            <title>Docker之nginx的负载均衡</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Tue, 12 Sep 2023 18:49:35 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;使用docker部署nginx的负载均衡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用docker部署nginx的负载均衡&#34;&gt;#&lt;/a&gt; 使用 docker 部署 nginx 的负载均衡&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;下载 nginx 和 tomcat 镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull nginx &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull tomcat&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2Vg10.png&#34; alt=&#34;pP2Vg10.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;新建 tomcat 网页&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; /root/www1/ROOT &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; /root/www2/ROOT&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2VhBF.png&#34; alt=&#34;pP2VhBF.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;进入刚创建的 www1/ROOT 目录里&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /root/www1/ROOT&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;使用 vim 创建 index.jsp 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; index.jsp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输入以下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+           &amp;lt;title&amp;gt;Tomcat1&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;	
+           &amp;lt;%
+                  out.println(&amp;quot;this is Tomcat1&amp;quot;);
+           %&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2VoN9.png&#34; alt=&#34;pP2VoN9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在 /root/www2/ROOT/ 下同样创建 index.jsp 文件，输入内容同上，将 Tomcat1 改为 Tomcat2 即可&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;运行 tomcat1 和 tomcat2 ，并且将 docker 的 /root/www1 和 /root/www2 与容器的 /usr/local/webapps 目录映射&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; tomcat1 &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;32769&lt;/span&gt;:8080 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/www1:/usr/local/tomcat/webapps tomcat:latest &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; tomcat2 &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;32770&lt;/span&gt;:8080 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/www2:/usr/local/tomcat/webapps tomcat:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：上面是一条命令&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2Z3uT.png&#34; alt=&#34;pP2Z3uT.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;在浏览器分别输入以下语句：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你的 ip:32769&lt;/p&gt;
+&lt;p&gt;你的 ip:32770&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MTozMjc2OQ==&#34;&gt;tomcat1&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MTozMjc3MA==&#34;&gt;tomcat2&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;运行 nginx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; nginx &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25567&lt;/span&gt;:80 nginx:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;在 /root 目录下使用 vim 创建 nginx.conf 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /root &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; nginx.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;填入以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;user  nginx&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;worker_processes  &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;error_log  /var/log/nginx/error.log warn&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pid        /var/run/nginx.pid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;events &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    worker_connections  &lt;span class=&#34;token number&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;http &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    include       /etc/nginx/mime.types&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    default_type  application/octet-stream&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    log_format  main  &lt;span class=&#34;token string&#34;&gt;&#39;$remote_addr - $remote_user [$time_local] &#34;$request&#34; &#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                      &lt;span class=&#34;token string&#34;&gt;&#39;$status $body_bytes_sent &#34;$http_referer&#34; &#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                      &lt;span class=&#34;token string&#34;&gt;&#39;&#34;$http_user_agent&#34; &#34;$http_x_forwarded_for&#34;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    access_log  /var/log/nginx/access.log  main&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    sendfile        on&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;#tcp_nopush     on;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    keepalive_timeout  &lt;span class=&#34;token number&#34;&gt;65&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;#gzip  on;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    include /etc/nginx/conf.d/*.conf&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    upstream tomcat &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        server &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.100:32772&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        server &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.100:32773&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    server &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        listen &lt;span class=&#34;token number&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        server_name &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.100&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        location / &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                proxy_pass http://tomcat&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中 server 后面的 ip 改为你的 ip 加端口号，server_name 同理&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2eKde.png&#34; alt=&#34;pP2eKde.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;将 nginx.conf 文件 cp 到你的容器里&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; nginx.conf e11dd26a3930:/etc/nginx/nginx.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 记住，容器 id 改为自己的 nginx 容器的 id&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2MeET.png&#34; alt=&#34;pP2MeET.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;重启 nginx 容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; restart 你的nginx容器id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;浏览器访问你服务器的 ip，因为我的 80 端口被占用，所以使用 25567 代替&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2MmUU.png&#34; alt=&#34;pP2MmUU.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;刷新会在 tomcat1 和 tomcat2 切换&lt;/p&gt;
+&lt;p&gt;示例：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MToyNTU2Nw==&#34;&gt;tomcat1 or tomcat2&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</guid>
+            <title>harbor本地仓库搭建</title>
+            <link>http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <category>harbor</category>
+            <pubDate>Tue, 12 Sep 2023 11:34:02 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;创建-harbor-仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建-harbor-仓库&#34;&gt;#&lt;/a&gt; 创建 Harbor 仓库&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;访问官方网站下载官方镜像源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方网站： &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nb2hhcmJvci5pby8=&#34;&gt;Harbor (goharbor.io)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用 scp 将下载的官方镜像上传到服务器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;scp &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;P 2000 &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;\harbor-offline-installer-v2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;7&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tgz root@你服务器的ip:&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;root/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：使用 -P 参数可以指定 scp 的端口号&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPg4W1U.png&#34; alt=&#34;pPg4W1U.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用下面的命令解压文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-zxvf&lt;/span&gt; harbor-offline-installer-v2.7.3.tgz&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;使用 vim 更改 harbor.yml.tmep 的内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; harbor.yml.tmep&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;将 hostname 修改为自己的 ip 地址，然后将 https 全部注释掉，同时也可以更改密码&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgHXgP.png&#34; alt=&#34;pPgHXgP.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;使用 yum 下载 epel-release 及 docker-compose&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; epel-release &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; yum &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker-compose&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：由于不可抗力的原因（我服务器带不动 [倒] ），下面的所有演示都是在我室友的虚拟机上完成的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgORaD.png&#34; alt=&#34;pPgORaD.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgO2VO.png&#34; alt=&#34;pPgO2VO.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;安装 harbor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; ./harbor.yml.tmep ./harbor.yml &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; ./install.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：安装之前请先将 harbor.yml.tmep 文件改为 harbor.yml ，要不然会找不到文件&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgXj0K.png&#34; alt=&#34;pPgXj0K.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;在浏览器中访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在浏览器中输入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你的 IP/harbor&lt;/p&gt;
+&lt;p&gt;由于我用的是室友的电脑中的虚拟机来做的，在我电脑上是直接访问不到虚拟机里的，所以做了个 net 端口转发使我电脑能够访问，你们在自己的浏览器中就不需要输入端口号了，默认 80&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgjrB6.png&#34; alt=&#34;pPgjrB6.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;输入账号密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;账号默认为 admin，密码默认为 Harbor12345，如果你更改了默认密码那就填你改的密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgjXgs.png&#34; alt=&#34;pPgjXgs.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;点击新建项目来新建一个仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgvLdK.png&#34; alt=&#34;pPgvLdK.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;修改 Docker 配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为我使用的使 http 协议，而 docker 默认为 https，所以需要将本地私有仓库添加到信任仓库中&lt;/p&gt;
+&lt;p&gt;使用下面的命令修改配置文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/docker/daemon.json&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注意：你在配置 daemon 文件的时候，除了最后一个键值对后面不用英文逗号，其他都要&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRpcxe.png&#34; alt=&#34;pPRpcxe.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;刷新刚刚编辑的 daemon.json 文件并重启 docker&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl daemon.json &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; systemctl restart &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;给要推送的镜像添加 tag 标签&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; tag centos:centos7 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.10/zero/centos:centos7&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 注：ip 后面的为你在仓库命名空间创建的仓库名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRAdS0.png&#34; alt=&#34;pPRAdS0.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;在终端登录至搭建的 harbor 私有仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; login http://192.168.100.10 &lt;span class=&#34;token parameter variable&#34;&gt;-u&lt;/span&gt; admin &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;123456&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRAUWq.png&#34; alt=&#34;pPRAUWq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;使用 push 命令上传镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; push &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.10/zero/centos:centos7&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRANYn.png&#34; alt=&#34;pPRANYn.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;从浏览器进入 harbor 仓库管理界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRAwlV.png&#34; alt=&#34;pPRAwlV.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，已经上传到 zero 仓库了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</guid>
+            <title>Docker构建镜像及使用的笔记</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Mon, 11 Sep 2023 21:52:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
+&lt;p&gt;本文并不记录详细过程，只是为了记录一下大概构建及使用的经过（还有踩坑记录，重点！！！）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;开始&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开始&#34;&gt;#&lt;/a&gt; 开始&lt;/h4&gt;
+&lt;p&gt;由于一些特殊原因，我需要一个包含 nodejs 的基础镜像来构建一个新的镜像，但是由于各种原因，没能下成，并且我也不知道哪些镜像中含有 nodejs，所以没办法，只能自己构建一个含有 nodejs 的镜像，为了使镜像最小化，我选择了 alpine 发行的 Linux 镜像&lt;/p&gt;
+&lt;p&gt;直接 docker pull alpine ，没毛病，下好之后准备 run 的，结果发现根本没有 bash 这个命令，查过资料才发现，它还是用的 sh 。。。。&lt;/p&gt;
+&lt;p&gt;好了，重新 run ， &lt;code&gt;docker run -it alpine /bin/sh&lt;/code&gt;  .&lt;/p&gt;
+&lt;p&gt;这下没毛病了，进了终端，然后竟然发现无从下手！！！（毕竟 alpine 跟 centos 不一样），一开始用的 yum ，结果直接 not found ，，查了资料发现，这玩意儿连 yum 都没有。。只能用 apk ，不愧是最小的 Linux .&lt;/p&gt;
+&lt;p&gt;在用 apk 将 nodejs 下好后，直接构建，然后尼玛又少了 npm ，淦！&lt;/p&gt;
+&lt;p&gt;同样的方法，用 apk 下好之后，构建！！！不出意外的话又出意外了，构建的时候有一步比较吃 cpu 资源 ，我用服务器构建了两次，&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</guid>
+            <title>Win至Linux的免密登录</title>
+            <link>http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</link>
+            <category>原创</category>
+            <category>电脑技术</category>
+            <category>SSH</category>
+            <pubDate>Sat, 09 Sep 2023 23:30:41 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;配置-windows-端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-windows-端&#34;&gt;#&lt;/a&gt; 配置 Windows 端&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先在 Windows 下生成公钥文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用 win+R 打开运行对话框，输入 cmd 打开命令提示符（或者随便打开一个文件夹 --&amp;gt; 右键 --&amp;gt; 在终端中打开）&lt;/p&gt;
+&lt;p&gt;输入以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh-keygen &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;t rsa&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;之后无脑回车确定&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/09/pPcuprT.png&#34; alt=&#34;powershell1&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;找到你默认存放公钥的位置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/09/pPcuPZF.png&#34; alt=&#34;powershell2&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将你生成的公钥文件传到 Linux 服务器上&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;scp 你公钥存放的位置&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh/id_rsa&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;pub  你要登录的用户名@你服务器的ip:~&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ssh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;上传完毕之后 Windows 端的配置就完成了&lt;/p&gt;
+&lt;h4 id=&#34;配置-linux-端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-linux-端&#34;&gt;#&lt;/a&gt; 配置 Linux 端&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先登录到 Linux 服务器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh root@你服务器的ip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;在输入密码后就能登录上去&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在当前用户家目录下找到  &lt;code&gt;.ssh&lt;/code&gt;  文件夹&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用以下命令查看：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-a&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后使用以下命令将  &lt;code&gt;id_rsa.pub&lt;/code&gt;  文件的内容追加到  &lt;code&gt;authorized_keys&lt;/code&gt;  中&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; id_rsa.pub &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; authorized_keys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;然后用  &lt;code&gt;chmod&lt;/code&gt;  修改文件的权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;600&lt;/span&gt; .ssh/authorized_keys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;700&lt;/span&gt; .ssh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;修改ssh的配置文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#修改ssh的配置文件&#34;&gt;#&lt;/a&gt; 修改 SSH 的配置文件&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;使用以下命令进入  &lt;code&gt;ssh&lt;/code&gt;  的配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/ssh/sshd_config&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;找到下面的三句不被注释掉，没有直接添加&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;温馨提示：可以使用  &lt;code&gt;斜杠“/”&lt;/code&gt;  来快速查找&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RSAAuthentication &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;PubkeyAuthentication &lt;span class=&#34;token function&#34;&gt;yes&lt;/span&gt; &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;AuthorizedKeysFile .ssh/authorized_keys&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后  &lt;code&gt;:wq&lt;/code&gt;  保存并退出&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用以下命令重启 SSH 服务&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;service&lt;/span&gt; sshd restart&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;测试免密登录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#测试免密登录&#34;&gt;#&lt;/a&gt; 测试免密登录&lt;/h4&gt;
+&lt;p&gt;在 Windows 的 power shell 上输入以下命令：&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh root@你服务器的ip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/09/pPcQcQI.png&#34; alt=&#34;powershell3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，直接连上了服务器，到这你的免密登录就成功了&lt;/p&gt;
+&lt;h4 id=&#34;使用指定端口登录&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用指定端口登录&#34;&gt;#&lt;/a&gt; 使用指定端口登录&lt;/h4&gt;
+&lt;p&gt;一般来说，为了服务器的安全起见，我们都会更改 SSH 的默认登录端口&lt;/p&gt;
+&lt;p&gt;可以在服务器 ip 后加 -p 参数来指定要使用的端口&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</guid>
+            <title>可道云桌面搭建笔记</title>
+            <link>http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</link>
+            <category>原创</category>
+            <category>可道云</category>
+            <pubDate>Fri, 08 Sep 2023 17:10:26 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;可道云桌面搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可道云桌面搭建&#34;&gt;#&lt;/a&gt; 可道云桌面搭建&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先创建 dockerfile-two 及 kod-two 文件夹（因为我之前搭过一遍，但是忘记截图了，所以重搭一遍，防止文件名重复所以用 -two ）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; dockerfile-two/kod-two&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6lYIe.png&#34; alt=&#34;pP6lYIe.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用 scp 将所必要的文件传到服务器上（请务必不要照抄我的命令）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;scp&lt;/span&gt; .&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;source&lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;* root@8.222.153.91:/root/dockerfile-two/kod-two/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ul&gt;
+&lt;li&gt;实在不会上传那就用下面的这条命令吧（复制粘贴总会吧？）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-O&lt;/span&gt; https://zero-li.fun/资源/source.tar &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-xf&lt;/span&gt; source.tar &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; source/* ./ &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt; sour*&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP61SeK.png&#34; alt=&#34;pP61SeK.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用 vim 创建 dockerfile 文件并填入以下内容：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; dockerfile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;pre&gt;&lt;code&gt;FROM centos:centos7    # 改为你的基础镜像
+
+ADD Centos-7.repo /etc/yum.repos.d/
+
+ADD epel-7.repo /etc/yum.repos.d/
+
+RUN yum -y install nginx php-fpm php-gd php-mbstring unzip
+
+RUN sed -i &#39;/^user/c user=nginx&#39; /etc/php-fpm.d/www.conf
+
+RUN sed -i &#39;/^group/c group=nginx&#39; /etc/php-fpm.d/www.conf
+
+COPY nginx.conf /etc/nginx/nginx.conf
+
+RUN mkdir /code
+
+WORKDIR /code/
+
+COPY kodexplorer4.40.zip .
+
+RUN unzip kodexplorer4.40.zip
+
+RUN chown -R nginx.nginx .
+
+ADD init.sh /init.sh
+
+EXPOSE 80
+
+ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP68PxA.png&#34; alt=&#34;pP68PxA.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP68krt.png&#34; alt=&#34;pP68krt.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;然后用 vim 创建一个名为 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2luaXQuc2g=&#34;&gt;init.sh&lt;/span&gt; 的 shell 脚本并写入以下内容：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; init.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token shebang important&#34;&gt;#!/bin/bash&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;php-fpm &lt;span class=&#34;token parameter variable&#34;&gt;-D&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;&lt;span class=&#34;token variable&#34;&gt;$1&lt;/span&gt;&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; /etc/nginx/nginx.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;nginx &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;daemon off;&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP68UG4.png&#34; alt=&#34;pP68UG4.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;之后执行以下命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; build &lt;span class=&#34;token parameter variable&#34;&gt;-t&lt;/span&gt; kod:v1 &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25567&lt;/span&gt;:80 kod:v1 &lt;span class=&#34;token string&#34;&gt;&#39;#testtest&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP68sZ6.png&#34; alt=&#34;pP68sZ6.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;在浏览器访问&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;你的IP:25567/kodexplorer4.40/index.php
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP68ydK.png&#34; alt=&#34;pP68ydK.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;示例：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MToyNTU2OS9rb2RleHBsb3JlcjQuNDAvaW5kZXgucGhwP3VzZXIvbG9naW4=&#34;&gt;可道云桌面&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</guid>
+            <title>Docker的使用-叁</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Fri, 08 Sep 2023 15:00:14 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;dockerfile的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dockerfile的使用&#34;&gt;#&lt;/a&gt; Dockerfile 的使用&lt;/h4&gt;
+&lt;p&gt;使用 Dockerfile 部署扫雷 web 程序&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先将必要的文件上传至服务器，然后在当前目录创建 init.sh 和 dockerfile 文件&lt;/p&gt;
+&lt;p&gt;友情提示：可以使用 scp 上传&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scp 不会用那就用下面的这条命令，我把资源都打包到我服务器上了，可以直接下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-O&lt;/span&gt; https://zero-li.fun/资源/source.tar &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-xf&lt;/span&gt; source.tar &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; source/* ./ &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt; sour*&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6Celd.png&#34; alt=&#34;pP6Celd.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过 vim 向 dockerfile  &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS1pbml0LTk5MGcuc2g=&#34;&gt;及 init.sh&lt;/span&gt; 写入以下内容：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请不要照抄我的配置，每句后面都有注释，稍微动一下脑子就行了，要不然寄&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用 dockerfile 之前，你首先要确保你的当前目录下有以下几个文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-a&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;Centos-7.repo&lt;/p&gt;
+&lt;p&gt;epel-7.repo&lt;/p&gt;
+&lt;p&gt;saolei.zip&lt;/p&gt;
+&lt;p&gt;dockerfile&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2luaXQuc2g=&#34;&gt;init.sh&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你还要确保你的本地有 centos:centos7 这个镜像&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; images&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/10/pPcdAF1.png&#34; alt=&#34;pPcdAF1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;没有怎么办？凉拌！！！&lt;/p&gt;
+&lt;p&gt;用下面这条命令下载：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull centos:centos7&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;要是还报错，那你就自己百度去吧，问题奇奇怪怪的&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;FROM centos:centos7    &lt;span class=&#34;token comment&#34;&gt;# 这是你要使用的基础镜像，记住改为自己的基础镜像 (如果你使用了上面的 pull 下载了镜像，就不需要改)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ADD Centos-7.repo /etc/yum.repos.d/    &lt;span class=&#34;token comment&#34;&gt;# 这条命令的意思是添加 Centos7.repo 文件到容器的 /etc/yum.repos.d 下&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ADD epel-7.repo /etc/yum.repos.d/    &lt;span class=&#34;token comment&#34;&gt;# 同上&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN yum &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; tomcat &lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;# 运行 yum 命令安装 tomcat 、 unzip 、 curl ，其中 -y 表示安装过程中的选择全部为 yes&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;WORKDIR /var/lib/tomcat/webapps/    &lt;span class=&#34;token comment&#34;&gt;# 指定工作目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-O&lt;/span&gt; https://zero-li.fun/资源/saolei.zip    &lt;span class=&#34;token comment&#34;&gt;# 从指定站点下载 saolei.zip 资源&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN &lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; saolei.zip    &lt;span class=&#34;token comment&#34;&gt;# 解压 saolei.zip 文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; saolei ROOT     &lt;span class=&#34;token comment&#34;&gt;# 将 saolei 移动至 ROOT 文件或目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ADD init.sh /init.sh    &lt;span class=&#34;token comment&#34;&gt;# 添加 init.sh 至 /init.sh&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;EXPOSE &lt;span class=&#34;token number&#34;&gt;8080&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;# 声明 8080 端口 ，此时并没有开放此端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;CMD &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;/bin/bash&#34;&lt;/span&gt;,&lt;span class=&#34;token string&#34;&gt;&#34;/init.sh&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;# 在容器启动时运行 /init.sh 脚本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token shebang important&#34;&gt;#!/bin/bash&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/usr/libexec/tomcat/server start    &lt;span class=&#34;token comment&#34;&gt;# 在指定目录启动 tomcat server 服务器&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;直接构建镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker build -t saolei:v1 .&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6PyUf.png&#34; alt=&#34;pP6PyUf.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;运行容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker run -itd -P saolei:v1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6PWvj.png&#34; alt=&#34;pP6PWvj.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;在浏览器通过 ” 你的 IP“: 开放的随机端口 /saolei.jsp 访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6PjM9.png&#34; alt=&#34;pP6PjM9.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;示例: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MTozMjc3MC9zYW9sZWkuanNwP2xldmVsPTgmYW1wO2xlaU51bT04JmFtcDtzaXplPTg=&#34;&gt;扫雷&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</guid>
+            <title>Docker的使用-贰</title>
+            <link>http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Tue, 05 Sep 2023 18:57:03 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;docker容器的应用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker容器的应用&#34;&gt;#&lt;/a&gt; Docker 容器的应用&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言：使用 Docker 部署 nginx 站点实现外网访问&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1. 先创建一个 nginx 站点&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run --name nginx-one -itd -P nginx:latest&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFU6s.png&#34; alt=&#34;nginx1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 将本地的 &lt;code&gt;./nginx/www&lt;/code&gt; 、 &lt;code&gt;./nginx/logs&lt;/code&gt; 、 &lt;code&gt;./nginx/conf&lt;/code&gt;  分别挂载到容器的 &lt;code&gt;/usr/share/nginx/html&lt;/code&gt; 、 &lt;code&gt;/var/log/nginx&lt;/code&gt; 、 &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt;  并且将主机端口 25568 映射到容器的 80 端口&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run -itd -p 25568:80 --name nginx-two -v /root/nginx/www:/usr/share/nginx/html -v /root/nginx/logs:/var/log/nginx -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf nginx:latest&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：挂载之前要用 &lt;code&gt;docker cp f9226f7ac7f7:/etc/nginx/nginx.conf ./nginx/conf/&lt;/code&gt;  命令将 &lt;code&gt;nginx.conf&lt;/code&gt;  文件 &lt;code&gt;copy&lt;/code&gt;  到本地，要不然会报挂载错误，使用本命令时注意将容器 ID 改为自己的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFwmq.png&#34; alt=&#34;nginx2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. 在本地的 &lt;code&gt;/root/nginx/www&lt;/code&gt;  文件夹下创建 &lt;code&gt;index.html&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cd /root/nginx/www; vim index.html&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFaXn.png&#34; alt=&#34;nginx3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4. 直接在浏览器访问你服务器的 ip 加之前指定的端口 (由于我服务器防火墙没开放 20000 端口，所以用 25568 代替一下)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFNlj.png&#34; alt=&#34;nginx4&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;点击连接访问&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MToyNTU2OA==&#34;&gt; nginx 站点&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</guid>
+            <title>Docker的使用-壹</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Tue, 05 Sep 2023 09:14:52 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;docker使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker使用&#34;&gt;#&lt;/a&gt; Docker 使用&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在 docker 容器内运行应用程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run ubuntu:15.10 /bin/echo &amp;quot;hello world&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsklv9.png&#34; alt=&#34;docker使用1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docker&lt;/code&gt; :Docker 的二进制执行文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run&lt;/code&gt; : 与 Docker 组合运行一个容器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ubuntu:15.10&lt;/code&gt; : 要运行的镜像，本地没有就会从镜像仓库下载&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/bin/echo &amp;quot;hello world&amp;quot;&lt;/code&gt; : 在启动的容器里执行 &lt;code&gt;echo&lt;/code&gt;  命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;与 docker 容器进行交互&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run -t -i centos:centos7 /bin/bash&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPskQgJ.png&#34; alt=&#34;docker使用2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;-t&lt;/code&gt; : 在新的容器里指定一个终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; : 允许与指定的终端进行交互&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：可以用 &lt;code&gt;exit&lt;/code&gt;  退出伪终端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 ps 查看正在运行的容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker ps&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPskM34.png&#34; alt=&#34;docker的使用3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CONTAINER ID&lt;/code&gt; : 容器 ID&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;IMAGE&lt;/code&gt; : 使用的镜像&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;COMMAND&lt;/code&gt; : 启动镜像时运行的命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CREATED&lt;/code&gt; : 容器的创建时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;STATUS&lt;/code&gt; : 容器的状态 （容器的七种状态：&lt;/p&gt;
+&lt;p&gt;1. &lt;code&gt;created&lt;/code&gt;  已创建&lt;/p&gt;
+&lt;p&gt;2. &lt;code&gt;restaring&lt;/code&gt;  重启中&lt;/p&gt;
+&lt;p&gt;3. &lt;code&gt;running&lt;/code&gt;  或 &lt;code&gt;Up&lt;/code&gt;  运行中&lt;/p&gt;
+&lt;p&gt;4. &lt;code&gt;removing &lt;/code&gt; 迁移中&lt;/p&gt;
+&lt;p&gt;5. &lt;code&gt;paused &lt;/code&gt; 暂停&lt;/p&gt;
+&lt;p&gt;6. &lt;code&gt;exited &lt;/code&gt; 停止&lt;/p&gt;
+&lt;p&gt;7. &lt;code&gt;dead &lt;/code&gt; 死亡）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;PORTS&lt;/code&gt; : 容器的端口信息和使用的连接类型（ &lt;code&gt;TCP/UDP&lt;/code&gt; ）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;NAMES&lt;/code&gt; : 自动分配的容器名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;常用命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用命令&#34;&gt;#&lt;/a&gt; 常用命令&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docker images&lt;/code&gt;         	列出本地主机上的镜像&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker search centos[:7] &lt;/code&gt;       	 搜索镜像&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker pull centos[:centos7] &lt;/code&gt;       	 下载镜像&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker tag centos:centos7 mycentos:centos7 &lt;/code&gt;        	为镜像添加标签，其中分号前为镜像类型，分号后为镜像版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker history centos:centos7 &lt;/code&gt;        	查看镜像的构建历史信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker rmi centos:centos7&lt;/code&gt;         	删除镜像（可以使用 &lt;code&gt;-f&lt;/code&gt;  强制删除，在删除使用 tag 标签标记的镜像时可以不用加 &lt;code&gt;-f&lt;/code&gt;  参数）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image prune [-a] [-f]&lt;/code&gt;         清理镜像，加 &lt;code&gt;-a&lt;/code&gt;  参数即删除所有无用的镜像，不仅仅是临时镜像  &lt;code&gt;-f&lt;/code&gt;  参数即可强制删除镜像而不提示&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image save centos:centos7 &amp;gt; ./my-centos7.tar.gz &lt;/code&gt;        导出镜像到当前目录，格式为一个压缩包（可以自行选择导出的位置）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image load [-i] [-q] ./my-centos7.tar.gz&lt;/code&gt;         将 centos7 的镜像压缩包导入， &lt;code&gt;-i&lt;/code&gt;  参数是指定导入的文件， &lt;code&gt;-q&lt;/code&gt;  参数是精简输出信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image inspect [-f] &amp;#123; &amp;#123;&amp;quot;.Os&amp;quot;&amp;#125; &amp;#125; centos:centos7&lt;/code&gt;         查看镜像信息，可以使用 &lt;code&gt;-f&lt;/code&gt;  参数获取指定信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker restart $(docker ps -a -q)&lt;/code&gt;  重启所有 docker 容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：[ ] 里的为可选内容，选择具体版本&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</guid>
+            <title>Docker部署</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Mon, 04 Sep 2023 16:53:57 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;docker部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker部署&#34;&gt;#&lt;/a&gt; Docker 部署&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言：部署 docker 要先确保 yum 源保持最新&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;1. 先安装运行 docker 所必要的工具包&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;yum install -y yum-utils device-mapper-persistent-data lvm2&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVkQJ.png&#34; alt=&#34;docker1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 添加 docker 源&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrViz4.png&#34; alt=&#34;pPrViz4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. 修改 docker 源为阿里源&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;sed -i &#39;s+download.docker.com+mirrors.aliyun.com/docker-ce+&#39; /etc/yum.repos.d/docker-ce.repo&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVPWF.png&#34; alt=&#34;pPrVPWF.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4. 更新 docker 源并安装 docker&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新源  &lt;code&gt;yum makecache fast&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装  &lt;code&gt;yum  -y install docker-ce&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：在 Centos8 中本命令不适用，将 fast 去掉即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrV9iT.png&#34; alt=&#34;pPrV9iT.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVSoV.png&#34; alt=&#34;pPrVSoV.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5. 重启 docker 服务并设置下次启动生效&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重新启动  &lt;code&gt;systemctl  restart  docker&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;设置下次启动生效  &lt;code&gt;systemctl  enable  docker&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVCJU.png&#34; alt=&#34;pPrVCJU.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVAy9.png&#34; alt=&#34;pPrVAy9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6. 配置镜像加速器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用 vim 创建 &lt;code&gt;daemon.json&lt;/code&gt;  文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vim /etc/docker/daemon.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;写入以下内容:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;
+&amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://14lrk6zd.mirror.aliyuncs.com&amp;quot;]
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVELR.png&#34; alt=&#34;pPrVELR.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVZe1.png&#34; alt=&#34;pPrVZe1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;7. 重新加载并重启 docker&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重新加载  &lt;code&gt;systemctl  daemon-reload&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;重启  &lt;code&gt;systemctl restart docker&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVedx.png&#34; alt=&#34;pPrVedx.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVmo6.png&#34; alt=&#34;pPrVmo6.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <title>Maven的使用</title>
+            <link>http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <category>java</category>
+            <category>maven</category>
+            <pubDate>Sat, 08 Jul 2023 23:32:50 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;maven 的项目结构&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCgiQts.png&#34; alt=&#34;pCgiQts.png&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;main	-- 项目的主要代码和资源
+&lt;ul&gt;
+&lt;li&gt;java	-- 项目的源代码&lt;/li&gt;
+&lt;li&gt;resources	-- 项目的资源&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;test	-- 测试项目代码，目录相当于 JUnit 的测试代码的目录
+&lt;ul&gt;
+&lt;li&gt;java	-- 所有的单元测试.java 文件，JUnit 测试类等&lt;/li&gt;
+&lt;li&gt;resources	-- 项目测试的资源，spring，hibernate 的配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;target	-- 项目输出位置，maven 编译后的类文件及打包文件会在此目录&lt;/li&gt;
+&lt;li&gt;pom.xml	--maven 的配置文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;pom基础标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#pom基础标签&#34;&gt;#&lt;/a&gt; pom 基础标签&lt;/h4&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token prolog&#34;&gt;&amp;lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;project&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;xmlns&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://maven.apache.org/POM/4.0.0&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;xmlns:&lt;/span&gt;xsi&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://www.w3.org/2001/XMLSchema-instance&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;         &lt;span class=&#34;token attr-name&#34;&gt;&lt;span class=&#34;token namespace&#34;&gt;xsi:&lt;/span&gt;schemaLocation&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;modelVersion&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;4.0.0&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;modelVersion&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- pom 版本 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;fun.zero.li&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 域名（项目组的唯一标识） --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;MavenWSM&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 项目的唯一 id / 模块名 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;1.0-SNAPSHOT&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 项目当前版本 SNAPSHOT (快速开发) --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- groupId  artifactId  version: 也决定了项目在打包 / 发布文件的样式 / 地址：本地仓库下 /fun/zero/MavenWSM/1.0-SNAPSHOT/MavenWSM-1.0-SNAPSHOT.jar --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;WSM&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;name&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 项目别名 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;packaging&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;jar&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;packaging&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;  &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 项目打包产生的工件类型 有 jar、war、ear、pom --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- Jar: 一般公司自己制作，方便开发调用的组件 Jar...     war: 项目打包成 war 可以部署至服务器中运行... 的格式；这里不是 web 工程所以不需要 war jar 即可～--&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;properties&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 给 pom 定义的一些常量 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 指定项目使用的 jdk 版本 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;maven.compiler.source&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;17&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;maven.compiler.source&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;maven.compiler.target&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;17&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;maven.compiler.target&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;properties&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 提供的依赖下载坐标 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;dependencies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- 每个 dependency 都是一个 jar 坐标 1. 先从本地找 -&gt; 2. 去私服找 -&gt; 3. 到中央仓库下载 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;junit&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;junit&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;4.13.2&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;scope&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;test&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;scope&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt; &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- Jar 包使用的范围：默认使用范围是 compile, 则测试代码和主代码都可以使用该代码 --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token comment&#34;&gt;&amp;lt;!-- &amp;lt;scope&gt;system&amp;lt;/scope&gt;               &amp;lt;systemPath&gt; 引入 Jar 资源路径... &amp;lt;/systemPath&gt; --&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;org.junit.jupiter&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;junit-jupiter&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;5.9.2&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;scope&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;test&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;scope&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;org.testng&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;groupId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;testng&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;artifactId&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;7.7.0&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;version&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;scope&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;test&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;scope&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;dependency&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;dependencies&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;/&lt;/span&gt;project&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;scopy标签&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#scopy标签&#34;&gt;#&lt;/a&gt; scopy 标签&lt;/h5&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;依赖范围&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;对于编译 class path 有效&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;对于测试 class path 有效&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;对于运行 class path 有效&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;例子&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;compile&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;spring-core&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;test&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Junit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;provided&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;servlet-api&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;runtime&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;JDBC 驱动&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;system&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Y&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;-&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;本地的，maven 仓库之外的类库&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;添加依赖时需要指定其依赖范围&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;compile
+&lt;ul&gt;
+&lt;li&gt;编译范围，默认范围值，依赖会用在编译、测试、运行，由于运行时需要所以编译范围的依赖会被打包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;test
+&lt;ul&gt;
+&lt;li&gt;编译范围，在编译和运行时都不需要，它们只有在测试编译和测试运行阶段可用。比如：junit。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;provided
+&lt;ul&gt;
+&lt;li&gt;编译范围，provided 依赖在编译和测试时需要，在运行时不需要，比如：servlet api 运行时被 tomcat 容器提供。(冲突反而会报错！)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;runtime
+&lt;ul&gt;
+&lt;li&gt;编译范围，依赖在运行和测试系统的时候需要，但在编译的时候不需要。 比如：jdbc 驱动包。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;system
+&lt;ul&gt;
+&lt;li&gt;编译范围，system 范围依赖与 provided 类似，使用本地之外的路径的 Jar 需要指定 systemPath 磁盘路径 (不推荐！)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;使用maven一键构建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用maven一键构建&#34;&gt;#&lt;/a&gt; 使用 maven 一键构建&lt;/h4&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCgBz7V.png&#34; alt=&#34;pCgBz7V.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 cmd 终端中输入 mvn -v 查看 maven 版本及是否安装正确&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCg3QqH.png&#34; alt=&#34;pCg3QqH.png&#34;&gt;]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn compile 将项目编译为 class 文件并输出到 target 目录&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCg3zTA.png&#34; alt=&#34;pCg3zTA.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn clean 清理 target 目录，整个目录一起删掉&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCg8Fl8.png&#34; alt=&#34;pCg8Fl8.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn test 执行 src/test/java 目录下的单元测试类&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCg8llT.png&#34; alt=&#34;pCg8llT.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn package 将 java 工程打包为 jar 包，将 web 工程打包为 war 包&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCg82tI.png&#34; alt=&#34;pCg82tI.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn install 将项目打包并发布到本地仓库，本步骤包含 package 和 test&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCgYGnS.png&#34; alt=&#34;pCgYGnS.png&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn deploy 也可以将项目打包，并发布到本地仓库和私服中，包含 package、test 及 install&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 mvn clean test 会先清理再 test 测试&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用 IDEA 也可以直接双击&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCgY4c6.png&#34; alt=&#34;pCgY4c6.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;使用maven进行模块开发&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用maven进行模块开发&#34;&gt;#&lt;/a&gt; 使用 maven 进行模块开发&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先将自己写的类用 maven 打包为 jar 并发布到本地仓库 (建议将本地仓库的存储位置改一下，具体度娘)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;pre&gt;&lt;code&gt;mvn install:install-file -Dfile=&#39;xxx.jar&#39; -DgroupId=&#39;xxx.xxx.xxx&#39; -DartifactId=xxx -Dversion=&#39;xxx.xxx.xxx&#39; -Dpackaging=jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;-Dfile&lt;/code&gt;  是 &lt;code&gt;jar&lt;/code&gt;  包的路径， &lt;code&gt;-DgroupID&lt;/code&gt;  是你在 &lt;code&gt;pom.xml&lt;/code&gt;  中设置的组名， &lt;code&gt;-DartifactID&lt;/code&gt;  是你在 &lt;code&gt;pom.xml&lt;/code&gt;  中设置的项目名， &lt;code&gt;-Dversion&lt;/code&gt;  是版本&lt;/p&gt;
+&lt;p&gt;注意：一定要将带点的加上单引号，否则报错&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCgBQLq.png&#34; alt=&#34;pCgBQLq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;然后将依赖引入即可&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/07/08/pCgB3wV.png&#34; alt=&#34;pCgB3wV.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;本教程参考的一些大佬的文章&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3QuY3Nkbi5jbi9oWEU5Vg==&#34;&gt;http://t.csdn.cn/hXE9V&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3QuY3Nkbi5jbi84MUltNg==&#34;&gt;http://t.csdn.cn/81Im6&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3QuY3Nkbi5jbi9FNGVOOA==&#34;&gt;http://t.csdn.cn/E4eN8&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cucnVub29iLmNvbS9tYXZlbi9tYXZlbi10dXRvcmlhbC5odG1s&#34;&gt;Maven 教程 | 菜鸟教程 (runoob.com)&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

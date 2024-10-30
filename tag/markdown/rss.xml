@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;markdown&#34; tag</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 07 Nov 2023 22:40:47 +0800</pubDate>
+        <lastBuildDate>Tue, 07 Nov 2023 22:40:47 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</guid>
+            <title>Typora的破解</title>
+            <link>http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</link>
+            <category>原创</category>
+            <category>markdown</category>
+            <category>破解</category>
+            <category>Typora</category>
+            <pubDate>Tue, 07 Nov 2023 22:40:47 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;前言废话&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言废话&#34;&gt;#&lt;/a&gt; 前言（&lt;s&gt;废话&lt;/s&gt;）&lt;/h4&gt;
+&lt;p&gt;介绍一下 Typora 是什么…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;下面是引用自百度百科的话：&lt;/p&gt;
+&lt;p&gt;Typora 是一款由 Abner Lee 开发的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTglQkQlQkIlRTklODclOEYlRTclQkElQTcvMTAwMDI4MzU/ZnJvbU1vZHVsZT1sZW1tYV9pbmxpbms=&#34;&gt;轻量级&lt;/span&gt; Markdown 编辑器，与其他 Markdown 编辑器不同的是，Typora 没有采用&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTYlQkElOTAlRTQlQkIlQTMlRTclQTAlODEvMzk2OT9mcm9tTW9kdWxlPWxlbW1hX2lubGluaw==&#34;&gt;源代码&lt;/span&gt;和预览双栏显示的方式，而是采用所见即所得的编辑方式，实现了即时预览的功能，但也可切换至源代码编辑模式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;看完之后你说你不知道 Markdown 是什么？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Markdown 是一种&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTglQkQlQkIlRTklODclOEYlRTclQkElQTclRTYlQTAlODclRTglQUUlQjAlRTglQUYlQUQlRTglQTglODAvNTI2NzE5MTU/ZnJvbU1vZHVsZT1sZW1tYV9pbmxpbms=&#34;&gt;轻量级标记语言&lt;/span&gt;，创始人为约翰・格鲁伯（John Gruber）。 它允许人们使用易读易写的&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclQkElQUYlRTYlOTYlODclRTYlOUMlQUMlRTYlQTAlQkMlRTUlQkMlOEYvOTg2MjI4OD9mcm9tTW9kdWxlPWxlbW1hX2lubGluaw==&#34;&gt;纯文本格式&lt;/span&gt;编写文档，然后转换成有效的 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9YSFRNTC8zMTY2MjE/ZnJvbU1vZHVsZT1sZW1tYV9pbmxpbms=&#34;&gt;XHTML&lt;/span&gt;（或者 HTML）文档。这种语言吸收了很多在&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclOTQlQjUlRTUlQUQlOTAlRTklODIlQUUlRTQlQkIlQjYvMTExMTA2P2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;电子邮件&lt;/span&gt;中已有的纯文本标记的特性。&lt;/p&gt;
+&lt;p&gt;由于 Markdown 的轻量化、易读易写特性，并且对于图片，图表、数学式都有支持，许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。 如 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9HaXRIdWIvMTAxNDUzNDE/ZnJvbU1vZHVsZT1sZW1tYV9pbmxpbms=&#34;&gt;GitHub&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9SZWRkaXQvMTI3MjAxMD9mcm9tTW9kdWxlPWxlbW1hX2lubGluaw==&#34;&gt;Reddit&lt;/span&gt;、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9EaWFzcG9yYS8xMDcyNjg5Mz9mcm9tTW9kdWxlPWxlbW1hX2lubGluaw==&#34;&gt;Diaspora&lt;/span&gt;、[Stack Exchange](&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9TdGFjaw==&#34;&gt;https://baike.baidu.com/item/Stack&lt;/span&gt; Exchange/13777796?fromModule=lemma_inlink)、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9PcGVuU3RyZWV0TWFwLzMxNzE2MDY/ZnJvbU1vZHVsZT1sZW1tYV9pbmxpbms=&#34;&gt;OpenStreetMap&lt;/span&gt; 、&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9Tb3VyY2VGb3JnZS82NTYyMTQxP2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;SourceForge&lt;/span&gt;、简书等，甚至还能被使用来撰写&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTclOTQlQjUlRTUlQUQlOTAlRTQlQjklQTYvMzQ2MDU0P2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r&#34;&gt;电子书&lt;/span&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;好了，现在你应该有一个大概的了解了，那么请继续看破解教程&lt;/p&gt;
+&lt;h4 id=&#34;下载-typora&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载-typora&#34;&gt;#&lt;/a&gt; 下载 Typora&lt;/h4&gt;
+&lt;p&gt;先到官网下最新版的 Typora 软件，然后安装，先别管激活&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官网: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly90eXBvcmEuaW8v&#34;&gt;Typora&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;破解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#破解&#34;&gt;#&lt;/a&gt; 破解&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;下载要用的破解软件。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;思路：使用伪造的激活码来激活&lt;/p&gt;
+&lt;p&gt;破解程序在 Github 上有，需要克隆 (下载) 两个仓库，克隆下来并不能直接使用，要使用 Rust 编译为 exe 文件。&lt;/p&gt;
+&lt;p&gt;或者你可以直接使用我提供的已经编译好的破解程序（要自己编译的话要安装及配置 Rust，麻烦）。&lt;/p&gt;
+&lt;p&gt;编译教程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL21veGlhb2JlaTE5OTMvYmxvZy9pc3N1ZXMvOA==&#34;&gt;一劳永逸破解 Typora 全系列&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;仓库一：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0RpYW1vbmRIdW50ZXJzL05vZGVJbmplY3Q=&#34;&gt;DiamondHunters/NodeInject&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;仓库二：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL0RpYW1vbmRIdW50ZXJzL05vZGVJbmplY3RfSG9va19leGFtcGxl&#34;&gt;DiamondHunters/NodeInject_Hook_example&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly84LjIyMi4xNTMuOTE6Mzk4MTEvZG93bi9QZ29qZ2NmR3dtWHAuN3o=&#34;&gt;exe 下载链接&lt;/span&gt;：提取码：YunYi	注：提取码大小写敏感&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;下载完之后在将压缩包里的文件直接提到你安装的 Typora 的根目录里（就是有 Typora.exe 文件的文件夹里，实在找不到那就直接右键桌面的 Typora 图标，然后属性，你就能看到安装的位置了）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后 Typora 根目录里的 run.bat 双击运行即可&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;你会在弹出的 CMD 命令行中看到如下的内容：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;License for you:  &lt;code&gt;CLX2WZ-WLQ7DP-PJPNGT-9AKLDL&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;其中的  &lt;code&gt;CLX2WZ-WLQ7DP-PJPNGT-9AKLDL&lt;/code&gt;  字段就是你要用的 “激活码”(伪)&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;之后你打开 Typora 软件，它应该会弹出激活或者试用页面，选择激活&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;它会让你输入两次邮箱，你直接用个临时邮箱即可（临时邮箱的获取可以在我以前的安利文章里找到），第二个邮箱跟第一个填一样的，注意，这个邮箱要你自己手动输入，不能复制粘贴&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;填入你的 “激活码”，然后激活&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第一次激活的时候它会提示你 &lt;code&gt;链接服务器失败，使用尝试访问国内域名进行激活&lt;/code&gt; ，不用管，点确认就可以了，或者关掉重新激活一下就行&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</guid>
+            <title>Mermaid画图测试</title>
+            <link>http://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</link>
+            <category>markdown</category>
+            <category>mermaid</category>
+            <pubDate>Sat, 29 Apr 2023 20:20:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;流程图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#流程图&#34;&gt;#&lt;/a&gt; 流程图&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;graph&lt;/code&gt;  表示声明一张流程图  &lt;code&gt;TD&lt;/code&gt;  表示方向 T (top)-D (down) 由上至下  &lt;code&gt;()&lt;/code&gt;  表示圆形框  &lt;code&gt;&amp;#123;&amp;#125;&lt;/code&gt;  表示菱形框&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;graph&lt;/span&gt; TD&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;B&lt;span class=&#34;token text string&#34;&gt;(B)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;C&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	B&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;D&lt;span class=&#34;token text string&#34;&gt;&amp;#123;D&amp;#125;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	流程图&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;时序图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#时序图&#34;&gt;#&lt;/a&gt; 时序图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;-&amp;gt;&amp;gt;代表实线箭头&lt;/code&gt;    &lt;code&gt;--&amp;gt;&amp;gt;代表虚线箭头&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;sequenceDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;J&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; hello J!&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	J&lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&gt;&lt;/span&gt;A&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; good!&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;状态图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#状态图&#34;&gt;#&lt;/a&gt; 状态图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;[*]代表开始或结束&lt;/code&gt;  如果在箭头右边则表示结束&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;stateDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token text string&#34;&gt;[*]&lt;/span&gt; &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt; s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	s &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;&lt;span class=&#34;token text string&#34;&gt;[*]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;类图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#类图&#34;&gt;#&lt;/a&gt; 类图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释: &lt;code&gt;&amp;lt;|--&lt;/code&gt;  表示继承  &lt;code&gt;+&lt;/code&gt;  表示 &lt;code&gt;public&lt;/code&gt;   &lt;code&gt;-&lt;/code&gt;  表示 &lt;code&gt;private&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;classDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token arrow operator&#34;&gt;&amp;lt;|--&lt;/span&gt; D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token arrow operator&#34;&gt;&amp;lt;|--&lt;/span&gt; F&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; + int a&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	A &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; + toString&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; D&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		+ String S&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		+ setS&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; F&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		- char c&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;		- getC&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h5 id=&#34;饼图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#饼图&#34;&gt;#&lt;/a&gt; 饼图&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;语法解释：饼图使用 &lt;code&gt;pie&lt;/code&gt;  表示 标题下面分别是区域名称及其所占百分比&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;pie&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	title 每日时间分配&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;睡觉&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 40&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;学习&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 25&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;吃饭刷视频&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 15&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token string&#34;&gt;&#34;生活杂事&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; 20&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

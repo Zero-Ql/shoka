@@ -1,0 +1,898 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="上善若水" href="http://yunyat.cloud/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="上善若水" href="http://yunyat.cloud/atom.xml" />
+<link rel="alternate" type="application/json" title="上善若水" href="http://yunyat.cloud/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="原创,java,spring注解" />
+
+
+<link rel="canonical" href="http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/">
+
+
+
+  <title>
+spring开发注解集合 - 框架 - Java - 我的编程宝典 |
+QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">spring开发注解集合
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-04-16 11:35:58">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-04-16T11:35:58+08:00">2024-04-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>2.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QSky Yun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?419908"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?524035"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?478051"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?30423"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?818590"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?23086"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/" itemprop="item" rel="index" title="分类于 我的编程宝典"><span itemprop="name">我的编程宝典</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/Java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" itemprop="item" rel="index" title="分类于 框架"><span itemprop="name">框架</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/wa.jpg">
+    <meta itemprop="name" content="清天">
+    <meta itemprop="description" content="=我真的很想喜欢你们，可是你们没有人喜欢我。=, 若能避开猛烈的欢喜，自然也不会有悲痛的来袭.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="上善若水">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="spring-的常用注解"><a class="markdownIt-Anchor" href="#spring-的常用注解">#</a> Spring 的常用注解</h3>
+<ul>
+<li>
+<p><code>@Component(value=&quot;&quot;)</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）使用此注解的类会被交由  <code>spring</code>  容器管理</p>
+<p>2）value 值为 spring 创建该类对象的 id 值</p>
+<p>3）该注解使用类的无参构造方法创建对象</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@Value(&quot;&quot;)</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）使用此注解进行基本类型的注入，在括号内的引号中键入属性值</p>
+<p>2）可以给  <code>set</code>  方法进行此注释</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@Autowired</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）使用此注解进行引用类型的注入，即 <code>bean</code>  对象的注入</p>
+<p>2）可以声明在字段 (属性) 或 <code>setter</code>  方法上</p>
+<p>3）默认使用 <code>byType</code>  注入，通过此注解的对象需要在 <code>IoC</code>  容器中存在，否则需要加上 <code>required=false</code> ，表示忽略当前要注入的 <code>bean</code> ，如果有就直接注入，没有跳过，不会报错</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@ComponentScan</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注释使组件扫描器扫描本类此包下的  <code>bean</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@Configuration</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）使用此注解定义配置类</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@Bean</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注解是  <code>spring</code>  中用于方法级别的注解，主要用于在  <code>Java</code>  配置类中定义一个  <code>Bean</code>  。</p>
+<p>2）此注解告诉  <code>spring</code>  这个方法将返回一个对象，该对象应该被注册为  <code>spring</code>  容器中的一个  <code>Bean</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@RestControllerAdvice</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注解是  <code>spring</code>  框架的一个注解，用于定义一个全局的异常处理控制器。通常与  <code>@ExceptionHandler</code>  注解一起使用。</p>
+<p>2） <code>@RestControllerAdvice</code>  等同于  <code>@ControllerAdvice</code>  加上  <code>@ResponseBody</code>  注解，表示该类中的方法负责处理异常，并将处理结果作为 <code>HTTP</code>  响应的主体返回。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@ResponseStatus</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注解为  <code>Spring</code>  框架提供的一个注解，用于指示方法应该返回特定的 HTTP 状态码和可选的原因短语。</p>
+<p>2）接收  <code>value</code>  和  <code>code(可选)</code>  ，类型为  <code>HTTPStatus</code>  枚举类的常量值</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="spring-mvc-的常用注解"><a class="markdownIt-Anchor" href="#spring-mvc-的常用注解">#</a> Spring MVC 的常用注解</h3>
+<ul>
+<li>
+<p><code>@Controller</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）使用此注解的类，其中的方法如果没有被此注解修饰，一般都是返回一个视图（一个具体的页面），这个视图会和模板引擎结合在一起使用</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@RestController</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注解基本上等于  <code>@RequesBody</code>   +  <code>@Controller</code></p>
+<p>2）使用此注解会直接返回一个 <code>JSON</code>  数据</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@RequestMapping</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）使用此注解来映射请求，也就是通过它来指定控制器可以处理那些  <code>URL</code>  请求</p>
+<p>2）此注解除了  <code>name()</code>  方法，其他的方法都可以定义多个属性值，如  <code>value()</code>  和  <code>path()</code>  都可以同时定义多个字符串值来接收多个  <code>URL</code>  请求</p>
+</blockquote>
+<ul>
+<li>
+<p><em>path</em>：可以处理的  <code>url</code>  路径， <code>value</code>  效果和  <code>path</code>  相同</p>
+</li>
+<li>
+<p><em>method</em>：此属性用来定义浏览器的请求方式，可以使用此属性指定方法仅处理哪些请求。有四种基本请求方式：1.  <code>RequestMethod.GET</code> （查）2.  <code>RequestMethod.POST</code> （增） 3.  <code>RequestMethod.PUT</code> （改） 4.  <code>RequestMethod.DELETE</code> （删）。常用的只有 1、2 两种</p>
+</li>
+<li>
+<p><em>params</em>：可以使用此属性限制请求参数，只有带指定参数的请求才会被响应</p>
+</li>
+<li>
+<p><em>headers</em>：此属性表示请求头，可以使用此属性限制客户端发来的请求</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@PathVariable</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）可以通过此注解将  <code>URL</code>  中的占位符绑定到控制器的处理方法的参数中，占位符可以在任何位置，占位符使用 <code>&#123;&#125;</code>  括起来，如： <code>@RequestMapping(&quot;/books/&#123;id&#125;/&#123;authorName&#125;&quot;)</code></p>
+<p>2）通过此注解可以将  <code>URL</code>  中的参数接收，URL 中的参数名需与方法接收参数名保持一致，否则无法接收。可以通过  <code>@PathVariable</code>  的  <code>value</code>  属性指定参数名</p>
+<p>3）此注解是直接放在形参中的，如： <code>public String testBook(@PathVariable Integer id, @PathVariable(value=&quot;authorName&quot;) String name)&#123;&#125;</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@RequestParam</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）通过此注解从  <code>request</code> （请求） 中获取数值。</p>
+<p>2）与上一个注解的区别在于请求数据风格不同，如： <code>http://localhost:8080/user?id=1</code></p>
+</blockquote>
+<ul>
+<li><code>value</code> ：当传入的参数和方法参数名不一致时，可以使用  <code>value</code>  指定传入的参数名</li>
+<li><code>required</code> ：是布尔值，用来表示该参数是否为必须传入</li>
+<li><code>defaultValue</code> ：默认值，表示请求中没有同名的参数时的默认值</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@RequestBody</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）将  <code>HTTP</code>  请求体数据自动绑定到指定类型的参数</p>
+<p>2）支持多种数据格式（如  <code>JSON</code> 、 <code>XML</code> ）与  <code>Java</code>  类型（如  <code>POJO</code> 、 <code>List</code> 、 <code>Map</code> ）的映射，借助  <code>HttpMessageConverter</code>  实现</p>
+<p>3）可与  <code>@RequestParam</code> 、 <code>@PathVariable</code>  等注解共存，以便在一个方法中处理多种来源的请求数据</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><code>@ExceptionHandler</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注解是 <code>Spring MVC</code>  中用于标记处理特定异常的方法</p>
+<p>2）可以接受多种异常 <code>@ExceptionHandler(value = &#123;NullPointerException.class, IllegalArgumentException.class, IllegalStateException.class&#125;</code></p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="其他注解"><a class="markdownIt-Anchor" href="#其他注解">#</a> 其他注解</h3>
+<p><code>@Resource</code></p>
+<ul>
+<li>
+<blockquote>
+<p>1）此注解为 <code>J2EE</code>  提供</p>
+<p>2）跟 <code>@Autowired</code>  一样，都是为 <code>bean</code>  对象注入，同样可以声明到字段或 <code>setter</code>  方法上</p>
+<p>3）默认使用 <code>byName</code>  注入，没有则通过 <code>byType</code>  方式注入</p>
+<p>更多关于此注解的细节参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQ1NTkwNDk0L2FydGljbGUvZGV0YWlscy8xMTQ0NDQzNzE=">@Autowired 和 @Resource 注解的区别和联系</span></p>
+</blockquote>
+</li>
+</ul>
+<p><code>@WebServlet</code></p>
+<ul>
+<li></li>
+</ul>
+<h3 id="注入方式"><a class="markdownIt-Anchor" href="#注入方式">#</a> 注入方式</h3>
+<ul>
+<li><code>byName</code>
+<ul>
+<li>简单说就是使用变量名去 <code>IoC</code>  容器中匹配合适 <code>bean</code>  的 <code>id</code>  属性</li>
+</ul>
+</li>
+<li><code>byType</code>
+<ul>
+<li>使用变量类型去匹配 <code>bean</code>  的 <code>class</code>  属性</li>
+</ul>
+</li>
+</ul>
+<p>具体可以参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3RhbmdhODQyNDI4L2FydGljbGUvZGV0YWlscy81NDY5NDQ4NA==">Spring 中的 byName 与 byType_springboot byname 和 bytype</span></p>
+<h3 id="封装实体类接收表单数据"><a class="markdownIt-Anchor" href="#封装实体类接收表单数据">#</a> 封装实体类接收表单数据</h3>
+<p>在表单数据过多时，可以封装实体类接收参数</p>
+<p><em>Demo</em>：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Setter</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token annotation punctuation">@Getter</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token annotation punctuation">@Service</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">User</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token keyword">private</span> <span class="token class-name">String</span> username<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">Integer</span> age<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">String</span> password<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/login"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token class-name">User</span> user<span class="token punctuation">)</span><span class="token punctuation">&#123;</span><span class="token comment">// 直接传入实体类的对象</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>user<span class="token punctuation">.</span>getUsername<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token comment">//...</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">return</span> <span class="token string">"ok"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure>
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/java/" rel="tag"><i class="ic i-tag"></i> java</a>
+          <a href="/tags/spring%E6%B3%A8%E8%A7%A3/" rel="tag"><i class="ic i-tag"></i> spring注解</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-06-22 15:26:04" itemprop="dateModified" datetime="2024-06-22T15:26:04+08:00">2024-06-22</time>
+  </span>
+  <span id="MyCodingBook/java/frame/spring开发注解集合/" class="item leancloud_visitors" data-flag-title="spring开发注解集合" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="清天 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="清天 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="清天 QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文博主： </strong>清天 <i class="ic i-at"><em>@</em></i>上善若水
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" title="spring开发注解集合">http://yunyat.cloud/MyCodingBook/java/frame/spring开发注解集合/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/MyCodingBook/javascript/JSON/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?896583" title="JSON">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> JavaScript</span>
+  <h3>JSON</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/MyCodingBook/java/JavaWeb/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?481868" title="JavaWeb">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Java</span>
+  <h3>JavaWeb</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#spring-%E7%9A%84%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">1.</span> <span class="toc-text"> Spring 的常用注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#spring-mvc-%E7%9A%84%E5%B8%B8%E7%94%A8%E6%B3%A8%E8%A7%A3"><span class="toc-number">2.</span> <span class="toc-text"> Spring MVC 的常用注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%B3%A8%E8%A7%A3"><span class="toc-number">3.</span> <span class="toc-text"> 其他注解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F"><span class="toc-number">4.</span> <span class="toc-text"> 注入方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E8%A3%85%E5%AE%9E%E4%BD%93%E7%B1%BB%E6%8E%A5%E6%94%B6%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE"><span class="toc-number">5.</span> <span class="toc-text"> 封装实体类接收表单数据</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" rel="bookmark" title="spring开发注解集合">spring开发注解集合</a></li><li><a href="/MyCodingBook/java/frame/SpringBoot%E5%9F%BA%E7%A1%80/" rel="bookmark" title="SpringBoot基础">SpringBoot基础</a></li><li><a href="/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/" rel="bookmark" title="Spring基础">Spring基础</a></li><li><a href="/MyCodingBook/java/frame/SpringMVC/" rel="bookmark" title="SpringMVC">SpringMVC</a></li><li><a href="/MyCodingBook/java/frame/Spring-ResponseEntity/" rel="bookmark" title="Spring-ResponseEntity">Spring-ResponseEntity</a></li><li><a href="/MyCodingBook/java/frame/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/" rel="bookmark" title="springboot多模块开发">springboot多模块开发</a></li><li><a href="/MyCodingBook/java/frame/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="bookmark" title="springboot全局异常处理">springboot全局异常处理</a></li><li><a href="/MyCodingBook/java/frame/MyBatisPlus-1/" rel="bookmark" title="MyBatisPlus-1">MyBatisPlus-1</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="清天"
+      data-src="/images/wa.jpg">
+  <p class="name" itemprop="name">清天</p>
+  <div class="description" itemprop="description">若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">66</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">18</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">53</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1plcm8tUWw=" title="https:&#x2F;&#x2F;github.com&#x2F;Zero-Ql"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9ncmF2YXRhci5jb20vcXNreTFhNGRjYzYyZmI4" title="https:&#x2F;&#x2F;gravatar.com&#x2F;qsky1a4dcc62fb8"><i class="ic i-address-card"></i></span>
+      <a href="mailto:qsky@yunyat.cloud" title="mailto:qsky@yunyat.cloud" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL1FTa3lZdW4=" title="https:&#x2F;&#x2F;t.me&#x2F;QSkyYun"><i class="ic i-paper-plane"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly95Lm11c2ljLjE2My5jb20vbS91c2VyP2lkPTIwNjM1MjA5Mzk=" title="https:&#x2F;&#x2F;y.music.163.com&#x2F;m&#x2F;user?id&#x3D;2063520939"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6bGl2ZTouY2lkLjdmYTYyZWIyZDhmMzQzYzI/Y2FsbHxjaGF0" title="skype:live:.cid.7fa62eb2d8f343c2?call|chat"><i class="ic i-skype"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83OTI2ODg4OTUw" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7926888950"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/site/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/gallery/" rel="section"><i class="ic i-loop"></i>Wo的足迹</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-magic"></i>链圈</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-link"></i>links</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/websitemap/" rel="section"><i class="ic i-sitemap"></i>网站Map</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/MyCodingBook/javascript/JSON/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/MyCodingBook/java/JavaWeb/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-5/" title="MySQL-5">MySQL-5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+</div>
+
+    <span><a href="/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="服务器搭建教程">服务器搭建教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" title="Java-lambda的方法引用">Java-lambda的方法引用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/Spring-ResponseEntity/" title="Spring-ResponseEntity">Spring-ResponseEntity</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-3/" title="MySQL-3">MySQL-3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/" title="Spring基础">Spring基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/" title="Linux2023.9.15作业">Linux2023.9.15作业</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/" title="JavaFx使用Maven打包及运行">JavaFx使用Maven打包及运行</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/" title="Yum安装失败">Yum安装失败</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+</div>
+
+    <span><a href="/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/" title="谈谈看完《孤注一掷》的感想">谈谈看完《孤注一掷》的感想</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">134k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:02</span>
+  </div>
+  <div class="icp-info">
+    <span class="icp-img">
+      <a class="post-meta-item-icon" target="_blank" rel="noopener" href="https://icp.gov.moe"><img title="https://icp.gov.moe" src="images/icon120.png" width="18" style="vertical-align:middle"></a>
+    </span>
+    <span class="icp-text">
+      <span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDIzMTAxMw==">萌ICP备20231013号</span>
+    </span>
+  </div>
+
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">清天 @ QSky Yun</span>
+  </div>
+  <div class="start-time">
+    <span>本站已平稳运行</span>
+    <span id="display_live_time"> 0 天 0 小时 0 分 0 秒</span>
+      <script>function blog_live_time(){
+          setTimeout(blog_live_time,1e3);
+          const e = new Date("2023-04-28T00:00:00"),
+          t=(new Date).getTime()-e.getTime(),
+          i=Math.floor(t/864e5),
+          o=Math.floor(t%864e5/60/60/1e3),
+          l=Math.floor(t%36e5/60/1e3),
+          _=Math.floor(t%6e4/1e3);
+          display_live_time.innerHTML=` ${i} 天 ${o} 小时 ${l} 分 ${_} 秒`
+        }
+        blog_live_time()
+      </script>
+    <span>ヽ(○´∀`)ﾉ♪</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'MyCodingBook/java/frame/spring开发注解集合/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看不见我看不见我"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="/js/typed.js"></script>
+    <script type="text/javascript">
+        var str = { "hitokoto": "=我真的很想喜欢你们，可是你们没有人喜欢我。=" };
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&min_length=15')
+        .then(response => {
+            if (!response.ok) {
+                return str;
+            } else {
+                return response.json();
+            }
+        }).then(data => {
+            typedfun(data.hitokoto);
+        }).catch(error => {
+            typedfun(str.hitokoto);
+        });
+        function typedfun(data) {
+            var msg = "=" + data  + "=^1500";
+            typed = new Typed(".say-subtitle", {
+                strings: msg.split(),
+                typeSpeed: 70,
+                loop: true,
+                loopCount: Infinity,
+                backDelay: 70,
+                backSpeed: 100,
+                smartBackspace: true
+            });
+        }
+    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;harbor&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2023-09-12T03:34:02.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</id>
+        <title>harbor本地仓库搭建</title>
+        <link rel="alternate" href="http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/"/>
+        <content type="html">&lt;h4 id=&#34;创建-harbor-仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建-harbor-仓库&#34;&gt;#&lt;/a&gt; 创建 Harbor 仓库&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;访问官方网站下载官方镜像源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方网站： &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9nb2hhcmJvci5pby8=&#34;&gt;Harbor (goharbor.io)&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用 scp 将下载的官方镜像上传到服务器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;scp &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;P 2000 &lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;\harbor-offline-installer-v2&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;7&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;3&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;tgz root@你服务器的ip:&lt;span class=&#34;token operator&#34;&gt;/&lt;/span&gt;root/&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：使用 -P 参数可以指定 scp 的端口号&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPg4W1U.png&#34; alt=&#34;pPg4W1U.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用下面的命令解压文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-zxvf&lt;/span&gt; harbor-offline-installer-v2.7.3.tgz&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;使用 vim 更改 harbor.yml.tmep 的内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; harbor.yml.tmep&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;将 hostname 修改为自己的 ip 地址，然后将 https 全部注释掉，同时也可以更改密码&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgHXgP.png&#34; alt=&#34;pPgHXgP.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;使用 yum 下载 epel-release 及 docker-compose&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;yum &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; epel-release &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; yum &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker-compose&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：由于不可抗力的原因（我服务器带不动 [倒] ），下面的所有演示都是在我室友的虚拟机上完成的&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgORaD.png&#34; alt=&#34;pPgORaD.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgO2VO.png&#34; alt=&#34;pPgO2VO.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;安装 harbor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; ./harbor.yml.tmep ./harbor.yml &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; ./install.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：安装之前请先将 harbor.yml.tmep 文件改为 harbor.yml ，要不然会找不到文件&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgXj0K.png&#34; alt=&#34;pPgXj0K.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;在浏览器中访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;在浏览器中输入：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你的 IP/harbor&lt;/p&gt;
+&lt;p&gt;由于我用的是室友的电脑中的虚拟机来做的，在我电脑上是直接访问不到虚拟机里的，所以做了个 net 端口转发使我电脑能够访问，你们在自己的浏览器中就不需要输入端口号了，默认 80&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgjrB6.png&#34; alt=&#34;pPgjrB6.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;输入账号密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;账号默认为 admin，密码默认为 Harbor12345，如果你更改了默认密码那就填你改的密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgjXgs.png&#34; alt=&#34;pPgjXgs.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;点击新建项目来新建一个仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pPgvLdK.png&#34; alt=&#34;pPgvLdK.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;修改 Docker 配置&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因为我使用的使 http 协议，而 docker 默认为 https，所以需要将本地私有仓库添加到信任仓库中&lt;/p&gt;
+&lt;p&gt;使用下面的命令修改配置文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/docker/daemon.json&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注意：你在配置 daemon 文件的时候，除了最后一个键值对后面不用英文逗号，其他都要&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRpcxe.png&#34; alt=&#34;pPRpcxe.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;刷新刚刚编辑的 daemon.json 文件并重启 docker&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;systemctl daemon.json &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; systemctl restart &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;12&#34;&gt;
+&lt;li&gt;给要推送的镜像添加 tag 标签&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; tag centos:centos7 &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.10/zero/centos:centos7&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 注：ip 后面的为你在仓库命名空间创建的仓库名&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRAdS0.png&#34; alt=&#34;pPRAdS0.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;13&#34;&gt;
+&lt;li&gt;在终端登录至搭建的 harbor 私有仓库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; login http://192.168.100.10 &lt;span class=&#34;token parameter variable&#34;&gt;-u&lt;/span&gt; admin &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;123456&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRAUWq.png&#34; alt=&#34;pPRAUWq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;14&#34;&gt;
+&lt;li&gt;使用 push 命令上传镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; push &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.10/zero/centos:centos7&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRANYn.png&#34; alt=&#34;pPRANYn.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;15&#34;&gt;
+&lt;li&gt;从浏览器进入 harbor 仓库管理界面&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/13/pPRAwlV.png&#34; alt=&#34;pPRAwlV.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到，已经上传到 zero 仓库了&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="Docker" />
+        <category term="harbor" />
+        <updated>2023-09-12T03:34:02.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;思维导图&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2023-11-09T07:43:55.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</id>
+        <title>Xmind破解</title>
+        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/"/>
+        <content type="html">&lt;h4 id=&#34;下载-xmind&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载-xmind&#34;&gt;#&lt;/a&gt; 下载 Xmind&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先去下载 Xmind 的最新版本&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly94bWluZC5jbi8=&#34;&gt;Xmind 思维导图 | Xmind 中文官方网站&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;激活&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#激活&#34;&gt;#&lt;/a&gt; 激活&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;找到你的 Xmind 的  &lt;code&gt;account.json&lt;/code&gt;  文件位置（一般在  &lt;code&gt;C:\Users\qingtian\AppData\Roaming\Xmind\Electron v3\vana\state&lt;/code&gt;  下）&lt;/li&gt;
+&lt;li&gt;将以下代码写入到  &lt;code&gt;account.json&lt;/code&gt;  文件中（注意：你直接复制我文章的内容会有版权信息，请将信息删除之后再写入到文件里）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;然后右键此文件，选择属性，点击只读，确定保存&lt;/p&gt;
+&lt;blockquote region:us,openSignInDialogDate:2023-05-23T02:42:15.383Z,rawSubscriptionData:WUnYY8kQKgX3kjftuV3gnl+b7lLsBaQjZv1C8AbQBBIn9RiEkGiJGlk9EAsI5E6uuxGTkhnf5D5Si2buztQGEaLXzVXzFzsMmdXw5fzb+Oo6I78xNPCRfOKSOlrtOveGdYX+GZJKXJSG77hb93Tgst5v1BqS+PdKHwd3dMg=&#34;&#34;&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;之后在你电脑杀毒软件中拦截 Xmind 的联网请求，由于我电脑装的是火绒，所以使用火绒演示，其他杀毒软件请自行百度&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;打开火绒，选择安全设置 》系统防护 》 联网控制，在里面找到添加规则，输入 xmind ，选择操作方式为阻止联网，然后保存即可&lt;/p&gt;
+&lt;h4 id=&#34;20231212-更新&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#20231212-更新&#34;&gt;#&lt;/a&gt; 2023.12.12 更新&lt;/h4&gt;
+&lt;p&gt;经过我的测试，这个激活码大概是在  &lt;code&gt;2023.11.25 9:16&lt;/code&gt;  之前有效， &lt;code&gt;xmind&lt;/code&gt;  应该是通过获取系统日期，然后加密和激活码中加密过的时间进行比较来判定是否生效。&lt;/p&gt;
+&lt;p&gt;知道原因了，问题就好解决了，使用  &lt;code&gt;RunAsdate&lt;/code&gt;  来让  &lt;code&gt;xmind&lt;/code&gt;  运行在指定的时间即可。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;链接：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96ZXJvLWxpLmxhbnpvdXQuY29tL2lFcWp6MWhvcGg4ZA==&#34;&gt;RunAsdate&lt;/span&gt;&lt;br&gt;
+ 密码:i50f&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;程序是汉化过的，不用担心看不懂。&lt;/p&gt;
+&lt;p&gt;你可以使用  &lt;code&gt;RunAsdate&lt;/code&gt;  创建一个指定的  &lt;code&gt;xmind&lt;/code&gt;  文件快捷方式，这样就不用每次都打开  &lt;code&gt;RunAsdate&lt;/code&gt; ，直接使用快捷方式就行。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+</content>
+        <category term="原创" />
+        <category term="破解" />
+        <category term="xmind" />
+        <category term="思维导图" />
+        <updated>2023-11-09T07:43:55.000Z</updated>
+    </entry>
+</feed>

@@ -1,0 +1,861 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="上善若水" href="http://yunyat.cloud/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="上善若水" href="http://yunyat.cloud/atom.xml" />
+<link rel="alternate" type="application/json" title="上善若水" href="http://yunyat.cloud/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="原创,shell" />
+
+
+<link rel="canonical" href="http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/">
+
+
+
+  <title>
+shell脚本笔记-1 - Shell - 我的编程宝典 |
+QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">shell脚本笔记-1
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-12-15 15:06:21">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-12-15T15:06:21+08:00">2023-12-15</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.4k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QSky Yun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?177128"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?18122"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?917128"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?506921"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?232119"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?845124"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/" itemprop="item" rel="index" title="分类于 我的编程宝典"><span itemprop="name">我的编程宝典</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/Shell/" itemprop="item" rel="index" title="分类于 Shell"><span itemprop="name">Shell</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/wa.jpg">
+    <meta itemprop="name" content="清天">
+    <meta itemprop="description" content="=我真的很想喜欢你们，可是你们没有人喜欢我。=, 若能避开猛烈的欢喜，自然也不会有悲痛的来袭.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="上善若水">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="shell命令解释器"><a class="markdownIt-Anchor" href="#shell命令解释器">#</a> Shell 命令解释器</h3>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">cat</span> /etc/shells</pre></td></tr></table></figure><p>shell 的命令解释器用于执行 shell 命令或 shell 脚本文件，Centos 下有四种解释器，一般用默认的 /bin/bash 即可</p>
+<h3 id="执行shell脚本"><a class="markdownIt-Anchor" href="#执行shell脚本">#</a> 执行 Shell 脚本</h3>
+<p>要执行 shell 脚本有两种方法：</p>
+<ol>
+<li>将要执行的  <code>.sh</code>  脚本通过  <code>chmod</code>  给予可执行权限，然后执行</li>
+<li>不赋予可执行权限，通过  <code>bash xxx.sh</code>  或  <code>sh xxx.sh</code>  来执行</li>
+</ol>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token function">chmod</span> +x ./hello.sh    <span class="token comment"># 方法一</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>./hello.sh    <span class="token comment"># 方法二</span></pre></td></tr></table></figure><p>使用  <code>.sh</code>  为后缀只是为了方便区分，对实际运行脚本没有任何影响</p>
+<h4 id="shell变量"><a class="markdownIt-Anchor" href="#shell变量">#</a> Shell 变量</h4>
+<p>shell 脚本定义变量除了等号两边不能加空格，其他和别的编程语言大差不差（值得一提的是，变量名不支持中文命名，其他大部分编程语言是支持的）</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"hello world"</span></pre></td></tr></table></figure><h4 id="变量类型"><a class="markdownIt-Anchor" href="#变量类型">#</a> 变量类型</h4>
+<p>在运行 shell 时，会同时存在三种变量类型：</p>
+<ol>
+<li>局部变量：局部变量在脚本或命令中被定义，只能由当前对象使用，无法被其他 shell 启动的对象访问</li>
+<li>环境变量：环境变量是所有的脚本或程序都能访问的，某些程序或脚本需要环境变量来维持运行，必要时也可以由 shell 脚本自己定义环境变量</li>
+<li>shell 变量：shell 变量是由 shell 程序设置的特殊变量，shell 变量中有一部分是环境变量，有一部分是局部变量，这些变量保证了 shell 的正常运行</li>
+</ol>
+<h4 id="使用变量"><a class="markdownIt-Anchor" href="#使用变量">#</a> 使用变量</h4>
+<p>要使用定义过的变量，只需在变量名前加美元符号，最好在变量名外加花括号以区分边界</p>
+<p><img data-src="https://s1.ax1x.com/2023/09/09/pP6gZdO.png" alt="shell1"></p>
+<p><img data-src="https://s1.ax1x.com/2023/09/09/pP6gVeK.png" alt="shell2"></p>
+<h4 id="只读变量"><a class="markdownIt-Anchor" href="#只读变量">#</a> 只读变量</h4>
+<p>使用 readonly 可以将变量定义为只读变量，只读变量不能被改变</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">readonly</span> name</pre></td></tr></table></figure><h4 id="删除变量"><a class="markdownIt-Anchor" href="#删除变量">#</a> 删除变量</h4>
+<p>使用 unset 删除变量</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">unset</span> name</pre></td></tr></table></figure><h3 id="shell-传递参数"><a class="markdownIt-Anchor" href="#shell-传递参数">#</a> Shell 传递参数</h3>
+<p>有一些特殊变量在 shell 脚本中有特殊含义，如：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数处理</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>$#</code></td>
+<td style="text-align:center">传递到脚本的参数个数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$*</code></td>
+<td style="text-align:center">以一个单字符串的形式输出所有向脚本输入的参数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$$</code></td>
+<td style="text-align:center">脚本运行的当前进程  <code>ID</code>  号</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$!</code></td>
+<td style="text-align:center">后台运行的最后一个进程的 <code>ID</code>  号</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$@</code></td>
+<td style="text-align:center">与 <code>$&#123;*&#125;</code>  效果相同，但是加引号时会返回以引号括起来的每个参数，与 <code>$&#123;*&#125;</code>  的区别是 <code>$&#123;*&#125;</code>  将所有参数当一个字符串处理，而 <code>$&#123;@&#125;</code>  则是分别处理每个参数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$-</code></td>
+<td style="text-align:center">显示 Shell 使用的当前选项，与  <code>set</code>  命令功能相同</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$?</code></td>
+<td style="text-align:center">显示最后命令的退出状态。 <code>0</code>  表示没有错误，其他任何值都表明有错误</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$0</code></td>
+<td style="text-align:center">表示脚本的名称</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>$1</code></td>
+<td style="text-align:center">表示脚本的参数，可以有多个，用 <code>$&#123;1&#125;</code>  、 <code>$&#123;2&#125;</code>  … 表示</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token shebang important">#!/bin/bash</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"有<span class="token variable">$&#123;<span class="token operator">#</span>&#125;</span>个参数"</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"参数:<span class="token variable">$&#123;*&#125;</span>"</span></pre></td></tr><tr><td data-num="6"></td><td><pre></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"进程ID:<span class="token variable">$&#123;$&#125;</span>"</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"最后一个进程ID:<span class="token variable">$&#123;<span class="token operator">!</span>&#125;</span>"</span></pre></td></tr><tr><td data-num="10"></td><td><pre></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"Shell选项:<span class="token variable">$&#123;-&#125;</span>"</span></pre></td></tr><tr><td data-num="12"></td><td><pre></pre></td></tr><tr><td data-num="13"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"脚本name:<span class="token variable">$&#123;0&#125;</span>"</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"<span class="token variable">$&#123;1&#125;</span> + <span class="token variable">$&#123;2&#125;</span> = "</span><span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> $<span class="token punctuation">&#123;</span><span class="token number">1</span><span class="token punctuation">&#125;</span> + $<span class="token punctuation">&#123;</span><span class="token number">2</span><span class="token punctuation">&#125;</span><span class="token variable">`</span></span></pre></td></tr><tr><td data-num="16"></td><td><pre></pre></td></tr><tr><td data-num="17"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;?&#125;</span></pre></td></tr></table></figure><p>输入：</p>
+<blockquote>
+<p>bash ./test.sh 10 20</p>
+</blockquote>
+<p>输出结果：</p>
+<blockquote>
+<p>有 2 个参数<br>
+参数：10 20<br>
+ 进程 ID:71819<br>
+ 最后一个进程 ID:<br>
+Shell 选项:hB<br>
+ 脚本 name:./test.sh<br>
+10 + 20 = 30<br>
+0</p>
+</blockquote>
+<h3 id="shell字符串"><a class="markdownIt-Anchor" href="#shell字符串">#</a> Shell 字符串</h3>
+<p>shell 的字符串可以加双引号、单引号，也可以不加引号</p>
+<h4 id="单引号"><a class="markdownIt-Anchor" href="#单引号">#</a> 单引号</h4>
+<ul>
+<li>
+<p>加单引号的字符串中的变量是无效的，可以使用单引号将变量引用起来达到拼接字符串的目的</p>
+</li>
+<li>
+<p>单引号字符串中不能出现单独的单引号，转义后也不行，只能成对出现</p>
+</li>
+</ul>
+<h4 id="双引号"><a class="markdownIt-Anchor" href="#双引号">#</a> 双引号</h4>
+<ul>
+<li>双引号中可以有变量</li>
+<li>双引号中可以出现转义字符</li>
+</ul>
+<h4 id="拼接字符串"><a class="markdownIt-Anchor" href="#拼接字符串">#</a> 拼接字符串</h4>
+<p>使用双引号拼接字符串：</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token shebang important">#!/bin/bash</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token assign-left variable">name</span><span class="token operator">=</span><span class="token string">"QSky"</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token string">"Hello! <span class="token variable">$&#123;name&#125;</span>"</span></pre></td></tr></table></figure><p>输出结果：</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre>Hello<span class="token operator">!</span> QSky</pre></td></tr></table></figure><p><img data-src="https://s1.ax1x.com/2023/09/09/pP6RMrt.png" alt="shell3"></p>
+<p>输出结果：</p>
+<blockquote>
+<p>string hello world</p>
+<p name="">string $</p>
+<p>string hello world</p>
+<p>“string” hello world</p>
+</blockquote>
+<h4 id="获取字符串的长度"><a class="markdownIt-Anchor" href="#获取字符串的长度">#</a> 获取字符串的长度</h4>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token string">"hello world"</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;<span class="token operator">#</span>str&#125;</span>    <span class="token comment"># $&#123;#str&#125; 等价于 $&#123;#str [0]&#125;</span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<p>11</p>
+</blockquote>
+<h4 id="提取子字符串"><a class="markdownIt-Anchor" href="#提取子字符串">#</a> 提取子字符串</h4>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token string">"hello world"</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 语法：字符串变量名：要提取的子串的开始位置：要提取的子串的结束位置</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;str<span class="token operator">:</span>6<span class="token operator">:</span>8&#125;</span>    <span class="token comment"># 第一个字符 'h' 索引为 0</span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<p>world</p>
+</blockquote>
+<h4 id="查找字符串"><a class="markdownIt-Anchor" href="#查找字符串">#</a> 查找字符串</h4>
+<p>查找字符  <code>i</code>  或  <code>o</code>  的位置，哪个先出现就计算哪个</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token string">"hello world"</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable"><span class="token variable">`</span><span class="token function">expr</span> index <span class="token string">"<span class="token variable">$str</span>"</span> or<span class="token variable">`</span></span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<p>5</p>
+</blockquote>
+<h3 id="shell数组"><a class="markdownIt-Anchor" href="#shell数组">#</a> Shell 数组</h3>
+<p>和大多数编程语言一样，shell 脚本也有数组，但与其他编程语言不同的是，shell 不支持多维数组，不过 shell 的数组并没有长度限制，并且可以使用不连续的下标，下标范围也没有限制</p>
+<h4 id="定义-shell-数组"><a class="markdownIt-Anchor" href="#定义-shell-数组">#</a> 定义 shell 数组</h4>
+<p>数组用小括号来表示，用空格区分值</p>
+<p>格式：</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token assign-left variable">array_name</span><span class="token operator">=</span><span class="token punctuation">(</span>value0 value1 value2 value3<span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 或</span></pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token assign-left variable">array_name</span><span class="token operator">=</span><span class="token punctuation">(</span></pre></td></tr><tr><td data-num="6"></td><td><pre>value0</pre></td></tr><tr><td data-num="7"></td><td><pre>value1</pre></td></tr><tr><td data-num="8"></td><td><pre>value2</pre></td></tr><tr><td data-num="9"></td><td><pre>value3</pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token punctuation">)</span></pre></td></tr></table></figure><p>示例：</p>
+<pre><code>array_name=(
+
+)
+</code></pre>
+<p>也能单独定义数组的单个元素</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre>array_name<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>value0</pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre>array_name<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>value1</pre></td></tr><tr><td data-num="4"></td><td><pre></pre></td></tr><tr><td data-num="5"></td><td><pre>array_name<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token operator">=</span>value5</pre></td></tr></table></figure><h4 id="读取数组"><a class="markdownIt-Anchor" href="#读取数组">#</a> 读取数组</h4>
+<p>和其他编程语言一样，shell 同样是通过数组名加下标来读取元素</p>
+<pre><code>$&#123;数组名[下标]&#125;
+</code></pre>
+<p>可以使用  <code>@</code>  或  <code>*</code>  读取数组的全部元素：</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token shebang important">#!/bin/bash</span></pre></td></tr><tr><td data-num="2"></td><td><pre>  </pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token assign-left variable">str</span><span class="token operator">=</span><span class="token punctuation">(</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token string">'string '</span><span class="token variable">$&#123;name&#125;</span><span class="token string">''</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token string">'string $&#123;name&#125;'</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token string">"string <span class="token variable">$&#123;name&#125;</span>"</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token string">"<span class="token entity" title="\&quot;">\"</span>string<span class="token entity" title="\&quot;">\"</span> <span class="token variable">$&#123;name&#125;</span>"</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;str<span class="token punctuation">[</span>@<span class="token punctuation">]</span>&#125;</span> <span class="token comment"># 和 echo $&#123;str [*]&#125; 效果相同</span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<h6 id="为了便于阅读我给输出结果分段处理了"><a class="markdownIt-Anchor" href="#为了便于阅读我给输出结果分段处理了">#</a> 为了便于阅读，我给输出结果分段处理了</h6>
+<p>string hello world</p>
+<p name="">string $</p>
+<p>string hello world</p>
+<p>“string” hello world</p>
+</blockquote>
+<h4 id="获取数组的长度"><a class="markdownIt-Anchor" href="#获取数组的长度">#</a> 获取数组的长度</h4>
+<p>获取数组长度的方法与获取字符串长度的方法相似</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token shebang important">#!/bin/bash</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token assign-left variable">array_name</span><span class="token operator">=</span><span class="token punctuation">(</span></pre></td></tr><tr><td data-num="4"></td><td><pre>value0</pre></td></tr><tr><td data-num="5"></td><td><pre>value1</pre></td></tr><tr><td data-num="6"></td><td><pre>value2</pre></td></tr><tr><td data-num="7"></td><td><pre>value3</pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="9"></td><td><pre></pre></td></tr><tr><td data-num="10"></td><td><pre><span class="token assign-left variable">length_1</span><span class="token operator">=</span><span class="token variable">$&#123;<span class="token operator">#</span>array_name<span class="token punctuation">[</span>@<span class="token punctuation">]</span>&#125;</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre><span class="token comment"># 或</span></pre></td></tr><tr><td data-num="13"></td><td><pre></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token assign-left variable">length_2</span><span class="token operator">=</span><span class="token variable">$&#123;<span class="token operator">#</span>array_name<span class="token punctuation">[</span>*<span class="token punctuation">]</span>&#125;</span></pre></td></tr><tr><td data-num="15"></td><td><pre></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token comment"># 获取单个数组元素的长度</span></pre></td></tr><tr><td data-num="17"></td><td><pre></pre></td></tr><tr><td data-num="18"></td><td><pre><span class="token assign-left variable">length_3</span><span class="token operator">=</span><span class="token variable">$&#123;<span class="token operator">#</span>array_name<span class="token punctuation">[</span>2<span class="token punctuation">]</span>&#125;</span></pre></td></tr><tr><td data-num="19"></td><td><pre></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;length_1&#125;</span> <span class="token variable">$&#123;length_2&#125;</span> <span class="token variable">$&#123;length_3&#125;</span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<p>4 4 6</p>
+<p>注：6 为第二个下标所表示的元素的长度</p>
+</blockquote>
+<h4 id="关联数组"><a class="markdownIt-Anchor" href="#关联数组">#</a> 关联数组</h4>
+<p>bash 脚本支持关联数组，可以使用任意的字符串或者整数来作为下标来访问数组。</p>
+<p>关联数组的键是唯一的，有点类似于其他编程语言的键值对。</p>
+<p>语法：</p>
+<blockquote>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">declare</span> <span class="token parameter variable">-A</span> array-name<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"key_1"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"value_1"</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token punctuation">[</span><span class="token string">"key_2"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"value_2"</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">[</span><span class="token string">"key_3"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"value_3"</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">[</span><span class="token string">"key_4"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"value_4"</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">..</span>.</pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">[</span><span class="token string">"key_n"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"value_n"</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token punctuation">)</span></pre></td></tr></table></figure></blockquote>
+<p>使用  <code>declare</code>  命令来声明， <code>-A</code>  选项就是用于声明一个关联数组。</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token shebang important">#!/bin/bash</span></pre></td></tr><tr><td data-num="2"></td><td><pre></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token builtin class-name">declare</span> <span class="token parameter variable">-A</span> <span class="token assign-left variable">site</span><span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"QSky"</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token punctuation">[</span><span class="token string">"url"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"zero-li.fun"</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;site<span class="token punctuation">[</span>@<span class="token punctuation">]</span>&#125;</span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<p>zero-li.fun QSky</p>
+</blockquote>
+<p>同样可以先声明再赋值：</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token shebang important">#!/bin/bash</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token builtin class-name">declare</span> <span class="token parameter variable">-A</span> site</pre></td></tr><tr><td data-num="3"></td><td><pre>site<span class="token punctuation">[</span><span class="token string">"zero"</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"zero-li.fun"</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token builtin class-name">echo</span> <span class="token variable">$&#123;site<span class="token punctuation">[</span>"zero"<span class="token punctuation">]</span>&#125;</span></pre></td></tr></table></figure><p>输出结果：</p>
+<blockquote>
+<p>zero-li.fun</p>
+</blockquote>
+<h3 id="shell-注释"><a class="markdownIt-Anchor" href="#shell-注释">#</a> Shell 注释</h3>
+<p>在 shell 脚本中，以  <code>#</code>  开头的就是注释。</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 这是一句注释</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token builtin class-name">echo</span> 注释的内容并不会被执行</pre></td></tr></table></figure><h4 id="多行注释"><a class="markdownIt-Anchor" href="#多行注释">#</a> 多行注释</h4>
+<p>可以使用  <code>:</code>  命令，并用单引号  <code>'</code>  将多行内容括起来。</p>
+<p>语法： <code>:</code>  +  <code> </code>  (空格) +  <code>'</code>  (单引号)</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token builtin class-name">:</span> <span class="token string">'</pre></td></tr><tr><td data-num="2"></td><td><pre>这是多段注释</pre></td></tr><tr><td data-num="3"></td><td><pre>可以有多行内容</pre></td></tr><tr><td data-num="4"></td><td><pre>'</span></pre></td></tr></table></figure><p>shell 常用命令及关键字：</p>
+<p><code>readonly</code> ：将变量定义为只读，无法更改其值</p>
+<p><code>unset</code> ：删除变量，无法删除只读变量</p>
+<hr>
+<p>END</p>
+
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/shell/" rel="tag"><i class="ic i-tag"></i> shell</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-06-22 15:27:56" itemprop="dateModified" datetime="2024-06-22T15:27:56+08:00">2024-06-22</time>
+  </span>
+  <span id="MyCodingBook/shell/shell脚本笔记-1/" class="item leancloud_visitors" data-flag-title="shell脚本笔记-1" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="清天 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="清天 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="清天 QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文博主： </strong>清天 <i class="ic i-at"><em>@</em></i>上善若水
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/" title="shell脚本笔记-1">http://yunyat.cloud/MyCodingBook/shell/shell脚本笔记-1/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?2304" title="windows重装系统重制版">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Windows</span>
+  <h3>windows重装系统重制版</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?563524" title="shell脚本笔记-3">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Shell</span>
+  <h3>shell脚本笔记-3</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E5%91%BD%E4%BB%A4%E8%A7%A3%E9%87%8A%E5%99%A8"><span class="toc-number">1.</span> <span class="toc-text"> Shell 命令解释器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A7%E8%A1%8Cshell%E8%84%9A%E6%9C%AC"><span class="toc-number">2.</span> <span class="toc-text"> 执行 Shell 脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#shell%E5%8F%98%E9%87%8F"><span class="toc-number">2.1.</span> <span class="toc-text"> Shell 变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%98%E9%87%8F%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.2.</span> <span class="toc-text"> 变量类型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E5%8F%98%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text"> 使用变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%AA%E8%AF%BB%E5%8F%98%E9%87%8F"><span class="toc-number">2.4.</span> <span class="toc-text"> 只读变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E5%8F%98%E9%87%8F"><span class="toc-number">2.5.</span> <span class="toc-text"> 删除变量</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell-%E4%BC%A0%E9%80%92%E5%8F%82%E6%95%B0"><span class="toc-number">3.</span> <span class="toc-text"> Shell 传递参数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.</span> <span class="toc-text"> Shell 字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8D%95%E5%BC%95%E5%8F%B7"><span class="toc-number">4.1.</span> <span class="toc-text"> 单引号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8F%8C%E5%BC%95%E5%8F%B7"><span class="toc-number">4.2.</span> <span class="toc-text"> 双引号</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8B%BC%E6%8E%A5%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.3.</span> <span class="toc-text"> 拼接字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="toc-number">4.4.</span> <span class="toc-text"> 获取字符串的长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%90%E5%8F%96%E5%AD%90%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.5.</span> <span class="toc-text"> 提取子字符串</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">4.6.</span> <span class="toc-text"> 查找字符串</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell%E6%95%B0%E7%BB%84"><span class="toc-number">5.</span> <span class="toc-text"> Shell 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89-shell-%E6%95%B0%E7%BB%84"><span class="toc-number">5.1.</span> <span class="toc-text"> 定义 shell 数组</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%BB%E5%8F%96%E6%95%B0%E7%BB%84"><span class="toc-number">5.2.</span> <span class="toc-text"> 读取数组</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E4%B8%BA%E4%BA%86%E4%BE%BF%E4%BA%8E%E9%98%85%E8%AF%BB%E6%88%91%E7%BB%99%E8%BE%93%E5%87%BA%E7%BB%93%E6%9E%9C%E5%88%86%E6%AE%B5%E5%A4%84%E7%90%86%E4%BA%86"><span class="toc-number">5.2.0.1.</span> <span class="toc-text"> 为了便于阅读，我给输出结果分段处理了</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%95%B0%E7%BB%84%E7%9A%84%E9%95%BF%E5%BA%A6"><span class="toc-number">5.3.</span> <span class="toc-text"> 获取数组的长度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E8%81%94%E6%95%B0%E7%BB%84"><span class="toc-number">5.4.</span> <span class="toc-text"> 关联数组</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#shell-%E6%B3%A8%E9%87%8A"><span class="toc-number">6.</span> <span class="toc-text"> Shell 注释</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A"><span class="toc-number">6.1.</span> <span class="toc-text"> 多行注释</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/" rel="bookmark" title="shell脚本笔记 - 2">shell脚本笔记 - 2</a></li><li class="active"><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/" rel="bookmark" title="shell脚本笔记-1">shell脚本笔记-1</a></li><li><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/" rel="bookmark" title="shell脚本笔记-3">shell脚本笔记-3</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="清天"
+      data-src="/images/wa.jpg">
+  <p class="name" itemprop="name">清天</p>
+  <div class="description" itemprop="description">若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">66</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">18</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">53</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1plcm8tUWw=" title="https:&#x2F;&#x2F;github.com&#x2F;Zero-Ql"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9ncmF2YXRhci5jb20vcXNreTFhNGRjYzYyZmI4" title="https:&#x2F;&#x2F;gravatar.com&#x2F;qsky1a4dcc62fb8"><i class="ic i-address-card"></i></span>
+      <a href="mailto:qsky@yunyat.cloud" title="mailto:qsky@yunyat.cloud" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL1FTa3lZdW4=" title="https:&#x2F;&#x2F;t.me&#x2F;QSkyYun"><i class="ic i-paper-plane"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly95Lm11c2ljLjE2My5jb20vbS91c2VyP2lkPTIwNjM1MjA5Mzk=" title="https:&#x2F;&#x2F;y.music.163.com&#x2F;m&#x2F;user?id&#x3D;2063520939"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6bGl2ZTouY2lkLjdmYTYyZWIyZDhmMzQzYzI/Y2FsbHxjaGF0" title="skype:live:.cid.7fa62eb2d8f343c2?call|chat"><i class="ic i-skype"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83OTI2ODg4OTUw" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7926888950"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/site/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/gallery/" rel="section"><i class="ic i-loop"></i>Wo的足迹</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-magic"></i>链圈</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-link"></i>links</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/websitemap/" rel="section"><i class="ic i-sitemap"></i>网站Map</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/" title="springboot多模块开发">springboot多模块开发</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" title="Docker部署">Docker部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
+</div>
+
+    <span><a href="/MyCodingBook/UnitTests/JUnit/" title="JUnit">JUnit</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/" title="集合-Map">集合-Map</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/" title="运算符级别比较">运算符级别比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-4/" title="MySQL-4">MySQL-4</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="记一次电脑启动原神蓝屏解决方案">记一次电脑启动原神蓝屏解决方案</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/" title="安利几个好用的网站">安利几个好用的网站</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/test/" title="分类于 测试">测试</a>
+</div>
+
+    <span><a href="/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/" title="Mermaid画图测试">Mermaid画图测试</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/SpringMVC/" title="SpringMVC">SpringMVC</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">134k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:02</span>
+  </div>
+  <div class="icp-info">
+    <span class="icp-img">
+      <a class="post-meta-item-icon" target="_blank" rel="noopener" href="https://icp.gov.moe"><img title="https://icp.gov.moe" src="images/icon120.png" width="18" style="vertical-align:middle"></a>
+    </span>
+    <span class="icp-text">
+      <span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDIzMTAxMw==">萌ICP备20231013号</span>
+    </span>
+  </div>
+
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">清天 @ QSky Yun</span>
+  </div>
+  <div class="start-time">
+    <span>本站已平稳运行</span>
+    <span id="display_live_time"> 0 天 0 小时 0 分 0 秒</span>
+      <script>function blog_live_time(){
+          setTimeout(blog_live_time,1e3);
+          const e = new Date("2023-04-28T00:00:00"),
+          t=(new Date).getTime()-e.getTime(),
+          i=Math.floor(t/864e5),
+          o=Math.floor(t%864e5/60/60/1e3),
+          l=Math.floor(t%36e5/60/1e3),
+          _=Math.floor(t%6e4/1e3);
+          display_live_time.innerHTML=` ${i} 天 ${o} 小时 ${l} 分 ${_} 秒`
+        }
+        blog_live_time()
+      </script>
+    <span>ヽ(○´∀`)ﾉ♪</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'MyCodingBook/shell/shell脚本笔记-1/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看不见我看不见我"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="/js/typed.js"></script>
+    <script type="text/javascript">
+        var str = { "hitokoto": "=我真的很想喜欢你们，可是你们没有人喜欢我。=" };
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&min_length=15')
+        .then(response => {
+            if (!response.ok) {
+                return str;
+            } else {
+                return response.json();
+            }
+        }).then(data => {
+            typedfun(data.hitokoto);
+        }).catch(error => {
+            typedfun(str.hitokoto);
+        });
+        function typedfun(data) {
+            var msg = "=" + data  + "=^1500";
+            typed = new Typed(".say-subtitle", {
+                strings: msg.split(),
+                typeSpeed: 70,
+                loop: true,
+                loopCount: Infinity,
+                backDelay: 70,
+                backSpeed: 100,
+                smartBackspace: true
+            });
+        }
+    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;docker&#34; category</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 26 Sep 2023 23:22:58 +0800</pubDate>
+        <lastBuildDate>Tue, 26 Sep 2023 23:22:58 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</guid>
+            <title>使用cAdvisor+Prometheus+Grafana监控Docker容器</title>
+            <link>http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</link>
+            <category>Docker</category>
+            <category>cAdvisor</category>
+            <category>Prometheus</category>
+            <category>Grafana</category>
+            <pubDate>Tue, 26 Sep 2023 23:22:58 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;10-下载镜像&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-下载镜像&#34;&gt;#&lt;/a&gt; 1.0 下载镜像&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先使用下面的命令下载必要的镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull google/cadvisor &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull prom/prometheus &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull grafana/grafana&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHGeun.png&#34; alt=&#34;pPHGeun.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;20-cadvisor-的部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#20-cadvisor-的部署&#34;&gt;#&lt;/a&gt; 2.0 cAdvisor 的部署&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用下面的命令将本地的 根目录、/sys、/var/lib/docker、/dev/disk 等目录以只读形式挂载到容器里，然后使用 -p 将本地端口映射到容器，使用 --privileged 给予容器特权模式，使用 --device=/dev/kmsg 将主机的 /dev/kmsg 设备文件添加到容器中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /:/rootfs:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /var/run:/var/run:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /sys:/sys:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /var/lib/docker/:/var/lib/docker:ro &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /dev/disk/:/dev/disk:ro &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25571&lt;/span&gt;:8080 &lt;span class=&#34;token parameter variable&#34;&gt;--detach&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;true &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;cadvisor &lt;span class=&#34;token parameter variable&#34;&gt;--privileged&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--device&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/dev/kmsg google/cadvisor&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHwpYq.png&#34; alt=&#34;pPHwpYq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;在浏览器输入  &lt;code&gt;你的ip:25571/containers/docker&lt;/code&gt;  即可访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHwilT.png&#34; alt=&#34;pPHwilT.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;30-prometheus-的部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#30-prometheus-的部署&#34;&gt;#&lt;/a&gt; 3.0 Prometheus 的部署&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先创建配置文件存放的目录，然后使用 vim 创建并编辑  &lt;code&gt;prometheus.yml&lt;/code&gt;  配置文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; /etc/prometheus &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; /etc/prometheus/prometheus.yml&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;然后在 prometheus.yml 文件中写入以下内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;将 ip 地址跟端口号改为自己的就行&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;global:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   scrape_interval: 15s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   evaluation_interval: 15s&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; alerting:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  alertmanagers:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  - static_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    - targets:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; rule_files:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt; scrape_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   - job_name: &lt;span class=&#34;token string&#34;&gt;&#39;prometheus&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     static_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     - targets: &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;192.168.234.128:25572&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;   - job_name: &lt;span class=&#34;token string&#34;&gt;&#39;cadvisor&#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     static_configs:&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;     - targets: &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#39;192.168.234.128:25571&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：缩进一定要跟我的一样，错一个字符都不行，因为我容器已经运行起来了才截的图，所以你们现在应该是没有这个容器的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHw9f0.png&#34; alt=&#34;pPHw9f0.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;使用 run 将容器运行起来&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;建议先使用 docker ps -a 查看容器有没有真正运行起来，有时候会出现成功创建但是没有运行起来的情况，这种情况一般都是配置文件有问题导致的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;prometheus &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25572&lt;/span&gt;:9090 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /etc/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus &lt;span class=&#34;token parameter variable&#34;&gt;--config.file&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;/etc/prometheus/prometheus.yml --web.enable-lifecycle&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;在浏览器输入你的 ip:25572/targets 来访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/26/pPHwPpV.png&#34; alt=&#34;pPHwPpV.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;40-grafana-的部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#40-grafana-的部署&#34;&gt;#&lt;/a&gt; 4.0 Grafana 的部署&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;因为之前已经把所有的镜像都已经下载了，所以直接用 run 来运行就行了，之后在浏览器中使用 你的 IP:25573/login 来访问即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;grafana &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25573&lt;/span&gt;:3000 grafana/grafana&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyPpR.png&#34; alt=&#34;pPHyPpR.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;默认账号及密码都为 admin ，登录之后网站会强制你更新密码&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyZ7D.png&#34; alt=&#34;pPHyZ7D.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;进入管理界面之后点击 DATA SOURCES 来创建数据源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyV0O.png&#34; alt=&#34;pPHyV0O.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;选择第一个数据源&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHyuhd.png&#34; alt=&#34;pPHyuhd.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;在 HTTP 的 URL 栏填入你的 Prometheus 访问地址，然后选 Save &amp;amp; test 保存并退出&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如：&lt;/p&gt;
+&lt;figure class=&#34;highlight http&#34;&gt;&lt;figcaption data-lang=&#34;HTTP&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token header&#34;&gt;&lt;span class=&#34;token header-name keyword&#34;&gt;http&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token header-value&#34;&gt;//192.168.234.128:25572/targets&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHy8nf.png&#34; alt=&#34;pPHy8nf.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;点击左边工具栏的 ‘+’ 号，然后点击 Import ，输入 193 ，点击后面的 Import&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHytAg.png&#34; alt=&#34;pPHytAg.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;在 Prometheus 列选择数据源，之后点击 Import&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHy0cq.png&#34; alt=&#34;pPHy0cq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;之后就可以看到仪表盘显示的数据了&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/27/pPHycEF.png&#34; alt=&#34;pPHycEF.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
+            <title>Docker之nginx的负载均衡</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Tue, 12 Sep 2023 18:49:35 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;使用docker部署nginx的负载均衡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用docker部署nginx的负载均衡&#34;&gt;#&lt;/a&gt; 使用 docker 部署 nginx 的负载均衡&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;下载 nginx 和 tomcat 镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull nginx &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull tomcat&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2Vg10.png&#34; alt=&#34;pP2Vg10.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;新建 tomcat 网页&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; /root/www1/ROOT &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; /root/www2/ROOT&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2VhBF.png&#34; alt=&#34;pP2VhBF.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;进入刚创建的 www1/ROOT 目录里&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /root/www1/ROOT&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;使用 vim 创建 index.jsp 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; index.jsp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;输入以下内容：&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-jsp&#34;&gt;&amp;lt;html&amp;gt;
+    &amp;lt;head&amp;gt;
+           &amp;lt;title&amp;gt;Tomcat1&amp;lt;/title&amp;gt;
+    &amp;lt;/head&amp;gt;
+    &amp;lt;body&amp;gt;	
+           &amp;lt;%
+                  out.println(&amp;quot;this is Tomcat1&amp;quot;);
+           %&amp;gt;
+    &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2VoN9.png&#34; alt=&#34;pP2VoN9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在 /root/www2/ROOT/ 下同样创建 index.jsp 文件，输入内容同上，将 Tomcat1 改为 Tomcat2 即可&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;运行 tomcat1 和 tomcat2 ，并且将 docker 的 /root/www1 和 /root/www2 与容器的 /usr/local/webapps 目录映射&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; tomcat1 &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;32769&lt;/span&gt;:8080 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/www1:/usr/local/tomcat/webapps tomcat:latest &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; tomcat2 &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;32770&lt;/span&gt;:8080 &lt;span class=&#34;token parameter variable&#34;&gt;-v&lt;/span&gt; /root/www2:/usr/local/tomcat/webapps tomcat:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;注：上面是一条命令&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2Z3uT.png&#34; alt=&#34;pP2Z3uT.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;在浏览器分别输入以下语句：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;你的 ip:32769&lt;/p&gt;
+&lt;p&gt;你的 ip:32770&lt;/p&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MTozMjc2OQ==&#34;&gt;tomcat1&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MTozMjc3MA==&#34;&gt;tomcat2&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;运行 nginx&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; run &lt;span class=&#34;token parameter variable&#34;&gt;-itd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;--name&lt;/span&gt; nginx &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;25567&lt;/span&gt;:80 nginx:latest&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;在 /root 目录下使用 vim 创建 nginx.conf 文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;cd&lt;/span&gt; /root &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;vim&lt;/span&gt; nginx.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;填入以下内容：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;user  nginx&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;worker_processes  &lt;span class=&#34;token number&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;error_log  /var/log/nginx/error.log warn&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;pid        /var/run/nginx.pid&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;events &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    worker_connections  &lt;span class=&#34;token number&#34;&gt;1024&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;http &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    include       /etc/nginx/mime.types&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    default_type  application/octet-stream&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    log_format  main  &lt;span class=&#34;token string&#34;&gt;&#39;$remote_addr - $remote_user [$time_local] &#34;$request&#34; &#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                      &lt;span class=&#34;token string&#34;&gt;&#39;$status $body_bytes_sent &#34;$http_referer&#34; &#39;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                      &lt;span class=&#34;token string&#34;&gt;&#39;&#34;$http_user_agent&#34; &#34;$http_x_forwarded_for&#34;&#39;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    access_log  /var/log/nginx/access.log  main&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    sendfile        on&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;#tcp_nopush     on;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    keepalive_timeout  &lt;span class=&#34;token number&#34;&gt;65&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;#gzip  on;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;29&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;30&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    include /etc/nginx/conf.d/*.conf&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;31&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;32&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    upstream tomcat &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;33&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        server &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.100:32772&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;34&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        server &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.100:32773&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;35&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;36&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    server &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;37&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        listen &lt;span class=&#34;token number&#34;&gt;80&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;38&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        server_name &lt;span class=&#34;token number&#34;&gt;192.168&lt;/span&gt;.100.100&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;39&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;40&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        location / &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;41&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;                proxy_pass http://tomcat&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;   &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;42&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;43&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;44&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;其中 server 后面的 ip 改为你的 ip 加端口号，server_name 同理&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2eKde.png&#34; alt=&#34;pP2eKde.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;9&#34;&gt;
+&lt;li&gt;将 nginx.conf 文件 cp 到你的容器里&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; nginx.conf e11dd26a3930:/etc/nginx/nginx.conf&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 记住，容器 id 改为自己的 nginx 容器的 id&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2MeET.png&#34; alt=&#34;pP2MeET.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;10&#34;&gt;
+&lt;li&gt;重启 nginx 容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; restart 你的nginx容器id&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;11&#34;&gt;
+&lt;li&gt;浏览器访问你服务器的 ip，因为我的 80 端口被占用，所以使用 25567 代替&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/12/pP2MmUU.png&#34; alt=&#34;pP2MmUU.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;刷新会在 tomcat1 和 tomcat2 切换&lt;/p&gt;
+&lt;p&gt;示例：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MToyNTU2Nw==&#34;&gt;tomcat1 or tomcat2&lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</guid>
+            <title>Docker构建镜像及使用的笔记</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Mon, 11 Sep 2023 21:52:29 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
+&lt;p&gt;本文并不记录详细过程，只是为了记录一下大概构建及使用的经过（还有踩坑记录，重点！！！）&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;开始&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开始&#34;&gt;#&lt;/a&gt; 开始&lt;/h4&gt;
+&lt;p&gt;由于一些特殊原因，我需要一个包含 nodejs 的基础镜像来构建一个新的镜像，但是由于各种原因，没能下成，并且我也不知道哪些镜像中含有 nodejs，所以没办法，只能自己构建一个含有 nodejs 的镜像，为了使镜像最小化，我选择了 alpine 发行的 Linux 镜像&lt;/p&gt;
+&lt;p&gt;直接 docker pull alpine ，没毛病，下好之后准备 run 的，结果发现根本没有 bash 这个命令，查过资料才发现，它还是用的 sh 。。。。&lt;/p&gt;
+&lt;p&gt;好了，重新 run ， &lt;code&gt;docker run -it alpine /bin/sh&lt;/code&gt;  .&lt;/p&gt;
+&lt;p&gt;这下没毛病了，进了终端，然后竟然发现无从下手！！！（毕竟 alpine 跟 centos 不一样），一开始用的 yum ，结果直接 not found ，，查了资料发现，这玩意儿连 yum 都没有。。只能用 apk ，不愧是最小的 Linux .&lt;/p&gt;
+&lt;p&gt;在用 apk 将 nodejs 下好后，直接构建，然后尼玛又少了 npm ，淦！&lt;/p&gt;
+&lt;p&gt;同样的方法，用 apk 下好之后，构建！！！不出意外的话又出意外了，构建的时候有一步比较吃 cpu 资源 ，我用服务器构建了两次，&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</guid>
+            <title>Docker的使用-叁</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Fri, 08 Sep 2023 15:00:14 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;dockerfile的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dockerfile的使用&#34;&gt;#&lt;/a&gt; Dockerfile 的使用&lt;/h4&gt;
+&lt;p&gt;使用 Dockerfile 部署扫雷 web 程序&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先将必要的文件上传至服务器，然后在当前目录创建 init.sh 和 dockerfile 文件&lt;/p&gt;
+&lt;p&gt;友情提示：可以使用 scp 上传&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;scp 不会用那就用下面的这条命令，我把资源都打包到我服务器上了，可以直接下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-O&lt;/span&gt; https://zero-li.fun/资源/source.tar &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tar&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-xf&lt;/span&gt; source.tar &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-f&lt;/span&gt; source/* ./ &lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;rm&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-rf&lt;/span&gt; sour*&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6Celd.png&#34; alt=&#34;pP6Celd.png&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过 vim 向 dockerfile  &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL3huLS1pbml0LTk5MGcuc2g=&#34;&gt;及 init.sh&lt;/span&gt; 写入以下内容：&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;请不要照抄我的配置，每句后面都有注释，稍微动一下脑子就行了，要不然寄&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用 dockerfile 之前，你首先要确保你的当前目录下有以下几个文件：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;ls&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-a&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;blockquote&gt;
+&lt;p&gt;Centos-7.repo&lt;/p&gt;
+&lt;p&gt;epel-7.repo&lt;/p&gt;
+&lt;p&gt;saolei.zip&lt;/p&gt;
+&lt;p&gt;dockerfile&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2luaXQuc2g=&#34;&gt;init.sh&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;你还要确保你的本地有 centos:centos7 这个镜像&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; images&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/10/pPcdAF1.png&#34; alt=&#34;pPcdAF1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;没有怎么办？凉拌！！！&lt;/p&gt;
+&lt;p&gt;用下面这条命令下载：&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;docker&lt;/span&gt; pull centos:centos7&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;要是还报错，那你就自己百度去吧，问题奇奇怪怪的&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;FROM centos:centos7    &lt;span class=&#34;token comment&#34;&gt;# 这是你要使用的基础镜像，记住改为自己的基础镜像 (如果你使用了上面的 pull 下载了镜像，就不需要改)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ADD Centos-7.repo /etc/yum.repos.d/    &lt;span class=&#34;token comment&#34;&gt;# 这条命令的意思是添加 Centos7.repo 文件到容器的 /etc/yum.repos.d 下&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ADD epel-7.repo /etc/yum.repos.d/    &lt;span class=&#34;token comment&#34;&gt;# 同上&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN yum &lt;span class=&#34;token parameter variable&#34;&gt;-y&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;install&lt;/span&gt; tomcat &lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;# 运行 yum 命令安装 tomcat 、 unzip 、 curl ，其中 -y 表示安装过程中的选择全部为 yes&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;WORKDIR /var/lib/tomcat/webapps/    &lt;span class=&#34;token comment&#34;&gt;# 指定工作目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN &lt;span class=&#34;token function&#34;&gt;curl&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-O&lt;/span&gt; https://zero-li.fun/资源/saolei.zip    &lt;span class=&#34;token comment&#34;&gt;# 从指定站点下载 saolei.zip 资源&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN &lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; saolei.zip    &lt;span class=&#34;token comment&#34;&gt;# 解压 saolei.zip 文件&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;RUN &lt;span class=&#34;token function&#34;&gt;mv&lt;/span&gt; saolei ROOT     &lt;span class=&#34;token comment&#34;&gt;# 将 saolei 移动至 ROOT 文件或目录&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ADD init.sh /init.sh    &lt;span class=&#34;token comment&#34;&gt;# 添加 init.sh 至 /init.sh&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;EXPOSE &lt;span class=&#34;token number&#34;&gt;8080&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;# 声明 8080 端口 ，此时并没有开放此端口&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;CMD &lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;/bin/bash&#34;&lt;/span&gt;,&lt;span class=&#34;token string&#34;&gt;&#34;/init.sh&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt;    &lt;span class=&#34;token comment&#34;&gt;# 在容器启动时运行 /init.sh 脚本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;span&gt;l&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token shebang important&#34;&gt;#!/bin/bash&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;  &lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;/usr/libexec/tomcat/server start    &lt;span class=&#34;token comment&#34;&gt;# 在指定目录启动 tomcat server 服务器&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;直接构建镜像&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker build -t saolei:v1 .&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6PyUf.png&#34; alt=&#34;pP6PyUf.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;运行容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;docker run -itd -P saolei:v1&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6PWvj.png&#34; alt=&#34;pP6PWvj.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;在浏览器通过 ” 你的 IP“: 开放的随机端口 /saolei.jsp 访问&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/08/pP6PjM9.png&#34; alt=&#34;pP6PjM9.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;示例: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MTozMjc3MC9zYW9sZWkuanNwP2xldmVsPTgmYW1wO2xlaU51bT04JmFtcDtzaXplPTg=&#34;&gt;扫雷&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</guid>
+            <title>Docker的使用-贰</title>
+            <link>http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Tue, 05 Sep 2023 18:57:03 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;docker容器的应用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker容器的应用&#34;&gt;#&lt;/a&gt; Docker 容器的应用&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言：使用 Docker 部署 nginx 站点实现外网访问&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1. 先创建一个 nginx 站点&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run --name nginx-one -itd -P nginx:latest&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFU6s.png&#34; alt=&#34;nginx1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 将本地的 &lt;code&gt;./nginx/www&lt;/code&gt; 、 &lt;code&gt;./nginx/logs&lt;/code&gt; 、 &lt;code&gt;./nginx/conf&lt;/code&gt;  分别挂载到容器的 &lt;code&gt;/usr/share/nginx/html&lt;/code&gt; 、 &lt;code&gt;/var/log/nginx&lt;/code&gt; 、 &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt;  并且将主机端口 25568 映射到容器的 80 端口&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run -itd -p 25568:80 --name nginx-two -v /root/nginx/www:/usr/share/nginx/html -v /root/nginx/logs:/var/log/nginx -v /root/nginx/conf/nginx.conf:/etc/nginx/nginx.conf nginx:latest&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：挂载之前要用 &lt;code&gt;docker cp f9226f7ac7f7:/etc/nginx/nginx.conf ./nginx/conf/&lt;/code&gt;  命令将 &lt;code&gt;nginx.conf&lt;/code&gt;  文件 &lt;code&gt;copy&lt;/code&gt;  到本地，要不然会报挂载错误，使用本命令时注意将容器 ID 改为自己的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFwmq.png&#34; alt=&#34;nginx2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. 在本地的 &lt;code&gt;/root/nginx/www&lt;/code&gt;  文件夹下创建 &lt;code&gt;index.html&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;cd /root/nginx/www; vim index.html&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFaXn.png&#34; alt=&#34;nginx3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4. 直接在浏览器访问你服务器的 ip 加之前指定的端口 (由于我服务器防火墙没开放 20000 端口，所以用 25568 代替一下)&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsFNlj.png&#34; alt=&#34;nginx4&#34;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;点击连接访问&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovLzguMjIyLjE1My45MToyNTU2OA==&#34;&gt; nginx 站点&lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</guid>
+            <title>Docker的使用-壹</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Tue, 05 Sep 2023 09:14:52 +0800</pubDate>
+            <description><![CDATA[ &lt;h4 id=&#34;docker使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker使用&#34;&gt;#&lt;/a&gt; Docker 使用&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在 docker 容器内运行应用程序&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run ubuntu:15.10 /bin/echo &amp;quot;hello world&amp;quot;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPsklv9.png&#34; alt=&#34;docker使用1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docker&lt;/code&gt; :Docker 的二进制执行文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;run&lt;/code&gt; : 与 Docker 组合运行一个容器&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ubuntu:15.10&lt;/code&gt; : 要运行的镜像，本地没有就会从镜像仓库下载&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/bin/echo &amp;quot;hello world&amp;quot;&lt;/code&gt; : 在启动的容器里执行 &lt;code&gt;echo&lt;/code&gt;  命令&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;与 docker 容器进行交互&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker run -t -i centos:centos7 /bin/bash&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPskQgJ.png&#34; alt=&#34;docker使用2&#34;&gt;&lt;/p&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;-t&lt;/code&gt; : 在新的容器里指定一个终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-i&lt;/code&gt; : 允许与指定的终端进行交互&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：可以用 &lt;code&gt;exit&lt;/code&gt;  退出伪终端&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通过 ps 查看正在运行的容器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;docker ps&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/05/pPskM34.png&#34; alt=&#34;docker的使用3&#34;&gt;&lt;/p&gt;
+&lt;p&gt;参数解析：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CONTAINER ID&lt;/code&gt; : 容器 ID&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;IMAGE&lt;/code&gt; : 使用的镜像&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;COMMAND&lt;/code&gt; : 启动镜像时运行的命令&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;CREATED&lt;/code&gt; : 容器的创建时间&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;STATUS&lt;/code&gt; : 容器的状态 （容器的七种状态：&lt;/p&gt;
+&lt;p&gt;1. &lt;code&gt;created&lt;/code&gt;  已创建&lt;/p&gt;
+&lt;p&gt;2. &lt;code&gt;restaring&lt;/code&gt;  重启中&lt;/p&gt;
+&lt;p&gt;3. &lt;code&gt;running&lt;/code&gt;  或 &lt;code&gt;Up&lt;/code&gt;  运行中&lt;/p&gt;
+&lt;p&gt;4. &lt;code&gt;removing &lt;/code&gt; 迁移中&lt;/p&gt;
+&lt;p&gt;5. &lt;code&gt;paused &lt;/code&gt; 暂停&lt;/p&gt;
+&lt;p&gt;6. &lt;code&gt;exited &lt;/code&gt; 停止&lt;/p&gt;
+&lt;p&gt;7. &lt;code&gt;dead &lt;/code&gt; 死亡）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;PORTS&lt;/code&gt; : 容器的端口信息和使用的连接类型（ &lt;code&gt;TCP/UDP&lt;/code&gt; ）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;NAMES&lt;/code&gt; : 自动分配的容器名称&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h5 id=&#34;常用命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#常用命令&#34;&gt;#&lt;/a&gt; 常用命令&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;docker images&lt;/code&gt;         	列出本地主机上的镜像&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker search centos[:7] &lt;/code&gt;       	 搜索镜像&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker pull centos[:centos7] &lt;/code&gt;       	 下载镜像&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker tag centos:centos7 mycentos:centos7 &lt;/code&gt;        	为镜像添加标签，其中分号前为镜像类型，分号后为镜像版本&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker history centos:centos7 &lt;/code&gt;        	查看镜像的构建历史信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker rmi centos:centos7&lt;/code&gt;         	删除镜像（可以使用 &lt;code&gt;-f&lt;/code&gt;  强制删除，在删除使用 tag 标签标记的镜像时可以不用加 &lt;code&gt;-f&lt;/code&gt;  参数）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image prune [-a] [-f]&lt;/code&gt;         清理镜像，加 &lt;code&gt;-a&lt;/code&gt;  参数即删除所有无用的镜像，不仅仅是临时镜像  &lt;code&gt;-f&lt;/code&gt;  参数即可强制删除镜像而不提示&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image save centos:centos7 &amp;gt; ./my-centos7.tar.gz &lt;/code&gt;        导出镜像到当前目录，格式为一个压缩包（可以自行选择导出的位置）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image load [-i] [-q] ./my-centos7.tar.gz&lt;/code&gt;         将 centos7 的镜像压缩包导入， &lt;code&gt;-i&lt;/code&gt;  参数是指定导入的文件， &lt;code&gt;-q&lt;/code&gt;  参数是精简输出信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker image inspect [-f] &amp;#123; &amp;#123;&amp;quot;.Os&amp;quot;&amp;#125; &amp;#125; centos:centos7&lt;/code&gt;         查看镜像信息，可以使用 &lt;code&gt;-f&lt;/code&gt;  参数获取指定信息&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker restart $(docker ps -a -q)&lt;/code&gt;  重启所有 docker 容器&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;注意：[ ] 里的为可选内容，选择具体版本&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;TODO&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</guid>
+            <title>Docker部署</title>
+            <link>http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</link>
+            <category>原创</category>
+            <category>Docker</category>
+            <pubDate>Mon, 04 Sep 2023 16:53:57 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;docker部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker部署&#34;&gt;#&lt;/a&gt; Docker 部署&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言：部署 docker 要先确保 yum 源保持最新&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;p&gt;1. 先安装运行 docker 所必要的工具包&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;yum install -y yum-utils device-mapper-persistent-data lvm2&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVkQJ.png&#34; alt=&#34;docker1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 添加 docker 源&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrViz4.png&#34; alt=&#34;pPrViz4.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;3. 修改 docker 源为阿里源&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;sed -i &#39;s+download.docker.com+mirrors.aliyun.com/docker-ce+&#39; /etc/yum.repos.d/docker-ce.repo&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVPWF.png&#34; alt=&#34;pPrVPWF.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;4. 更新 docker 源并安装 docker&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更新源  &lt;code&gt;yum makecache fast&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;安装  &lt;code&gt;yum  -y install docker-ce&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注意：在 Centos8 中本命令不适用，将 fast 去掉即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrV9iT.png&#34; alt=&#34;pPrV9iT.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVSoV.png&#34; alt=&#34;pPrVSoV.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;5. 重启 docker 服务并设置下次启动生效&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重新启动  &lt;code&gt;systemctl  restart  docker&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;设置下次启动生效  &lt;code&gt;systemctl  enable  docker&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVCJU.png&#34; alt=&#34;pPrVCJU.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVAy9.png&#34; alt=&#34;pPrVAy9.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;6. 配置镜像加速器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;用 vim 创建 &lt;code&gt;daemon.json&lt;/code&gt;  文件&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;vim /etc/docker/daemon.json&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;写入以下内容:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;#123;
+&amp;quot;registry-mirrors&amp;quot;: [&amp;quot;https://14lrk6zd.mirror.aliyuncs.com&amp;quot;]
+&amp;#125;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVELR.png&#34; alt=&#34;pPrVELR.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVZe1.png&#34; alt=&#34;pPrVZe1.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;7. 重新加载并重启 docker&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;重新加载  &lt;code&gt;systemctl  daemon-reload&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;重启  &lt;code&gt;systemctl restart docker&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVedx.png&#34; alt=&#34;pPrVedx.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/09/04/pPrVmo6.png&#34; alt=&#34;pPrVmo6.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,19 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "上善若水 • All posts by \"ubuntu\" tag",
+    "description": "若能避开猛烈的欢喜，自然也不会有悲痛的来袭.",
+    "home_page_url": "http://yunyat.cloud",
+    "items": [
+        {
+            "id": "http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/",
+            "url": "http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/",
+            "title": "Yum安装失败",
+            "date_published": "2024-06-24T08:18:25.000Z",
+            "content_html": "<h1 id=\"描述\"><a class=\"markdownIt-Anchor\" href=\"#描述\">#</a> 描述</h1>\n<p>使用  <code>apt-get</code>  安装  <code>yum</code>  失败</p>\n<h2 id=\"环境\"><a class=\"markdownIt-Anchor\" href=\"#环境\">#</a> 环境</h2>\n<p>系统：Ubuntu 20.04.1</p>\n<h2 id=\"原因\"><a class=\"markdownIt-Anchor\" href=\"#原因\">#</a> 原因</h2>\n<p>缺少依赖</p>\n<h2 id=\"解决\"><a class=\"markdownIt-Anchor\" href=\"#解决\">#</a> 解决</h2>\n<p><img data-src=\"https://figurebed.yunyat.cloud/Code/20240624162654.png\" alt=\"image-20240624162654309\"></p>\n<p>使用  <code>apt-get</code>  依次安装缺少的依赖项</p>\n<hr>\n<p><em>END</em></p>\n",
+            "tags": [
+                "Linux",
+                "Ubuntu"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,912 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="上善若水" href="http://yunyat.cloud/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="上善若水" href="http://yunyat.cloud/atom.xml" />
+<link rel="alternate" type="application/json" title="上善若水" href="http://yunyat.cloud/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="原创,MySQL" />
+
+
+<link rel="canonical" href="http://yunyat.cloud/MyCodingBook/database/MySQL-4/">
+
+
+
+  <title>
+MySQL-4 - 数据库 - 我的编程宝典 |
+QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">MySQL-4
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-05-13 16:24:45">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-05-13T16:24:45+08:00">2024-05-13</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.6k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QSky Yun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?496023"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?114638"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?761786"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?219193"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?515431"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?496889"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/" itemprop="item" rel="index" title="分类于 我的编程宝典"><span itemprop="name">我的编程宝典</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="item" rel="index" title="分类于 数据库"><span itemprop="name">数据库</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/MyCodingBook/database/MySQL-4/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/wa.jpg">
+    <meta itemprop="name" content="清天">
+    <meta itemprop="description" content="=我真的很想喜欢你们，可是你们没有人喜欢我。=, 若能避开猛烈的欢喜，自然也不会有悲痛的来袭.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="上善若水">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="事务"><a class="markdownIt-Anchor" href="#事务">#</a> 事务</h3>
+<p><em>MySQL</em> 中，<u>事务</u>(<em> <code>Transaction</code> </em>) 是一组 <em>SQL</em> 语句的执行，它们被视为一个单独的工作单元。这组操作要么全部成功执行，要么全部不执行，是一个 “全有或全无” 的原则. <u>事务</u>的主要目的是为了保证数据的完整性和一致性.</p>
+<p>基本特性 (<em><strong>ACID</strong></em> 属性)：</p>
+<ul>
+<li><strong>原子性</strong> (<strong>A</strong>tomicity)
+<ul>
+<li><u>事务</u>是一个原子操作单元，<u>事务</u>中的所有操作要么全部执行成功，要么全部不执行，不会仅执行部分操作，<u>事务</u>在执行过程中发生错误，会被回滚（ <code>Rollback</code> ）到<u>事务</u>开始前的状态.</li>
+</ul>
+</li>
+<li><strong>一致性</strong> (<strong>C</strong>onsistency)
+<ul>
+<li><u>事务</u>执行前后，数据库从一个一致状态转换到另一个一致状态。即使在<u>事务</u>执行过程中出现错误，数据库也能够保持数据的完整性.</li>
+</ul>
+</li>
+<li><strong>隔离性</strong> (<strong>I</strong>solation)
+<ul>
+<li>多个<u>事务</u>并发执行时，每个<u>事务</u>好像是在独立地处理数据，即一个<u>事务</u>内部的操作对其他<u>事务</u>是隔离的，这可以防止并发<u>事务</u>之间的相互干扰，<u>事务</u>隔离分为不同级别，包括读未提交（ <code>Read uncommitted</code> ）、读提交（ <code>read committed</code> ）、可重复读（ <code>repeatable read</code> ）和串行化（ <code>Serializable</code> ）.</li>
+</ul>
+</li>
+<li><strong>持久性</strong> (<strong>D</strong>urability)
+<ul>
+<li>一旦<u>事务</u>提交（ <code>commit</code> ），其结果就是永久性的，即使系统发生故障也不会丢失已提交<u>事务</u>的结果.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em>只有使用了 lnnodb 数据库引擎的数据库或表才支持事务.</em></p>
+<p><em>在 MySQL 命令行的默认设置下，事务都是自动提交的，即执行 SQL 语句后就会马上执行 COMMIT 操作。因此要显式地开启一个事务务须使用命令 BEGIN 或 START TRANSACTION，或者执行命令 SET AUTOCOMMIT=0，用来禁止使用当前会话的自动提交.</em></p>
+</blockquote>
+<h3 id="事务操作"><a class="markdownIt-Anchor" href="#事务操作">#</a> 事务操作</h3>
+<ul>
+<li><code>BEGIN</code>  或  <code>START TRANSACTION</code>
+<ul>
+<li>显示开启一个事务.</li>
+</ul>
+</li>
+<li><code>COMMIT</code>
+<ul>
+<li>提交事务，并对已对数据库进行的所有修改变为永久.</li>
+</ul>
+</li>
+<li><code>ROLLBACK</code>
+<ul>
+<li>回滚事务。结束用户的事务，并撤销正在进行的所有未提交的修改.</li>
+</ul>
+</li>
+<li><code>SAVEPOINT &lt;identifier&gt;</code>
+<ul>
+<li><code>savepoint</code>  允许在事务中创建一个标记点，一个事务中可以有多个标记点.</li>
+</ul>
+</li>
+<li><code>RELEASE SAVEPOINT &lt;identifier&gt;</code>
+<ul>
+<li>删除一个事务的标记点，当没有指定的标记点时，该语句会抛出一个异常.</li>
+</ul>
+</li>
+<li><code>ROLLBACK TO &lt;identifier&gt;</code>
+<ul>
+<li>将事务回滚到标记点.</li>
+</ul>
+</li>
+</ul>
+<p>事务处理流程：</p>
+<p><img data-src="https://s21.ax1x.com/2024/05/10/pkZG5WQ.png" alt="mysql_1"></p>
+<p>示例：</p>
+<pre><code class="language-mysql"># 开启一个事务
+begin;
+
+# 更改 user 表的 birhdate 列的值为 '2024-05-09' 的值为 NULL
+update user as u set birhdate=NULL where u.birhdate='2024-05-09';
+
+# 提交事务
+commit;
+# or 回滚事务
+rollback;
+</code></pre>
+<p>更多使用示例请参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9teXNxbC9teXNxbC10cmFuc2FjdGlvbi5odG1s">MySQL 事务 | 菜鸟教程 (runoob.com)</span></p>
+<h3 id="alter-命令"><a class="markdownIt-Anchor" href="#alter-命令">#</a> <em>ALTER</em> 命令</h3>
+<p><em>ALTER</em> 命令是用于修改现有数据库表结构的重要语句，通过它，你可以执行多种表结构的更改操作，而不必删除并重新创建表.</p>
+<p>常用操作：</p>
+<ul>
+<li>添加列
+<ul>
+<li><code>ALTER TABLE table_name ADD column_name data_type;</code>
+<ul>
+<li>示例： <code>alter table user add birth_date date;</code> ，向  <code>user</code>  表添加  <code>birth_date</code>  日期列.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除列
+<ul>
+<li><code>ALTER TABLE table_name DROP COLUMN column_name;</code>
+<ul>
+<li>示例： <code>alter table user drop column birth_date;</code> ，将  <code>user</code>  表的  <code>birth_date</code>  列删除.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改列的数据类型
+<ul>
+<li><code>ALTER TABLE table_name MODIFY column_name new_data_type;</code>
+<ul>
+<li>示例： <code>alter table user modify id varchar(10);</code>  ，将  <code>id</code>  列的字段类型修改为变长字符串类型.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>改变列名及数据类型：
+<ul>
+<li><code>ALTER TABLE table_name CHANGE column_name new_column_name new_data_type;</code></li>
+<li>示例： <code>alter table user change birhdate birth_date date;</code> ，将  <code>birhdate</code>  列名改为  <code>birth_date</code>  并将列类型改为  <code>date</code> ；</li>
+</ul>
+</li>
+<li>添加主键
+<ul>
+<li><code>ALTER TABLE table_name ADD PRIMARY KEY(column_name);</code>
+<ul>
+<li>示例： <code>alter table user add primary key(id);</code> ，将  <code>id</code>  设置为  <code>test_table</code>  表的主键.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>添加唯一键
+<ul>
+<li><code>ALTER TABLE table_name ADD UNIQUE(column_name);</code>
+<ul>
+<li>示例： <code>alter table user add unique(id);</code> ，将  <code>id</code>  列设置为唯一键.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>添加外键约束
+<ul>
+<li><code> ALTER TABLE table_name ADD CONSTRAINT fk_constraint_name FOREIGN KEY(column_name) REFERENCES referenced_table_name(referenced_column_name);</code>
+<ul>
+<li>示例： <code>alter table orders add constraint fk_user_id foreign key(id) references user(id);</code> ，将 <code>orders</code>  的  <code>id</code>  设置为外键，引用  <code>user</code>  的  <code>id</code>  列.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>设置默认值
+<ul>
+<li><code>ALTER TABLE table_name ALTER column_name SET DEFAULT value;</code>
+<ul>
+<li>示例： <code>alter table orders alter order_date set default '1970-01-01';</code> ，将  <code>order_date</code>  的默认值设置为  <code>1970-01-01</code>  .</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>删除默认值
+<ul>
+<li><code>ALTER TABLE table_name ALTER order_date DROP DEFAULT;</code>
+<ul>
+<li>示例： <code>alter table orders alter order_date drop default;</code> ，将  <code>order_date</code>  列的默认值删除.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改表名
+<ul>
+<li><code>ALTER TABLE table_name RENAME TO new_table;</code>
+<ul>
+<li>示例： <code>alter table test_table rename to user_age;</code> ，将  <code>test_table</code>  表名改为  <code>user_age</code>  .</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>修改存储引擎
+<ul>
+<li><code>ALTER TABLE table_name ENGINE=value;</code>
+<ul>
+<li>示例： <code>alter table user engine=myisam;</code> ，将 user 表的存储引擎改为  <code>myisam</code>  .</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="数据备份与恢复"><a class="markdownIt-Anchor" href="#数据备份与恢复">#</a> 数据备份与恢复</h3>
+<p>​	使用  <code>MYSQLDUMP</code>  命令可以备份和还原数据库。如果只想复制一张表，可以使用  <code>mysqldump</code>  命令导出该表的结构和数据，然后导入到新的数据库或新的表中，也可以导出所有的表结构及数据，以达到复制数据库的目的 .</p>
+<ul>
+<li>备份表数据：
+<ul>
+<li><code>mysqldump -h &lt;ip&gt; -u &lt;user_name&gt; -p [-d] &lt;db_name&gt; &lt;table_name&gt; &gt; &lt;table_name.sql&gt;;</code>
+<ul>
+<li>示例： <code>mysqldump -h localhost -uroot -p test_mysql user &gt; user.sql;</code> ，将本地的  <code>test_mysql</code>  数据库的  <code>user</code>  表导出到当前目录下名为  <code>user.sql</code>  的文件中 .</li>
+<li>- <code>d</code>  参数为可选，加上此参数则只导出表结构而不包含数据 .</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>还原表数据：
+<ul>
+<li><code>source &lt;path&gt;;</code>
+<ul>
+<li>示例： <code>source D:/user.sql;</code> ，将 D 盘根目录下的  <code>user.sql</code>  文件导入到当前选择的数据库中 .</li>
+<li>此命令需要在 <em>MySQL</em> 中执行 .</li>
+<li>可以使用此方法还原所有表数据，即还原数据库 .</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>备份数据库：
+<ul>
+<li><code>mysqldump -h &lt;ip&gt; -u &lt;user_name&gt; -p [-d] &lt;db_name&gt; &gt; &lt;new_db_name.sql&gt;;</code>
+<ul>
+<li>示例： <code>mysqldump -h localhost -uroot -p test_mysql &gt; test_mysql.sql;</code> ，将本地的  <code>test_mysql</code>  数据库的所有表导出到当前目录下名为  <code>test_mysql.sql</code>  的文件中 .</li>
+<li>- <code>d</code>  参数为可选，加上此参数则只导出表结构而不包含数据 .</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>更多使用示例请参考：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NTI5OTM0MC9hcnRpY2xlL2RldGFpbHMvMTIxMzgwMDU4">mysql 导入导出命令详细总结，看这一篇就够了_mysql 导入导出命令 - CSDN 博客</span></p>
+<h3 id="元数据"><a class="markdownIt-Anchor" href="#元数据">#</a> 元数据</h3>
+<p>元数据是用于描述数据的数据。元数据在 <em>MySQL</em> 中是指关于数据库及其内容 (如表、列、索引等) 的信息。</p>
+<p>元数据存储在系统表中，这些表位于 <em>MySQL</em> 数据库的  <code>information_schema</code>  数据库中，通过查询这些系统表，可以获取关于数据库的结构、对象和其他相关信息的详细信息。</p>
+<p>常用的元数据查询：</p>
+<ul>
+<li>查看表的索引
+<ul>
+<li><code>SHOW INDEX FROM table_name;</code></li>
+</ul>
+</li>
+<li>查看表的创建语句
+<ul>
+<li><code>SHOW CREATE TABLE table_name;</code></li>
+</ul>
+</li>
+<li>查看表的行数
+<ul>
+<li><code>SELECT COUNT(*) FROM table_name;</code></li>
+</ul>
+</li>
+</ul>
+<p>更多使用示例请参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cucnVub29iLmNvbS9teXNxbC9teXNxbC1kYXRhYmFzZS1pbmZvLmh0bWw=">MySQL 元数据 | 菜鸟教程 (runoob.com)</span></p>
+<hr>
+<p><em>END</em></p>
+
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/MySQL/" rel="tag"><i class="ic i-tag"></i> MySQL</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-06-22 15:23:03" itemprop="dateModified" datetime="2024-06-22T15:23:03+08:00">2024-06-22</time>
+  </span>
+  <span id="MyCodingBook/database/MySQL-4/" class="item leancloud_visitors" data-flag-title="MySQL-4" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="清天 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="清天 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="清天 QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文博主： </strong>清天 <i class="ic i-at"><em>@</em></i>上善若水
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://yunyat.cloud/MyCodingBook/database/MySQL-4/" title="MySQL-4">http://yunyat.cloud/MyCodingBook/database/MySQL-4/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/MyCodingBook/database/MySQL-3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?358185" title="MySQL-3">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数据库</span>
+  <h3>MySQL-3</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/MyCodingBook/database/MySQL-5/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?803068" title="MySQL-5">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 数据库</span>
+  <h3>MySQL-5</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text"> 事务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1%E6%93%8D%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text"> 事务操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#alter-%E5%91%BD%E4%BB%A4"><span class="toc-number">3.</span> <span class="toc-text"> ALTER 命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D"><span class="toc-number">4.</span> <span class="toc-text"> 数据备份与恢复</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%83%E6%95%B0%E6%8D%AE"><span class="toc-number">5.</span> <span class="toc-text"> 元数据</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/MyCodingBook/database/MySQL-1/" rel="bookmark" title="MySQL-1">MySQL-1</a></li><li><a href="/MyCodingBook/database/MySQL-2/" rel="bookmark" title="MySQL-2">MySQL-2</a></li><li><a href="/MyCodingBook/database/MySQL-3/" rel="bookmark" title="MySQL-3">MySQL-3</a></li><li class="active"><a href="/MyCodingBook/database/MySQL-4/" rel="bookmark" title="MySQL-4">MySQL-4</a></li><li><a href="/MyCodingBook/database/MySQL-5/" rel="bookmark" title="MySQL-5">MySQL-5</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="清天"
+      data-src="/images/wa.jpg">
+  <p class="name" itemprop="name">清天</p>
+  <div class="description" itemprop="description">若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">66</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">18</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">53</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1plcm8tUWw=" title="https:&#x2F;&#x2F;github.com&#x2F;Zero-Ql"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9ncmF2YXRhci5jb20vcXNreTFhNGRjYzYyZmI4" title="https:&#x2F;&#x2F;gravatar.com&#x2F;qsky1a4dcc62fb8"><i class="ic i-address-card"></i></span>
+      <a href="mailto:qsky@yunyat.cloud" title="mailto:qsky@yunyat.cloud" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL1FTa3lZdW4=" title="https:&#x2F;&#x2F;t.me&#x2F;QSkyYun"><i class="ic i-paper-plane"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly95Lm11c2ljLjE2My5jb20vbS91c2VyP2lkPTIwNjM1MjA5Mzk=" title="https:&#x2F;&#x2F;y.music.163.com&#x2F;m&#x2F;user?id&#x3D;2063520939"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6bGl2ZTouY2lkLjdmYTYyZWIyZDhmMzQzYzI/Y2FsbHxjaGF0" title="skype:live:.cid.7fa62eb2d8f343c2?call|chat"><i class="ic i-skype"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83OTI2ODg4OTUw" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7926888950"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/site/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/gallery/" rel="section"><i class="ic i-loop"></i>Wo的足迹</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-magic"></i>链圈</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-link"></i>links</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/websitemap/" rel="section"><i class="ic i-sitemap"></i>网站Map</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/MyCodingBook/database/MySQL-3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/MyCodingBook/database/MySQL-5/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/" title="Spring基础">Spring基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+</div>
+
+    <span><a href="/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/" title="Screen使用">Screen使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Windows/" title="分类于 Windows">Windows</a>
+</div>
+
+    <span><a href="/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/" title="任意版本win远程桌面使用内网穿透连接">任意版本win远程桌面使用内网穿透连接</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
+</div>
+
+    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/" title="shell脚本笔记 - 2">shell脚本笔记 - 2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="Docker之nginx的负载均衡">Docker之nginx的负载均衡</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" title="Java-lambda的方法引用">Java-lambda的方法引用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+</div>
+
+    <span><a href="/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="服务器搭建教程">服务器搭建教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" title="spring开发注解集合">spring开发注解集合</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp之内网穿透">frp之内网穿透</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-4/" title="MySQL-4">MySQL-4</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">134k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:02</span>
+  </div>
+  <div class="icp-info">
+    <span class="icp-img">
+      <a class="post-meta-item-icon" target="_blank" rel="noopener" href="https://icp.gov.moe"><img title="https://icp.gov.moe" src="images/icon120.png" width="18" style="vertical-align:middle"></a>
+    </span>
+    <span class="icp-text">
+      <span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDIzMTAxMw==">萌ICP备20231013号</span>
+    </span>
+  </div>
+
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">清天 @ QSky Yun</span>
+  </div>
+  <div class="start-time">
+    <span>本站已平稳运行</span>
+    <span id="display_live_time"> 0 天 0 小时 0 分 0 秒</span>
+      <script>function blog_live_time(){
+          setTimeout(blog_live_time,1e3);
+          const e = new Date("2023-04-28T00:00:00"),
+          t=(new Date).getTime()-e.getTime(),
+          i=Math.floor(t/864e5),
+          o=Math.floor(t%864e5/60/60/1e3),
+          l=Math.floor(t%36e5/60/1e3),
+          _=Math.floor(t%6e4/1e3);
+          display_live_time.innerHTML=` ${i} 天 ${o} 小时 ${l} 分 ${_} 秒`
+        }
+        blog_live_time()
+      </script>
+    <span>ヽ(○´∀`)ﾉ♪</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'MyCodingBook/database/MySQL-4/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看不见我看不见我"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="/js/typed.js"></script>
+    <script type="text/javascript">
+        var str = { "hitokoto": "=我真的很想喜欢你们，可是你们没有人喜欢我。=" };
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&min_length=15')
+        .then(response => {
+            if (!response.ok) {
+                return str;
+            } else {
+                return response.json();
+            }
+        }).then(data => {
+            typedfun(data.hitokoto);
+        }).catch(error => {
+            typedfun(str.hitokoto);
+        });
+        function typedfun(data) {
+            var msg = "=" + data  + "=^1500";
+            typed = new Typed(".say-subtitle", {
+                strings: msg.split(),
+                typeSpeed: 70,
+                loop: true,
+                loopCount: Infinity,
+                backDelay: 70,
+                backSpeed: 100,
+                smartBackspace: true
+            });
+        }
+    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

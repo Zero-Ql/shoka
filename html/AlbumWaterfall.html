@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gallery</title>
+    <script src="source/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="source/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="source/bootstrap.min.css">
+    <script src="source/bootstrap.min.js"></script>
+    <script src="source/minigrid.min.js"></script>
+    <script src="source/jquery.fancybox.min.js"></script>
+    <script src="source/lazyload.js"></script>
+    <style>
+        html,
+        body {
+            overflow: hidden;
+            /* Hide scrollbars */
+        }
+
+        .image-grid {
+            width: 100%;
+            max-width: 1040px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .card {
+            overflow: hidden;
+            transition: 0.3s ease-in-out;
+            border-radius: 8px;
+            background-color: rgba(180, 180, 180, 0.2);
+            padding: 1.4px;
+        }
+
+        .image-in-card img {
+            padding: 0;
+            border-radius: 8px;
+            width: 100%;
+            height: 100%;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            .card {
+                background-color: rgba(180, 180, 180, 0.2);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="imageTab"></div>
+    <div class="image-grid"></div>
+    <script>
+        const IMG_PATH = "images/";
+        const IMG_DATA_PATH = "galleryList.json";
+
+        const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        const IMAGE_WIDTH = windowWidth < 768 ? 145 : 250;
+
+        const gallery = {
+            page: 1,
+            offset: 50,
+            init() {
+                $.getJSON(IMG_DATA_PATH, (data) => {
+                    this.render(this.page, data);
+                    this.addEventListeners(data);
+                });
+            },
+            createImageHtml({ imageWidth, imageX, imageY, name, imgPath, imgName, imgNameWithPattern }) {
+                return `<div class="card lozad" style="width:${imageWidth}px">
+                    <div class="image-in-card" style="height:${(imageWidth * imageY) / imageX}px">
+                      <a data-fancybox="gallery" href="${imgPath}${imgNameWithPattern}" data-caption="${imgName}" title="${imgName}">
+                        <img class="lazyload" data-src="${imgPath}${imgNameWithPattern}"
+                             src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                             onload="lzld(this)" lazyload="auto">
+                      </a>
+                    </div>
+                  </div>`;
+            },
+            render(page, data = []) {
+                if (!data.length) return;
+
+                let navHtml = "";
+                let contentHtml = "";
+
+                data.forEach((item, index) => {
+                    const activeClass = index === 0 ? "active" : "";
+                    navHtml += `<li class="nav-item" role="presentation">
+                        <a class="nav-link ${activeClass} photo-tab" id="tab-${index}" data-uuid="${item.name}" data-toggle="tab" href="#tab-content-${index}" role="tab" aria-controls="tab-content-${index}" aria-selected="true">${item.name}</a>
+                    </li>`;
+                });
+
+                const { children = [], name } = data[0];
+                let imagesHtml = "";
+
+                children.forEach((item) => {
+                    const imgNameWithPattern = item.slice(item.indexOf(" ") + 1);
+                    const imgName = imgNameWithPattern.split("/").pop();
+                    const [imageX, imageY] = item.split(" ")[0].split(".");
+                    imagesHtml += this.createImageHtml({
+                        imageWidth: IMAGE_WIDTH,
+                        imageX,
+                        imageY,
+                        name,
+                        imgPath: IMG_PATH,
+                        imgName,
+                        imgNameWithPattern
+                    });
+                });
+
+                contentHtml = `<div class="tab-pane fade show active" role="tabpanel" aria-labelledby="tab-0">${imagesHtml}</div>`;
+
+                const ulHtml = `<ul class="nav nav-tabs" id="myTab" role="tablist">${navHtml}</ul>`;
+                const tabContentHtml = `<div class="tab-content" id="myTabContent">${contentHtml}</div>`;
+
+                $("#imageTab").html(ulHtml);
+                $(".image-grid").html(tabContentHtml);
+                this.initializeMinigrid();
+            },
+            addEventListeners(data) {
+                $('a[data-toggle="tab"]').on("shown.bs.tab", (e) => {
+                    $(".image-grid").empty();
+                    const selectId = $(e.target).data("uuid");
+                    const selectedData = data.find(item => item.name === selectId) || {};
+                    const { children, name } = selectedData;
+                    let imagesHtml = "";
+
+                    children.forEach((item) => {
+                        const imgNameWithPattern = item.split(" ")[1];
+                        const imgName = imgNameWithPattern.split("/").pop();
+                        const [imageX, imageY] = item.split(" ")[0].split(".");
+                        imagesHtml += this.createImageHtml({
+                            imageWidth: IMAGE_WIDTH,
+                            imageX,
+                            imageY,
+                            name,
+                            imgPath: IMG_PATH,
+                            imgName,
+                            imgNameWithPattern
+                        });
+                    });
+
+                    $(".image-grid").append(imagesHtml);
+                    this.initializeMinigrid();
+                });
+            },
+            initializeMinigrid() {
+                const grid = new Minigrid({
+                    container: ".image-grid",
+                    item: ".card",
+                    gutter: 12,
+                });
+                grid.mount();
+                $(window).resize(() => {
+                    grid.mount();
+                });
+            }
+        };
+
+        $(document).ready(() => {
+            gallery.init();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;linux&#34; tag</title>
+        <link>http://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Mon, 24 Jun 2024 16:18:25 +0800</pubDate>
+        <lastBuildDate>Mon, 24 Jun 2024 16:18:25 +0800</lastBuildDate>
+        <category>hexo</category>
+        <category>原创</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>可道云</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>记录</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>暑假工</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>lambda表达式</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>集合</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>Ubuntu</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>frp</category>
+        <category>计算机</category>
+        <category>分享</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>spring</category>
+        <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
+        <category>spring注解</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</guid>
+            <title>Yum安装失败</title>
+            <link>http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</link>
+            <category>Linux</category>
+            <category>Ubuntu</category>
+            <pubDate>Mon, 24 Jun 2024 16:18:25 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#描述&#34;&gt;#&lt;/a&gt; 描述&lt;/h1&gt;
+&lt;p&gt;使用  &lt;code&gt;apt-get&lt;/code&gt;  安装  &lt;code&gt;yum&lt;/code&gt;  失败&lt;/p&gt;
+&lt;h2 id=&#34;环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h2&gt;
+&lt;p&gt;系统：Ubuntu 20.04.1&lt;/p&gt;
+&lt;h2 id=&#34;原因&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#原因&#34;&gt;#&lt;/a&gt; 原因&lt;/h2&gt;
+&lt;p&gt;缺少依赖&lt;/p&gt;
+&lt;h2 id=&#34;解决&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#解决&#34;&gt;#&lt;/a&gt; 解决&lt;/h2&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/Code/20240624162654.png&#34; alt=&#34;image-20240624162654309&#34;&gt;&lt;/p&gt;
+&lt;p&gt;使用  &lt;code&gt;apt-get&lt;/code&gt;  依次安装缺少的依赖项&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</guid>
+            <title>Linux2023-9-18作业</title>
+            <link>http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</link>
+            <category>原创</category>
+            <category>Linux</category>
+            <pubDate>Mon, 18 Sep 2023 14:40:30 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;题目要求：&lt;/p&gt;
+&lt;p&gt;1、破解 centos7 操作系统密码为 flectrag&lt;/p&gt;
+&lt;p&gt;2、查找系统中文件，要求将文件大小大于 5M 小于 10M 的文件查找出来放置 /findfile 目录下&lt;/p&gt;
+&lt;p&gt;3、查找文件 /usr/share/xml/iso-codes/iso_639_3.xml 中包含字符串 ng 的所有行。&lt;br&gt;
+将所有这些行的副本按原始顺序放在文件 /root/list 中。/root/list 不得包含空行，&lt;br&gt;
+且所有行必须是 /usr/share/xml/iso-codes/iso_639_3.xml 中原始行的确切副本&lt;/p&gt;
+&lt;p&gt;4、新建用户 student，设置密码为 flectrag&lt;/p&gt;
+&lt;p&gt;5、修改 student 用户策略，允许 student 组成员 sudo 时不需要密码&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;10-破解-centos7-操作系统的-root-用户密码&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#10-破解-centos7-操作系统的-root-用户密码&#34;&gt;#&lt;/a&gt; 1.0 破解 centos7 操作系统的 root 用户密码&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先重启虚拟机，在如下图的界面按 e 键进入 edit&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4i8FH.jpg&#34; alt=&#34;pP4i8FH.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4iJfA.jpg&#34; alt=&#34;pP4iJfA.jpg&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;找到 linux16 字段，把里面的  &lt;code&gt;ro rhgb quiet&lt;/code&gt;  改为  &lt;code&gt;rw init=/bin/sh&lt;/code&gt; ，之后按 ctrl+x 进入单用户模式&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4iNlt.jpg&#34; alt=&#34;pP4iNlt.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4itSI.jpg&#34; alt=&#34;pP4itSI.jpg&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;在该模式下输入  &lt;code&gt;passwd root&lt;/code&gt;  来更改 root 密码，之后输入 touch /.autorelabel 创建文件，然后输入 exec /sbin/init 正常启动 init 进程即可&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4iGYd.jpg&#34; alt=&#34;pP4iGYd.jpg&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;20-查找文件1&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#20-查找文件1&#34;&gt;#&lt;/a&gt; 2.0 查找文件 1&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;首先要在根目录创建一个  &lt;code&gt;findfile&lt;/code&gt;  文件夹，然后使用下面的命令来查找并复制&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;mkdir&lt;/span&gt; /findfile&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;find&lt;/span&gt; &lt;span class=&#34;token builtin class-name&#34;&gt;.&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-type&lt;/span&gt; f &lt;span class=&#34;token parameter variable&#34;&gt;-size&lt;/span&gt; +5M &lt;span class=&#34;token parameter variable&#34;&gt;-size&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-10M&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-exec&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; &lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt; /findfile &lt;span class=&#34;token punctuation&#34;&gt;\&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4kyMq.png&#34; alt=&#34;pP4kyMq.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;可以使用  &lt;code&gt;ll&lt;/code&gt;  命令验证大小&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4ApQI.png&#34; alt=&#34;pP4ApQI.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;30-查找文件2&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#30-查找文件2&#34;&gt;#&lt;/a&gt; 3.0 查找文件 2&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先在用户的家目录下用  &lt;code&gt;touch&lt;/code&gt;  命令创建  &lt;code&gt;list&lt;/code&gt;  文件，然后使用下面的命令完成要求，最后使用  &lt;code&gt;cat list&lt;/code&gt;  来验证&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;touch&lt;/span&gt; list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;grep&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ng&#34;&lt;/span&gt; /usr/share/xml/iso-codes/iso_639_3.xml &lt;span class=&#34;token operator&#34;&gt;|&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;tr&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-d&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#39;\r&#39;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt; /root/list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; list&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4AGY4.png&#34; alt=&#34;pP4AGY4.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;40-创建用户&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#40-创建用户&#34;&gt;#&lt;/a&gt; 4.0 创建用户&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;使用下面的命令创建 student 用户并指定其密码，使用普通用户 sir 登录测试&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-p&lt;/span&gt; &lt;span class=&#34;token variable&#34;&gt;&lt;span class=&#34;token variable&#34;&gt;$(&lt;/span&gt;openssl &lt;span class=&#34;token function&#34;&gt;passwd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-1&lt;/span&gt; flectrag&lt;span class=&#34;token variable&#34;&gt;)&lt;/span&gt;&lt;/span&gt; student&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4e3uR.png&#34; alt=&#34;pP4e3uR.png&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;50-修改用户策略&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#50-修改用户策略&#34;&gt;#&lt;/a&gt; 5.0 修改用户策略&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;先使用下面的命令将 student 用户添加到 /etc/sudoers 文件中&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token builtin class-name&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;%student ALL=(ALL) NOPASSWD: ALL&#34;&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&gt;&gt;&lt;/span&gt; /etc/sudoers&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;然后切换到 student 用户，之后使用 sudo passwd root 来试着更改 root 用户的密码，可以看到，可以直接更改，不需要输入密码，然后切到 sir 普通用户，同样试着更改 root 用户的密码，可以看到，无法更改&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/18/pP4e8D1.png&#34; alt=&#34;pP4e8D1.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</guid>
+            <title>Linux2023.9.15作业</title>
+            <link>http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</link>
+            <category>原创</category>
+            <category>Linux</category>
+            <pubDate>Fri, 15 Sep 2023 14:18:57 +0800</pubDate>
+            <description><![CDATA[ &lt;blockquote&gt;
+&lt;p&gt;题目要求：&lt;/p&gt;
+&lt;p&gt;1、创建用户和用户组&lt;/p&gt;
+&lt;p&gt;请按照以下要求创建用户、用户组：&lt;/p&gt;
+&lt;p&gt;新建一个名为 adminuser 的组，组 id 为 40000&lt;/p&gt;
+&lt;p&gt;新建一个名为 natasha 的用户，并将 adminuser 作为其附属组&lt;/p&gt;
+&lt;p&gt;新建一个名为 harry 的用户，并将 adminuser 作为其附属组&lt;/p&gt;
+&lt;p&gt;新建一个名为 sarah 的用户，其不属于 adminuser 组，并将其 shell 设置为不可登陆 shell&lt;/p&gt;
+&lt;p&gt;natasha、harry 和 sarah 三个用户的密码均设置为 glegunge&lt;/p&gt;
+&lt;p&gt;2、复制文件 /etc/fstab 到 /var/tmp 目录下，并按照以下要求配置 /var/tmp/fstab 文件的权限:&lt;/p&gt;
+&lt;p&gt;该文件的所属人为 root&lt;/p&gt;
+&lt;p&gt;该文件的所属组为 root&lt;/p&gt;
+&lt;p&gt;该文件对任何人均没有执行权限&lt;/p&gt;
+&lt;p&gt;用户 natasha 对该文件有读和写的权限&lt;/p&gt;
+&lt;p&gt;用户 harry 对该文件既不能读也不能写&lt;/p&gt;
+&lt;p&gt;所有其他用户（包括当前已有用户及未来创建的用户）对该文件都有读的权限&lt;/p&gt;
+&lt;p&gt;3、打包文件&lt;/p&gt;
+&lt;p&gt;请对 /etc/sysconfig 目录进行打包并用 bzip2 压缩，生成的文件保存为 /root/sysconfig.tar.bz2&lt;/p&gt;
+&lt;p&gt;4、创建一个大小为 500M 的分区，永久挂载到 /test 目录下&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h5 id=&#34;创建用户和用户组&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建用户和用户组&#34;&gt;#&lt;/a&gt; 创建用户和用户组&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;新建一个名为 adminuser 的组，组 id 为 40000&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;groupadd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-g&lt;/span&gt; &lt;span class=&#34;token number&#34;&gt;40000&lt;/span&gt; adminuser&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;新建一个名为 natasha 的用户，并将 adminuser 作为其附属组&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-G&lt;/span&gt; adminuser natasha&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;新建一个名为 harry 的用户，并将 adminuser 作为其附属组&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-G&lt;/span&gt; adminuser harry&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;新建一个名为 sarah 的用户，其不属于 adminuser 组，并将其 shell 设置为不可登陆 shell&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;useradd&lt;/span&gt; &lt;span class=&#34;token parameter variable&#34;&gt;-s&lt;/span&gt; /usr/sbin/nologin sarah&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWsWAf.png&#34; alt=&#34;pPWsWAf.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;natasha、harry 和 sarah 三个用户的密码均设置为 glegunge&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;passwd&lt;/span&gt; &lt;span class=&#34;token operator&#34;&gt;&amp;lt;&lt;/span&gt;用户名&lt;span class=&#34;token operator&#34;&gt;&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWsfN8.png&#34; alt=&#34;pPWsfN8.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;测试：&lt;/p&gt;
+&lt;p&gt;查看组 id 及附属组&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWs2HP.png&#34; alt=&#34;pPWs2HP.png&#34;&gt;&lt;/p&gt;
+&lt;p&gt;测试 sarah 的 shell 登录&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWsqH0.png&#34; alt=&#34;pPWsqH0.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;复制文件etcfstab到vartmp目录下并按照以下要求配置vartmpfstab文件的权限&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#复制文件etcfstab到vartmp目录下并按照以下要求配置vartmpfstab文件的权限&#34;&gt;#&lt;/a&gt; 复制文件 /etc/fstab 到 /var/tmp 目录下，并按照以下要求配置 /var/tmp/fstab 文件的权限:&lt;/h5&gt;
+&lt;p&gt;先复制&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cp&lt;/span&gt; /etc/fstab /var/tmp&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;ol&gt;
+&lt;li&gt;该文件的所属人为 root，该文件的所属组为 root&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW6pi8.png&#34; alt=&#34;pPW6pi8.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;该文件对任何人均没有执行权限，用户 natasha 对该文件有读和写的权限，用户 harry 对该文件既不能读也不能写&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW69JS.png&#34; alt=&#34;pPW69JS.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;所有其他用户（包括当前已有用户及未来创建的用户）对该文件都有读的权限&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWyxdP.png&#34; alt=&#34;pPWyxdP.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;打包文件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打包文件&#34;&gt;#&lt;/a&gt; 打包文件&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;请对 /etc/sysconfig 目录进行打包并用 bzip2 压缩，生成的文件保存为 /root/sysconfig.tar.bz2&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPWyzIf.png&#34; alt=&#34;pPWyzIf.png&#34;&gt;&lt;/p&gt;
+&lt;h5 id=&#34;创建分区&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建分区&#34;&gt;#&lt;/a&gt; 创建分区&lt;/h5&gt;
+&lt;ol&gt;
+&lt;li&gt;创建一个大小为 500M 的分区&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW26T1.png&#34; alt=&#34;pPW26T1.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;使用 mkfs 将 sda4 格式化为 ext4 文件系统&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW2wSU.png&#34; alt=&#34;pPW2wSU.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;将分区挂载到 /test 目录，如果没有请自行创建&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW2aWT.png&#34; alt=&#34;pPW2aWT.png&#34;&gt;&lt;/p&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;使用开机自启实现永久挂载目录&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/09/15/pPW2UYV.png&#34; alt=&#34;pPW2UYV.png&#34;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;END&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

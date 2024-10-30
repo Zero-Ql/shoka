@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://yunyat.cloud</id>
+    <title>上善若水 • Posts by &#34;python&#34; tag</title>
+    <link href="http://yunyat.cloud" />
+    <updated>2024-03-05T07:47:19.000Z</updated>
+    <category term="hexo" />
+    <category term="原创" />
+    <category term="Linux" />
+    <category term="电脑技术" />
+    <category term="SSH" />
+    <category term="Docker" />
+    <category term="harbor" />
+    <category term="可道云" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="记录" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="暑假工" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="MySQL" />
+    <category term="lambda表达式" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="Hexo" />
+    <category term="教程" />
+    <category term="shell" />
+    <category term="Git" />
+    <category term="maven" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="Ubuntu" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="frp" />
+    <category term="计算机" />
+    <category term="分享" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
+    <category term="springmvc" />
+    <category term="springboot" />
+    <category term="spring注解" />
+    <entry>
+        <id>http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+        <title>Selenium 的使用</title>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+        <content type="html">&lt;h3 id=&#34;selenium-介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#selenium-介绍&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Selenium&lt;/code&gt;  介绍&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;selenium&lt;/code&gt;  是一个广泛使用的模拟浏览器运行的库，它是一个用于  &lt;code&gt;Web&lt;/code&gt;  应用程序测试的工具。 &lt;code&gt;Selenium&lt;/code&gt;  测试直接运行在浏览器中，就像真正的用户在操作一样，并且支持大多数现代  &lt;code&gt;Web&lt;/code&gt;  浏览器。&lt;/p&gt;
+&lt;h3 id=&#34;selenium-自动化测试的八种定位方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#selenium-自动化测试的八种定位方法&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Selenium&lt;/code&gt;  自动化测试的八种定位方法&lt;/h3&gt;
+&lt;h4 id=&#34;使用场景&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用场景&#34;&gt;#&lt;/a&gt; 使用场景：&lt;/h4&gt;
+&lt;p&gt;① 优先用 &lt;code&gt;id&lt;/code&gt; 、 &lt;code&gt;name&lt;/code&gt; （保证唯一性）&lt;/p&gt;
+&lt;p&gt;② 是否是超链接，是超链接用 &lt;code&gt;link_text&lt;/code&gt; 、 &lt;code&gt;partial_link_text&lt;/code&gt; ，否则用 &lt;code&gt;css_selector&lt;/code&gt; 、 &lt;code&gt;xpath&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;③  &lt;code&gt;class_name&lt;/code&gt; 、 &lt;code&gt;tag_name&lt;/code&gt;  很少用，因为这俩个难以保证被定为元素或属性的唯一性&lt;/p&gt;
+&lt;h4 id=&#34;id-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#id-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;ID&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.ID,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;ID&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;username&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;name-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#name-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Name&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.NAME,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;NAME&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;username&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;class-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#class-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Class&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.CLASS_NAME,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;CLASS_NAME&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt; value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;username&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;tag_name-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#tag_name-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Tag_Name&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.TAG_NAME,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;TAG_NAME&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;input&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;link_text-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#link_text-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Link_Text&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.LINK_TEXT,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;LINK_TEXT&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;登&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;partial_link-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#partial_link-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Partial_Link&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.PARTIAL_LINK,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;PARTIAL_LINK&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;登录&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;xpath-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#xpath-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Xpath&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.XPATH,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 使用 XPATH 定位带有 id=&#39;login&#39; 属性和 name=&#39;user&#39; 属性的 input 标签&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;XPATH&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;//input[@id=&#39;login&#39; and @name=&#39;user&#39;]&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h4 id=&#34;css_selector-定位&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#css_selector-定位&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Css_selector&lt;/code&gt;  定位&lt;/h4&gt;
+&lt;p&gt;方法原型：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;driver.find_element(By.CSS_SELECTOR,value)&lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;CSS_SELECTOR&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;input#login&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</content>
+        <category term="原创" />
+        <category term="python" />
+        <category term="selenium" />
+        <updated>2024-03-05T07:47:19.000Z</updated>
+    </entry>
+</feed>
