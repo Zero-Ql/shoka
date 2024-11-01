@@ -23,20 +23,20 @@
     <category term="junit" />
     <category term="python" />
     <category term="selenium" />
-    <category term="MySQL" />
-    <category term="shell" />
     <category term="游戏" />
     <category term="我的世界" />
+    <category term="MySQL" />
+    <category term="JavaScript" />
+    <category term="JSON" />
     <category term="lambda表达式" />
     <category term="java线程" />
     <category term="Java" />
     <category term="servlet" />
     <category term="javafx" />
-    <category term="集合" />
-    <category term="JavaScript" />
-    <category term="JSON" />
     <category term="Hexo" />
     <category term="教程" />
+    <category term="集合" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
     <category term="cAdvisor" />
@@ -52,10 +52,10 @@
     <category term="计算机" />
     <category term="mybatis" />
     <category term="mybatisplus" />
-    <category term="spring" />
-    <category term="ResponseEntity" />
     <category term="springboot" />
     <category term="springmvc" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
     <category term="spring注解" />
     <entry>
         <id>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>

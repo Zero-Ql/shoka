@@ -23,20 +23,20 @@
     <category term="junit" />
     <category term="python" />
     <category term="selenium" />
-    <category term="MySQL" />
-    <category term="shell" />
     <category term="游戏" />
     <category term="我的世界" />
+    <category term="MySQL" />
+    <category term="JavaScript" />
+    <category term="JSON" />
     <category term="lambda表达式" />
     <category term="java线程" />
     <category term="Java" />
     <category term="servlet" />
     <category term="javafx" />
-    <category term="集合" />
-    <category term="JavaScript" />
-    <category term="JSON" />
     <category term="Hexo" />
     <category term="教程" />
+    <category term="集合" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
     <category term="cAdvisor" />
@@ -52,10 +52,10 @@
     <category term="计算机" />
     <category term="mybatis" />
     <category term="mybatisplus" />
-    <category term="spring" />
-    <category term="ResponseEntity" />
     <category term="springboot" />
     <category term="springmvc" />
+    <category term="spring" />
+    <category term="ResponseEntity" />
     <category term="spring注解" />
     <entry>
         <id>http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
