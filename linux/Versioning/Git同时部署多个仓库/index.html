@@ -117,12 +117,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?363874"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?309299"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?274407"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?762228"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?416301"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?219827"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?84774"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?243581"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?396672"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?48711"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?741735"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?832683"></li>
         </ul>
       </div>
     </header>
@@ -194,45 +194,54 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 </blockquote>
 <h5 id="客户端生成公钥"><a class="markdownIt-Anchor" href="#客户端生成公钥">#</a> 客户端生成公钥：</h5>
 <blockquote>
-<p>ssh-keygen -t rsa -f “id_rsa_git” 	# 使用 -f 来区分生成的公钥文件</p>
+<p>ssh-keygen -t rsa -C “git” -f “id_rsa_git” 	<br>
+# 使用 -f 来指定生成的密钥文件名<br>
+ #使用 -C 来指定生成密钥的注释信息，以便使用 -v 调试时区分密钥</p>
 </blockquote>
 <h4 id="配置-github-和-gitee-仓库"><a class="markdownIt-Anchor" href="#配置-github-和-gitee-仓库">#</a> 配置 Github 和 Gitee 仓库</h4>
 <blockquote>
-<p>ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOjI3MDQ5ODQ2NDlAcXEuY29t">2704984649@qq.com</span>” -f “id_rsa_gitee”</p>
-<p>ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOjI3MDQ5ODQ2NDlAcXEuY29t">2704984649@qq.com</span>” -f “id_rsa_github”</p>
+<p>ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOmdpdEBnaXRlZS5jb20=">git@gitee.com</span>” -f “id_rsa_gitee”</p>
+<p>ssh-keygen -t rsa -C “<span class="exturl" data-url="bWFpbHRvOmdpdEBnaXRodWIuY29t">git@github.com</span>” -f “id_rsa_github”</p>
 </blockquote>
-<p>注：生成公钥请在 C:\Users\ 用户名 \ .ssh\ 这个目录下的终端里进行，文件名为 .pub 后缀的文件为公钥文件</p>
+<div class="note primary">
+<p>生成公钥请在 C:\Users\ 用户名 \ .ssh\ 这个目录下的终端里进行，文件名为 .pub 后缀的文件为公钥文件</p>
 <p>然后将不同仓库的公钥里的值分别添加到不同的仓库里即可</p>
 <p>私有仓库则将值添加到 git 用户的 .ssh/authorized_keys 里</p>
+</div>
+<div class="note info">
 <p>注：可以使用 echo “值” &gt;&gt; authorized_keys 将值追加到文件里，这样可以防止覆盖以前配置的 ssh 公钥，防止其他用户无法使用免密登录</p>
-<p>然后配置本地主机的 C:\Users\ 用户名 \ .ssh\ 这个目录下的 config.config 文件来解决 ssh 冲突问题 ，没有就创建一个，然后填入以下内容</p>
+</div>
+<p>然后配置本地主机的 C:\Users\ 用户名 \ .ssh\ 这个目录下的  <code>config</code>  文件来解决  <code>ssh</code>  冲突问题 ，没有就创建一个，然后填入以下内容</p>
+<div class="note info">
+<p>创建的 config 文件没有后缀名</p>
+</div>
 <blockquote>
-<p>#git 用户</p>
-<p>Host githost 	# 别名<br>
+<p>#hexo 用户</p>
+<p>Host hexohost 	# 别名<br>
  HostName 8.222.153.91 	# 主机地址<br>
  Post 5213 	# 端口<br>
- User git 	# 用户名<br>
- IdentityFile ~/.ssh/id_rsa.pub 	# 公钥位置，一般位于 C:\\Users\qingtian\.ssh\ 下</p>
+ User hexo 	# 用户名<br>
+ IdentityFile ~/.ssh/id_rsa_hexo 	# 私钥位置，一般位于 C:\\Users\username\.ssh\ 下</p>
 <p>#root 用户</p>
 <p>Host roothost<br>
 HostName 8.222.153.91<br>
 Post 5213<br>
 User root<br>
-IdentityFile ~/.ssh/id_rsa.pub</p>
+IdentityFile ~/.ssh/id_rsa</p>
 <p>#git 登录 github</p>
 <p>Host <span class="exturl" data-url="aHR0cDovL2dpdGh1Yi5jb20=">github.com</span><br>
 HostName <span class="exturl" data-url="aHR0cDovL2dpdGh1Yi5jb20=">github.com</span><br>
 User git<br>
-IdentityFile ~/.ssh/id_rsa_github.pub</p>
+IdentityFile ~/.ssh/id_rsa_github</p>
 <p>#git 登录 gitee</p>
 <p>Host <span class="exturl" data-url="aHR0cDovL2dpdGVlLmNvbQ==">gitee.com</span><br>
 HostName <span class="exturl" data-url="aHR0cDovL2dpdGVlLmNvbQ==">gitee.com</span><br>
 User git<br>
-IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
+IdentityFile ~/.ssh/id_rsa_gitee</p>
 </blockquote>
 <p>也可以在使用 ssh 的时候在后面使用 -p 参数指定端口</p>
 <blockquote>
-<p>ssh <span class="exturl" data-url="bWFpbHRvOmdpdEA4LjIyMi4xNTMuOTE=">git@8.222.153.91</span> -p 5213</p>
+<p>ssh <span class="exturl" data-url="bWFpbHRvOmhleG9AOC4yMjIuMTUzLjkx">hexo@8.222.153.91</span> -p 5213</p>
 </blockquote>
 <p>然后可以使用下面的命令测试登录：</p>
 <blockquote>
@@ -258,9 +267,8 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
 <p>ssh-add ~/.ssh/id_rsa_gitee 	# 你的 gitee 私钥文件位置</p>
 <p>ssh-add ~/.ssh/id_rsa_github 	# 你的 github 私钥文件位置</p>
 </blockquote>
-<ol start="2">
-<li>在关闭 git bash 窗口后要重新添加关联，暂无解决办法</li>
-</ol>
+<hr>
+<p><em>END</em></p>
 
       <div class="tags">
           <a href="/tags/Git/" rel="tag"><i class="ic i-tag"></i> Git</a>
@@ -275,7 +283,7 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-06-22 15:08:52" itemprop="dateModified" datetime="2024-06-22T15:08:52+08:00">2024-06-22</time>
+    <time title="修改时间：2024-11-01 16:08:15" itemprop="dateModified" datetime="2024-11-01T16:08:15+08:00">2024-11-01</time>
   </span>
   <span id="linux/Versioning/Git同时部署多个仓库/" class="item leancloud_visitors" data-flag-title="Git同时部署多个仓库" title="阅读次数">
       <span class="icon">
@@ -338,7 +346,7 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
     <div class="item left">
       
 
-  <a href="/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?545045" title="使用cAdvisor+Prometheus+Grafana监控Docker容器">
+  <a href="/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?323523" title="使用cAdvisor+Prometheus+Grafana监控Docker容器">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Docker</span>
   <h3>使用cAdvisor+Prometheus+Grafana监控Docker容器</h3>
@@ -348,7 +356,7 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
     <div class="item right">
       
 
-  <a href="/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?854141" title="Git的使用">
+  <a href="/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?177022" title="Git的使用">
   <span class="type">下一篇</span>
   <span class="category"><i class="ic i-flag"></i> 版本控制</span>
   <h3>Git的使用</h3>
@@ -513,47 +521,9 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
     
 <div class="breadcrumb">
 <a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
 </div>
 
-    <span><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" title="Docker部署">Docker部署</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
-</div>
-
-    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/" title="shell脚本笔记-1">shell脚本笔记-1</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/game/" title="分类于 游戏">游戏</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
-</div>
-
-    <span><a href="/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="服务器搭建教程">服务器搭建教程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/game/" title="分类于 游戏">游戏</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
-</div>
-
-    <span><a href="/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/" title="搭建问题集合">搭建问题集合</a></span>
+    <span><a href="/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/" title="Linux2023.9.15作业">Linux2023.9.15作业</a></span>
   </li>
 
       
@@ -563,7 +533,7 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
 <a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
 </div>
 
-    <span><a href="/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/" title="hexo及SSL获取">hexo及SSL获取</a></span>
+    <span><a href="/hexo/hello-world/" title="Hello World">Hello World</a></span>
   </li>
 
       
@@ -573,49 +543,9 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
 <a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
 </div>
 
-    <span><a href="/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" title="spring开发注解集合">spring开发注解集合</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
-</div>
-
-    <span><a href="/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" title="记一次电脑启动原神蓝屏解决方案">记一次电脑启动原神蓝屏解决方案</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
-</div>
-
-    <span><a href="/MyCodingBook/java/frame/SpringBoot%E5%9F%BA%E7%A1%80/" title="SpringBoot基础">SpringBoot基础</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
-</div>
-
-    <span><a href="/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/" title="安利几个好用的网站">安利几个好用的网站</a></span>
+    <span><a href="/MyCodingBook/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/" title="JavaFx使用Maven打包及运行">JavaFx使用Maven打包及运行</a></span>
   </li>
 
       
@@ -627,7 +557,73 @@ IdentityFile ~/.ssh/id_rsa_gitee.pub</p>
 <a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
 </div>
 
-    <span><a href="/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/" title="Docker构建镜像及使用的笔记">Docker构建镜像及使用的笔记</a></span>
+    <span><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" title="Docker部署">Docker部署</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/hexo/Shoka/" title="分类于 Shoka">Shoka</a>
+</div>
+
+    <span><a href="/hexo/shoka/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Windows/" title="分类于 Windows">Windows</a>
+</div>
+
+    <span><a href="/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/" title="任意版本win远程桌面使用内网穿透连接">任意版本win远程桌面使用内网穿透连接</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" title="Win至Linux的免密登录">Win至Linux的免密登录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/" title="Linux2023-9-18作业">Linux2023-9-18作业</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
+</div>
+
+    <span><a href="/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Selenium 的使用">Selenium 的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+</div>
+
+    <span><a href="/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/" title="谈谈看完《孤注一掷》的感想">谈谈看完《孤注一掷》的感想</a></span>
   </li>
 
   </ul>
