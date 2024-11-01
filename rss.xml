@@ -9,25 +9,23 @@
         <lastBuildDate>Sun, 01 Sep 2024 16:40:26 +0800</lastBuildDate>
         <category>hexo</category>
         <category>原创</category>
-        <category>Linux</category>
-        <category>电脑技术</category>
-        <category>SSH</category>
-        <category>Docker</category>
-        <category>harbor</category>
-        <category>可道云</category>
-        <category>markdown</category>
-        <category>mermaid</category>
-        <category>测试</category>
         <category>2023</category>
         <category>年度总结</category>
         <category>记录</category>
         <category>暑假工</category>
+        <category>Linux</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>可道云</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>测试</category>
         <category>java</category>
         <category>junit</category>
         <category>python</category>
         <category>selenium</category>
-        <category>游戏</category>
-        <category>我的世界</category>
         <category>MySQL</category>
         <category>JavaScript</category>
         <category>JSON</category>
@@ -39,26 +37,28 @@
         <category>Hexo</category>
         <category>教程</category>
         <category>集合</category>
+        <category>游戏</category>
+        <category>我的世界</category>
         <category>shell</category>
-        <category>Git</category>
-        <category>maven</category>
-        <category>cAdvisor</category>
-        <category>Prometheus</category>
-        <category>Grafana</category>
         <category>破解</category>
         <category>Typora</category>
         <category>xmind</category>
         <category>思维导图</category>
         <category>Ubuntu</category>
-        <category>frp</category>
         <category>分享</category>
+        <category>frp</category>
         <category>计算机</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
         <category>mybatis</category>
         <category>mybatisplus</category>
-        <category>springboot</category>
-        <category>springmvc</category>
         <category>spring</category>
         <category>ResponseEntity</category>
+        <category>springmvc</category>
+        <category>springboot</category>
         <category>spring注解</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/</guid>
@@ -1504,6 +1504,101 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
+            <title>Spring基础</title>
+            <link>http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
+            <category>原创</category>
+            <category>java</category>
+            <category>spring</category>
+            <pubDate>Tue, 16 Apr 2024 12:03:49 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;#&lt;/a&gt; Spring、Spring MVC、Spring Boot、Spring Cloud&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Spring&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Spring&lt;/code&gt;  是一个轻量级的&lt;strong&gt;控制反转 ( &lt;code&gt;IoC&lt;/code&gt; )&lt;/strong&gt; 和&lt;strong&gt;面向切面 ( &lt;code&gt;AOP&lt;/code&gt; )&lt;/strong&gt; 的容器框架。&lt;/li&gt;
+&lt;li&gt;它使你能够编写更干净、更可管理、并且更易于测试的代码。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Spring&lt;/code&gt;  提供了基础功能，适用于开发  &lt;code&gt;WEB&lt;/code&gt;  层、业务层、持久层等多个方面。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spring MVC&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Spring MVC&lt;/code&gt;  是  &lt;code&gt;Spring&lt;/code&gt;  的一个模块，是一个&lt;strong&gt; Web 框架&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;通过  &lt;code&gt;Dispatcher Servlet&lt;/code&gt; 、 &lt;code&gt;ModelAndView&lt;/code&gt;  和  &lt;code&gt;View Resolver&lt;/code&gt; ，它使得开发  &lt;code&gt;Web&lt;/code&gt;  应用变得很容易。&lt;/li&gt;
+&lt;li&gt;主要针对网站应用程序或者服务开发，处理 URL 路由、 &lt;code&gt;Session&lt;/code&gt; 、模板引擎、静态  &lt;code&gt;Web&lt;/code&gt;  资源等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Spring Boot&lt;/code&gt;  是为简化  &lt;code&gt;Spring&lt;/code&gt;  配置的&lt;strong&gt;快速开发整合包&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;它约定优于配置，简化了  &lt;code&gt;Spring&lt;/code&gt;  的配置流程。&lt;/li&gt;
+&lt;li&gt;更专注于开发&lt;strong&gt;微服务后台接口&lt;/strong&gt;，不涉及前端视图。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spring Cloud&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Spring Cloud&lt;/code&gt;  构建于  &lt;code&gt;Spring Boot&lt;/code&gt;  之上，是一个关注全局的&lt;strong&gt;服务治理框架&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;它用于整合和管理多个  &lt;code&gt;Spring Boot&lt;/code&gt;  单体微服务。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Spring Cloud&lt;/code&gt;  依赖于  &lt;code&gt;Spring Boot&lt;/code&gt;  开发，但  &lt;code&gt;Spring Boot&lt;/code&gt;  可以独立开发。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Spring 是核心，提供了基础功能。&lt;/li&gt;
+&lt;li&gt;Spring MVC 是基于 Spring 的一个 MVC 框架。&lt;/li&gt;
+&lt;li&gt;Spring Boot 是为简化 Spring 配置的快速开发整合包。&lt;/li&gt;
+&lt;li&gt;Spring Cloud 是构建在 Spring Boot 之上的服务治理框架。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;spring&lt;/code&gt;  是一个专注于  &lt;code&gt;Java EE&lt;/code&gt;  开发的框架，它会使我们编写出来的  &lt;code&gt;Java&lt;/code&gt;  程序 更快，更容易，更安全。&lt;/p&gt;
+&lt;h3 id=&#34;spring的分层架构设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring的分层架构设计模式&#34;&gt;#&lt;/a&gt; Spring 的分层架构设计模式&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;表示层（Controller 层）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表示层是 Web 应用的入口，负责接收 HTTP 请求并处理。&lt;/li&gt;
+&lt;li&gt;在 Spring 中，它提供了与 Spring MVC 和 Struts2 等框架的整合。&lt;/li&gt;
+&lt;li&gt;控制器层处理用户请求，协调业务逻辑层和持久层之间的交互。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;服务层（Service 层）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;也称为业务逻辑层，负责处理业务逻辑，与项目需求紧密相关。&lt;/li&gt;
+&lt;li&gt;在 Spring 中，可以管理事务、记录日志等。&lt;/li&gt;
+&lt;li&gt;服务层通过调用持久层的方法来操作数据，对外提供接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;持久层（DAO 层）&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;也被称为数据访问层，负责将数据持久化到数据库中。&lt;/li&gt;
+&lt;li&gt;基本上，它主要用于数据库的增删改查操作。&lt;/li&gt;
+&lt;li&gt;DAO 层是一个接口，具体的实现在 Mapper.xml 或者其他地方。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;声明组件扫描器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#声明组件扫描器&#34;&gt;#&lt;/a&gt; 声明组件扫描器&lt;/h3&gt;
+&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token namespace&#34;&gt;context:&lt;/span&gt;component-scan&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;base-package&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;你要扫描的包名&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;spring-相关网站&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-相关网站&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Spring&lt;/code&gt;  相关网站&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Spring MVC API&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctZnJhbWV3b3JrL2RvY3MvY3VycmVudC9qYXZhZG9jLWFwaS8=&#34;&gt;Overview (Spring Framework 6.1.5 API)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Spring Boot API&lt;/code&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctYm9vdC9kb2NzL2N1cnJlbnQvYXBpLw==&#34;&gt;Overview (Spring Boot 3.2.4 API)&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
             <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/SpringBoot%E5%9F%BA%E7%A1%80/</guid>
             <title>SpringBoot基础</title>
             <link>http://yunyat.cloud/MyCodingBook/java/frame/SpringBoot%E5%9F%BA%E7%A1%80/</link>
@@ -1612,101 +1707,6 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
     &lt;/tr&gt;
 &lt;/table&gt;
 &lt;p&gt;除了上面的注解标签，还可以自定义数据校验规则&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
-            <title>Spring基础</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
-            <category>原创</category>
-            <category>java</category>
-            <category>spring</category>
-            <pubDate>Tue, 16 Apr 2024 12:03:49 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;#&lt;/a&gt; Spring、Spring MVC、Spring Boot、Spring Cloud&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Spring&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Spring&lt;/code&gt;  是一个轻量级的&lt;strong&gt;控制反转 ( &lt;code&gt;IoC&lt;/code&gt; )&lt;/strong&gt; 和&lt;strong&gt;面向切面 ( &lt;code&gt;AOP&lt;/code&gt; )&lt;/strong&gt; 的容器框架。&lt;/li&gt;
-&lt;li&gt;它使你能够编写更干净、更可管理、并且更易于测试的代码。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Spring&lt;/code&gt;  提供了基础功能，适用于开发  &lt;code&gt;WEB&lt;/code&gt;  层、业务层、持久层等多个方面。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spring MVC&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Spring MVC&lt;/code&gt;  是  &lt;code&gt;Spring&lt;/code&gt;  的一个模块，是一个&lt;strong&gt; Web 框架&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;通过  &lt;code&gt;Dispatcher Servlet&lt;/code&gt; 、 &lt;code&gt;ModelAndView&lt;/code&gt;  和  &lt;code&gt;View Resolver&lt;/code&gt; ，它使得开发  &lt;code&gt;Web&lt;/code&gt;  应用变得很容易。&lt;/li&gt;
-&lt;li&gt;主要针对网站应用程序或者服务开发，处理 URL 路由、 &lt;code&gt;Session&lt;/code&gt; 、模板引擎、静态  &lt;code&gt;Web&lt;/code&gt;  资源等。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spring Boot&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Spring Boot&lt;/code&gt;  是为简化  &lt;code&gt;Spring&lt;/code&gt;  配置的&lt;strong&gt;快速开发整合包&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;它约定优于配置，简化了  &lt;code&gt;Spring&lt;/code&gt;  的配置流程。&lt;/li&gt;
-&lt;li&gt;更专注于开发&lt;strong&gt;微服务后台接口&lt;/strong&gt;，不涉及前端视图。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spring Cloud&lt;/strong&gt;：
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Spring Cloud&lt;/code&gt;  构建于  &lt;code&gt;Spring Boot&lt;/code&gt;  之上，是一个关注全局的&lt;strong&gt;服务治理框架&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;它用于整合和管理多个  &lt;code&gt;Spring Boot&lt;/code&gt;  单体微服务。&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Spring Cloud&lt;/code&gt;  依赖于  &lt;code&gt;Spring Boot&lt;/code&gt;  开发，但  &lt;code&gt;Spring Boot&lt;/code&gt;  可以独立开发。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;总结：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Spring 是核心，提供了基础功能。&lt;/li&gt;
-&lt;li&gt;Spring MVC 是基于 Spring 的一个 MVC 框架。&lt;/li&gt;
-&lt;li&gt;Spring Boot 是为简化 Spring 配置的快速开发整合包。&lt;/li&gt;
-&lt;li&gt;Spring Cloud 是构建在 Spring Boot 之上的服务治理框架。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-&lt;h3 id=&#34;介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;spring&lt;/code&gt;  是一个专注于  &lt;code&gt;Java EE&lt;/code&gt;  开发的框架，它会使我们编写出来的  &lt;code&gt;Java&lt;/code&gt;  程序 更快，更容易，更安全。&lt;/p&gt;
-&lt;h3 id=&#34;spring的分层架构设计模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring的分层架构设计模式&#34;&gt;#&lt;/a&gt; Spring 的分层架构设计模式&lt;/h3&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;表示层（Controller 层）&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;表示层是 Web 应用的入口，负责接收 HTTP 请求并处理。&lt;/li&gt;
-&lt;li&gt;在 Spring 中，它提供了与 Spring MVC 和 Struts2 等框架的整合。&lt;/li&gt;
-&lt;li&gt;控制器层处理用户请求，协调业务逻辑层和持久层之间的交互。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;服务层（Service 层）&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;也称为业务逻辑层，负责处理业务逻辑，与项目需求紧密相关。&lt;/li&gt;
-&lt;li&gt;在 Spring 中，可以管理事务、记录日志等。&lt;/li&gt;
-&lt;li&gt;服务层通过调用持久层的方法来操作数据，对外提供接口。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;持久层（DAO 层）&lt;/strong&gt;：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;也被称为数据访问层，负责将数据持久化到数据库中。&lt;/li&gt;
-&lt;li&gt;基本上，它主要用于数据库的增删改查操作。&lt;/li&gt;
-&lt;li&gt;DAO 层是一个接口，具体的实现在 Mapper.xml 或者其他地方。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;声明组件扫描器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#声明组件扫描器&#34;&gt;#&lt;/a&gt; 声明组件扫描器&lt;/h3&gt;
-&lt;figure class=&#34;highlight xml&#34;&gt;&lt;figcaption data-lang=&#34;XML&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token tag&#34;&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;token namespace&#34;&gt;context:&lt;/span&gt;component-scan&lt;/span&gt; &lt;span class=&#34;token attr-name&#34;&gt;base-package&lt;/span&gt;&lt;span class=&#34;token attr-value&#34;&gt;&lt;span class=&#34;token punctuation attr-equals&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;你要扫描的包名&lt;span class=&#34;token punctuation&#34;&gt;&#34;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;h3 id=&#34;spring-相关网站&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-相关网站&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Spring&lt;/code&gt;  相关网站&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Spring MVC API&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctZnJhbWV3b3JrL2RvY3MvY3VycmVudC9qYXZhZG9jLWFwaS8=&#34;&gt;Overview (Spring Framework 6.1.5 API)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;Spring Boot API&lt;/code&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctYm9vdC9kb2NzL2N1cnJlbnQvYXBpLw==&#34;&gt;Overview (Spring Boot 3.2.4 API)&lt;/span&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
  ]]></description>
