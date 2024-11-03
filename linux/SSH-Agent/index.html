@@ -24,12 +24,15 @@
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
   
-
-<link rel="canonical" href="http://yunyat.cloud/about/">
-
+  <meta name="keywords" content="原创,电脑技术,SSH" />
 
 
-  <title>关于我 |
+<link rel="canonical" href="http://yunyat.cloud/linux/SSH-Agent/">
+
+
+
+  <title>
+SSH Agent - Linux |
 QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -57,8 +60,34 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">关于我
+  <h1 itemprop="name headline">SSH Agent
   </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-11-03 14:36:15">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-11-03T14:36:15+08:00">2024-11-03</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>760</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>1 分钟</span>
+  </span>
+</div>
+
 
           </div>
         </div>
@@ -88,12 +117,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?43878"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?395376"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?523447"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?738396"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?836843"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?795799"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?967529"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?791608"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?730238"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?162295"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?379567"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?439378"></li>
         </ul>
       </div>
     </header>
@@ -114,9 +143,17 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <div class="inner">
         <div id="main" class="pjax">
           
-  <div class="page wrap">
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/linux/" itemprop="item" rel="index" title="分类于 Linux"><span itemprop="name">Linux</span></a>
+<meta itemprop="position" content="1" /></span>
+</div>
+
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/about/index.html">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/linux/SSH-Agent/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/wa.jpg">
@@ -131,30 +168,71 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <div class="body md" itemprop="articleBody">
     
 
-    <hr>
+    <h3 id="ssh-agent-简介"><a class="markdownIt-Anchor" href="#ssh-agent-简介">#</a> <em>SSH Agent</em> 简介</h3>
+<blockquote>
+<p>*SSH Agent（Secure Shell Agent）* 是一个帮助管理 <em>SSH</em> 认证过程的守护进程。它的主要功能是存储用户的私钥，并代表用户在进行 <em>SSH</em> 认证时向 <em>SSH</em> 服务器提供这些私钥，从而避免频繁输入密码或私钥文件的路径。<em>SSH Agent</em> 的设计目的是为了提高安全性、方便性和效率。</p>
+</blockquote>
+<p>总结：使用 <em>ssh agent</em> 可以使你用不同的私钥免密登录不同的账号</p>
+<h3 id="主要功能"><a class="markdownIt-Anchor" href="#主要功能">#</a> 主要功能</h3>
+<ol>
+<li><strong>存储私钥</strong>：
 <ul>
-<li>简介</li>
+<li><em>SSH Agent</em> 可以存储用户的私钥，并在需要时提供给 <em>SSH</em> 客户端。</li>
+<li>这样用户不需要每次都输入私钥的密码或指定私钥文件的路径。</li>
 </ul>
-<blockquote>
-<p>混吃等死的无名之士</p>
-<p>···</p>
-</blockquote>
+</li>
+<li><strong>简化认证过程</strong>：
 <ul>
-<li>特长</li>
+<li><em>SSH Agent</em> 可以简化 <em>SSH</em> 认证过程，使得用户只需要一次加载私钥，之后就可以在多个会话中使用。</li>
+<li>这样可以避免每次使用 SSH 连接时都需要重新输入密码或使用  <code>-i</code>  参数指定私钥文件。</li>
 </ul>
-<blockquote>
-<p>没什么特长，就是喜欢做自己喜欢做的事</p>
-</blockquote>
-<h5 id="说点什么"><a class="markdownIt-Anchor" href="#说点什么">#</a> 说点什么…</h5>
-<blockquote>
-<p>寒冬终会过去，我们即使身处黑暗之中，也依然要相信光明，就像明知道明天不会变好，但是我们睡前还是会祈祷明天能变好一点.</p>
-<p>“愿为五陵轻薄儿，生在贞观开元时。斗鸡走犬过一生，天地安危两不知。”</p>
-</blockquote>
+</li>
+<li><strong>提高安全性</strong>：
+<ul>
+<li>私钥存储在内存中，并受到 <em>SSH Agent</em> 的保护，减少了私钥被未经授权的访问的风险。</li>
+<li><em>SSH Agent</em> 可以配置为在一定时间内自动删除私钥，从而增加安全性。</li>
+</ul>
+</li>
+</ol>
+<h3 id="使用"><a class="markdownIt-Anchor" href="#使用">#</a> 使用</h3>
+<ol>
+<li>
+<p>启动</p>
+<ul>
+<li>在 <em>Windows</em> 下使用  <code>ssh-agent -s</code>  来启动守护进程</li>
+</ul>
+</li>
+<li>
+<p>将输出的环境变量添加到当前会话</p>
+<ul>
+<li>
+<figure class="highlight shell"><figcaption data-lang="Bash"><span>命令</span><a href="https://yunyat.cloud">参考链接</a></figcaption><table><tr><td data-num="1"></td><td><pre>Set-Content env:<span class="token environment constant">SSH_AUTH_SOCK</span> <span class="token variable">$env</span><span class="token builtin class-name">:</span><span class="token environment constant">SSH_AUTH_SOCK</span></pre></td></tr><tr class="marked"><td data-num="2"></td><td><pre>Set-Content env:SSH_AGENT_PID <span class="token variable">$env</span>:SSH_AGENT_PID</pre></td></tr></table></figure></li>
+</ul>
+</li>
+<li>
+<p>添加私钥到 <em>SSH Agent</em></p>
+<ul>
+<li>
+<figure class="highlight shell"><figcaption data-lang="Bash"><span>命令</span><a href="https://yunyat.cloud">参考链接</a></figcaption><table><tr class="marked"><td data-num="1"></td><td><pre>ssh-add ~/.ssh/<span class="token punctuation">[</span>你的私钥名称<span class="token punctuation">]</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment"># 例如：ssh-add ~/.ssh/id_rsa_github</span></pre></td></tr></table></figure></li>
+</ul>
+</li>
+</ol>
+<div class="note info">
+<p>添加成功应该显示为类似的输出 “Identity added: .\id_rsa_github (github)”</p>
+</div>
+<h3 id="常用命令"><a class="markdownIt-Anchor" href="#常用命令">#</a> 常用命令</h3>
+<ol>
+<li><code>ssh-add -l </code>  查看当前 <em>SSH Agent</em> 中已加载的私钥</li>
+<li><code>ssh-add -D</code>  删除 <em>SSH Agent</em> 中所有私钥</li>
+</ol>
 <hr>
-<blockquote>
-<p><em>人生何处不相逢，相逢何必曾相识</em></p>
-</blockquote>
+<p><em>END</em></p>
 
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/%E7%94%B5%E8%84%91%E6%8A%80%E6%9C%AF/" rel="tag"><i class="ic i-tag"></i> 电脑技术</a>
+          <a href="/tags/SSH/" rel="tag"><i class="ic i-tag"></i> SSH</a>
+      </div>
   </div>
 
    <footer>
@@ -165,9 +243,9 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-09-07 16:19:03" itemprop="dateModified" datetime="2023-09-07T16:19:03+08:00">2023-09-07</time>
+    <time title="修改时间：2024-11-03 14:38:28" itemprop="dateModified" datetime="2024-11-03T14:38:28+08:00">2024-11-03</time>
   </span>
-  <span id="about/" class="item leancloud_visitors" data-flag-title="关于我" title="阅读次数">
+  <span id="linux/SSH-Agent/" class="item leancloud_visitors" data-flag-title="SSH Agent" title="阅读次数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -209,7 +287,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://yunyat.cloud/about/index.html" title="关于我">http://yunyat.cloud/about/index.html</a>
+    <a href="http://yunyat.cloud/linux/SSH-Agent/" title="SSH Agent">http://yunyat.cloud/linux/SSH-Agent/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -223,6 +301,23 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 
   </div>
   
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?876108" title="Screen使用">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 我的世界</span>
+  <h3>Screen使用</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
   <div class="wrap" id="comments"></div>
 
 
@@ -235,9 +330,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E8%AF%B4%E7%82%B9%E4%BB%80%E4%B9%88"><span class="toc-number">1.</span> <span class="toc-text"> 说点什么…</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#ssh-agent-%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text"> SSH Agent 简介</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD"><span class="toc-number">2.</span> <span class="toc-text"> 主要功能</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">3.</span> <span class="toc-text"> 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"><span class="toc-number">4.</span> <span class="toc-text"> 常用命令</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="bookmark" title="Maven的使用">Maven的使用</a></li><li><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" rel="bookmark" title="Docker部署">Docker部署</a></li><li><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/" rel="bookmark" title="Docker的使用-壹">Docker的使用-壹</a></li><li><a href="/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/" rel="bookmark" title="Docker的使用-贰">Docker的使用-贰</a></li><li><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/" rel="bookmark" title="Docker的使用-叁">Docker的使用-叁</a></li><li><a href="/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/" rel="bookmark" title="可道云桌面搭建笔记">可道云桌面搭建笔记</a></li><li><a href="/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" rel="bookmark" title="Win至Linux的免密登录">Win至Linux的免密登录</a></li><li><a href="/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/" rel="bookmark" title="Docker构建镜像及使用的笔记">Docker构建镜像及使用的笔记</a></li><li><a href="/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/" rel="bookmark" title="harbor本地仓库搭建">harbor本地仓库搭建</a></li><li><a href="/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" rel="bookmark" title="Docker之nginx的负载均衡">Docker之nginx的负载均衡</a></li><li><a href="/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/" rel="bookmark" title="Linux2023.9.15作业">Linux2023.9.15作业</a></li><li><a href="/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/" rel="bookmark" title="Linux2023-9-18作业">Linux2023-9-18作业</a></li><li><a href="/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/" rel="bookmark" title="使用cAdvisor+Prometheus+Grafana监控Docker容器">使用cAdvisor+Prometheus+Grafana监控Docker容器</a></li><li><a href="/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/" rel="bookmark" title="Git同时部署多个仓库">Git同时部署多个仓库</a></li><li><a href="/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" rel="bookmark" title="Git的使用">Git的使用</a></li><li class="active"><a href="/linux/SSH-Agent/" rel="bookmark" title="SSH Agent">SSH Agent</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -374,12 +472,10 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <div class="breadcrumb">
 <a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
 </div>
 
-    <span><a href="/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/" title="Spring基础">Spring基础</a></span>
+    <span><a href="/MyCodingBook/UnitTests/JUnit/" title="JUnit">JUnit</a></span>
   </li>
 
       
@@ -391,7 +487,19 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
 </div>
 
-    <span><a href="/MyCodingBook/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" title="Java-lambda的方法引用">Java-lambda的方法引用</a></span>
+    <span><a href="/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/" title="集合-Map">集合-Map</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/" title="安利几个好用的网站">安利几个好用的网站</a></span>
   </li>
 
       
@@ -403,7 +511,47 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
 </div>
 
-    <span><a href="/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/" title="使用cAdvisor+Prometheus+Grafana监控Docker容器">使用cAdvisor+Prometheus+Grafana监控Docker容器</a></span>
+    <span><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/" title="Docker的使用-叁">Docker的使用-叁</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/hexo/Shoka/" title="分类于 Shoka">Shoka</a>
+</div>
+
+    <span><a href="/hexo/shoka/dependents/" title="Step.1 依赖插件">Step.1 依赖插件</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/SpringMVC/" title="SpringMVC">SpringMVC</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/frame/MyBatisPlus-1/" title="MyBatisPlus-1">MyBatisPlus-1</a></span>
   </li>
 
       
@@ -420,72 +568,24 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/" title="harbor本地仓库搭建">harbor本地仓库搭建</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
-</div>
-
-    <span><a href="/MyCodingBook/UnitTests/JUnit/" title="JUnit">JUnit</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
 </div>
 
-    <span><a href="/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/" title="湖北飞young算号器">湖北飞young算号器</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/game/" title="分类于 游戏">游戏</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
-</div>
-
-    <span><a href="/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="服务器搭建教程">服务器搭建教程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
-</div>
-
-    <span><a href="/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/" title="Docker之nginx的负载均衡">Docker之nginx的负载均衡</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/hexo/Shoka/" title="分类于 Shoka">Shoka</a>
-</div>
-
-    <span><a href="/hexo/shoka/special/" title="Step.4 主题特殊功能">Step.4 主题特殊功能</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
-</div>
-
-    <span><a href="/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/" title="Docker构建镜像及使用的笔记">Docker构建镜像及使用的笔记</a></span>
+    <span><a href="/MyCodingBook/java/frame/Spring-ResponseEntity/" title="Spring-ResponseEntity">Spring-ResponseEntity</a></span>
   </li>
 
   </ul>
@@ -554,7 +654,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: 'about/',
+    path: 'linux/SSH-Agent/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)看不见我看不见我"

@@ -5,6 +5,18 @@
     "home_page_url": "http://yunyat.cloud",
     "items": [
         {
+            "id": "http://yunyat.cloud/linux/SSH-Agent/",
+            "url": "http://yunyat.cloud/linux/SSH-Agent/",
+            "title": "SSH Agent",
+            "date_published": "2024-11-03T06:36:15.000Z",
+            "content_html": "<h3 id=\"ssh-agent-简介\"><a class=\"markdownIt-Anchor\" href=\"#ssh-agent-简介\">#</a> <em>SSH Agent</em> 简介</h3>\n<blockquote>\n<p>*SSH Agent（Secure Shell Agent）* 是一个帮助管理 <em>SSH</em> 认证过程的守护进程。它的主要功能是存储用户的私钥，并代表用户在进行 <em>SSH</em> 认证时向 <em>SSH</em> 服务器提供这些私钥，从而避免频繁输入密码或私钥文件的路径。<em>SSH Agent</em> 的设计目的是为了提高安全性、方便性和效率。</p>\n</blockquote>\n<p>总结：使用 <em>ssh agent</em> 可以使你用不同的私钥免密登录不同的账号</p>\n<h3 id=\"主要功能\"><a class=\"markdownIt-Anchor\" href=\"#主要功能\">#</a> 主要功能</h3>\n<ol>\n<li><strong>存储私钥</strong>：\n<ul>\n<li><em>SSH Agent</em> 可以存储用户的私钥，并在需要时提供给 <em>SSH</em> 客户端。</li>\n<li>这样用户不需要每次都输入私钥的密码或指定私钥文件的路径。</li>\n</ul>\n</li>\n<li><strong>简化认证过程</strong>：\n<ul>\n<li><em>SSH Agent</em> 可以简化 <em>SSH</em> 认证过程，使得用户只需要一次加载私钥，之后就可以在多个会话中使用。</li>\n<li>这样可以避免每次使用 SSH 连接时都需要重新输入密码或使用  <code>-i</code>  参数指定私钥文件。</li>\n</ul>\n</li>\n<li><strong>提高安全性</strong>：\n<ul>\n<li>私钥存储在内存中，并受到 <em>SSH Agent</em> 的保护，减少了私钥被未经授权的访问的风险。</li>\n<li><em>SSH Agent</em> 可以配置为在一定时间内自动删除私钥，从而增加安全性。</li>\n</ul>\n</li>\n</ol>\n<h3 id=\"使用\"><a class=\"markdownIt-Anchor\" href=\"#使用\">#</a> 使用</h3>\n<ol>\n<li>\n<p>启动</p>\n<ul>\n<li>在 <em>Windows</em> 下使用  <code>ssh-agent -s</code>  来启动守护进程</li>\n</ul>\n</li>\n<li>\n<p>将输出的环境变量添加到当前会话</p>\n<ul>\n<li>\n<figure class=\"highlight shell\"><figcaption data-lang=\"Bash\"><span>命令</span><a href=\"https://yunyat.cloud\">参考链接</a></figcaption><table><tr><td data-num=\"1\"></td><td><pre>Set-Content env:<span class=\"token environment constant\">SSH_AUTH_SOCK</span> <span class=\"token variable\">$env</span><span class=\"token builtin class-name\">:</span><span class=\"token environment constant\">SSH_AUTH_SOCK</span></pre></td></tr><tr class=\"marked\"><td data-num=\"2\"></td><td><pre>Set-Content env:SSH_AGENT_PID <span class=\"token variable\">$env</span>:SSH_AGENT_PID</pre></td></tr></table></figure></li>\n</ul>\n</li>\n<li>\n<p>添加私钥到 <em>SSH Agent</em></p>\n<ul>\n<li>\n<figure class=\"highlight shell\"><figcaption data-lang=\"Bash\"><span>命令</span><a href=\"https://yunyat.cloud\">参考链接</a></figcaption><table><tr class=\"marked\"><td data-num=\"1\"></td><td><pre>ssh-add ~/.ssh/<span class=\"token punctuation\">[</span>你的私钥名称<span class=\"token punctuation\">]</span></pre></td></tr><tr><td data-num=\"2\"></td><td><pre><span class=\"token comment\"># 例如：ssh-add ~/.ssh/id_rsa_github</span></pre></td></tr></table></figure></li>\n</ul>\n</li>\n</ol>\n<div class=\"note info\">\n<p>添加成功应该显示为类似的输出 “Identity added: .\\id_rsa_github (github)”</p>\n</div>\n<h3 id=\"常用命令\"><a class=\"markdownIt-Anchor\" href=\"#常用命令\">#</a> 常用命令</h3>\n<ol>\n<li><code>ssh-add -l </code>  查看当前 <em>SSH Agent</em> 中已加载的私钥</li>\n<li><code>ssh-add -D</code>  删除 <em>SSH Agent</em> 中所有私钥</li>\n</ol>\n<hr>\n<p><em>END</em></p>\n",
+            "tags": [
+                "原创",
+                "电脑技术",
+                "SSH"
+            ]
+        },
+        {
             "id": "http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/",
             "url": "http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/",
             "title": "Win至Linux的免密登录",
