@@ -32,7 +32,7 @@
 
 
   <title>
-Mod开发指南 - NeoForge - 我的世界 - 游戏 |
+Mod开发指南 - 物品篇 - NeoForge - 我的世界 - 游戏 |
 QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -60,7 +60,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Mod开发指南
+  <h1 itemprop="name headline">Mod开发指南 - 物品篇
   </h1>
   
 <div class="meta">
@@ -76,7 +76,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>2k</span>
+    <span>3.6k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -84,7 +84,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <i class="ic i-clock"></i>
     </span>
     <span class="text">阅读时长</span>
-    <span>2 分钟</span>
+    <span>3 分钟</span>
   </span>
 </div>
 
@@ -117,12 +117,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?638168"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?857345"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?380499"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?809558"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?633251"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/fj?533892"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?821661"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?324774"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?792873"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?709444"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?590571"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?410685"></li>
         </ul>
       </div>
     </header>
@@ -174,7 +174,24 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <div class="body md" itemprop="articleBody">
     
 
-    <h2 id="注册"><a class="markdownIt-Anchor" href="#注册">#</a> 注册</h2>
+    <h2 id="物品item"><a class="markdownIt-Anchor" href="#物品item">#</a> 物品 (Item)</h2>
+<p><ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>中存储了一些不会变化的信息，比如堆叠上限，最大耐久等。</p>
+<p>所有此种<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>的<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>都以该<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>实例为基础，比如你的物品栏有三个泥土<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>，数量分别为 <code>10</code> ， <code>20</code> ， <code>30</code> ，通过这三个<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>获取到的都是同一个<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>实例，即泥土<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>实例。(<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>的一些配置信息将会影响到<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>与物品实体的效果)</p>
+<div class="note warning">
+<p>不要把可变的信息存储到<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>中！请把它们存储到<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>里！</p>
+</div>
+<p><ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>中存储了一些额外的，可变的信息，比如<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>的数量，药水中的效果种类等。它们以 <code>nbt</code>  的形式存储在<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>中。</p>
+<p>一个<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>拥有下面的三个主要部分：</p>
+<ul>
+<li>它代表的<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>，可以使用 <code>itemstack.getItem()</code>  获得。</li>
+<li><ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>的数量，一般在<span class="red"> 1~64</span> 之间，通过 <code>itemstack.getCount()</code>  获得，使用 <code>itemstack.setCount(int)</code>  或 <code>itemstack.shrink(int)</code>  变化。</li>
+<li>额外的 <code>nbt</code>  数据，存储着每个<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>独特的数据。通过 <code>itemstack.getTag()</code>  获取，或者通过 <code>itemstack.getOrCreateTag()</code>  来处理标签不存在的情况。 <code>ItemStack</code>  类中也存在许多其他和 <code>nbt</code>  有关的方法，最重要的是 <code>hasTag()</code>  和 <code>setTag()</code> 。</li>
+</ul>
+<div class="note info">
+<p><ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>非单例，即两个数据完全相同的<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>并不会共用同一个实例 (对象)</p>
+</div>
+<p>值得一提的是，拥有空白的额外 nbt 的<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>和不拥有 <code>nbt</code>  的<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>是不同的。这意味着他们无法被堆叠，尽管他们在功能上完全一样。如果需要创建一个新的<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>，请使用 <code>new ItemStack(Item)</code>  并传入指定的<ruby>物品<rp>【</rp><rt>Item</rt><rp>】</rp></ruby>。默认情况下，这样创建的<ruby>物品堆<rp>【</rp><rt>ItemStack</rt><rp>】</rp></ruby>数量为<span class="red"> 1</span> 且没有 <code>nbt</code>  数据；但同时，类中也提供了创建带有数量或 <code>nbt</code>  物品的构造方法。</p>
+<h2 id="注册"><a class="markdownIt-Anchor" href="#注册">#</a> 注册</h2>
 <p>注册是指将模组中的对象（如物品、方块、声音等）告知游戏的过程。注册非常重要，因为如果没有注册，游戏将不知道这些对象的存在，这会导致不可预测的行为和崩溃。<br>
 游戏中大多数需要注册的对象都是通过 <code>Forge</code>  注册表来处理的。注册表类似于一个映射表，它将值分配给键。 <code>Forge</code>  使用带有 <code>ResourceLocation</code>  键的注册表来注册对象。这使得 <code>ResourceLocation</code>  可以作为对象的 “注册名称”。<br>
 每种可注册的对象类型都有自己的注册表。要查看所有由 <code>Forge</code>  封装的注册表，可以查看 <code>ForgeRegistries</code>  类。注册表内的所有注册名称必须是唯一的。然而，不同注册表中的名称不会冲突。例如，有一个方块注册表和一个物品注册表。一个方块和一个物品可以使用相同的名称 <code>example:thing</code>  进行注册而不会冲突；但是，如果两个不同的方块或物品使用完全相同的名称进行注册，后注册的对象将覆盖先注册的对象。</p>
@@ -187,14 +204,29 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <p>Every type of registrable object has its own registry. To see all registries wrapped by Forge, see the ForgeRegistries class. All registry names within a registry must be unique. However, names in different registries will not collide. For example, there’s a Block registry, and an Item registry. A Block and an Item may be registered with the same name example:thing without colliding; however, if two different Blocks or Items were registered with the same exact name, the second object will override the first.</p>
 <p>——from Neoforge docs , <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLm5lb2ZvcmdlZC5uZXQvZG9jcy9jb25jZXB0cy9yZWdpc3RyaWVz">https://docs.neoforged.net/docs/concepts/registries</span></p>
 </div></details>
+<h2 id="物品特性itemproperties"><a class="markdownIt-Anchor" href="#物品特性itemproperties">#</a> 物品特性 (ItemProperties)</h2>
+<p>物品特性用于描述物品在特定情况下表现出的特征，比如是否可以食用，是否抗火，最大耐久与稀有度等。</p>
+<div class="note info">
+<p>所有可以用 <code>Properties</code>  做到的方法都在  <code>net.minecraft.world.item.Properties</code>  类中。</p>
+</div>
 <h2 id="食物"><a class="markdownIt-Anchor" href="#食物">#</a> 食物</h2>
 <p>食物属性通过 <code>FoodProperties.Builder()</code>  设置</p>
 <figure class="highlight java"><figcaption data-lang="java"><span>示例</span><span class="exturl" data-url="aHR0cHM6Ly9hcmtkdXN0LXR1dG9yaWFscy5raXR1aW4uZnVuL2Jhc2UvaXRlbS5odG1sIyVFOSVBMyU5RiVFNyU4OSVBOQ==">参考链接</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">FoodProperties</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FoodProperties<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="2"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">alwaysEat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">nutrition</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">saturationMod</span><span class="token punctuation">(</span><span class="token number">0.5F</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">MobEffectInstance</span><span class="token punctuation">(</span><span class="token class-name">MobEffects</span><span class="token punctuation">.</span><span class="token constant">REGENERATION</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">MobEffectInstance</span><span class="token punctuation">(</span><span class="token class-name">MobEffects</span><span class="token punctuation">.</span><span class="token constant">ABSORPTION</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">MobEffectInstance</span><span class="token punctuation">(</span><span class="token class-name">MobEffects</span><span class="token punctuation">.</span><span class="token constant">HEAL</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>物品属性通过 <code>Properties()</code>  设置</p>
 <figure class="highlight java"><figcaption data-lang="java"><span>示例</span><span class="exturl" data-url="aHR0cHM6Ly9hcmtkdXN0LXR1dG9yaWFscy5raXR1aW4uZnVuL2Jhc2UvaXRlbS5odG1sIyVFOSVBMyU5RiVFNyU4OSVBOQ==">参考链接</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">public</span> <span class="token class-name">SuperGooooooldApple</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    	<span class="token comment">// 通过 food 将食物属性与物品关联起来</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    	<span class="token comment">//fireResistant () 设置物品防火</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    	<span class="token comment">//rarity () 设置物品珍稀度</span></pre></td></tr><tr><td data-num="5"></td><td><pre>        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">food</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fireResistant</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">rarity</span><span class="token punctuation">(</span><span class="token class-name">Rarity</span><span class="token punctuation">.</span><span class="token constant">EPIC</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><div class="note info">
 <p><a href="#Rarity_1">各稀有度级别点击此处跳转</a></p>
 </div>
+<details class="primary"><summary>完整代码</summary><div>
+<figure class="highlight java"><figcaption data-lang="java"><span>示例</span><span class="exturl" data-url="aHR0cHM6Ly9hcmtkdXN0LXR1dG9yaWFscy5raXR1aW4uZnVuL2Jhc2UvaXRlbS5odG1sIyVFOSVBMyU5RiVFNyU4OSVBOQ==">参考链接</span></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">SuperGooooooldApple</span> <span class="token keyword">extends</span> <span class="token class-name">Item</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">FoodProperties</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FoodProperties<span class="token punctuation">.</span>Builder</span><span class="token punctuation">(</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="3"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">alwaysEat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fast</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">nutrition</span><span class="token punctuation">(</span><span class="token number">16</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">saturationMod</span><span class="token punctuation">(</span><span class="token number">0.5F</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="4"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">MobEffectInstance</span><span class="token punctuation">(</span><span class="token class-name">MobEffects</span><span class="token punctuation">.</span><span class="token constant">REGENERATION</span><span class="token punctuation">,</span> <span class="token number">3000</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="5"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">MobEffectInstance</span><span class="token punctuation">(</span><span class="token class-name">MobEffects</span><span class="token punctuation">.</span><span class="token constant">ABSORPTION</span><span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="6"></td><td><pre>            <span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-></span> <span class="token keyword">new</span> <span class="token class-name">MobEffectInstance</span><span class="token punctuation">(</span><span class="token class-name">MobEffects</span><span class="token punctuation">.</span><span class="token constant">HEAL</span><span class="token punctuation">,</span> <span class="token number">200</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">build</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">SuperGooooooldApple</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>        <span class="token keyword">super</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Properties</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">food</span><span class="token punctuation">(</span>p<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">fireResistant</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">rarity</span><span class="token punctuation">(</span><span class="token class-name">Rarity</span><span class="token punctuation">.</span><span class="token constant">EPIC</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="11"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure></div></details>
 <p><span id="Rarity_1">稀有度级别</span></p>
 <p><img data-src="https://figurebed.yunyat.cloud/imgs/image-20241105175722568.png" alt="image-20241105175722568"></p>
+<ul>
+<li><code>COMMON</code> : 常见，颜色为白色</li>
+<li><code>UNCOMMON</code> : 不常见，颜色我黄色</li>
+<li><code>RARE</code> : 稀有，颜色为水蓝色</li>
+<li><code>EPIC</code> : 史诗，颜色为浅紫色</li>
+</ul>
+<hr>
+<p><em>END</em></p>
 
       <div class="tags">
           <a href="/tags/%E6%B8%B8%E6%88%8F/" rel="tag"><i class="ic i-tag"></i> 游戏</a>
@@ -210,9 +242,9 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2024-11-05 17:57:31" itemprop="dateModified" datetime="2024-11-05T17:57:31+08:00">2024-11-05</time>
+    <time title="修改时间：2024-11-05 23:09:06" itemprop="dateModified" datetime="2024-11-05T23:09:06+08:00">2024-11-05</time>
   </span>
-  <span id="game/Minecraft/NeoForge/Mod开发指南/" class="item leancloud_visitors" data-flag-title="Mod开发指南" title="阅读次数">
+  <span id="game/Minecraft/NeoForge/Mod开发指南/" class="item leancloud_visitors" data-flag-title="Mod开发指南 - 物品篇" title="阅读次数">
       <span class="icon">
         <i class="ic i-eye"></i>
       </span>
@@ -254,7 +286,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" title="Mod开发指南">http://yunyat.cloud/game/Minecraft/NeoForge/Mod开发指南/</a>
+    <a href="http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" title="Mod开发指南 - 物品篇">http://yunyat.cloud/game/Minecraft/NeoForge/Mod开发指南/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -273,7 +305,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
     <div class="item left">
       
 
-  <a href="/linux/SSH-Agent/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?390874" title="SSH Agent">
+  <a href="/linux/SSH-Agent/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?393295" title="SSH Agent">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Linux</span>
   <h3>SSH Agent</h3>
@@ -281,6 +313,14 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 
     </div>
     <div class="item right">
+      
+
+  <a href="/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?955372" title="Mod开发指南 - 方块篇">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> NeoForge</span>
+  <h3>Mod开发指南 - 方块篇</h3>
+  </a>
+
     </div>
 </div>
 
@@ -297,11 +337,11 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C"><span class="toc-number">1.</span> <span class="toc-text"> 注册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%9F%E7%89%A9"><span class="toc-number">2.</span> <span class="toc-text"> 食物</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E5%93%81item"><span class="toc-number">1.</span> <span class="toc-text"> 物品 (Item)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E5%86%8C"><span class="toc-number">2.</span> <span class="toc-text"> 注册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%A9%E5%93%81%E7%89%B9%E6%80%A7itemproperties"><span class="toc-number">3.</span> <span class="toc-text"> 物品特性 (ItemProperties)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A3%9F%E7%89%A9"><span class="toc-number">4.</span> <span class="toc-text"> 食物</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li class="active"><a href="/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" rel="bookmark" title="Mod开发指南">Mod开发指南</a></li>
+          <li class="active"><a href="/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" rel="bookmark" title="Mod开发指南 - 物品篇">Mod开发指南 - 物品篇</a></li><li><a href="/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/" rel="bookmark" title="Mod开发指南 - 方块篇">Mod开发指南 - 方块篇</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -315,7 +355,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">68</span>
+        <span class="count">69</span>
         <span class="name">文章</span>
       </a>
     </div>
@@ -412,10 +452,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/linux/SSH-Agent/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -437,12 +479,68 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
 </div>
 
-    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/" title="shell脚本笔记-1">shell脚本笔记-1</a></span>
+    <span><a href="/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/" title="hexo及SSL获取">hexo及SSL获取</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+</div>
+
+    <span><a href="/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/" title="2023年度总结">2023年度总结</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/" title="集合-Map">集合-Map</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+</div>
+
+    <span><a href="/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" title="服务器搭建教程">服务器搭建教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/" title="运算符级别比较">运算符级别比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/" title="Docker的使用-叁">Docker的使用-叁</a></span>
   </li>
 
       
@@ -463,26 +561,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+<a href="/categories/hexo/Shoka/" title="分类于 Shoka">Shoka</a>
 </div>
 
-    <span><a href="/MyCodingBook/java/frame/MyBatisPlus-1/" title="MyBatisPlus-1">MyBatisPlus-1</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
-</div>
-
-    <span><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" title="Docker部署">Docker部署</a></span>
+    <span><a href="/hexo/shoka/config/" title="Step.2 基本配置">Step.2 基本配置</a></span>
   </li>
 
       
@@ -501,60 +585,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
+<a href="/categories/linux/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" title="分类于 版本控制">版本控制</a>
 </div>
 
-    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/" title="shell脚本笔记-3">shell脚本笔记-3</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/hexo/Shoka/" title="分类于 Shoka">Shoka</a>
-</div>
-
-    <span><a href="/hexo/shoka/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/game/" title="分类于 游戏">游戏</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
-</div>
-
-    <span><a href="/game/Minecraft/Minecraft/" title="Minecraft">Minecraft</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/Java/" title="分类于 Java">Java</a>
-</div>
-
-    <span><a href="/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/" title="集合-Map">集合-Map</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/miscellaneous/Windows/" title="分类于 Windows">Windows</a>
-</div>
-
-    <span><a href="/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/" title="任意版本win远程桌面使用内网穿透连接">任意版本win远程桌面使用内网穿透连接</a></span>
+    <span><a href="/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Git的使用">Git的使用</a></span>
   </li>
 
   </ul>
@@ -573,13 +609,13 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="站点总字数">137k 字</span>
+    <span title="站点总字数">139k 字</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="站点阅读时长">2:05</span>
+    <span title="站点阅读时长">2:06</span>
   </div>
   <div class="icp-info">
     <span class="icp-img">
