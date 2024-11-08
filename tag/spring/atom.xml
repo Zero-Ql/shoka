@@ -57,10 +57,13 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/frame/Spring-ResponseEntity/</id>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Tools/Spring-ResponseEntity/</id>
         <title>Spring-ResponseEntity</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/frame/Spring-ResponseEntity/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Tools/Spring-ResponseEntity/"/>
         <content type="html">&lt;h3 id=&#34;responseentity&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#responseentity&#34;&gt;#&lt;/a&gt; &lt;em&gt;ResponseEntity&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;ResponseEntity&lt;/em&gt; 是 &lt;em&gt;Spring Web MVC&lt;/em&gt; 框架中提供的一个类，用于封装 &lt;em&gt;HTTP&lt;/em&gt; 响应的详细信息。它允许开发者不仅定义返回给客户端的数据（通常作为请求处理的结果），还能够控制响应的状态码、头部信息以及主体内容的类型。&lt;/p&gt;
 &lt;h4 id=&#34;主要属性和功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主要属性和功能&#34;&gt;#&lt;/a&gt; 主要属性和功能：&lt;/h4&gt;
@@ -84,9 +87,9 @@
         <updated>2024-04-22T03:39:54.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</id>
-        <title>Spring基础</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/"/>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Spring%E5%9F%BA%E7%A1%80/</id>
+        <title>SpringFramework基础</title>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Spring%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h3 id=&#34;spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;#&lt;/a&gt; Spring、Spring MVC、Spring Boot、Spring Cloud&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;

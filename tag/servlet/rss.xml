@@ -60,10 +60,13 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/JavaWeb/</guid>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/JavaWeb/</guid>
             <title>JavaWeb</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/JavaWeb/</link>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/JavaWeb/</link>
             <category>原创</category>
             <category>Java</category>
             <category>servlet</category>

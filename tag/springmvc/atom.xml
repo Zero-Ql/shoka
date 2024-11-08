@@ -57,10 +57,13 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/frame/SpringMVC/</id>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringMVC/</id>
         <title>SpringMVC</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/frame/SpringMVC/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringMVC/"/>
         <content type="html">&lt;h3 id=&#34;spring-mvc原理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-mvc原理&#34;&gt;#&lt;/a&gt; Spring MVC 原理&lt;/h3&gt;
 &lt;h4 id=&#34;spring-mvc工作原理图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-mvc工作原理图&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Spring MVC工作原理图&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/17/pFxTxC6.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;

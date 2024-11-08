@@ -57,10 +57,13 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</id>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</id>
         <title>集合接口的继承及实现概览</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/"/>
         <content type="html">&lt;h5 id=&#34;map-根接口包含键和值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map-根接口包含键和值&#34;&gt;#&lt;/a&gt; Map    -- 根接口 (包含键和值)&lt;/h5&gt;
 &lt;p&gt;直接继承的接口&lt;/p&gt;
 &lt;ul&gt;
@@ -167,9 +170,9 @@
         <updated>2023-05-14T13:45:06.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/</id>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88-Map/</id>
         <title>集合-Map</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88-Map/"/>
         <content type="html">&lt;h4 id=&#34;map接口双列队列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map接口双列队列&#34;&gt;#&lt;/a&gt; Map 接口 (双列队列)&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;

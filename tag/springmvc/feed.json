@@ -5,8 +5,8 @@
     "home_page_url": "http://yunyat.cloud",
     "items": [
         {
-            "id": "http://yunyat.cloud/MyCodingBook/java/frame/SpringMVC/",
-            "url": "http://yunyat.cloud/MyCodingBook/java/frame/SpringMVC/",
+            "id": "http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringMVC/",
+            "url": "http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringMVC/",
             "title": "SpringMVC",
             "date_published": "2024-04-16T04:09:09.000Z",
             "content_html": "<h3 id=\"spring-mvc原理\"><a class=\"markdownIt-Anchor\" href=\"#spring-mvc原理\">#</a> Spring MVC 原理</h3>\n<h4 id=\"spring-mvc工作原理图\"><a class=\"markdownIt-Anchor\" href=\"#spring-mvc工作原理图\">#</a>  <code>Spring MVC工作原理图</code></h4>\n<p><img data-src=\"https://s21.ax1x.com/2024/04/17/pFxTxC6.png\" alt=\"img\"></p>\n<blockquote>\n<p>在没有使用 SpringMVC 之前我们都是使用 Servlet 在做 Web 开发。但是使用 Servlet 开发在接收请求参数，数据共享，页面跳转等操作相对比较复杂。servlet 是 java 进行 web 开发的标准，既然 springMVC 是对 servlet 的封装，那么很显然<strong> SpringMVC 底层就是 Servlet，SpringMVC 就是对 Servlet 进行深层次的封装</strong></p>\n<blockquote>\n<p><span class=\"exturl\" data-url=\"aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xMDA3MjM1ODE=\">SpringMVC【入门篇】 - 知乎 (zhihu.com)</span></p>\n</blockquote>\n</blockquote>\n<h3 id=\"mvc模式\"><a class=\"markdownIt-Anchor\" href=\"#mvc模式\">#</a> MVC 模式</h3>\n<p>MVC 模式 ( <code>Model</code> - <code>View</code> - <code>Controller</code> )：解决页面代码和后台代码的分离</p>\n<p>MVC 分别是：模型 <code>model(javabean)</code> 、视图 <code>view(jsp/img)</code> 、控制器 <code>Controller(Action/servlet)</code> 。</p>\n<p>C 存在的目的就是为了保证 M 和 V 的一致性，当 M 发生改变时，C 可以把 M 中的新内容更新到 V 中</p>\n<hr>\n<p><em>TODO</em></p>\n",

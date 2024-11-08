@@ -57,6 +57,9 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
         <id>http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</id>
         <title>可道云桌面搭建笔记</title>

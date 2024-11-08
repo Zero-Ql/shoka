@@ -60,10 +60,13 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</guid>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</guid>
             <title>spring开发注解集合</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</link>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring注解</category>

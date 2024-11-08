@@ -60,6 +60,9 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
             <title>2023年度总结</title>
@@ -79,7 +82,7 @@
 &lt;p&gt;​	最后附上一张烟花&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20240520143957.png&#34; alt=&#34;yh&#34;&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;END&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

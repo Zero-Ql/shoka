@@ -57,6 +57,9 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
         <id>http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</id>
         <title>使用cAdvisor+Prometheus+Grafana监控Docker容器</title>

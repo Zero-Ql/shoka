@@ -1,0 +1,874 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="上善若水" href="http://yunyat.cloud/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="上善若水" href="http://yunyat.cloud/atom.xml" />
+<link rel="alternate" type="application/json" title="上善若水" href="http://yunyat.cloud/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="原创,JavaScript" />
+
+
+<link rel="canonical" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript%E7%AC%94%E8%AE%B0/">
+
+
+
+  <title>
+JavaScript - 1 - JavaScript - 前端 - 我的编程宝典 |
+QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaScript - 1
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2023-11-22 14:22:20">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-11-22T14:22:20+08:00">2023-11-22</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>3.8k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>3 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QSky Yun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?736209"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?557574"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?670360"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?828818"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?169364"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?418687"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/" itemprop="item" rel="index" title="分类于 我的编程宝典"><span itemprop="name">我的编程宝典</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/%E5%89%8D%E7%AB%AF/" itemprop="item" rel="index" title="分类于 前端"><span itemprop="name">前端</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/%E5%89%8D%E7%AB%AF/JavaScript/" itemprop="item" rel="index" title="分类于 JavaScript"><span itemprop="name">JavaScript</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript%E7%AC%94%E8%AE%B0/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/wa.jpg">
+    <meta itemprop="name" content="清天">
+    <meta itemprop="description" content="=我真的很想喜欢你们，可是你们没有人喜欢我。=, 若能避开猛烈的欢喜，自然也不会有悲痛的来袭.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="上善若水">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="说明"><a class="markdownIt-Anchor" href="#说明">#</a> 说明</h3>
+<blockquote>
+<p>因本人主学 <code>Java</code> , 所以下文包括以后的笔记绝大部分都是与 Java 做对比</p>
+</blockquote>
+<hr>
+<h3 id="概览"><a class="markdownIt-Anchor" href="#概览">#</a> 概览</h3>
+<p>JavaScript 的类型有</p>
+<ul>
+<li><code>Number</code>  (数字)</li>
+<li><code>String</code>  (字符串)</li>
+<li><code>Boolean</code>  (布尔值)</li>
+<li><code>Symbol</code>  (符号)</li>
+<li><code>Object</code>  (对象)
+<ul>
+<li><code>Function</code>  (函数)</li>
+<li><code>Array</code>  (数组)</li>
+<li><code>Date</code>  (日期)</li>
+<li><code>RegExp</code>  (正则表达式)</li>
+</ul>
+</li>
+<li><code>null</code>  (空)</li>
+<li><code>undefined</code>  (未定义)</li>
+</ul>
+<p>注：在  <code>JavaScript</code>  中，所有的类型都是对象</p>
+<h4 id="数据类型"><a class="markdownIt-Anchor" href="#数据类型">#</a> 数据类型</h4>
+<h5 id="变量-常量"><a class="markdownIt-Anchor" href="#变量-常量">#</a> 变量 &amp; 常量</h5>
+<p>在 2015 年之前，使用  <code>var</code>  定义变量，但在 2015 年之后，ES 6 新增了两个关键字 ： <code>lei</code>  、 <code>const</code></p>
+<p><code>var</code>  声明的变量在全局都能使用，但是注意，如果在代码块外声明了变量，然后在代码块中声明了同名的变量，在代码块外的变量就会被重新定义</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">10</span> <span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token comment">// 此处输出 x 为 10</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>	<span class="token keyword">var</span> x <span class="token operator">=</span> <span class="token number">2</span> <span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token comment">// 此处输出 x 为 2</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment">// 此处输出 x 为 2</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>2</p>
+</blockquote>
+<p><code>let</code>  声明的变量只在  <code>let</code>  命令所在的代码块有效，即  <code>let</code>  所在的花括号内</p>
+<p><code>const</code>  声明的对象为基本类型（数字，字符串，布尔值等），那么它就是常量，即不可更改的。但是也是相对的，如果它的值为一个复合类型，那么它的值就是可变的，可以修改它的属性或元素</p>
+<blockquote>
+<p><code>let</code>  和  <code>const</code>  都是块级作用域，即只在声明所在的代码块中有效</p>
+</blockquote>
+<h5 id="数字"><a class="markdownIt-Anchor" href="#数字">#</a> 数字</h5>
+<p>与 Java 不一样，JavaScript 没有整数 ( <code>int</code> ) 亦或者整型 ( <code>Integer</code> )，除了  <code>BigInt</code></p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">3</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>1.5</p>
+<p>1</p>
+</blockquote>
+<p>JavaScript 提供了两个内置函数用于将字符串转换为整型和将浮点数转换为整型</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">函数名</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>parseInt(String str , Number radix)</code></td>
+<td style="text-align:center">接收两个参数， <code>str</code>  为要转换的字符串， <code>radix</code>  为目标整数的基进制，返回转换后的指定进制数</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>parseFloat(String str)</code></td>
+<td style="text-align:center">接收一个参数， <code>str</code>  为要转换的字符串，返回转换后的十进制数</td>
+</tr>
+</tbody>
+</table>
+<p>要转换字符串为整数也可以使用一元运算符  <code>'+'</code> 。</p>
+<p>如果给定的字符串没有  <code>Number</code>  (数值) 类型，那么此时就会返回一个  <code>NaN</code>  (Not a Number 的缩写) 值</p>
+<p>除了  <code>NaN</code> ，JavaScript 还提供了两个特殊值， <code>Infinity</code>  (正无穷) 和  <code>-Infinity</code>  (负无穷)</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">"张三"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token literal-property property">id</span> <span class="token operator">:</span> <span class="token string">"1234"</span><span class="token punctuation">,</span> </pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token literal-property property">str</span> <span class="token operator">:</span> <span class="token string">"1234.567"</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span>id<span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">parseFloat</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span>str<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token operator">+</span><span class="token string">"123"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">parseInt</span><span class="token punctuation">(</span>list<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>1234</p>
+<p>1234.567</p>
+<p>123</p>
+<p>NaN</p>
+</blockquote>
+<p>可以使用  <code>isNaN()</code>  来判断一个变量是否为  <code>NaN</code></p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isNaN</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>true</p>
+</blockquote>
+<p>可以使用  <code>isFinite()</code>  来判断一个变量是否为一个有穷数，如果值为  <code>Infinity</code> 、 <code>-Infinity</code>  或  <code>NaN</code>  ，那么就返回  <code>false</code></p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isFinite</span><span class="token punctuation">(</span><span class="token number">Infinity</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isFinite</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">Infinity</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isFinite</span><span class="token punctuation">(</span><span class="token number">NaN</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>false</p>
+<p>false</p>
+<p>false</p>
+</blockquote>
+<blockquote>
+<p>小知识 1：使用  <code>parseInt()</code>  及  <code>parseFloat()</code>  时，这两个函数回尝试逐个解析字符串中的字符，直到遇到一个无法被解析的字符，然后返回该字符之前所有数字组成的数字。</p>
+</blockquote>
+<blockquote>
+<p>小知识 2：使用单目运算符  <code>'+'</code>  来转换字符串时，只要字符串中包含无法转换的字符，就会返回  <code>NaN</code></p>
+</blockquote>
+<h5 id="字符串"><a class="markdownIt-Anchor" href="#字符串">#</a> 字符串</h5>
+<blockquote>
+<p>在 JavaScript 中，所有字符串都是一串  <code>Unicode</code>  字符序列。更准确的说，它是一串  <code>UTF-16</code>  编码单元的序列，每一个编码单元由一个 16 位二进制数表示。每一个  <code>Unicode</code>  字符由一个或两个编码单元表示。</p>
+</blockquote>
+<p>在 JavaScript 中， <code>String</code>  是一个对象，因此你可以像操作普通对象一样对它进行操作。</p>
+<p>使用  <code>length</code>  方法获取它的长度，使用  <code>charAt(0)</code>  返回第一个字符</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">let</span> str <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>str<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>5</p>
+<p>h</p>
+</blockquote>
+<h5 id="其他类型"><a class="markdownIt-Anchor" href="#其他类型">#</a> 其他类型</h5>
+<p><code>null</code>  表示一个空值， <code>undefined</code>  是一个  <code>undefined</code>  (未定义) 类型的对象，表示一个未初始化的值，即没有被分配空间的值。在变量声明之后并未赋值，那么它的值就是  <code>undefined</code> 。</p>
+<p>JavaScript 的逻辑值与 Java 中的一样， <code>false</code> 、 <code>0</code> 、空字符串 ( <code>&quot;&quot;</code> )、 <code>NaN</code> 、 <code>null</code> 、 <code>undefined</code>  都是  <code>false</code> ，其余为  <code>true</code></p>
+<p>逻辑运算符也同 Java 一样， <code>&amp;&amp;</code> (逻辑与)、 <code>||</code> (逻辑或)、 <code>!</code> (逻辑非)，用法也一样</p>
+<p>小技巧：</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">let</span> name <span class="token operator">=</span> CacheName <span class="token operator">&amp;&amp;</span> o<span class="token punctuation">.</span><span class="token function">getName</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><blockquote>
+<p>使用逻辑与可以事先检测该参数是否为空，防止意外的赋值</p>
+</blockquote>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">let</span> name <span class="token operator">=</span> CacheName <span class="token operator">||</span> <span class="token punctuation">(</span> CacheName <span class="token operator">=</span> o<span class="token punctuation">.</span>getName<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><blockquote>
+<p>使用逻辑或可以在参数无效时使用默认值</p>
+</blockquote>
+<h4 id="控制结构"><a class="markdownIt-Anchor" href="#控制结构">#</a> 控制结构</h4>
+<p>JavaScript 的  <code>if</code> 、 <code>else if</code> 、 <code>while</code> 、 <code>do...while</code> 、 <code>switch</code>  都同 Java 一样，稍微有点不同的就是  <code>for</code>  ，普通的  <code>for</code>  和 Java 相同，但是  <code>for...in</code>  和  <code>for...of</code>  稍微有点不同，在 Java 中，与之对应的是  <code>foreach</code>  也就是增强  <code>for</code> 。</p>
+<h5 id="forin"><a class="markdownIt-Anchor" href="#forin">#</a>  <code>for...in</code></h5>
+<p>使用  <code>for...in</code>  迭代可枚举属性，可以遍历属性名和属性值，但是无法使用  <code>for...of</code>  迭代可枚举属性</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="2"></td><td><pre>    <span class="token literal-property property">name</span> <span class="token operator">:</span> <span class="token string">"Tom"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token literal-property property">sex</span> <span class="token operator">:</span> <span class="token string">"男"</span><span class="token punctuation">,</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token literal-property property">age</span> <span class="token operator">:</span><span class="token number">18</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> l <span class="token keyword">in</span> list<span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="7"></td><td><pre>	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>naem</p>
+<p>Tom</p>
+<p>sex</p>
+<p>男</p>
+<p>age</p>
+<p>18</p>
+</blockquote>
+<h5 id="forof"><a class="markdownIt-Anchor" href="#forof">#</a>  <code>for...of</code></h5>
+<p>使用  <code>for...of</code>  迭代可枚举对象</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token keyword">const</span> list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"name"</span><span class="token punctuation">,</span><span class="token string">"sex"</span><span class="token punctuation">,</span><span class="token string">"age"</span><span class="token punctuation">]</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">const</span> l <span class="token keyword">of</span> list<span class="token punctuation">)</span><span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>list<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>输出：</p>
+<blockquote>
+<p>name</p>
+<p>undefined</p>
+<p>sex</p>
+<p>undefined</p>
+<p>age</p>
+<p>undefined</p>
+</blockquote>
+<p>注：之所以是  <code>undefined</code>  是因为  <code>list</code>  的元素并没有初始化，所有未初始化的变量一律是  <code>undefined</code></p>
+<h4 id="在任意浏览器中运行"><a class="markdownIt-Anchor" href="#在任意浏览器中运行">#</a> 在任意浏览器中运行</h4>
+<p>在浏览器中按  <code>F12</code>  进入检查模式，然后在选项卡中找到源代码，在里面可以新建代码片段，也可以直接在控制台输入代码，然后用  <code>Ctrl+Enter</code>  运行</p>
+<p><img data-src="https://z1.ax1x.com/2023/11/07/pilWwRS.png" alt="1"></p>
+<h4 id="输入输出"><a class="markdownIt-Anchor" href="#输入输出">#</a> 输入输出</h4>
+<p>JavaScript 并没有提供任何打印或输出函数。但可以通过不同的方式输出数据。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>window.alert()</code></td>
+<td style="text-align:center">弹出警告窗</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>document.write()</code></td>
+<td style="text-align:center">将内容写入到 HTML 文档中</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>innerHTML()</code></td>
+<td style="text-align:center">将内容写入到 HTML 元素</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>console.log()</code></td>
+<td style="text-align:center">将内容写入到浏览器的控制台</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>由当前页面弹出警告信息弹窗</li>
+</ol>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>window<span class="token punctuation">.</span><span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"你好！"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p><img data-src="https://z1.ax1x.com/2023/11/11/pi8vJsJ.jpg" alt="2"></p>
+<ol start="2">
+<li>直接将内容写入 HTML 中，如果在 HTML 文档加载完后执行  <code>document.write()</code>  , 则整个页面内容将被覆盖</li>
+</ol>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"HELLO WORLD!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr></table></figure><p>可以将 JavaScript 直接写在 HTML 文档中，这时的 HTML 文档是不会被覆盖的</p>
+<figure class="highlight html"><figcaption data-lang="HTML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>JavaScript练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="7"></td><td><pre>			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="8"></td><td><pre>				你好 世界!</pre></td></tr><tr><td data-num="9"></td><td><pre>			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="10"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"></pre></td></tr><tr><td data-num="11"></td><td><pre>			document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"HELLO WORLD!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>		</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="13"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><ol start="3">
+<li>将内容写入指定 HTML 元素中，覆盖原有的元素内容</li>
+</ol>
+<p><code>document.getElementById(&quot;demo&quot;)</code>  是使用 id 属性来查找 HTML 元素的 JavaScript 代码</p>
+<figure class="highlight javascript"><figcaption data-lang="javascript"></figcaption><table><tr><td data-num="1"></td><td><pre>document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token string">"哈喽"</span><span class="token punctuation">;</span></pre></td></tr></table></figure><figure class="highlight html"><figcaption data-lang="HTML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>JavaScript练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="7"></td><td><pre>			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="8"></td><td><pre>				你好 世界!</pre></td></tr><tr><td data-num="9"></td><td><pre>			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="10"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"></pre></td></tr><tr><td data-num="11"></td><td><pre>			document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML<span class="token operator">=</span><span class="token string">"HELLO WORLD!"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>		</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="13"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><ol start="4">
+<li>将值写到控制台</li>
+</ol>
+<figure class="highlight html"><figcaption data-lang="HTML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>JavaScript练习<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="6"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="7"></td><td><pre>			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="8"></td><td><pre>				你好 世界!</pre></td></tr><tr><td data-num="9"></td><td><pre>			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="10"></td><td><pre>		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"></pre></td></tr><tr><td data-num="11"></td><td><pre>			console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"HELLO WORLD!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>		</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="13"></td><td><pre>	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="14"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><p><img data-src="https://z1.ax1x.com/2023/11/11/pi8vGM4.jpg" alt="3"></p>
+<hr>
+<p><em>END</em></p>
+
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/JavaScript/" rel="tag"><i class="ic i-tag"></i> JavaScript</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-11-08 17:04:19" itemprop="dateModified" datetime="2024-11-08T17:04:19+08:00">2024-11-08</time>
+  </span>
+  <span id="MyCodingBook/前端/javascript/JavaScript笔记/" class="item leancloud_visitors" data-flag-title="JavaScript - 1" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="清天 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="清天 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="清天 QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文博主： </strong>清天 <i class="ic i-at"><em>@</em></i>上善若水
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript%E7%AC%94%E8%AE%B0/" title="JavaScript - 1">http://yunyat.cloud/MyCodingBook/前端/javascript/JavaScript笔记/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?372274" title="Xmind破解">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Issues</span>
+  <h3>Xmind破解</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?551417" title="shell脚本笔记 - 2">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> Shell</span>
+  <h3>shell脚本笔记 - 2</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%B4%E6%98%8E"><span class="toc-number">1.</span> <span class="toc-text"> 说明</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A6%82%E8%A7%88"><span class="toc-number">2.</span> <span class="toc-text"> 概览</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.</span> <span class="toc-text"> 数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%8F%98%E9%87%8F-%E5%B8%B8%E9%87%8F"><span class="toc-number">2.1.1.</span> <span class="toc-text"> 变量 &amp; 常量</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%95%B0%E5%AD%97"><span class="toc-number">2.1.2.</span> <span class="toc-text"> 数字</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="toc-number">2.1.3.</span> <span class="toc-text"> 字符串</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-number">2.1.4.</span> <span class="toc-text"> 其他类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8E%A7%E5%88%B6%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.</span> <span class="toc-text"> 控制结构</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#forin"><span class="toc-number">2.2.1.</span> <span class="toc-text">  for...in</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#forof"><span class="toc-number">2.2.2.</span> <span class="toc-text">  for...of</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E4%BB%BB%E6%84%8F%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B8%AD%E8%BF%90%E8%A1%8C"><span class="toc-number">2.3.</span> <span class="toc-text"> 在任意浏览器中运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA"><span class="toc-number">2.4.</span> <span class="toc-text"> 输入输出</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li class="active"><a href="/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript%E7%AC%94%E8%AE%B0/" rel="bookmark" title="JavaScript - 1">JavaScript - 1</a></li><li><a href="/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JSON/" rel="bookmark" title="JSON">JSON</a></li><li><a href="/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript-2/" rel="bookmark" title="JavaScript - 2">JavaScript - 2</a></li><li><a href="/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript-3/" rel="bookmark" title="JavaScript - 3">JavaScript - 3</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="清天"
+      data-src="/images/wa.jpg">
+  <p class="name" itemprop="name">清天</p>
+  <div class="description" itemprop="description">若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">76</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">25</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">56</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1plcm8tUWw=" title="https:&#x2F;&#x2F;github.com&#x2F;Zero-Ql"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9ncmF2YXRhci5jb20vcXNreTFhNGRjYzYyZmI4" title="https:&#x2F;&#x2F;gravatar.com&#x2F;qsky1a4dcc62fb8"><i class="ic i-address-card"></i></span>
+      <a href="mailto:qsky@yunyat.cloud" title="mailto:qsky@yunyat.cloud" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL1FTa3lZdW4=" title="https:&#x2F;&#x2F;t.me&#x2F;QSkyYun"><i class="ic i-paper-plane"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly95Lm11c2ljLjE2My5jb20vbS91c2VyP2lkPTIwNjM1MjA5Mzk=" title="https:&#x2F;&#x2F;y.music.163.com&#x2F;m&#x2F;user?id&#x3D;2063520939"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6bGl2ZTouY2lkLjdmYTYyZWIyZDhmMzQzYzI/Y2FsbHxjaGF0" title="skype:live:.cid.7fa62eb2d8f343c2?call|chat"><i class="ic i-skype"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83OTI2ODg4OTUw" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7926888950"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/site/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/gallery/" rel="section"><i class="ic i-loop"></i>Wo的足迹</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-magic"></i>链圈</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-link"></i>links</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/websitemap/" rel="section"><i class="ic i-sitemap"></i>网站Map</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/" title="Docker的使用-壹">Docker的使用-壹</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" title="Java-lambda的方法引用">Java-lambda的方法引用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-5/" title="MySQL-5">MySQL-5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
+</div>
+
+    <span><a href="/MyCodingBook/UnitTests/JUnit/" title="JUnit">JUnit</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88-Map/" title="集合-Map">集合-Map</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java/" title="Java线程池">Java线程池</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/Shell/" title="分类于 Shell">Shell</a>
+</div>
+
+    <span><a href="/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/" title="shell脚本笔记 - 2">shell脚本笔记 - 2</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/" title="JavaFx使用Maven打包及运行">JavaFx使用Maven打包及运行</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/%E6%A1%86%E6%9E%B6/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/" title="分类于 SpringBoot持久层框架">SpringBoot持久层框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/" title="MyBatisPlus-1">MyBatisPlus-1</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" title="Docker部署">Docker部署</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">171k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:35</span>
+  </div>
+  <div class="icp-info">
+    <span class="icp-img">
+      <a class="post-meta-item-icon" target="_blank" rel="noopener" href="https://icp.gov.moe"><img title="https://icp.gov.moe" src="images/icon120.png" width="18" style="vertical-align:middle"></a>
+    </span>
+    <span class="icp-text">
+      <span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDIzMTAxMw==">萌ICP备20231013号</span>
+    </span>
+  </div>
+
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">清天 @ QSky Yun</span>
+  </div>
+  <div class="start-time">
+    <span>本站已平稳运行</span>
+    <span id="display_live_time"> 0 天 0 小时 0 分 0 秒</span>
+      <script>function blog_live_time(){
+          setTimeout(blog_live_time,1e3);
+          const e = new Date("2023-04-28T00:00:00"),
+          t=(new Date).getTime()-e.getTime(),
+          i=Math.floor(t/864e5),
+          o=Math.floor(t%864e5/60/60/1e3),
+          l=Math.floor(t%36e5/60/1e3),
+          _=Math.floor(t%6e4/1e3);
+          display_live_time.innerHTML=` ${i} 天 ${o} 小时 ${l} 分 ${_} 秒`
+        }
+        blog_live_time()
+      </script>
+    <span>ヽ(○´∀`)ﾉ♪</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'MyCodingBook/前端/javascript/JavaScript笔记/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看不见我看不见我"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="/js/typed.js"></script>
+    <script type="text/javascript">
+        var str = { "hitokoto": "=我真的很想喜欢你们，可是你们没有人喜欢我。=" };
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&min_length=15')
+        .then(response => {
+            if (!response.ok) {
+                return str;
+            } else {
+                return response.json();
+            }
+        }).then(data => {
+            typedfun(data.hitokoto);
+        }).catch(error => {
+            typedfun(str.hitokoto);
+        });
+        function typedfun(data) {
+            var msg = "=" + data  + "=^1500";
+            typed = new Typed(".say-subtitle", {
+                strings: msg.split(),
+                typeSpeed: 70,
+                loop: true,
+                loopCount: Infinity,
+                backDelay: 70,
+                backSpeed: 100,
+                smartBackspace: true
+            });
+        }
+    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

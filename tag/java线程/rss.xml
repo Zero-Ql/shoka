@@ -60,10 +60,13 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/Java/</guid>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java/</guid>
             <title>Java线程池</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/Java/</link>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java/</link>
             <category>原创</category>
             <category>java线程</category>
             <pubDate>Fri, 28 Apr 2023 23:15:03 +0800</pubDate>

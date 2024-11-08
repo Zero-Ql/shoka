@@ -60,10 +60,13 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
             <title>集合接口的继承及实现概览</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</link>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</link>
             <category>原创</category>
             <category>java</category>
             <category>集合</category>
@@ -170,9 +173,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/</guid>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88-Map/</guid>
             <title>集合-Map</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/%E9%9B%86%E5%90%88-Map/</link>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88-Map/</link>
             <category>原创</category>
             <category>java</category>
             <category>集合</category>

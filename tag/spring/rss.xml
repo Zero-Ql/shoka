@@ -60,10 +60,13 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/Spring-ResponseEntity/</guid>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Tools/Spring-ResponseEntity/</guid>
             <title>Spring-ResponseEntity</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/frame/Spring-ResponseEntity/</link>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Tools/Spring-ResponseEntity/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring</category>
@@ -87,9 +90,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
-            <title>Spring基础</title>
-            <link>http://yunyat.cloud/MyCodingBook/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
+            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
+            <title>SpringFramework基础</title>
+            <link>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring</category>

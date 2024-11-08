@@ -60,6 +60,9 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</guid>
             <title>shell脚本笔记-1</title>
@@ -255,7 +258,7 @@ Shell 选项:hB&lt;br&gt;
 &lt;p&gt;&lt;code&gt;readonly&lt;/code&gt; ：将变量定义为只读，无法更改其值&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;unset&lt;/code&gt; ：删除变量，无法删除只读变量&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;END&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
@@ -549,7 +552,7 @@ Shell 选项:hB&lt;br&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;p&gt;END&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

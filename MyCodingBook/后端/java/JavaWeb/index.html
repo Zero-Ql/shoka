@@ -1,0 +1,939 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="上善若水" href="http://yunyat.cloud/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="上善若水" href="http://yunyat.cloud/atom.xml" />
+<link rel="alternate" type="application/json" title="上善若水" href="http://yunyat.cloud/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="原创,Java,servlet" />
+
+
+<link rel="canonical" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/JavaWeb/">
+
+
+
+  <title>
+JavaWeb - Java - 后端 - 我的编程宝典 |
+QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人喜欢我。=</title>
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaWeb
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2024-04-16 11:46:44">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-04-16T11:46:44+08:00">2024-04-16</time>
+  </span>
+  <span class="item" title="本文字数">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">本文字数</span>
+    <span>14k</span>
+    <span class="text">字</span>
+  </span>
+  <span class="item" title="阅读时长">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">阅读时长</span>
+    <span>12 分钟</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">QSky Yun</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?248251"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?261277"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?738743"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?232576"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?741652"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/fj?608590"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/" itemprop="item" rel="index" title="分类于 我的编程宝典"><span itemprop="name">我的编程宝典</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" itemprop="item" rel="index" title="分类于 后端"><span itemprop="name">后端</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" itemprop="item" rel="index" title="分类于 Java"><span itemprop="name">Java</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/JavaWeb/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/wa.jpg">
+    <meta itemprop="name" content="清天">
+    <meta itemprop="description" content="=我真的很想喜欢你们，可是你们没有人喜欢我。=, 若能避开猛烈的欢喜，自然也不会有悲痛的来袭.">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="上善若水">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h3 id="域"><a class="markdownIt-Anchor" href="#域">#</a> 域</h3>
+<ul>
+<li>
+<p>域是类的属性或数据成员，用于表示对象的特征或属性。</p>
+</li>
+<li>
+<p>它可以包括各种数据类型，可以是一个类变量，一个对象变量，一个对象方法变量或者是一个函数的参数。</p>
+</li>
+</ul>
+<h4 id="作用"><a class="markdownIt-Anchor" href="#作用">#</a> 作用</h4>
+<ul>
+<li>域存储对象的状态信息，使得我们可以在对象内部访问和操作这些数据。</li>
+<li>通过域，我们可以描述对象的特性，例如一个人的姓名、年龄、工资等。</li>
+</ul>
+<h4 id="域对象"><a class="markdownIt-Anchor" href="#域对象">#</a> 域对象</h4>
+<p>域对象是一种在  <code>Java Web</code>  应用中用于存储数据的容器。它们可以在不同的  <code>Servlet</code>  之间共享数据，以便在整个应用程序生命周期内保持数据的一致性。域对象主要包括以下三种：</p>
+<ol>
+<li><strong>请求域（Request 域）</strong>：请求域是一种用于在同一次 <em>HTTP</em> 请求处理周期内共享数据的域对象。数据存储在请求对象中，只在当前请求内有效。</li>
+<li><strong>会话域（Session 域）</strong>：会话域是一种用于在整个用户会话周期内共享数据的域对象。数据存储在会话对象中，可在用户登录后的多次请求之间共享。</li>
+<li><strong>应用域（Application 域）</strong>：应用域是一种用于在整个 <em>Web</em> 应用程序周期内共享数据的域对象。数据存储在  <code>ServletContext</code>  对象中，可被整个应用程序的所有  <code>Servlet</code>  共享。</li>
+</ol>
+<p>具体参考：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9jbG91ZC50ZW5jZW50LmNvbS9kZXZlbG9wZXIvYXJ0aWNsZS8yMzUyNzEz">【Java 进阶篇】在 Java Web 应用中实现请求数据的共享：域对象详解</span></p>
+<h3 id="servlet"><a class="markdownIt-Anchor" href="#servlet">#</a>  <code>Servlet</code></h3>
+<h4 id="介绍"><a class="markdownIt-Anchor" href="#介绍">#</a> 介绍</h4>
+<blockquote>
+<p><code>Servlet</code> （Server Applet），全称  <code>Java Servlet</code> ，未有中文译文。是用<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvSmF2YQ=="> Java</span> 编写的<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU2JTlDJThEJUU1JThBJUExJUU1JTk5JUE4">服务器</span>端<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU3JUE4JThCJUU1JUJBJThG">程序</span>。其主要功能在于交互式地浏览和修改数据，生成动态<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvV2Vi"> Web</span> 内容。狭义的  <code>Servlet</code>  是指 Java 语言实现的一个<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU2JThFJUE1JUU1JThGJUEz">接口</span>，广义的  <code>Servlet</code>  是指任何实现了这个  <code>Servlet</code>  接口的<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU3JUIxJUJCXyglRTglQUUlQTElRTclQUUlOTclRTYlOUMlQkElRTclQTclOTElRTUlQUQlQTYp">类</span>，一般情况下，人们将  <code>Servlet</code>  理解为后者。</p>
+</blockquote>
+<blockquote>
+<p><code>Servlet</code>  运行于支持 Java 的<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU1JUJBJTk0JUU3JTk0JUE4JUU2JTlDJThEJUU1JThBJUExJUU1JTk5JUE4">应用服务器</span>中。从实现上讲， <code>Servlet</code>  可以响应任何类型的请求，但绝大多数情况下  <code>Servlet</code>  只用来扩展基于<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvSFRUUA=="> HTTP</span><span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvJUU1JThEJThGJUU4JUFFJUFF"> 协议</span>的<span class="exturl" data-url="aHR0cHM6Ly96aC53aWtpcGVkaWEub3JnL3dpa2kvV2ViJUU2JTlDJThEJUU1JThBJUExJUU1JTk5JUE4"> Web 服务器</span>。</p>
+<blockquote>
+<p>引用自： <span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzE5NzgyMDE5L2FydGljbGUvZGV0YWlscy84MDI5MjExMA==">JavaWeb——Servlet（全网最详细教程包括 Servlet 源码分析）</span></p>
+</blockquote>
+</blockquote>
+<h4 id="servlet-和-controller-的区别"><a class="markdownIt-Anchor" href="#servlet-和-controller-的区别">#</a>  <code>servlet</code>  和  <code>controller</code>  的区别</h4>
+<blockquote>
+<p><code>web</code>  应用程序开发人员通常编写 <code>servlet</code>  来处理请求，但是，当要使用  <code>Servlet</code>  完成复杂的功能时，需要编写多个  <code>Servlet</code>  类，并且在  <code>web.xml</code>  进行注册，这对于完成复杂的  <code>Web</code>  应用，代码编写会变得很复杂，开发成本也会很高。所以  <code>Spring</code>  提供了强大的  <code>Web</code>  开发框架 <code> Spring MVC：Spring MVC</code>  是  <code>Spring</code>  产品的一部分， <code>Spring MVC</code>  是一个模型 - 视图 - 控制器的  <code>Web</code>  框架，建立在前端控制器  <code>servlet（DispatcherServlet）</code> ，它负责发送每个请求到合适的处理程序，使用视图来返回响应结果。</p>
+<blockquote>
+<p>引用自：<span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQzNTMwNzk2L2FydGljbGUvZGV0YWlscy8xMjcwNzg1NjI=">【SpringBoot】controller 与 servlet 区别_servlet 和 controller 的区别</span></p>
+</blockquote>
+</blockquote>
+<p><em>controller</em> 是 <em>spring</em> 中的一个普通的 <em>bean</em> , 通过将请求发送到前端控制器然后经过一系列流程到达合适的 <em>controller</em> 并执行 <em>controller</em> 中的代码，使用 <em>springmvc</em> 可以很轻松的完成处理请求的工作</p>
+<p><em>springmvc</em> 可以参考：<span class="exturl" data-url="aHR0cHM6Ly96ZXJvLWxpLmZ1bi8yMDI0LzA0LzE2L1NwcmluZ01WQy8=">SpringMVC | 渡世之舟 (zero-li.fun)</span></p>
+<h3 id="上下文"><a class="markdownIt-Anchor" href="#上下文">#</a> 上下文</h3>
+<blockquote>
+<p><strong>上下文代表了程序当下所运行的环境，联系你整个  <code>app(应用程序)</code>  的生命周期与资源调用，是程序可以访问到的所有资源的总和，资源可以是一个变量，也可以是一个对象的引用。</strong></p>
+</blockquote>
+<blockquote>
+<p>文章上下文，整片文章的语义。应用上下文，应用的语义 —— 运行时的环境</p>
+</blockquote>
+<p>由上可知，上下文就是整个文章语义环境，是应用程序当前所有能访问的资源的集合。</p>
+<p>参考：</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC84NDc1MzQ3Nw==">到底什么是应用上下文？</span></p>
+<p><span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC82NTA2MjkyOTA=">计算机编程中的上下文（Context）到底是什么？从理解到实践</span></p>
+<h3 id="过滤器"><a class="markdownIt-Anchor" href="#过滤器">#</a> 过滤器</h3>
+<p>顾名思义，过滤一些不符合要求的请求。</p>
+<p>使用过滤器需要实现  <code>Filter</code>  接口，该接口中有三个方法需要实现</p>
+<ul>
+<li><code>init</code> ：
+<ul>
+<li>在容器创建当前过滤器的时候调用</li>
+</ul>
+</li>
+<li><code>doFilter</code> ：
+<ul>
+<li>过滤器的具体过滤规则</li>
+</ul>
+</li>
+<li><code>destroy</code> ：
+<ul>
+<li>在容器中销毁当前过滤器的时候调用</li>
+</ul>
+</li>
+</ul>
+<p>例子：</p>
+<p><em>AllFilter</em>:</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Log4j2</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token annotation punctuation">@Component</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AllFilter</span> <span class="token keyword">implements</span> <span class="token class-name">Filter</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="5"></td><td><pre>     * 过滤器的初始化方法。</pre></td></tr><tr><td data-num="6"></td><td><pre>     *</pre></td></tr><tr><td data-num="7"></td><td><pre>     * @param filterConfig 过滤器配置对象，提供了配置信息。</pre></td></tr><tr><td data-num="8"></td><td><pre>     * @throws ServletException 如果初始化过程中出现异常，则抛出 ServletException。</pre></td></tr><tr><td data-num="9"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">FilterConfig</span> filterConfig<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="12"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"初始化AllFilter过滤器"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="14"></td><td><pre></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="16"></td><td><pre>     * 过滤器的核心方法，用于拦截请求并进行处理。</pre></td></tr><tr><td data-num="17"></td><td><pre>     * 如果请求来自本机，则放行；否则，返回 403 禁止访问。</pre></td></tr><tr><td data-num="18"></td><td><pre>     *</pre></td></tr><tr><td data-num="19"></td><td><pre>     * @param servletRequest  代表客户端的请求</pre></td></tr><tr><td data-num="20"></td><td><pre>     * @param servletResponse 用于向客户端发送响应</pre></td></tr><tr><td data-num="21"></td><td><pre>     * @param filterChain     过滤器链，用于将请求传递给下一个过滤器或 servlet</pre></td></tr><tr><td data-num="22"></td><td><pre>     * @throws IOException      如果发生输入 / 输出错误</pre></td></tr><tr><td data-num="23"></td><td><pre>     * @throws ServletException 如果处理请求时发生异常</pre></td></tr><tr><td data-num="24"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="25"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="26"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFilter</span><span class="token punctuation">(</span><span class="token class-name">ServletRequest</span> servletRequest<span class="token punctuation">,</span> <span class="token class-name">ServletResponse</span> servletResponse<span class="token punctuation">,</span> <span class="token class-name">FilterChain</span> filterChain<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">,</span> <span class="token class-name">ServletException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"AllFilter过滤器开始工作"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="28"></td><td><pre></pre></td></tr><tr><td data-num="29"></td><td><pre>        <span class="token comment">// 获取客户端 IP 地址</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token class-name">String</span> ip <span class="token operator">=</span> servletRequest<span class="token punctuation">.</span><span class="token function">getRemoteHost</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre></pre></td></tr><tr><td data-num="32"></td><td><pre>        <span class="token comment">// 判断 IP 是否为本机，是则放行，否则返回 403 错误</span></pre></td></tr><tr><td data-num="33"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>ip<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"0:0:0:0:0:0:0:1"</span><span class="token punctuation">)</span> <span class="token operator">||</span> ip<span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span><span class="token string">"127.0.0.1"</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>            filterChain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>servletRequest<span class="token punctuation">,</span> servletResponse<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>            <span class="token comment">// 设置响应编码和类型，写入禁止访问的消息</span></pre></td></tr><tr><td data-num="37"></td><td><pre>            servletResponse<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>            servletResponse<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"application/json;charset=UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>            servletResponse<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"&#123;\"code\":\"403\",\"msg\":\"非本机IP，禁止访问\"&#125;"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>            log<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">"&#123;&#125; 非本机IP，禁止访问"</span><span class="token punctuation">,</span> ip<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="42"></td><td><pre></pre></td></tr><tr><td data-num="43"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"AllFilter过滤器结束工作"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="44"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="45"></td><td><pre></pre></td></tr><tr><td data-num="46"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="47"></td><td><pre>     * 过滤器的销毁方法，用于执行过滤器的清理工作。</pre></td></tr><tr><td data-num="48"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="49"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="50"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="51"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"销毁AllFilter过滤器"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="52"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="53"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><em>LoginFilter</em>:</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Log4j2</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token annotation punctuation">@Component</span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LoginFilter</span> <span class="token keyword">implements</span> <span class="token class-name">Filter</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token comment">// 定义需要过滤的 URL 地址数组</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token keyword">private</span> <span class="token keyword">final</span> <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> urls <span class="token operator">=</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="6"></td><td><pre>            <span class="token string">"/login.html"</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token punctuation">&#125;</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="10"></td><td><pre>     * 过滤器初始化方法。</pre></td></tr><tr><td data-num="11"></td><td><pre>     * 该方法在过滤器实例化后立即调用，用于执行过滤器的初始化逻辑。</pre></td></tr><tr><td data-num="12"></td><td><pre>     * </pre></td></tr><tr><td data-num="13"></td><td><pre>     * @param filterConfig 过滤器配置对象，提供了配置文件中定义的过滤器参数。</pre></td></tr><tr><td data-num="14"></td><td><pre>     * @throws ServletException 如果初始化过程中出现 Servlet 相关异常，则抛出。</pre></td></tr><tr><td data-num="15"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="16"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">FilterConfig</span> filterConfig<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"初始化login过滤器"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="20"></td><td><pre></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="22"></td><td><pre>     * 执行过滤逻辑的方法。</pre></td></tr><tr><td data-num="23"></td><td><pre>     * 该方法会在每个请求到达时被调用，用于判断请求是否需要进行过滤处理。</pre></td></tr><tr><td data-num="24"></td><td><pre>     * </pre></td></tr><tr><td data-num="25"></td><td><pre>     * @param servletRequest 客户端请求对象，包含了客户端发送的请求信息。</pre></td></tr><tr><td data-num="26"></td><td><pre>     * @param servletResponse 用于向客户端发送响应的对象。</pre></td></tr><tr><td data-num="27"></td><td><pre>     * @param filterChain 过滤器链对象，用于将请求传递给下一个过滤器或 servlet。</pre></td></tr><tr><td data-num="28"></td><td><pre>     * @throws IOException 如果处理请求或响应时发生 IO 异常，则抛出。</pre></td></tr><tr><td data-num="29"></td><td><pre>     * @throws ServletException 如果处理请求或响应时发生 Servlet 相关异常，则抛出。</pre></td></tr><tr><td data-num="30"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="31"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFilter</span><span class="token punctuation">(</span><span class="token class-name">ServletRequest</span> servletRequest<span class="token punctuation">,</span> <span class="token class-name">ServletResponse</span> servletResponse<span class="token punctuation">,</span> <span class="token class-name">FilterChain</span> filterChain<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">,</span> <span class="token class-name">ServletException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"login过滤器开始执行"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>urls<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 将 URL 数组转换为 List 方便后续操作</span></pre></td></tr><tr><td data-num="35"></td><td><pre>        <span class="token keyword">var</span> httpServletRequest <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">)</span> servletRequest<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>        <span class="token keyword">var</span> url <span class="token operator">=</span> httpServletRequest<span class="token punctuation">.</span><span class="token function">getRequestURL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取请求的完整 URL</span></pre></td></tr><tr><td data-num="37"></td><td><pre>        <span class="token class-name">String</span> regex <span class="token operator">=</span> <span class="token string">"/[^/]+\\.html$"</span><span class="token punctuation">;</span> <span class="token comment">// 定义匹配 HTML 文件的正则表达式</span></pre></td></tr><tr><td data-num="38"></td><td><pre>        <span class="token keyword">var</span> pattern <span class="token operator">=</span> <span class="token class-name">Pattern</span><span class="token punctuation">.</span><span class="token function">compile</span><span class="token punctuation">(</span>regex<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 编译正则表达式为 Pattern 对象</span></pre></td></tr><tr><td data-num="39"></td><td><pre>        <span class="token keyword">var</span> matcher <span class="token operator">=</span> pattern<span class="token punctuation">.</span><span class="token function">matcher</span><span class="token punctuation">(</span>url<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 创建 Matcher 对象用于匹配 URL</span></pre></td></tr><tr><td data-num="40"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 如果 URL 中存在匹配的部分</span></pre></td></tr><tr><td data-num="41"></td><td><pre>            <span class="token keyword">if</span> <span class="token punctuation">(</span>list<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>matcher<span class="token punctuation">.</span><span class="token function">group</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 检查是否为需要过滤的 URL</span></pre></td></tr><tr><td data-num="42"></td><td><pre>                filterChain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>servletRequest<span class="token punctuation">,</span> servletResponse<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 继续过滤链</span></pre></td></tr><tr><td data-num="43"></td><td><pre>            <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="44"></td><td><pre>                log<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">"访问路径错误 &#123;&#125;"</span><span class="token punctuation">,</span> url<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 记录非法访问尝试</span></pre></td></tr><tr><td data-num="45"></td><td><pre>            <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="46"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="47"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"login过滤器执行结束"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="48"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="49"></td><td><pre></pre></td></tr><tr><td data-num="50"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="51"></td><td><pre>     * 过滤器销毁方法。</pre></td></tr><tr><td data-num="52"></td><td><pre>     * 该方法在应用停止时调用，用于执行过滤器的销毁逻辑，释放资源。</pre></td></tr><tr><td data-num="53"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="54"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="55"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="56"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"销毁login过滤器"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="57"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="58"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>如果需要过滤指定的请求，需要在配置类中添加一个 <code>Bean</code></p>
+<p><em>FilterConfig</em>:</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Configuration</span> <span class="token comment">// 标识为配置类</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">FilterConfig</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token annotation punctuation">@Resource</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">AllFilter</span> allFilter<span class="token punctuation">;</span> <span class="token comment">// 注入 AllFilter 实例</span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token annotation punctuation">@Resource</span></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">LoginFilter</span> loginFilter<span class="token punctuation">;</span> <span class="token comment">// 注入 LoginFilter 实例</span></pre></td></tr><tr><td data-num="7"></td><td><pre></pre></td></tr><tr><td data-num="8"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="9"></td><td><pre>     * 配置 AllFilter 的注册信息。</pre></td></tr><tr><td data-num="10"></td><td><pre>     *</pre></td></tr><tr><td data-num="11"></td><td><pre>     * @return FilterRegistrationBean&lt;AllFilter> 返回 AllFilter 的注册 bean 配置。</pre></td></tr><tr><td data-num="12"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token annotation punctuation">@Bean</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">FilterRegistrationBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AllFilter</span><span class="token punctuation">></span></span> <span class="token function">allFilterRegistrationBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token class-name">FilterRegistrationBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">AllFilter</span><span class="token punctuation">></span></span> allFilterBean <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FilterRegistrationBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        allFilterBean<span class="token punctuation">.</span><span class="token function">setFilter</span><span class="token punctuation">(</span>allFilter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器实例</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        allFilterBean<span class="token punctuation">.</span><span class="token function">addUrlPatterns</span><span class="token punctuation">(</span><span class="token string">"/*"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器的 URL 模式</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        allFilterBean<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"allFilter"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器的名称</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        allFilterBean<span class="token punctuation">.</span><span class="token function">setOrder</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器的执行顺序</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        <span class="token keyword">return</span> allFilterBean<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="22"></td><td><pre></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="24"></td><td><pre>     * 配置 LoginFilter 的注册信息。</pre></td></tr><tr><td data-num="25"></td><td><pre>     *</pre></td></tr><tr><td data-num="26"></td><td><pre>     * @return FilterRegistrationBean&lt;LoginFilter> 返回 LoginFilter 的注册 bean 配置。</pre></td></tr><tr><td data-num="27"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="28"></td><td><pre>    <span class="token annotation punctuation">@Bean</span></pre></td></tr><tr><td data-num="29"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">FilterRegistrationBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LoginFilter</span><span class="token punctuation">></span></span> <span class="token function">loginFilterRegistrationBean</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>        <span class="token class-name">FilterRegistrationBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">LoginFilter</span><span class="token punctuation">></span></span> loginFilterBean <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FilterRegistrationBean</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>        loginFilterBean<span class="token punctuation">.</span><span class="token function">setFilter</span><span class="token punctuation">(</span>loginFilter<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器实例</span></pre></td></tr><tr><td data-num="32"></td><td><pre>        loginFilterBean<span class="token punctuation">.</span><span class="token function">addUrlPatterns</span><span class="token punctuation">(</span><span class="token string">"*.html"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器的 URL 模式</span></pre></td></tr><tr><td data-num="33"></td><td><pre>        loginFilterBean<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"loginFilter"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器的名称</span></pre></td></tr><tr><td data-num="34"></td><td><pre>        loginFilterBean<span class="token punctuation">.</span><span class="token function">setOrder</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置过滤器的执行顺序</span></pre></td></tr><tr><td data-num="35"></td><td><pre>        <span class="token keyword">return</span> loginFilterBean<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="37"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><code>allFilterRegistrationBean</code>  过滤所有请求， <code>loginFilterRegistrationBean()</code>  过滤所有以 <code>.html</code>  结尾的请求</p>
+<h3 id="拦截器"><a class="markdownIt-Anchor" href="#拦截器">#</a> 拦截器</h3>
+<h3 id="监听器"><a class="markdownIt-Anchor" href="#监听器">#</a> 监听器</h3>
+<ol>
+<li><code>ServletContextListener（上下文监听器）</code> ：用于监听  <code>Web</code>  应用程序的启动和关闭事件。当 <code>ServletContext</code>  对象创建或销毁时，可以执行相应的操作。</li>
+<li><code>HttpSessionListener（会话监听器）</code> ：监听会话的创建和销毁事件。这对于跟踪在线用户、管理用户会话状态非常有用。</li>
+<li><code>ServletRequestListener（请求监听器）</code> ：监听请求的创建和销毁事件。可以用于记录请求信息、初始化数据等。</li>
+</ol>
+<p>在  <code>Spring</code>  框架中，也有一些特定的事件监听器：</p>
+<ol>
+<li><code>ApplicationListener</code> ： <code>Spring</code>  提供的通用事件监听器接口。您可以自定义事件，继承 <code>ApplicationEvent</code>  类，并实现 <code>ApplicationListener</code>  接口来处理这些事件。例如，您可以监听自定义事件，如用户登录、订单创建等，以执行相应的业务逻辑。</li>
+<li><code>Spring Boot中的事件监听器</code> ： <code>Spring Boot</code>  继承了  <code>Spring</code>  的事件监听机制。您可以使用 <code>@EventListener</code>  注解来定义事件监听方法，将其与特定事件关联。例如，监听应用启动事件、数据库连接池初始化等。</li>
+</ol>
+<p>参考文章：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.aliyun.com/article/688320">spring 监听器 Listener - 阿里云开发者社区 (  <code>aliyun.com</code>  )</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/145927110">深入浅出  <code>Spring/SpringBoot</code>  事件监听机制 - 知乎 (  <code>zhihu.com</code>  )</a></p>
+<p><em>Controller</em>:</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@RestController</span> <span class="token comment">// 定义一个 RESTful 控制器</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">GetStudentController</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token annotation punctuation">@Resource</span> <span class="token comment">// 注入 GetStudent 服务</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token class-name">GetStudent</span> getstudent<span class="token punctuation">;</span> <span class="token comment">// 用于获取学生信息的服务</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="7"></td><td><pre>     * 处理 GET 请求，获取学生信息。</pre></td></tr><tr><td data-num="8"></td><td><pre>     * </pre></td></tr><tr><td data-num="9"></td><td><pre>     * @return JsonResult&lt;String> 包含学生信息的 JSON 结果，其中数据类型为 String。</pre></td></tr><tr><td data-num="10"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/GetStudent"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span><span class="token constant">GET</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">JsonResult</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">></span></span> <span class="token function">getStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token comment">// 调用 getStudent 服务，将结果封装在 JsonResult 中返回</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">return</span> <span class="token keyword">new</span> <span class="token class-name">JsonResult</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span>getstudent<span class="token punctuation">.</span><span class="token function">getStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><em>getStudent</em>:</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Service</span> <span class="token comment">// 标示一个 Spring 框架的服务组件</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">GetStudent</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token annotation punctuation">@Resource</span> <span class="token comment">// 注入 ApplicationContext 对象，用于访问 Spring 应用上下文</span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">ApplicationContext</span> applicationContext<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="5"></td><td><pre></pre></td></tr><tr><td data-num="6"></td><td><pre>    <span class="token annotation punctuation">@Resource</span> <span class="token comment">// 注入 Student 对象，该对象将被用于演示事件发布时的数据载体</span></pre></td></tr><tr><td data-num="7"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">Student</span> student<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="8"></td><td><pre></pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="10"></td><td><pre>     * 获取并设置学生信息，然后发布一个学生信息更新的事件。</pre></td></tr><tr><td data-num="11"></td><td><pre>     * </pre></td></tr><tr><td data-num="12"></td><td><pre>     * @return 返回设置好的学生信息字符串。</pre></td></tr><tr><td data-num="13"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">getStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token comment">// 设置学生的基本信息</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        student<span class="token punctuation">.</span><span class="token function">setName</span><span class="token punctuation">(</span><span class="token string">"Tom"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        student<span class="token punctuation">.</span><span class="token function">setAge</span><span class="token punctuation">(</span><span class="token number">18</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        student<span class="token punctuation">.</span><span class="token function">setStudentNumber</span><span class="token punctuation">(</span><span class="token string">"20240001"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token comment">// 发布一个自定义事件，通知其他监听器学生信息已更新</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        applicationContext<span class="token punctuation">.</span><span class="token function">publishEvent</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">TestEvent</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> student<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token comment">// 返回学生信息</span></pre></td></tr><tr><td data-num="22"></td><td><pre>        <span class="token keyword">return</span> student<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="24"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><em>Event:</em></p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">/**</pre></td></tr><tr><td data-num="2"></td><td><pre> * TestEvent 类扩展了 ApplicationEvent 用于表示一个测试事件。</pre></td></tr><tr><td data-num="3"></td><td><pre> * 这个类主要用于事件驱动的架构中，用来传递与学生相关的事件信息。</pre></td></tr><tr><td data-num="4"></td><td><pre> */</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token annotation punctuation">@Getter</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token annotation punctuation">@Setter</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token annotation punctuation">@ToString</span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token annotation punctuation">@Log4j2</span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestEvent</span> <span class="token keyword">extends</span> <span class="token class-name">ApplicationEvent</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token keyword">private</span> <span class="token class-name">String</span> student<span class="token punctuation">;</span> <span class="token comment">// 学生信息</span></pre></td></tr><tr><td data-num="11"></td><td><pre></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="13"></td><td><pre>     * 构造函数，用于创建一个 TestEvent 实例。</pre></td></tr><tr><td data-num="14"></td><td><pre>     * </pre></td></tr><tr><td data-num="15"></td><td><pre>     * @param source 事件的来源对象。</pre></td></tr><tr><td data-num="16"></td><td><pre>     * @param student 发生事件的学生信息。</pre></td></tr><tr><td data-num="17"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="18"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">TestEvent</span><span class="token punctuation">(</span><span class="token class-name">Object</span> source<span class="token punctuation">,</span> <span class="token class-name">String</span> student<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        <span class="token keyword">super</span><span class="token punctuation">(</span>source<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 调用父类构造函数，设置事件来源</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        <span class="token keyword">this</span><span class="token punctuation">.</span>student <span class="token operator">=</span> student<span class="token punctuation">;</span> <span class="token comment">// 设置事件相关的学生信息</span></pre></td></tr><tr><td data-num="21"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="22"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><em>EventListener</em>:</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment">/**</pre></td></tr><tr><td data-num="2"></td><td><pre> * 测试事件监听器类，用于监听 TestEvent 事件。</pre></td></tr><tr><td data-num="3"></td><td><pre> * 使用 Log4j2 进行日志记录，并组件化以便于 Spring 容器管理。</pre></td></tr><tr><td data-num="4"></td><td><pre> */</span></pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token annotation punctuation">@Log4j2</span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token annotation punctuation">@Component</span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestEventListener</span> <span class="token keyword">implements</span> <span class="token class-name">ApplicationListener</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">TestEvent</span><span class="token punctuation">></span></span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="8"></td><td><pre>    </pre></td></tr><tr><td data-num="9"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="10"></td><td><pre>     * 当监听到 TestEvent 事件时，处理该事件。</pre></td></tr><tr><td data-num="11"></td><td><pre>     * </pre></td></tr><tr><td data-num="12"></td><td><pre>     * @param event 发生的 TestEvent 事件，包含需要处理的学生信息。</pre></td></tr><tr><td data-num="13"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token annotation punctuation">@Override</span></pre></td></tr><tr><td data-num="15"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">onApplicationEvent</span><span class="token punctuation">(</span><span class="token class-name">TestEvent</span> event<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        <span class="token comment">// 从事件中获取学生信息，并记录到日志中</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token keyword">var</span> student <span class="token operator">=</span> event<span class="token punctuation">.</span><span class="token function">getStudent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        log<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">"信息：&#123;&#125;"</span><span class="token punctuation">,</span> student<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="20"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>上面的例子中使用了监听器监听了自定义事件。首先，请求到达控制器，控制器获取学生信息，在学生信息类中发布一个自定义事件，然后监听器会捕获此事件并执行你自定义的事件内容</p>
+<hr>
+<p><code>Servlet API</code>  中文 Doc：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/haimishasha/p/5609261.html#autoid-3-4-0">  <code>Java Servlet API</code>  中文说明文档 - 海米傻傻 - 博客园 (  <code>cnblogs.com</code>  )</a></p>
+<p>官方  <code>Servlet API</code>  Doc：<a target="_blank" rel="noopener" href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html">  <code>ServletRequest</code>  (Java™ EE 7 Specification APIs) (  <code>oracle.com</code>  )</a></p>
+<h3 id="cookie"><a class="markdownIt-Anchor" href="#cookie">#</a> <em>Cookie</em></h3>
+<blockquote>
+<p><em>Cookie</em>，有时也用其复数形式 <em>Cookies</em>。类型为 “<strong>小型文本文件</strong>”，是某些网站为了辨别用户身份，进行 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Session/479100?fromModule=lemma_inlink"><em>Session</em></a> 跟踪而储存在用户本地终端上的数据（通常经过加密），由用户<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTUlQUUlQTIlRTYlODglQjclRTclQUIlQUYvMTAxMDgxP2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r">客户端</span>计算机暂时或永久保存的<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS8lRTQlQkYlQTElRTYlODElQUYvMTExMTYzP2Zyb21Nb2R1bGU9bGVtbWFfaW5saW5r">信息</span> 。</p>
+<blockquote>
+<p>引用自<span class="exturl" data-url="aHR0cHM6Ly9iYWlrZS5iYWlkdS5jb20vaXRlbS9jb29raWUvMTExOSNyZWZlcmVuY2UtJTVCMyU1RC01MDYyMzMyLXdyYXA=">百度百科</span></p>
+</blockquote>
+</blockquote>
+<p>​	使用 <em>cookie</em> 就可以使浏览器保存一些用户信息，来达到某些特定目的，比如打开网站在一定时间内不需要重复登录，或者使我们登录时可以自动填充账号密码等。</p>
+<p>​	一般情况下，<em>cookie</em> 是以键值对的形式表示的 <code>(key=value)</code></p>
+<h4 id="cookie-常用属性"><a class="markdownIt-Anchor" href="#cookie-常用属性">#</a> <em>cookie</em> 常用属性</h4>
+<p><img data-src="https://s21.ax1x.com/2024/04/13/pFjt5fe.png" alt="cookie1"></p>
+<ul>
+<li>
+<p><em>Path</em>：该属性定义了 <em>Web</em> 站点上可以访问此 <em>Cookie</em> 的目录</p>
+</li>
+<li>
+<p><em>Expires</em>：该属性表示 <em>Cookie</em> 的过期时间，也就是有效值，此 <em>Cookie</em> 在这个值之前都有效</p>
+</li>
+</ul>
+<p>其他属性请参考百度百科</p>
+<h4 id="cookie-在浏览器请求中的表现形式"><a class="markdownIt-Anchor" href="#cookie-在浏览器请求中的表现形式">#</a> <em>cookie</em> 在浏览器请求中的表现形式</h4>
+<p>请求头：</p>
+<p><img data-src="https://s21.ax1x.com/2024/04/13/pFjNt9e.png" alt="cookie2"></p>
+<blockquote>
+<p>通过上面可以发现， <code>cookie</code>  是以  <code>key=value</code>  表示的。多个  <code>cookie</code>  用  <code>;</code>  号隔开</p>
+</blockquote>
+<p>响应头：</p>
+<p><img data-src="https://s21.ax1x.com/2024/04/13/pFjN0Bt.png" alt="cookie3"></p>
+<blockquote>
+<p><code>cookie</code>  在响应中的表现形式为  <code>Set-Cookie=value</code>  。多个  <code>cookie</code>  使用多个  <code>Set-Cookie</code>  表示</p>
+</blockquote>
+<h4 id="cookie-的生命周期"><a class="markdownIt-Anchor" href="#cookie-的生命周期">#</a> <em>cookie</em> 的生命周期</h4>
+<p>​	 <code>cookie</code>  有 2 种存储方式，一种是会话性，一种是持久性。</p>
+<ul>
+<li>会话性：如果  <code>cookie</code>  为会话性，那么  <code>cookie</code>  仅会保存在客户端的内存中，当我们关闭客户端时  <code>cookie</code>  也就失效了</li>
+<li>持久性：如果  <code>cookie</code>  为持久性，那么  <code>cookie</code>  会保存在用户的硬盘中，直至生存期结束或者用户主动将其销毁。</li>
+</ul>
+<p>​     <code>cookie</code>  我们是可以进行设置的，我们可以人为设置  <code>cookie</code>  的有效时间，什么时候创建，什么时候销毁。</p>
+<h4 id="cookie-的常用方法"><a class="markdownIt-Anchor" href="#cookie-的常用方法">#</a> cookie 的常用方法</h4>
+<table>
+<tr>
+        <th align="center" colspan="2">构造方法</th>
+    </tr>
+    <tr>
+        <td align="center">Cookie(String name, String value)</td>
+        <td align="center">使用指定的名称和值创建一个新的 Cookie。</td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <th align="center">修饰符与类型</th>
+        <th align="center">方法与描述</th>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">Object</td>
+        <td align="center">clone()</td>
+    </tr>
+    <tr>
+        <td align="center">覆盖标准 java.lang.Object.clone 方法返回此 Cookie 的副本。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">String</td>
+        <td align="center">getComment()</td>
+    </tr>
+    <tr>
+        <td align="center">获取此 Cookie 用途的注释。如果此 Cookie 没有注释，则返回 null。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">int</td>
+        <td align="center">getMaxAge()</td>
+    </tr>
+    <tr>
+        <td align="center">获取此 Cookie 的最大期限（以秒为单位）。默认情况下，此 Cookie 的最大期限是 -1，表示此 Cookie
+            将会持续存在，直至浏览器关闭而消失。
+        </td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">String</td>
+        <td align="center">getName()</td>
+    </tr>
+    <tr>
+        <td align="center">获取此 Cookie 的当前名称。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">String</td>
+        <td align="center">getValue()</td>
+    </tr>
+    <tr>
+        <td align="center">获取此 Cookie 的当前值。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">String</td>
+        <td align="center">getPath()</td>
+    </tr>
+    <tr>
+        <td align="center">获取此 Cookie 的当前路径。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">void</td>
+        <td align="center">setComment(String purpose)</td>
+    </tr>
+    <tr>
+        <td align="center">设置此 Cookie 的注释。注释用于说明 Cookie 的用途。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">void</td>
+        <td align="center">setMaxAge(int expiry)</td>
+    </tr>
+    <tr>
+        <td align="center">设置此 Cookie 的最大期限（以秒为单位）。正值表示此 Cookie 将在设置的 expiry 后过期。注意，该值为 Cookie 过期的最长期限，而不是 Cookie 当前年龄。
+            负值表示 Cookie 将在浏览器关闭时过期。零值表示 Cookie 会立马删除。
+        </td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">void</td>
+        <td align="center">setPath(String uri)</td>
+    </tr>
+    <tr>
+        <td align="center">设置此 Cookie 的当前路径。</td>
+    </tr>
+    <tr>
+        <td align="center" rowspan="2">void</td>
+        <td align="center">setValue(String newValue)</td>
+    </tr>
+    <tr>
+        <td align="center">为此 Cookie 的分配一个新值。</td>
+    </tr>
+</table>
+<blockquote>
+<p>更多请参考：<a target="_blank" rel="noopener" href="https://docs.oracle.com/javaee/7/api/index.html">Cookie（Java（TM） EE 7 规范 API） ( <code>oracle.com</code> )</a></p>
+</blockquote>
+<p><em>Cookie</em> 类位于  <code>javax.servlet.http</code>  下</p>
+<p><code>HttpServletRequest</code>  和  <code>HttpServletResponse</code>  对 <em>cookie</em> 进行操作的常用方法</p>
+<ul>
+<li><code>response.addCookie(Cookie cookie)</code>
+<ul>
+<li>将 <em>cookie</em> 给客户端进行保存</li>
+</ul>
+</li>
+<li><code>request.getCookies()</code>
+<ul>
+<li>得到客户端传过来的所有 <em>cookie</em> 对象</li>
+</ul>
+</li>
+</ul>
+<h4 id="示例"><a class="markdownIt-Anchor" href="#示例">#</a> 示例</h4>
+<p>使用 <em>cookie</em> 自动填充用户名和密码，使用 <em>session</em> 实现一天内登录过后无需登录</p>
+<p><em><strong>login.html</strong></em>：</p>
+<figure class="highlight html"><figcaption data-lang="HTML"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="4"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>UTF-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="5"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="6"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="7"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="8"></td><td><pre><span class="token comment">&lt;!-- 登录表单，向 http://localhost:8080/login 发送 POST 请求 --></span></pre></td></tr><tr><td data-num="9"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://localhost:8080/login<span class="token punctuation">"</span></span> <span class="token attr-name">method</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post<span class="token punctuation">"</span></span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="10"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>label</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="11"></td><td><pre>        账号：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="12"></td><td><pre>        密码：<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span></pre></td></tr><tr><td data-num="14"></td><td><pre>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>label</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="15"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="16"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript"></pre></td></tr><tr><td data-num="17"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="18"></td><td><pre>     * 获取指定名称的 cookie 值</pre></td></tr><tr><td data-num="19"></td><td><pre>     * @param name 需要获取的 cookie 的名称</pre></td></tr><tr><td data-num="20"></td><td><pre>     * @return 返回 cookie 的值，如果不存在则返回 null</pre></td></tr><tr><td data-num="21"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="22"></td><td><pre>    <span class="token keyword">function</span> <span class="token function">getCookie</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="23"></td><td><pre>        <span class="token keyword">let</span> arr<span class="token punctuation">,</span> reg <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">RegExp</span><span class="token punctuation">(</span><span class="token string">"(^| )"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"=([^;]*)(;|$)"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>arr <span class="token operator">=</span> document<span class="token punctuation">.</span>cookie<span class="token punctuation">.</span><span class="token function">match</span><span class="token punctuation">(</span>reg<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>            <span class="token keyword">return</span> <span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="26"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>            <span class="token keyword">return</span> <span class="token keyword">null</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="28"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="30"></td><td><pre></pre></td></tr><tr><td data-num="31"></td><td><pre>    <span class="token comment">// 从 cookie 中获取用户名和密码</span></pre></td></tr><tr><td data-num="32"></td><td><pre>    <span class="token keyword">const</span> username_cookie <span class="token operator">=</span> <span class="token function">getCookie</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>    <span class="token keyword">const</span> password_cookie <span class="token operator">=</span> <span class="token function">getCookie</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="34"></td><td><pre>    <span class="token comment">// 获取 HTML 中对应的用户名和密码输入框元素</span></pre></td></tr><tr><td data-num="35"></td><td><pre>    <span class="token keyword">const</span> username_eb <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>    <span class="token keyword">const</span> password_eb <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="37"></td><td><pre></pre></td></tr><tr><td data-num="38"></td><td><pre>    <span class="token comment">// 如果 cookie 中存在用户名和密码，且输入框元素存在，则将 cookie 中的用户名和密码填入输入框</span></pre></td></tr><tr><td data-num="39"></td><td><pre>    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>username_cookie <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> password_cookie <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>username_eb <span class="token operator">!=</span> <span class="token keyword">null</span> <span class="token operator">&amp;&amp;</span> password_eb <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="40"></td><td><pre>        username_eb<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">,</span> username_cookie<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        password_eb<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"value"</span><span class="token punctuation">,</span> password_cookie<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="43"></td><td><pre></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="44"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span></pre></td></tr><tr><td data-num="45"></td><td><pre><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span></pre></td></tr></table></figure><p><em><strong>LoginController</strong></em>：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Controller</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">LoginController</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="4"></td><td><pre>     * 登录处理控制器</pre></td></tr><tr><td data-num="5"></td><td><pre>     *</pre></td></tr><tr><td data-num="6"></td><td><pre>     * @param request  HttpServletRequest 对象，用于接收客户端请求数据</pre></td></tr><tr><td data-num="7"></td><td><pre>     * @param response HttpServletResponse 对象，用于向客户端发送响应</pre></td></tr><tr><td data-num="8"></td><td><pre>     * @return 返回登录成功后重定向到的 URL 或登录失败后重新回到登录页面的 URL</pre></td></tr><tr><td data-num="9"></td><td><pre>     * @throws IOException 如果发生 I/O 错误</pre></td></tr><tr><td data-num="10"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="11"></td><td><pre>    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/login"</span><span class="token punctuation">,</span> method <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token class-name">RequestMethod</span><span class="token punctuation">.</span><span class="token constant">POST</span><span class="token punctuation">,</span> <span class="token class-name">RequestMethod</span><span class="token punctuation">.</span><span class="token constant">GET</span><span class="token punctuation">&#125;</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">loginController</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="13"></td><td><pre>        <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">String</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">></span></span> hashMap <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashMap</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token punctuation">></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 用于存储用户输入的登录信息</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">var</span> session <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 获取当前会话对象</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token class-name">Cookie</span> cookieUserName<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        <span class="token class-name">Cookie</span> cookiePassword<span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token comment">// 从请求中获取用户名和密码，并存入 hashMap 中</span></pre></td></tr><tr><td data-num="18"></td><td><pre>        hashMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">,</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="19"></td><td><pre>        hashMap<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>        <span class="token comment">// 调用 Login 类的 login 方法进行登录验证</span></pre></td></tr><tr><td data-num="21"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token class-name">Login</span><span class="token punctuation">.</span><span class="token function">login</span><span class="token punctuation">(</span>hashMap<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="22"></td><td><pre>            <span class="token comment">// 登录成功，创建并设置用户名和密码的 Cookie</span></pre></td></tr><tr><td data-num="23"></td><td><pre>            cookieUserName <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">,</span> hashMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="24"></td><td><pre>            cookiePassword <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Cookie</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">,</span> hashMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="25"></td><td><pre>            cookieUserName<span class="token punctuation">.</span><span class="token function">setMaxAge</span><span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 设置 Cookie 有效期为 1 天</span></pre></td></tr><tr><td data-num="26"></td><td><pre>            cookiePassword<span class="token punctuation">.</span><span class="token function">setMaxAge</span><span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="27"></td><td><pre>            <span class="token comment">// 设置会话有效期为 1 天</span></pre></td></tr><tr><td data-num="28"></td><td><pre>            session<span class="token punctuation">.</span><span class="token function">setMaxInactiveInterval</span><span class="token punctuation">(</span><span class="token number">60</span> <span class="token operator">*</span> <span class="token number">60</span> <span class="token operator">*</span> <span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="29"></td><td><pre>            response<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookieUserName<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="30"></td><td><pre>            response<span class="token punctuation">.</span><span class="token function">addCookie</span><span class="token punctuation">(</span>cookiePassword<span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="31"></td><td><pre>            <span class="token comment">// 在会话中设置用户名，以便在其他页面中使用</span></pre></td></tr><tr><td data-num="32"></td><td><pre>            session<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">,</span> hashMap<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="33"></td><td><pre>            <span class="token comment">// 登录成功，重定向到首页</span></pre></td></tr><tr><td data-num="34"></td><td><pre>            <span class="token keyword">return</span> <span class="token string">"redirect:/index"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="35"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="36"></td><td><pre>            <span class="token comment">// 登录失败，重定向回登录页面</span></pre></td></tr><tr><td data-num="37"></td><td><pre>            <span class="token keyword">return</span> <span class="token string">"redirect:/login.html"</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="40"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p><em><strong>Index</strong></em>：</p>
+<figure class="highlight java"><figcaption data-lang="java"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token annotation punctuation">@Controller</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token keyword">class</span> <span class="token class-name">Index</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="3"></td><td><pre>    <span class="token comment">/**</pre></td></tr><tr><td data-num="4"></td><td><pre>     * 处理访问首页的请求。</pre></td></tr><tr><td data-num="5"></td><td><pre>     * 如果用户已登录（即会话中包含用户名），则显示欢迎页面；</pre></td></tr><tr><td data-num="6"></td><td><pre>     * 否则，重定向到登录页面。</pre></td></tr><tr><td data-num="7"></td><td><pre>     *</pre></td></tr><tr><td data-num="8"></td><td><pre>     * @param request  HttpServletRequest 对象，用于获取请求信息</pre></td></tr><tr><td data-num="9"></td><td><pre>     * @param response HttpServletResponse 对象，用于设置响应信息和发送响应</pre></td></tr><tr><td data-num="10"></td><td><pre>     * @throws IOException 如果发生 I/O 错误</pre></td></tr><tr><td data-num="11"></td><td><pre>     */</span></pre></td></tr><tr><td data-num="12"></td><td><pre>    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span>path <span class="token operator">=</span> <span class="token string">"/index*"</span><span class="token punctuation">)</span></pre></td></tr><tr><td data-num="13"></td><td><pre>    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">index</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="14"></td><td><pre>        <span class="token keyword">var</span> session <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getSession</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="15"></td><td><pre>        <span class="token keyword">var</span> username <span class="token operator">=</span> session<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 尝试从会话中获取用户名</span></pre></td></tr><tr><td data-num="16"></td><td><pre>        <span class="token class-name">PrintWriter</span> out <span class="token operator">=</span> response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="17"></td><td><pre>        <span class="token keyword">if</span> <span class="token punctuation">(</span>username <span class="token operator">!=</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="18"></td><td><pre>            <span class="token comment">// 用户已登录，设置响应为 HTML 格式，并输出欢迎页面</span></pre></td></tr><tr><td data-num="19"></td><td><pre>            response<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="20"></td><td><pre>            response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=utf-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="21"></td><td><pre>            out<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token triple-quoted-string string">"""</pre></td></tr><tr><td data-num="22"></td><td><pre>                    &lt;!DOCTYPE html></pre></td></tr><tr><td data-num="23"></td><td><pre>                    &lt;html lang="en"></pre></td></tr><tr><td data-num="24"></td><td><pre>                    &lt;head></pre></td></tr><tr><td data-num="25"></td><td><pre>                        &lt;meta charset="utf-8"></pre></td></tr><tr><td data-num="26"></td><td><pre>                        &lt;title>Title&lt;/title></pre></td></tr><tr><td data-num="27"></td><td><pre>                    &lt;/head></pre></td></tr><tr><td data-num="28"></td><td><pre>                    &lt;body></pre></td></tr><tr><td data-num="29"></td><td><pre>                    &lt;h1>success&lt;/h1></pre></td></tr><tr><td data-num="30"></td><td><pre>                    &lt;div></pre></td></tr><tr><td data-num="31"></td><td><pre>                        &lt;p></pre></td></tr><tr><td data-num="32"></td><td><pre>                            welcome\s"""</span> <span class="token operator">+</span> username <span class="token operator">+</span> <span class="token triple-quoted-string string">"""</pre></td></tr><tr><td data-num="33"></td><td><pre>                        &lt;/p></pre></td></tr><tr><td data-num="34"></td><td><pre>                    &lt;/div></pre></td></tr><tr><td data-num="35"></td><td><pre>                    &lt;/body></pre></td></tr><tr><td data-num="36"></td><td><pre>                    &lt;/html></pre></td></tr><tr><td data-num="37"></td><td><pre>                    """</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="38"></td><td><pre>        <span class="token punctuation">&#125;</span> <span class="token keyword">else</span> <span class="token punctuation">&#123;</span></pre></td></tr><tr><td data-num="39"></td><td><pre>            <span class="token comment">// 用户未登录，重定向到登录页面</span></pre></td></tr><tr><td data-num="40"></td><td><pre>            response<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span>request<span class="token punctuation">.</span><span class="token function">getContextPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">"/login.html"</span><span class="token punctuation">)</span><span class="token punctuation">;</span></pre></td></tr><tr><td data-num="41"></td><td><pre>        <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="42"></td><td><pre>    <span class="token punctuation">&#125;</span></pre></td></tr><tr><td data-num="43"></td><td><pre><span class="token punctuation">&#125;</span></pre></td></tr></table></figure><p>自动填充逻辑：</p>
+<p>​	先访问  <code>index</code>  接口，它会判断有没有登录，没有登录的话会重定向到  <code>login.html</code>  界面。在  <code>login</code>  接口中验证用户名和密码，并将  <code>cookie</code>  放到响应头中返回给客户端存储，如果登录成功则重定向到  <code>index</code>  主页，否则重定向到  <code>login.html</code>  重新登录。</p>
+<p>​	之后关闭浏览器，访问  <code>index</code>  接口，由于请求头会携带  <code>cookie</code>  以及  <code>session</code>  ， 所以只要  <code>session</code>  没有过期就可以直接访问。</p>
+<p>​	访问  <code>login.html</code>  则  <code>HTML</code>  中的  <code>JavaScript</code>  代码会获取  <code>cookie</code>  ，以便实现自动填充。</p>
+<h4 id="流程图"><a class="markdownIt-Anchor" href="#流程图">#</a> 流程图</h4>
+<p><img data-src="https://s21.ax1x.com/2024/04/13/pFjH4SO.png" alt="流程图"></p>
+<hr>
+<p><em>TODO</em></p>
+
+      <div class="tags">
+          <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
+          <a href="/tags/Java/" rel="tag"><i class="ic i-tag"></i> Java</a>
+          <a href="/tags/servlet/" rel="tag"><i class="ic i-tag"></i> servlet</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2024-11-08 16:25:50" itemprop="dateModified" datetime="2024-11-08T16:25:50+08:00">2024-11-08</time>
+  </span>
+  <span id="MyCodingBook/后端/java/JavaWeb/" class="item leancloud_visitors" data-flag-title="JavaWeb" title="阅读次数">
+      <span class="icon">
+        <i class="ic i-eye"></i>
+      </span>
+      <span class="text">阅读次数</span>
+      <span class="leancloud-visitors-count"></span>
+      <span class="text">次</span>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> 赞赏</button>
+  <p>请我喝[茶]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="清天 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="清天 支付宝">
+        <p>支付宝</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="清天 QQ">
+        <p>QQ</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文博主： </strong>清天 <i class="ic i-at"><em>@</em></i>上善若水
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/JavaWeb/" title="JavaWeb">http://yunyat.cloud/MyCodingBook/后端/java/JavaWeb/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?769022" title="spring开发注解集合">
+  <span class="type">上一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 框架</span>
+  <h3>spring开发注解集合</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;fj?127036" title="SpringBoot基础">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> SpringBoot</span>
+  <h3>SpringBoot基础</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F"><span class="toc-number">1.</span> <span class="toc-text"> 域</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BD%9C%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text"> 作用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%9F%E5%AF%B9%E8%B1%A1"><span class="toc-number">1.2.</span> <span class="toc-text"> 域对象</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#servlet"><span class="toc-number">2.</span> <span class="toc-text">  Servlet</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">2.1.</span> <span class="toc-text"> 介绍</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#servlet-%E5%92%8C-controller-%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.2.</span> <span class="toc-text">  servlet  和  controller  的区别</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87"><span class="toc-number">3.</span> <span class="toc-text"> 上下文</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="toc-number">4.</span> <span class="toc-text"> 过滤器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%A6%E6%88%AA%E5%99%A8"><span class="toc-number">5.</span> <span class="toc-text"> 拦截器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%91%E5%90%AC%E5%99%A8"><span class="toc-number">6.</span> <span class="toc-text"> 监听器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#cookie"><span class="toc-number">7.</span> <span class="toc-text"> Cookie</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie-%E5%B8%B8%E7%94%A8%E5%B1%9E%E6%80%A7"><span class="toc-number">7.1.</span> <span class="toc-text"> cookie 常用属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie-%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E8%AF%B7%E6%B1%82%E4%B8%AD%E7%9A%84%E8%A1%A8%E7%8E%B0%E5%BD%A2%E5%BC%8F"><span class="toc-number">7.2.</span> <span class="toc-text"> cookie 在浏览器请求中的表现形式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie-%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="toc-number">7.3.</span> <span class="toc-text"> cookie 的生命周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie-%E7%9A%84%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="toc-number">7.4.</span> <span class="toc-text"> cookie 的常用方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">7.5.</span> <span class="toc-text"> 示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="toc-number">7.6.</span> <span class="toc-text"> 流程图</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java/" rel="bookmark" title="Java线程池">Java线程池</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/" rel="bookmark" title="运算符级别比较">运算符级别比较</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/" rel="bookmark" title="JavaFx使用Maven打包及运行">JavaFx使用Maven打包及运行</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88-Map/" rel="bookmark" title="集合-Map">集合-Map</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/" rel="bookmark" title="集合接口的继承及实现概览">集合接口的继承及实现概览</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/" rel="bookmark" title="Java-lambda的方法引用">Java-lambda的方法引用</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" rel="bookmark" title="spring开发注解集合">spring开发注解集合</a></li><li class="active"><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/JavaWeb/" rel="bookmark" title="JavaWeb">JavaWeb</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Spring%E5%9F%BA%E7%A1%80/" rel="bookmark" title="SpringFramework基础">SpringFramework基础</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/" rel="bookmark" title="SpringBoot基础">SpringBoot基础</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringMVC/" rel="bookmark" title="SpringMVC">SpringMVC</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Tools/Spring-ResponseEntity/" rel="bookmark" title="Spring-ResponseEntity">Spring-ResponseEntity</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/" rel="bookmark" title="springboot多模块开发">springboot多模块开发</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" rel="bookmark" title="springboot全局异常处理">springboot全局异常处理</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/" rel="bookmark" title="MyBatisPlus-1">MyBatisPlus-1</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/" rel="bookmark" title="MyBatisPlus-2">MyBatisPlus-2</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/" rel="bookmark" title="MyBatisPlus-3">MyBatisPlus-3</a></li><li><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/" rel="bookmark" title="MyBatisPlus疑难杂症">MyBatisPlus疑难杂症</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="清天"
+      data-src="/images/wa.jpg">
+  <p class="name" itemprop="name">清天</p>
+  <div class="description" itemprop="description">若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">76</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">25</span>
+        <span class="name">分类</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">56</span>
+        <span class="name">标签</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+      <span class="exturl item github" data-url="aHR0cHM6Ly9naXRodWIuY29tL1plcm8tUWw=" title="https:&#x2F;&#x2F;github.com&#x2F;Zero-Ql"><i class="ic i-github"></i></span>
+      <span class="exturl item about" data-url="aHR0cHM6Ly9ncmF2YXRhci5jb20vcXNreTFhNGRjYzYyZmI4" title="https:&#x2F;&#x2F;gravatar.com&#x2F;qsky1a4dcc62fb8"><i class="ic i-address-card"></i></span>
+      <a href="mailto:qsky@yunyat.cloud" title="mailto:qsky@yunyat.cloud" class="item email"><i class="ic i-envelope"></i></a>
+      <span class="exturl item telegram" data-url="aHR0cHM6Ly90Lm1lL1FTa3lZdW4=" title="https:&#x2F;&#x2F;t.me&#x2F;QSkyYun"><i class="ic i-paper-plane"></i></span>
+      <span class="exturl item music" data-url="aHR0cHM6Ly95Lm11c2ljLjE2My5jb20vbS91c2VyP2lkPTIwNjM1MjA5Mzk=" title="https:&#x2F;&#x2F;y.music.163.com&#x2F;m&#x2F;user?id&#x3D;2063520939"><i class="ic i-cloud-music"></i></span>
+      <span class="exturl item skype" data-url="c2t5cGU6bGl2ZTouY2lkLjdmYTYyZWIyZDhmMzQzYzI/Y2FsbHxjaGF0" title="skype:live:.cid.7fa62eb2d8f343c2?call|chat"><i class="ic i-skype"></i></span>
+      <span class="exturl item weibo" data-url="aHR0cHM6Ly93ZWliby5jb20vdS83OTI2ODg4OTUw" title="https:&#x2F;&#x2F;weibo.com&#x2F;u&#x2F;7926888950"><i class="ic i-weibo"></i></span>
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="/about/" rel="section"><i class="ic i-user"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/site/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/gallery/" rel="section"><i class="ic i-loop"></i>Wo的足迹</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-magic"></i>链圈</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-link"></i>links</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/websitemap/" rel="section"><i class="ic i-sitemap"></i>网站Map</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>随机文章</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+</div>
+
+    <span><a href="/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/" title="暑假工踩坑记">暑假工踩坑记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/game/" title="分类于 游戏">游戏</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/NeoForge/" title="分类于 NeoForge">NeoForge</a>
+</div>
+
+    <span><a href="/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/" title="Mod开发指南 - 方块篇">Mod开发指南 - 方块篇</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/Spring%E5%9F%BA%E7%A1%80/" title="SpringFramework基础">SpringFramework基础</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
+</div>
+
+    <span><a href="/MyCodingBook/UnitTests/JUnit/" title="JUnit">JUnit</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
+</div>
+
+    <span><a href="/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/" title="Docker构建镜像及使用的笔记">Docker构建镜像及使用的笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
+</div>
+
+    <span><a href="/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/" title="运算符级别比较">运算符级别比较</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-5/" title="MySQL-5">MySQL-5</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/hexo/Shoka/" title="分类于 Shoka">Shoka</a>
+</div>
+
+    <span><a href="/hexo/shoka/display/" title="Step.3 界面显示">Step.3 界面显示</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/miscellaneous/Issues/" title="分类于 Issues">Issues</a>
+</div>
+
+    <span><a href="/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/" title="湖北飞young算号器">湖北飞young算号器</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/SSH-Agent/" title="SSH Agent">SSH Agent</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>最新评论</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="站点总字数">171k 字</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="站点阅读时长">2:35</span>
+  </div>
+  <div class="icp-info">
+    <span class="icp-img">
+      <a class="post-meta-item-icon" target="_blank" rel="noopener" href="https://icp.gov.moe"><img title="https://icp.gov.moe" src="images/icon120.png" width="18" style="vertical-align:middle"></a>
+    </span>
+    <span class="icp-text">
+      <span class="exturl" data-url="aHR0cHM6Ly9pY3AuZ292Lm1vZS8/a2V5d29yZD0yMDIzMTAxMw==">萌ICP备20231013号</span>
+    </span>
+  </div>
+
+  <div class="copyright">
+    
+    &copy; 2023 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">清天 @ QSky Yun</span>
+  </div>
+  <div class="start-time">
+    <span>本站已平稳运行</span>
+    <span id="display_live_time"> 0 天 0 小时 0 分 0 秒</span>
+      <script>function blog_live_time(){
+          setTimeout(blog_live_time,1e3);
+          const e = new Date("2023-04-28T00:00:00"),
+          t=(new Date).getTime()-e.getTime(),
+          i=Math.floor(t/864e5),
+          o=Math.floor(t%864e5/60/60/1e3),
+          l=Math.floor(t%36e5/60/1e3),
+          _=Math.floor(t%6e4/1e3);
+          display_live_time.innerHTML=` ${i} 天 ${o} 小时 ${l} 分 ${_} 秒`
+        }
+        blog_live_time()
+      </script>
+    <span>ヽ(○´∀`)ﾉ♪</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: 'MyCodingBook/后端/java/JavaWeb/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)看不见我看不见我"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="/js/typed.js"></script>
+    <script type="text/javascript">
+        var str = { "hitokoto": "=我真的很想喜欢你们，可是你们没有人喜欢我。=" };
+        fetch('https://v1.hitokoto.cn/?encode=json&charset=utf-8&min_length=15')
+        .then(response => {
+            if (!response.ok) {
+                return str;
+            } else {
+                return response.json();
+            }
+        }).then(data => {
+            typedfun(data.hitokoto);
+        }).catch(error => {
+            typedfun(str.hitokoto);
+        });
+        function typedfun(data) {
+            var msg = "=" + data  + "=^1500";
+            typed = new Typed(".say-subtitle", {
+                strings: msg.split(),
+                typeSpeed: 70,
+                loop: true,
+                loopCount: Infinity,
+                backDelay: 70,
+                backSpeed: 100,
+                smartBackspace: true
+            });
+        }
+    </script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

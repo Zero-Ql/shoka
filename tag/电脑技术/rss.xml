@@ -60,6 +60,9 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/linux/SSH-Agent/</guid>
             <title>SSH Agent</title>
@@ -137,21 +140,24 @@
             <category>电脑技术</category>
             <pubDate>Wed, 29 Nov 2023 14:37:53 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;重要&lt;/strong&gt;：在阅读本文章前请确保你已拥有以下技能：&lt;/p&gt;
+&lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;&lt;b&gt;重要&lt;/b&gt;：在阅读本文章前请确保你已拥有这些技能：&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
 &lt;li&gt;学会正常使用搜索引擎&lt;/li&gt;
 &lt;li&gt;拥有基本的动手能力&lt;/li&gt;
 &lt;li&gt;拥有义务教育阶段要求的知识水平&lt;/li&gt;
 &lt;/ul&gt;
+&lt;/div&gt;&lt;/details&gt;
+&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;如果没有以上技能，请立即停止阅读本文章并关闭浏览器。&lt;/p&gt;
 &lt;p&gt;如果你有以上技能，并在完整阅读本文章内容后出现疑问，请先阅读提问的智慧再向我提问，否则别问我问题，我只会忽略你。&lt;/p&gt;
-&lt;blockquote&gt;
+&lt;/div&gt;
+&lt;div class=&#34;note primary&#34;&gt;
 &lt;p&gt;提问的智慧：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hc2suaWNvZGVxLmNvbS8=&#34;&gt;提问的智慧 (中文版)&lt;/span&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;/div&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;正文&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#正文&#34;&gt;#&lt;/a&gt; 正文&lt;/h3&gt;
 &lt;h4 id=&#34;准备工作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#准备工作&#34;&gt;#&lt;/a&gt; 准备工作&lt;/h4&gt;
-&lt;p&gt;重装系统有很多方法，本次使用的是使用 Wepe 工具箱将 U 盘 做成 pe 启动盘来重装系统。&lt;/p&gt;
+&lt;p&gt;重装系统有很多方法，本次使用的是使用  &lt;code&gt;Wepe&lt;/code&gt;  工具箱将 U 盘 做成 &lt;code&gt;pe&lt;/code&gt;  启动盘来重装系统。&lt;/p&gt;
 &lt;h5 id=&#34;微pe下载&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#微pe下载&#34;&gt;#&lt;/a&gt; 微 pe 下载&lt;/h5&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cud2VwZS5jb20uY24=&#34;&gt;官网&lt;/span&gt;&lt;/p&gt;
@@ -169,12 +175,12 @@
 &lt;p&gt;注意：下图的 EFI 盘是系统盘，请不要将任何文件放入其中，如果你没有，请忽略。&lt;/p&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDrqe0.jpg&#34; alt=&#34;0&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
-&lt;li&gt;将 U 盘插入要重装系统的电脑，然后重启电脑，并在重启过程中不断的按 F2 键以进入系统 BIOS，不同的电脑进入的方法或快捷键不一样，请自行浏览器搜索你自己电脑进入的方法，本文所使用的电脑为华硕天选 2。&lt;/li&gt;
-&lt;li&gt;进入 BIOS 后，在下图右边所示位置应该有两个盘，将下面的 UEFI 盘移动到 Windows Boot 盘的上面，有可能你的盘名字和我的不一样，但是名字应该都是差不多的。&lt;/li&gt;
+&lt;li&gt;将 U 盘插入要重装系统的电脑，然后重启电脑，并在重启过程中不断的按  &lt;code&gt;F2&lt;/code&gt;  键以进入系统  &lt;code&gt;BIOS&lt;/code&gt; ，不同的电脑进入的方法或快捷键不一样，请自行浏览器搜索你自己电脑进入的方法，本文所使用的电脑为华硕天选 2。&lt;/li&gt;
+&lt;li&gt;进入  &lt;code&gt;BIOS&lt;/code&gt;  后，在下图右边所示位置应该有两个盘，将下面的  &lt;code&gt;UEFI&lt;/code&gt;  盘移动到  &lt;code&gt;Windows Boot&lt;/code&gt;  盘的上面，有可能你的盘名字和我的不一样，但是名字应该都是差不多的。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDX2d.jpg&#34; alt=&#34;1&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;5&#34;&gt;
-&lt;li&gt;重启电脑进入 wepe 桌面，点击桌面上的分区工具。&lt;/li&gt;
+&lt;li&gt;重启电脑进入  &lt;code&gt;wepe&lt;/code&gt;  桌面，点击桌面上的分区工具。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDHUO.jpg&#34; alt=&#34;2&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;6&#34;&gt;
@@ -182,24 +188,24 @@
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDb5D.jpg&#34; alt=&#34;3&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;7&#34;&gt;
-&lt;li&gt;将你的分区表类型改为 GPI (GUID)，一般是默认的。&lt;/li&gt;
-&lt;li&gt;分区数目就是你要分几个磁盘就选几个分区，一般两个磁盘就够了，在右边可以设置每个分区 (磁盘) 的大小，第一个硬盘一般都是 C 盘，建议将大小设置为 120 G 。&lt;/li&gt;
-&lt;li&gt;然后将创建新 ESP 分区勾选上，勾选不了的就将上面的保留现有的 ESP 分区取消勾选。&lt;/li&gt;
-&lt;li&gt;对齐分区到此扇区数的整数倍选择 4096 扇区。&lt;/li&gt;
+&lt;li&gt;将你的分区表类型改为  &lt;code&gt;GPI(GUID)&lt;/code&gt; ，一般是默认的。&lt;/li&gt;
+&lt;li&gt;分区数目就是你要分几个磁盘就选几个分区，一般两个磁盘就够了，在右边可以设置每个分区 (磁盘) 的大小，第一个硬盘一般都是 C 盘，建议将大小设置为  &lt;code&gt;120 G&lt;/code&gt;  以上 。&lt;/li&gt;
+&lt;li&gt;然后将创建新  &lt;code&gt;ESP&lt;/code&gt;  分区勾选上，勾选不了的就将上面的保留现有的  &lt;code&gt;ESP&lt;/code&gt;  分区取消勾选。&lt;/li&gt;
+&lt;li&gt;对齐分区到此扇区数的整数倍选择  &lt;code&gt;4096&lt;/code&gt;  扇区。&lt;/li&gt;
 &lt;li&gt;最后点击确定。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDLPe.jpg&#34; alt=&#34;4&#34;&gt;&lt;/p&gt;
 &lt;ol start=&#34;12&#34;&gt;
-&lt;li&gt;回到桌面，点击 Windows 安装器。&lt;/li&gt;
+&lt;li&gt;回到桌面，点击  &lt;code&gt;Windows&lt;/code&gt;  安装器。&lt;/li&gt;
 &lt;li&gt;进入之后先选择你在 U 盘里的镜像，然后选择你要安装系统的位置，一般安装到 C 盘。&lt;/li&gt;
 &lt;li&gt;最后点击安装。&lt;/li&gt;
 &lt;li&gt;在一切完毕之后重启电脑就 ok 了。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://z1.ax1x.com/2023/11/29/piDDO8H.jpg&#34; alt=&#34;5&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;免责声明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#免责声明&#34;&gt;#&lt;/a&gt; 免责声明&lt;/h3&gt;
-&lt;p&gt;本文的内容仅供读者参考，不构成任何投资、法律或其他方面的建议。本文的信息和数据来自公开渠道，作者不保证其准确性和完整性。读者在阅读本文后，应自行判断其适用性和可靠性，并自行承担由此可能产生的所有风险和责任。作者对读者因阅读本文而造成的任何直接或间接的损失或损害概不负责。&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;rainbow&#34;&gt;本文的内容仅供读者参考，不构成任何投资、法律或其他方面的建议。本文的信息和数据来自公开渠道，作者不保证其准确性和完整性。读者在阅读本文后，应自行判断其适用性和可靠性，并自行承担由此可能产生的所有风险和责任。作者对读者因阅读本文而造成的任何直接或间接的损失或损害概不负责。&lt;/span&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;END&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>

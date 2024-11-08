@@ -57,6 +57,9 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
         <id>http://yunyat.cloud/test/Test/</id>
         <title>Test</title>

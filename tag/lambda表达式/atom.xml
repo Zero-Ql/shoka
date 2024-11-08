@@ -57,10 +57,13 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</id>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</id>
         <title>Java-lambda的方法引用</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/"/>
         <content type="html">&lt;h5 id=&#34;方法引用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法引用&#34;&gt;#&lt;/a&gt; 方法引用&lt;/h5&gt;
 &lt;p&gt;方法引用有四种引用方法&lt;/p&gt;
 &lt;table&gt;

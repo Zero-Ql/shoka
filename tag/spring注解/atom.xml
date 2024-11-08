@@ -57,10 +57,13 @@
     <category term="springboot" />
     <category term="springmvc" />
     <category term="spring注解" />
+    <category term="HTML" />
+    <category term="异常处理" />
+    <category term="问题解决" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</id>
+        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</id>
         <title>spring开发注解集合</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/"/>
         <content type="html">&lt;h3 id=&#34;spring-的常用注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-的常用注解&#34;&gt;#&lt;/a&gt; Spring 的常用注解&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;

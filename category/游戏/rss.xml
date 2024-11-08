@@ -60,6 +60,9 @@
         <category>springboot</category>
         <category>springmvc</category>
         <category>spring注解</category>
+        <category>HTML</category>
+        <category>异常处理</category>
+        <category>问题解决</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/</guid>
             <title>Mod开发指南 - 方块篇</title>
@@ -81,6 +84,8 @@
 &lt;p&gt;相区别的，如果我们使用 &lt;code&gt;ItemStack.copy()&lt;/code&gt;  创建一个物品堆的副本，虽然它和原物品堆内容一样， 但它们并不是同一实例，对其中一个更改并不会影响到另一个。&lt;/p&gt;
 &lt;p&gt;——&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcmtkdXN0LXR1dG9yaWFscy5raXR1aW4uZnVuL2Jhc2UvYmxvY2suaHRtbA==&#34;&gt;ArkdustTutorials-block&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
  ]]></description>
         </item>
         <item>
