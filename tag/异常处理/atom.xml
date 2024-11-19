@@ -60,6 +60,8 @@
     <category term="HTML" />
     <category term="异常处理" />
     <category term="问题解决" />
+    <category term="数据结构" />
+    <category term="算法" />
     <entry>
         <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</id>
         <title>springboot全局异常处理</title>

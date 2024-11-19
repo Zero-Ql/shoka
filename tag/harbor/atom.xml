@@ -60,6 +60,8 @@
     <category term="HTML" />
     <category term="异常处理" />
     <category term="问题解决" />
+    <category term="数据结构" />
+    <category term="算法" />
     <entry>
         <id>http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</id>
         <title>harbor本地仓库搭建</title>

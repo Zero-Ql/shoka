@@ -60,6 +60,8 @@
     <category term="HTML" />
     <category term="异常处理" />
     <category term="问题解决" />
+    <category term="数据结构" />
+    <category term="算法" />
     <entry>
         <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</id>
         <title>MyBatisPlus疑难杂症</title>

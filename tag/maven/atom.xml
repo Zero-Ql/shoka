@@ -60,6 +60,8 @@
     <category term="HTML" />
     <category term="异常处理" />
     <category term="问题解决" />
+    <category term="数据结构" />
+    <category term="算法" />
     <entry>
         <id>http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
         <title>Maven的使用</title>

@@ -63,6 +63,8 @@
         <category>HTML</category>
         <category>异常处理</category>
         <category>问题解决</category>
+        <category>数据结构</category>
+        <category>算法</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</guid>
             <title>JavaFx使用Maven打包及运行</title>

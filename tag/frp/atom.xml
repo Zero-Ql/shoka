@@ -60,6 +60,8 @@
     <category term="HTML" />
     <category term="异常处理" />
     <category term="问题解决" />
+    <category term="数据结构" />
+    <category term="算法" />
     <entry>
         <id>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>
         <title>任意版本win远程桌面使用内网穿透连接</title>

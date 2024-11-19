@@ -63,6 +63,8 @@
         <category>HTML</category>
         <category>异常处理</category>
         <category>问题解决</category>
+        <category>数据结构</category>
+        <category>算法</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
             <title>集合接口的继承及实现概览</title>
