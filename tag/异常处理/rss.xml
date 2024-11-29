@@ -14,57 +14,57 @@
         <category>SSH</category>
         <category>Docker</category>
         <category>harbor</category>
+        <category>可道云</category>
         <category>markdown</category>
         <category>mermaid</category>
-        <category>可道云</category>
-        <category>测试</category>
         <category>2023</category>
         <category>年度总结</category>
         <category>记录</category>
+        <category>测试</category>
         <category>暑假工</category>
+        <category>shell</category>
         <category>java</category>
         <category>junit</category>
         <category>python</category>
         <category>selenium</category>
         <category>MySQL</category>
-        <category>JavaScript</category>
-        <category>JSON</category>
-        <category>lambda表达式</category>
-        <category>java线程</category>
-        <category>Java</category>
-        <category>servlet</category>
-        <category>javafx</category>
-        <category>集合</category>
-        <category>shell</category>
         <category>游戏</category>
         <category>我的世界</category>
         <category>Hexo</category>
         <category>教程</category>
         <category>Git</category>
         <category>maven</category>
+        <category>破解</category>
+        <category>Typora</category>
         <category>cAdvisor</category>
         <category>Prometheus</category>
         <category>Grafana</category>
-        <category>frp</category>
-        <category>破解</category>
-        <category>Typora</category>
+        <category>Ubuntu</category>
         <category>xmind</category>
         <category>思维导图</category>
-        <category>Ubuntu</category>
+        <category>frp</category>
         <category>分享</category>
         <category>计算机</category>
-        <category>mybatis</category>
-        <category>mybatisplus</category>
-        <category>spring</category>
-        <category>ResponseEntity</category>
-        <category>springboot</category>
-        <category>springmvc</category>
-        <category>spring注解</category>
-        <category>HTML</category>
-        <category>异常处理</category>
-        <category>问题解决</category>
         <category>数据结构</category>
         <category>算法</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>HTML</category>
+        <category>lambda表达式</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>集合</category>
+        <category>springmvc</category>
+        <category>spring</category>
+        <category>spring注解</category>
+        <category>springboot</category>
+        <category>异常处理</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>问题解决</category>
+        <category>ResponseEntity</category>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
             <title>springboot全局异常处理</title>

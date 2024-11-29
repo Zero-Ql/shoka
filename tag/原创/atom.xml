@@ -11,57 +11,57 @@
     <category term="SSH" />
     <category term="Docker" />
     <category term="harbor" />
+    <category term="可道云" />
     <category term="markdown" />
     <category term="mermaid" />
-    <category term="可道云" />
-    <category term="测试" />
     <category term="2023" />
     <category term="年度总结" />
     <category term="记录" />
+    <category term="测试" />
     <category term="暑假工" />
+    <category term="shell" />
     <category term="java" />
     <category term="junit" />
     <category term="python" />
     <category term="selenium" />
     <category term="MySQL" />
-    <category term="JavaScript" />
-    <category term="JSON" />
-    <category term="lambda表达式" />
-    <category term="java线程" />
-    <category term="Java" />
-    <category term="servlet" />
-    <category term="javafx" />
-    <category term="集合" />
-    <category term="shell" />
     <category term="游戏" />
     <category term="我的世界" />
     <category term="Hexo" />
     <category term="教程" />
     <category term="Git" />
     <category term="maven" />
+    <category term="破解" />
+    <category term="Typora" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
-    <category term="frp" />
-    <category term="破解" />
-    <category term="Typora" />
+    <category term="Ubuntu" />
     <category term="xmind" />
     <category term="思维导图" />
-    <category term="Ubuntu" />
+    <category term="frp" />
     <category term="分享" />
     <category term="计算机" />
-    <category term="mybatis" />
-    <category term="mybatisplus" />
-    <category term="spring" />
-    <category term="ResponseEntity" />
-    <category term="springboot" />
-    <category term="springmvc" />
-    <category term="spring注解" />
-    <category term="HTML" />
-    <category term="异常处理" />
-    <category term="问题解决" />
     <category term="数据结构" />
     <category term="算法" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="HTML" />
+    <category term="lambda表达式" />
+    <category term="Java" />
+    <category term="servlet" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="集合" />
+    <category term="springmvc" />
+    <category term="spring" />
+    <category term="spring注解" />
+    <category term="springboot" />
+    <category term="异常处理" />
+    <category term="mybatis" />
+    <category term="mybatisplus" />
+    <category term="问题解决" />
+    <category term="ResponseEntity" />
     <entry>
         <id>http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
         <title>二叉树之打印二叉树</title>
@@ -184,9 +184,9 @@
         <updated>2024-11-15T09:16:25.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/HTML/HTML-2/</id>
+        <id>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</id>
         <title>HTML - 2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/HTML/HTML-2/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/"/>
         <content type="html">&lt;h3 id=&#34;html-基础&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-基础&#34;&gt;#&lt;/a&gt; HTML 基础&lt;/h3&gt;
 &lt;h4 id=&#34;html-标题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-标题&#34;&gt;#&lt;/a&gt; HTML 标题&lt;/h4&gt;
 &lt;p&gt;HTML 的标题 (Heading) 是通过  &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;  -  &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;  标签来定义的。&lt;/p&gt;
@@ -491,9 +491,9 @@
         <updated>2024-11-08T08:59:39.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/HTML/HTML-1/</id>
+        <id>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</id>
         <title>HTML - 1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/HTML/HTML-1/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/"/>
         <content type="html">&lt;h3 id=&#34;html&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html&#34;&gt;#&lt;/a&gt; HTML&lt;/h3&gt;
 &lt;h4 id=&#34;html-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-简介&#34;&gt;#&lt;/a&gt; HTML 简介&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -639,9 +639,9 @@
         <updated>2024-11-08T08:57:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript-3/</id>
+        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</id>
         <title>JavaScript - 3</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript-3/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/"/>
         <content type="html">&lt;h3 id=&#34;javascript-事件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript-事件&#34;&gt;#&lt;/a&gt; JavaScript 事件&lt;/h3&gt;
 &lt;hr&gt;
 &lt;p&gt;HTML 事件是发生在 HTML 元素上的事情&lt;/p&gt;
@@ -654,9 +654,9 @@
         <updated>2024-11-08T08:56:18.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript-2/</id>
+        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</id>
         <title>JavaScript - 2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript-2/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/"/>
         <content type="html">&lt;h3 id=&#34;对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对象&#34;&gt;#&lt;/a&gt; 对象&lt;/h3&gt;
 &lt;p&gt;在 JavaScript 中，除了核心类型 —— &lt;code&gt;core object&lt;/code&gt; ，其他的一切都是对象&lt;/p&gt;
 &lt;p&gt;JavaScript 的对象可以简单的理解为  &lt;code&gt;&amp;quot;名称&amp;quot;&lt;/code&gt; —— &lt;code&gt;&amp;quot;值&amp;quot;&lt;/code&gt; (你不应将其理解为键值对，因为 JavaScript 中有比其更接近键值对的  &lt;code&gt;Map&lt;/code&gt; （映射表，于 ES 2015 加入）)，其中， &lt;code&gt;&amp;quot;名称&amp;quot;&lt;/code&gt;  是一个字符串， &lt;code&gt;&amp;quot;值&amp;quot;&lt;/code&gt;  可以是任意 JavaScript 的数据类型 (包括对象)。正因为这种特性，使得用户可以创建出极为复杂的数据结构。&lt;/p&gt;
@@ -4031,9 +4031,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-16T03:35:58.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JSON/</id>
+        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</id>
         <title>JSON</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JSON/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/"/>
         <content type="html">&lt;h3 id=&#34;json-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#json-简介&#34;&gt;#&lt;/a&gt; JSON 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;JSON&lt;/code&gt; : &lt;strong&gt;J&lt;/strong&gt;ava&lt;strong&gt;S&lt;/strong&gt;cript &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;N&lt;/strong&gt;otation(  &lt;code&gt;JavaScript&lt;/code&gt;  对象表示法)&lt;/p&gt;
@@ -4924,9 +4924,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-11-27T08:59:13.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript%E7%AC%94%E8%AE%B0/</id>
+        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</id>
         <title>JavaScript - 1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%89%8D%E7%AB%AF/javascript/JavaScript%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h3 id=&#34;说明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#说明&#34;&gt;#&lt;/a&gt; 说明&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;因本人主学 &lt;code&gt;Java&lt;/code&gt; , 所以下文包括以后的笔记绝大部分都是与 Java 做对比&lt;/p&gt;
