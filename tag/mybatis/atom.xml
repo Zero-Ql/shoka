@@ -4,53 +4,53 @@
     <title>上善若水 • Posts by &#34;mybatis&#34; tag</title>
     <link href="http://yunyat.cloud" />
     <updated>2024-11-08T08:35:36.000Z</updated>
-    <category term="hexo" />
-    <category term="原创" />
     <category term="Linux" />
+    <category term="原创" />
+    <category term="hexo" />
     <category term="电脑技术" />
     <category term="SSH" />
-    <category term="Docker" />
-    <category term="harbor" />
-    <category term="可道云" />
-    <category term="markdown" />
-    <category term="mermaid" />
     <category term="2023" />
     <category term="年度总结" />
     <category term="记录" />
-    <category term="测试" />
+    <category term="可道云" />
+    <category term="Docker" />
+    <category term="harbor" />
     <category term="暑假工" />
-    <category term="shell" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
     <category term="java" />
     <category term="junit" />
     <category term="python" />
     <category term="selenium" />
     <category term="MySQL" />
+    <category term="shell" />
     <category term="游戏" />
     <category term="我的世界" />
     <category term="Hexo" />
     <category term="教程" />
     <category term="Git" />
     <category term="maven" />
-    <category term="破解" />
-    <category term="Typora" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
-    <category term="Ubuntu" />
+    <category term="破解" />
+    <category term="Typora" />
     <category term="xmind" />
     <category term="思维导图" />
+    <category term="Ubuntu" />
     <category term="frp" />
     <category term="分享" />
     <category term="计算机" />
     <category term="数据结构" />
     <category term="算法" />
+    <category term="HTML" />
     <category term="JavaScript" />
     <category term="JSON" />
-    <category term="HTML" />
     <category term="lambda表达式" />
+    <category term="java线程" />
     <category term="Java" />
     <category term="servlet" />
-    <category term="java线程" />
     <category term="javafx" />
     <category term="集合" />
     <category term="springmvc" />
@@ -63,9 +63,9 @@
     <category term="问题解决" />
     <category term="ResponseEntity" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</id>
+        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</id>
         <title>MyBatisPlus疑难杂症</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
         <content type="html">&lt;ol&gt;
 &lt;li&gt;无效绑定&lt;/li&gt;
 &lt;/ol&gt;
@@ -90,9 +90,9 @@
         <updated>2024-11-08T08:35:36.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</id>
+        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</id>
         <title>MyBatisPlus-3</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/"/>
         <content type="html">&lt;h3 id=&#34;条件构造器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#条件构造器&#34;&gt;#&lt;/a&gt; 条件构造器&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;MyBatis-Plus&lt;/em&gt; 提供了条件构造器 (&lt;em&gt;Wrapper&lt;/em&gt;) 来构建复杂的数据库查询条件，简单便捷，没有额外的负担。&lt;/p&gt;
 &lt;p&gt;Wrapper 类是构建查询和更新条件的核心工具。以下是主要的 Wrapper 类及其功能：&lt;/p&gt;
@@ -1084,9 +1084,9 @@
         <updated>2024-11-08T08:32:23.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</id>
+        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</id>
         <title>MyBatisPlus-2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/"/>
         <content type="html">&lt;h3 id=&#34;持久层接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#持久层接口&#34;&gt;#&lt;/a&gt; 持久层接口&lt;/h3&gt;
 &lt;h4 id=&#34;service-interface&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#service-interface&#34;&gt;#&lt;/a&gt; Service Interface&lt;/h4&gt;
 &lt;h5 id=&#34;save&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#save&#34;&gt;#&lt;/a&gt; save&lt;/h5&gt;
@@ -1235,9 +1235,9 @@
         <updated>2024-11-08T08:31:35.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</id>
+        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</id>
         <title>MyBatisPlus-1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/%E5%90%8E%E7%AB%AF/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/"/>
+        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/"/>
         <content type="html">&lt;h3 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Jhb21pZG91L215YmF0aXMtcGx1cw==&#34;&gt;MyBatis-Plus&lt;/span&gt; 是一个 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubXliYXRpcy5vcmcvbXliYXRpcy0zLw==&#34;&gt;MyBatis&lt;/span&gt; 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。&lt;/p&gt;
