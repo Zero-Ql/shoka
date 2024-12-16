@@ -1975,6 +1975,7 @@
 &lt;p&gt;相区别的，如果我们使用 &lt;code&gt;ItemStack.copy()&lt;/code&gt;  创建一个物品堆的副本，虽然它和原物品堆内容一样， 但它们并不是同一实例，对其中一个更改并不会影响到另一个。&lt;/p&gt;
 &lt;p&gt;——&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9hcmtkdXN0LXR1dG9yaWFscy5raXR1aW4uZnVuL2Jhc2UvYmxvY2suaHRtbA==&#34;&gt;ArkdustTutorials-block&lt;/span&gt;&lt;/p&gt;
 &lt;/div&gt;
+&lt;h2 id=&#34;方块基础属性blockproperties&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方块基础属性blockproperties&#34;&gt;#&lt;/a&gt; 方块基础属性 (BlockProperties)&lt;/h2&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;TODO&lt;/em&gt;&lt;/p&gt;
 </content>
