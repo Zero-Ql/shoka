@@ -5,8 +5,8 @@
         <link>http://yunyat.cloud</link>
         <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
         <language>zh-CN</language>
-        <pubDate>Mon, 24 Jun 2024 16:18:25 +0800</pubDate>
-        <lastBuildDate>Mon, 24 Jun 2024 16:18:25 +0800</lastBuildDate>
+        <pubDate>Sat, 08 Mar 2025 18:30:10 +0800</pubDate>
+        <lastBuildDate>Sat, 08 Mar 2025 18:30:10 +0800</lastBuildDate>
         <category>Linux</category>
         <category>原创</category>
         <category>hexo</category>
@@ -65,6 +65,36 @@
         <category>mybatisplus</category>
         <category>问题解决</category>
         <category>ResponseEntity</category>
+        <category>GitHub</category>
+        <item>
+            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</guid>
+            <title>设置代理解决GitHub连接问题</title>
+            <link>http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</link>
+            <category>SSH</category>
+            <category>GitHub</category>
+            <pubDate>Sat, 08 Mar 2025 18:30:10 +0800</pubDate>
+            <description><![CDATA[ &lt;h2 id=&#34;设置-ssh-代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置-ssh-代理&#34;&gt;#&lt;/a&gt; 设置 ssh 代理&lt;/h2&gt;
+&lt;div class=&#34;note primary&#34;&gt;
+&lt;p&gt;在设置之前，请确保正确配置了  &lt;code&gt;ssh&lt;/code&gt;  免密钥登录&lt;/p&gt;
+&lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在 config 文件中添加以下行&lt;/p&gt;
+&lt;figure class=&#34;highlight yaml&#34;&gt;&lt;figcaption data-lang=&#34;YAML&#34;&gt;&lt;span&gt;命令 参考链接&lt;/span&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC80ODE1NzQwMjQ=&#34;&gt;link&lt;/span&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ProxyCommand &#34;C&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;\APP\Git\mingw64\bin\connect&#34; &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;S 127.0.0.1&lt;span class=&#34;token punctuation&#34;&gt;:&lt;/span&gt;51837 &lt;span class=&#34;token punctuation&#34;&gt;-&lt;/span&gt;a none %h %p&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;div class=&#34;note info&#34;&gt;
+&lt;p&gt;你应该替换你自己本地代理的端口号以及 &lt;code&gt;connect&lt;/code&gt;  的路径&lt;/p&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;测试&lt;/p&gt;
+&lt;p&gt;在你配置完并打开本地代理后在终端输入&lt;/p&gt;
+&lt;figure class=&#34;highlight powershell&#34;&gt;&lt;figcaption data-lang=&#34;PowerShell&#34;&gt;&lt;span&gt;命令&lt;/span&gt;&lt;a href=&#34;https://yunyat.cloud&#34;&gt;参考链接&lt;/a&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr class=&#34;marked&#34;&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;ssh &lt;span class=&#34;token operator&#34;&gt;-&lt;/span&gt;T git@github&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;com&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;出现图中所示结果则表示成功&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/image-20250308185046181.png&#34; alt=&#34;image-20250308185046181&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
+ ]]></description>
+        </item>
         <item>
             <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</guid>
             <title>Yum安装失败</title>
