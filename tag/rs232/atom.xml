@@ -4,12 +4,8 @@
     <title>上善若水 • Posts by &#34;rs232&#34; tag</title>
     <link href="https://yunyat.cloud" />
     <updated>2025-07-11T06:18:55.000Z</updated>
-    <category term="2023" />
-    <category term="年度总结" />
-    <category term="原创" />
-    <category term="记录" />
     <category term="hexo" />
-    <category term="暑假工" />
+    <category term="原创" />
     <category term="Linux" />
     <category term="RS232" />
     <category term="RS485" />
@@ -21,51 +17,55 @@
     <category term="可道云" />
     <category term="markdown" />
     <category term="mermaid" />
+    <category term="2023" />
+    <category term="年度总结" />
+    <category term="记录" />
     <category term="测试" />
-    <category term="java" />
-    <category term="junit" />
-    <category term="python" />
-    <category term="selenium" />
-    <category term="MySQL" />
-    <category term="shell" />
-    <category term="游戏" />
-    <category term="我的世界" />
+    <category term="暑假工" />
     <category term="Hexo" />
     <category term="教程" />
-    <category term="破解" />
-    <category term="xmind" />
-    <category term="思维导图" />
-    <category term="Typora" />
-    <category term="frp" />
-    <category term="Ubuntu" />
-    <category term="分享" />
-    <category term="计算机" />
-    <category term="GitHub" />
+    <category term="python" />
+    <category term="selenium" />
+    <category term="java" />
+    <category term="junit" />
+    <category term="MySQL" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
+    <category term="游戏" />
+    <category term="我的世界" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
+    <category term="破解" />
+    <category term="Typora" />
+    <category term="xmind" />
+    <category term="思维导图" />
+    <category term="Ubuntu" />
+    <category term="frp" />
+    <category term="分享" />
+    <category term="计算机" />
+    <category term="GitHub" />
+    <category term="HTML" />
     <category term="数据结构" />
     <category term="算法" />
-    <category term="HTML" />
-    <category term="JavaScript" />
-    <category term="JSON" />
     <category term="lambda表达式" />
-    <category term="java线程" />
-    <category term="javafx" />
     <category term="Java" />
     <category term="servlet" />
+    <category term="java线程" />
+    <category term="javafx" />
     <category term="集合" />
+    <category term="JavaScript" />
+    <category term="JSON" />
     <category term="springmvc" />
     <category term="spring" />
-    <category term="spring注解" />
     <category term="springboot" />
     <category term="异常处理" />
+    <category term="spring注解" />
     <category term="mybatis" />
     <category term="mybatisplus" />
-    <category term="问题解决" />
     <category term="ResponseEntity" />
+    <category term="问题解决" />
     <entry>
         <id>https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</id>
         <title>RS232与RS485串口调试方案</title>
@@ -78,7 +78,7 @@
 &lt;li&gt;确认螺丝端子是 232 转 232，还是 232 转 485&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;插入串口，如果一切顺利，那么应该会显示如下图所示的 &lt;code&gt;USB xxx(COMn)&lt;/code&gt; (n 为数字)；如果没有，请检查驱动是否正确安装 or 接线是否正确&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709114420.png&#34; alt=&#34;image-20250709114413848&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709114420.png&#34; alt=&#34;image-20250709114413848&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;安装minicom-设置minicom&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装minicom-设置minicom&#34;&gt;#&lt;/a&gt; 安装 minicom &amp;amp; 设置 minicom&lt;/h3&gt;
 &lt;ol&gt;
 &lt;li&gt;
@@ -92,11 +92,11 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;输入  &lt;code&gt;minicom -s&lt;/code&gt;  打开   &lt;code&gt;minicom&lt;/code&gt;  设置&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134020.png&#34; alt=&#34;image-20250709134020176&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709134020.png&#34; alt=&#34;image-20250709134020176&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;选择  &lt;code&gt;Serial port setup&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134728.png&#34; alt=&#34;image-20250709134727862&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709134728.png&#34; alt=&#34;image-20250709134727862&#34;&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;A - Serial Device&lt;/code&gt;  :  &lt;code&gt;/dev/modem&lt;/code&gt;&lt;/p&gt;
@@ -184,14 +184,14 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;有针脚的为公头&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150407.jpeg&#34; alt=&#34;公头&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709150407.jpeg&#34; alt=&#34;公头&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;没有的为母头&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150428.jpeg&#34; alt=&#34;母头&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709150428.jpeg&#34; alt=&#34;母头&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709145106.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709145106.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;针脚解释&lt;/p&gt;
@@ -270,7 +270,7 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;RS-485 使用差分信号传输，通过一对导线 (网线等) 上的电压差来传输数据。当  &lt;code&gt;T/R+&lt;/code&gt;  比  &lt;code&gt;T/R-&lt;/code&gt;  高时代表 &lt;code&gt;1&lt;/code&gt; ，反之代表逻辑 &lt;code&gt;0&lt;/code&gt; ； &lt;code&gt;GND&lt;/code&gt;  为接地线，可以接也可以不接&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711152645.jpeg&#34; alt=&#34;rs232转rs485母口&amp;amp;rs232电压转rs485电压&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711152645.jpeg&#34; alt=&#34;rs232转rs485母口&amp;amp;rs232电压转rs485电压&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;如图所示 :&lt;/p&gt;
@@ -290,19 +290,19 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;选择如下图所示红框中的协议&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162351.png&#34; alt=&#34;image-20250711162350937&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711162351.png&#34; alt=&#34;image-20250711162350937&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;然后点击左侧串口选项，将常规配置的选项配置为服务器的 minicom 相同的配置&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162530.png&#34; alt=&#34;image-20250711162530375&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711162530.png&#34; alt=&#34;image-20250711162530375&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在服务器使用 root 用户输入 minicom 来启动 minicom；在 xshell 中点击连接&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162821.png&#34; alt=&#34;image-20250711162821459&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711162821.png&#34; alt=&#34;image-20250711162821459&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;之后在两边终端中各输入  &lt;code&gt;test1&lt;/code&gt;  和  &lt;code&gt;test2&lt;/code&gt;  后如下图所示，两边都有对端输入的字符&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163139.png&#34; alt=&#34;image-20250711163139610&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711163139.png&#34; alt=&#34;image-20250711163139610&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;如果结果不是上面图中所示内容请检查接线以及串口的配置参数&lt;/p&gt;
@@ -319,14 +319,14 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;打开串口调试助手，将参数配置为与服务器 minicom 相同&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163442.png&#34; alt=&#34;image-20250711163442350&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711163442.png&#34; alt=&#34;image-20250711163442350&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击打开&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;同方案一第五步骤&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163719.png&#34; alt=&#34;image-20250711163719671&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250711163719.png&#34; alt=&#34;image-20250711163719671&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;如果都有显示则串口通信没有问题&lt;/p&gt;
@@ -343,23 +343,23 @@
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;使用 win+x 打开如图选项框，点击设置&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103039.png&#34; alt=&#34;image-20250709103032922&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709103039.png&#34; alt=&#34;image-20250709103032922&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;进入设置先点击 &lt;code&gt;隐私和安全性&lt;/code&gt; ，然后点击 &lt;code&gt;windows安全中心&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103319.png&#34; alt=&#34;image-20250709103318752&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709103319.png&#34; alt=&#34;image-20250709103318752&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击设备安全性&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103400.png&#34; alt=&#34;image-20250709103359846&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709103400.png&#34; alt=&#34;image-20250709103359846&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;在安全中心点击内核隔离详细信息&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103457.png&#34; alt=&#34;image-20250709103457253&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709103457.png&#34; alt=&#34;image-20250709103457253&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;点击关闭内核隔离&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103536.png&#34; alt=&#34;image-20250709103536230&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://figurebed.yunyat.cloud/imgs/20250709103536.png&#34; alt=&#34;image-20250709103536230&#34;&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;/li&gt;
