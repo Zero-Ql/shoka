@@ -2,19 +2,18 @@
 <rss version="2.0">
     <channel>
         <title>上善若水 • Posts by &#34;版本控制&#34; category</title>
-        <link>http://yunyat.cloud</link>
+        <link>https://yunyat.cloud</link>
         <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
         <language>zh-CN</language>
         <pubDate>Thu, 26 Oct 2023 19:30:24 +0800</pubDate>
         <lastBuildDate>Thu, 26 Oct 2023 19:30:24 +0800</lastBuildDate>
-        <category>markdown</category>
-        <category>mermaid</category>
-        <category>测试</category>
-        <category>hexo</category>
-        <category>原创</category>
         <category>Linux</category>
+        <category>原创</category>
         <category>电脑技术</category>
         <category>SSH</category>
+        <category>RS232</category>
+        <category>RS485</category>
+        <category>硬件</category>
         <category>可道云</category>
         <category>Docker</category>
         <category>harbor</category>
@@ -22,54 +21,58 @@
         <category>年度总结</category>
         <category>记录</category>
         <category>暑假工</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>hexo</category>
         <category>游戏</category>
         <category>我的世界</category>
         <category>java</category>
         <category>junit</category>
-        <category>shell</category>
         <category>python</category>
         <category>selenium</category>
-        <category>Hexo</category>
-        <category>教程</category>
         <category>MySQL</category>
+        <category>shell</category>
         <category>Git</category>
         <category>maven</category>
         <category>cAdvisor</category>
         <category>Prometheus</category>
         <category>Grafana</category>
+        <category>frp</category>
         <category>破解</category>
         <category>Typora</category>
         <category>xmind</category>
         <category>思维导图</category>
         <category>Ubuntu</category>
-        <category>frp</category>
         <category>分享</category>
         <category>计算机</category>
         <category>GitHub</category>
+        <category>Hexo</category>
+        <category>教程</category>
         <category>数据结构</category>
         <category>算法</category>
-        <category>HTML</category>
-        <category>JavaScript</category>
         <category>lambda表达式</category>
-        <category>JSON</category>
-        <category>java线程</category>
-        <category>javafx</category>
-        <category>集合</category>
         <category>Java</category>
         <category>servlet</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>集合</category>
+        <category>HTML</category>
         <category>springmvc</category>
         <category>spring</category>
         <category>spring注解</category>
-        <category>ResponseEntity</category>
+        <category>springboot</category>
+        <category>异常处理</category>
         <category>mybatis</category>
         <category>mybatisplus</category>
         <category>问题解决</category>
-        <category>springboot</category>
-        <category>异常处理</category>
+        <category>ResponseEntity</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Git的使用</title>
-            <link>http://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <category>Git</category>
             <pubDate>Thu, 26 Oct 2023 19:30:24 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;git概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git概念&#34;&gt;#&lt;/a&gt; Git 概念&lt;/h4&gt;
@@ -440,9 +443,9 @@ Fast-forward
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</guid>
             <title>Git同时部署多个仓库</title>
-            <link>http://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</link>
+            <link>https://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</link>
             <category>Git</category>
             <pubDate>Thu, 26 Oct 2023 11:20:32 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;私有仓库的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#私有仓库的配置&#34;&gt;#&lt;/a&gt; 私有仓库的配置&lt;/h4&gt;
@@ -546,9 +549,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Maven的使用</title>
-            <link>http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <category>java</category>
             <category>maven</category>
             <pubDate>Sat, 08 Jul 2023 23:32:50 +0800</pubDate>

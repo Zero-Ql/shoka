@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yunyat.cloud</id>
+    <id>https://yunyat.cloud</id>
     <title>上善若水 • Posts by &#34;杂项&#34; category</title>
-    <link href="http://yunyat.cloud" />
+    <link href="https://yunyat.cloud" />
     <updated>2025-03-08T10:30:10.000Z</updated>
-    <category term="markdown" />
-    <category term="mermaid" />
-    <category term="测试" />
-    <category term="hexo" />
-    <category term="原创" />
     <category term="Linux" />
+    <category term="原创" />
     <category term="电脑技术" />
     <category term="SSH" />
+    <category term="RS232" />
+    <category term="RS485" />
+    <category term="硬件" />
     <category term="可道云" />
     <category term="Docker" />
     <category term="harbor" />
@@ -19,54 +18,58 @@
     <category term="年度总结" />
     <category term="记录" />
     <category term="暑假工" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="hexo" />
     <category term="游戏" />
     <category term="我的世界" />
     <category term="java" />
     <category term="junit" />
-    <category term="shell" />
     <category term="python" />
     <category term="selenium" />
-    <category term="Hexo" />
-    <category term="教程" />
     <category term="MySQL" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
+    <category term="frp" />
     <category term="破解" />
     <category term="Typora" />
     <category term="xmind" />
     <category term="思维导图" />
     <category term="Ubuntu" />
-    <category term="frp" />
     <category term="分享" />
     <category term="计算机" />
     <category term="GitHub" />
+    <category term="Hexo" />
+    <category term="教程" />
     <category term="数据结构" />
     <category term="算法" />
-    <category term="HTML" />
-    <category term="JavaScript" />
     <category term="lambda表达式" />
-    <category term="JSON" />
-    <category term="java线程" />
-    <category term="javafx" />
-    <category term="集合" />
     <category term="Java" />
     <category term="servlet" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="集合" />
+    <category term="HTML" />
     <category term="springmvc" />
     <category term="spring" />
     <category term="spring注解" />
-    <category term="ResponseEntity" />
+    <category term="springboot" />
+    <category term="异常处理" />
     <category term="mybatis" />
     <category term="mybatisplus" />
     <category term="问题解决" />
-    <category term="springboot" />
-    <category term="异常处理" />
+    <category term="ResponseEntity" />
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</id>
         <title>设置代理解决GitHub连接问题</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
         <content type="html">&lt;h2 id=&#34;设置-ssh-代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置-ssh-代理&#34;&gt;#&lt;/a&gt; 设置 ssh 代理&lt;/h2&gt;
 &lt;div class=&#34;note primary&#34;&gt;
 &lt;p&gt;在设置之前，请确保正确配置了  &lt;code&gt;ssh&lt;/code&gt;  免密钥登录&lt;/p&gt;
@@ -93,9 +96,9 @@
         <updated>2025-03-08T10:30:10.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</id>
         <title>Yum安装失败</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/"/>
         <content type="html">&lt;h1 id=&#34;描述&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#描述&#34;&gt;#&lt;/a&gt; 描述&lt;/h1&gt;
 &lt;p&gt;使用  &lt;code&gt;apt-get&lt;/code&gt;  安装  &lt;code&gt;yum&lt;/code&gt;  失败&lt;/p&gt;
 &lt;h2 id=&#34;环境&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#环境&#34;&gt;#&lt;/a&gt; 环境&lt;/h2&gt;
@@ -113,9 +116,9 @@
         <updated>2024-06-24T08:18:25.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
+        <id>https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
         <title>2023年度总结</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
 &lt;p&gt;先在这里提前祝大家新年快乐！新的一年要开开心心，顺顺利利的。🧨爆竹🎇烟花💥爆炸✨闪亮&lt;/p&gt;
 &lt;hr&gt;
@@ -135,9 +138,9 @@
         <updated>2024-02-09T12:56:01.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</id>
+        <id>https://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</id>
         <title>windows重装系统重制版</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
         <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
 &lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;&lt;b&gt;重要&lt;/b&gt;：在阅读本文章前请确保你已拥有这些技能：&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
@@ -211,9 +214,9 @@
         <updated>2023-11-29T06:37:53.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>
+        <id>https://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>
         <title>任意版本win远程桌面使用内网穿透连接</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/"/>
         <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;&lt;b&gt;重要&lt;/b&gt;：请不要问我为什么不能访问 GitHub 网站这种问题&lt;/p&gt;
@@ -290,9 +293,9 @@
         <updated>2023-11-28T14:56:44.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</id>
         <title>Xmind破解</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/"/>
         <content type="html">&lt;h4 id=&#34;下载-xmind&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载-xmind&#34;&gt;#&lt;/a&gt; 下载 Xmind&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;先去下载 Xmind 的最新版本&lt;/li&gt;
@@ -332,9 +335,9 @@
         <updated>2023-11-09T07:43:55.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</id>
         <title>Typora的破解</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/"/>
         <content type="html">&lt;h4 id=&#34;前言废话&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言废话&#34;&gt;#&lt;/a&gt; 前言（&lt;s&gt;废话&lt;/s&gt;）&lt;/h4&gt;
 &lt;p&gt;介绍一下 Typora 是什么…&lt;/p&gt;
 &lt;blockquote&gt;
@@ -397,16 +400,16 @@
 &lt;hr&gt;
 &lt;p&gt;END&lt;/p&gt;
 </content>
-        <category term="markdown" />
         <category term="原创" />
+        <category term="markdown" />
         <category term="破解" />
         <category term="Typora" />
         <updated>2023-11-07T14:40:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</id>
+        <id>https://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</id>
         <title>谈谈看完《孤注一掷》的感想</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/"/>
         <content type="html">&lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
 &lt;p&gt;我并没有什么文采，也不懂什么高深的遣词造句，此篇如其名，只是谈一下我对看完这部电影的浅薄感想！&lt;/p&gt;
 &lt;p&gt;就这么多吧，将就着看看就成，不必当真。&lt;/p&gt;
@@ -427,9 +430,9 @@
         <updated>2023-09-16T10:29:35.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</id>
+        <id>https://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</id>
         <title>暑假工踩坑记</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/"/>
         <content type="html">&lt;p&gt;一切的不顺，全都来之于能力的不足&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
@@ -464,9 +467,9 @@
         <updated>2023-06-28T09:26:18.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</id>
         <title>湖北飞young算号器</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/"/>
         <content type="html">&lt;hr&gt;
 &lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
 &lt;ul&gt;
@@ -513,9 +516,9 @@
         <updated>2023-06-13T08:24:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
         <title>frp之内网穿透</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/01/p98QaIP.jpg&#34; alt=&#34;p98QaIP.jpg&#34;&gt;&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
@@ -611,9 +614,9 @@
         <updated>2023-05-08T04:12:18.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
         <title>记一次电脑启动原神蓝屏解决方案</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
         <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;原因：&lt;/p&gt;
@@ -632,9 +635,9 @@
         <updated>2023-05-05T16:24:25.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
         <title>安利几个好用的网站</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
         <content type="html">&lt;h4 id=&#34;今天来分享几个十分好用的网站&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#今天来分享几个十分好用的网站&#34;&gt;#&lt;/a&gt; 今天来分享几个十分好用的网站&lt;/h4&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;游戏类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#游戏类&#34;&gt;#&lt;/a&gt; 游戏类&lt;/h5&gt;

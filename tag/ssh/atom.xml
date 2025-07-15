@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yunyat.cloud</id>
+    <id>https://yunyat.cloud</id>
     <title>上善若水 • Posts by &#34;ssh&#34; tag</title>
-    <link href="http://yunyat.cloud" />
+    <link href="https://yunyat.cloud" />
     <updated>2025-03-08T10:30:10.000Z</updated>
-    <category term="markdown" />
-    <category term="mermaid" />
-    <category term="测试" />
-    <category term="hexo" />
-    <category term="原创" />
     <category term="Linux" />
+    <category term="原创" />
     <category term="电脑技术" />
     <category term="SSH" />
+    <category term="RS232" />
+    <category term="RS485" />
+    <category term="硬件" />
     <category term="可道云" />
     <category term="Docker" />
     <category term="harbor" />
@@ -19,54 +18,58 @@
     <category term="年度总结" />
     <category term="记录" />
     <category term="暑假工" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="hexo" />
     <category term="游戏" />
     <category term="我的世界" />
     <category term="java" />
     <category term="junit" />
-    <category term="shell" />
     <category term="python" />
     <category term="selenium" />
-    <category term="Hexo" />
-    <category term="教程" />
     <category term="MySQL" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
+    <category term="frp" />
     <category term="破解" />
     <category term="Typora" />
     <category term="xmind" />
     <category term="思维导图" />
     <category term="Ubuntu" />
-    <category term="frp" />
     <category term="分享" />
     <category term="计算机" />
     <category term="GitHub" />
+    <category term="Hexo" />
+    <category term="教程" />
     <category term="数据结构" />
     <category term="算法" />
-    <category term="HTML" />
-    <category term="JavaScript" />
     <category term="lambda表达式" />
-    <category term="JSON" />
-    <category term="java线程" />
-    <category term="javafx" />
-    <category term="集合" />
     <category term="Java" />
     <category term="servlet" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="集合" />
+    <category term="HTML" />
     <category term="springmvc" />
     <category term="spring" />
     <category term="spring注解" />
-    <category term="ResponseEntity" />
+    <category term="springboot" />
+    <category term="异常处理" />
     <category term="mybatis" />
     <category term="mybatisplus" />
     <category term="问题解决" />
-    <category term="springboot" />
-    <category term="异常处理" />
+    <category term="ResponseEntity" />
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</id>
         <title>设置代理解决GitHub连接问题</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/"/>
         <content type="html">&lt;h2 id=&#34;设置-ssh-代理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#设置-ssh-代理&#34;&gt;#&lt;/a&gt; 设置 ssh 代理&lt;/h2&gt;
 &lt;div class=&#34;note primary&#34;&gt;
 &lt;p&gt;在设置之前，请确保正确配置了  &lt;code&gt;ssh&lt;/code&gt;  免密钥登录&lt;/p&gt;
@@ -93,9 +96,9 @@
         <updated>2025-03-08T10:30:10.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/SSH-Agent/</id>
+        <id>https://yunyat.cloud/linux/SSH-Agent/</id>
         <title>SSH Agent</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/SSH-Agent/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/SSH-Agent/"/>
         <content type="html">&lt;h3 id=&#34;ssh-agent-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh-agent-简介&#34;&gt;#&lt;/a&gt; &lt;em&gt;SSH Agent&lt;/em&gt; 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;*SSH Agent（Secure Shell Agent）* 是一个帮助管理 &lt;em&gt;SSH&lt;/em&gt; 认证过程的守护进程。它的主要功能是存储用户的私钥，并代表用户在进行 &lt;em&gt;SSH&lt;/em&gt; 认证时向 &lt;em&gt;SSH&lt;/em&gt; 服务器提供这些私钥，从而避免频繁输入密码或私钥文件的路径。&lt;em&gt;SSH Agent&lt;/em&gt; 的设计目的是为了提高安全性、方便性和效率。&lt;/p&gt;
@@ -162,9 +165,9 @@
         <updated>2024-11-03T06:36:15.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</id>
+        <id>https://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</id>
         <title>Win至Linux的免密登录</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
         <content type="html">&lt;h4 id=&#34;配置-windows-端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-windows-端&#34;&gt;#&lt;/a&gt; 配置 Windows 端&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;先在 Windows 下生成公钥文件&lt;/li&gt;

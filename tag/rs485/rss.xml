@@ -1,0 +1,378 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>上善若水 • Posts by &#34;rs485&#34; tag</title>
+        <link>https://yunyat.cloud</link>
+        <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
+        <language>zh-CN</language>
+        <pubDate>Fri, 11 Jul 2025 14:18:55 +0800</pubDate>
+        <lastBuildDate>Fri, 11 Jul 2025 14:18:55 +0800</lastBuildDate>
+        <category>Linux</category>
+        <category>原创</category>
+        <category>电脑技术</category>
+        <category>SSH</category>
+        <category>RS232</category>
+        <category>RS485</category>
+        <category>硬件</category>
+        <category>可道云</category>
+        <category>Docker</category>
+        <category>harbor</category>
+        <category>2023</category>
+        <category>年度总结</category>
+        <category>记录</category>
+        <category>暑假工</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>hexo</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>java</category>
+        <category>junit</category>
+        <category>python</category>
+        <category>selenium</category>
+        <category>MySQL</category>
+        <category>shell</category>
+        <category>Git</category>
+        <category>maven</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>frp</category>
+        <category>破解</category>
+        <category>Typora</category>
+        <category>xmind</category>
+        <category>思维导图</category>
+        <category>Ubuntu</category>
+        <category>分享</category>
+        <category>计算机</category>
+        <category>GitHub</category>
+        <category>Hexo</category>
+        <category>教程</category>
+        <category>数据结构</category>
+        <category>算法</category>
+        <category>lambda表达式</category>
+        <category>Java</category>
+        <category>servlet</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>集合</category>
+        <category>HTML</category>
+        <category>springmvc</category>
+        <category>spring</category>
+        <category>spring注解</category>
+        <category>springboot</category>
+        <category>异常处理</category>
+        <category>mybatis</category>
+        <category>mybatisplus</category>
+        <category>问题解决</category>
+        <category>ResponseEntity</category>
+        <item>
+            <guid isPermalink="true">https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</guid>
+            <title>RS232与RS485串口调试方案</title>
+            <link>https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</link>
+            <category>原创</category>
+            <category>RS232</category>
+            <category>RS485</category>
+            <category>硬件</category>
+            <pubDate>Fri, 11 Jul 2025 14:18:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;连接串口-安装驱动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#连接串口-安装驱动&#34;&gt;#&lt;/a&gt; 连接串口 &amp;amp; 安装驱动&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡tips : 检查服务器上有几个串口，以及是公口还是母口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;确认螺丝端子是 232 转 232，还是 232 转 485&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;插入串口，如果一切顺利，那么应该会显示如下图所示的 &lt;code&gt;USB xxx(COMn)&lt;/code&gt; (n 为数字)；如果没有，请检查驱动是否正确安装 or 接线是否正确&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709114420.png&#34; alt=&#34;image-20250709114413848&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装minicom-设置minicom&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装minicom-设置minicom&#34;&gt;#&lt;/a&gt; 安装 minicom &amp;amp; 设置 minicom&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将  &lt;code&gt;minicom_packages.zip&lt;/code&gt;  包上传到服务器上并解压  &lt;code&gt;minicom_packages.zip&lt;/code&gt;  包&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 解压&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; minicom_packages.zip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 给予可执行权限&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x install_centos.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 执行安装脚本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./install_centos.shh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置  &lt;code&gt;minicom&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️警告：以下操作需要在 root 用户下执行，否则保存配置不生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输入  &lt;code&gt;minicom -s&lt;/code&gt;  打开   &lt;code&gt;minicom&lt;/code&gt;  设置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134020.png&#34; alt=&#34;image-20250709134020176&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择  &lt;code&gt;Serial port setup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134728.png&#34; alt=&#34;image-20250709134727862&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;A - Serial Device&lt;/code&gt;  :  &lt;code&gt;/dev/modem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;指定用于通信的串行设备文件路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;C - Callin Program&lt;/code&gt;  :&lt;/p&gt;
+&lt;p&gt;用于指定调制解调器来电执行的脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;D - Callout Program&lt;/code&gt;  :&lt;/p&gt;
+&lt;p&gt;用于指定调制解调器拨出电话执行的脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;E - Bps/Par/Bits&lt;/code&gt;  :  &lt;code&gt;115200 8N1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;定义串行通信的基本参数&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Bps(Bits per second)&lt;/code&gt;  : 波特率，即每秒传输的数据位数。此处默认为每秒传输 115200 个数据位.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Data Bits&lt;/code&gt;  : 数据位数，表示每个字符由 8 个数据位组成.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Parity&lt;/code&gt;  : 校验方式， &lt;code&gt;E&lt;/code&gt;  (Even, 偶校验).  &lt;code&gt;O&lt;/code&gt;  (Odd, 奇校验).  &lt;code&gt;N&lt;/code&gt;  (None, 不校验)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Stop Bits&lt;/code&gt;  : 停止位数，表示每个字符后有一个停止位.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;F - Hardware Flow Control&lt;/code&gt;  : Yes&lt;/p&gt;
+&lt;p&gt;硬件流控制是否启用&lt;/p&gt;
+&lt;p&gt;通常通过  &lt;code&gt;RTS/CTS&lt;/code&gt;  信号线 (信号线参见下文) 实现，用于防止数据溢出和丢失&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;G - Software Flow Control&lt;/code&gt;  : No&lt;/p&gt;
+&lt;p&gt;软件流控制是否启用&lt;/p&gt;
+&lt;p&gt;通常通过  &lt;code&gt;XON/XOFF&lt;/code&gt;  字符实现，用于控制数据流的暂停和回复&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过输入选项前面的字母来更改对应的设置项，使用  &lt;code&gt;esc&lt;/code&gt;  返回 (不保存); 使用  &lt;code&gt;enter(回车)&lt;/code&gt;  保存并返回&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在按 E 后显示 Comm Parameters 界面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current 行：该行为当前设置的参数&lt;/li&gt;
+&lt;li&gt;Speed 列：用于设置波特率，使用指定选项选择对应的频率&lt;/li&gt;
+&lt;li&gt;Parity 列：用于设置当前校验方式&lt;/li&gt;
+&lt;li&gt;Data 列：用于设置数据位数&lt;/li&gt;
+&lt;li&gt;Stopbits 列：用于设置停止位的数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在全部设置完成后选择  &lt;code&gt;Save setup as dfl&lt;/code&gt;  保存为默认设置或选择  &lt;code&gt;Save setup as ..&lt;/code&gt;  并指定一个名称来保存当前设置&lt;/p&gt;
+&lt;p&gt;设置文件默认保存在  &lt;code&gt;/etc/minirc.dfl&lt;/code&gt;  文件中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保存完成后选择  &lt;code&gt;Exit from Minicom&lt;/code&gt;  退出&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;串口基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#串口基础知识&#34;&gt;#&lt;/a&gt; 串口基础知识&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;串口常用的分为 RS-232 以及 RS-485&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RS-232 :&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该接口通常使用 DB9 针接口 (只有 9 个针脚) or DB25 (25 个针脚)；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-232 使用单端信号传输方式 (即一根针脚&lt;strong&gt;传输&lt;/strong&gt;一根针脚&lt;strong&gt;接收&lt;/strong&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS485 :&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该接口不需要特定类型的连接器，它可能使用各种类型的连接器，包括 RJ45、螺丝端子 (如下图接口一所示) 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-485 使用半双工 (两根导线) 或全双工 (四根导线) 进行通信&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;rs-232接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rs-232接口&#34;&gt;#&lt;/a&gt; RS-232 接口&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;公头 or 母头&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;有针脚的为公头&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150407.jpeg&#34; alt=&#34;公头&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;没有的为母头&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150428.jpeg&#34; alt=&#34;母头&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709145106.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;针脚解释&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;引脚&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;简写&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;载波侦测 (Carrier Detect)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RXD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;接收数据 (Receive)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;TXD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;发送数据 (Transmit)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DTR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据终端准备 (Data Terminal Ready)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;GND&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;地线 (Ground)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DSR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据准备好 (Data Set Ready)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;请求发送 (Request To Send)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清除发送 (Clear To Send)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RI&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;振铃指示 (Ring Indicator)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一般只用到 2、3、5 三个引脚；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS232 是全双工；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS232 限于 15 米以内，理论传输距离是 10 米；&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdndWNoYW8vYXJ0aWNsZS9kZXRhaWxzLzEyODQ3OTEwNg==&#34;&gt;参考文献&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;rs-485接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rs-485接口&#34;&gt;#&lt;/a&gt; RS-485 接口&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;如下图螺丝端子接口中的 &lt;code&gt;T/R+&lt;/code&gt; 、 &lt;code&gt;T/R-&lt;/code&gt; 、 &lt;code&gt;GND&lt;/code&gt;  等，下图接口一为半双工螺丝端子，全双工需要再加两根接线端子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-485 使用差分信号传输，通过一对导线 (网线等) 上的电压差来传输数据。当  &lt;code&gt;T/R+&lt;/code&gt;  比  &lt;code&gt;T/R-&lt;/code&gt;  高时代表 &lt;code&gt;1&lt;/code&gt; ，反之代表逻辑 &lt;code&gt;0&lt;/code&gt; ； &lt;code&gt;GND&lt;/code&gt;  为接地线，可以接也可以不接&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711152645.jpeg&#34; alt=&#34;rs232转rs485母口&amp;amp;rs232电压转rs485电压&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如图所示 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接口一为 RS-232 转 RS-485 (只有 4 个螺丝口）&lt;/li&gt;
+&lt;li&gt;接口二为 RS-232 电压 与 RS-485 电压 互转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️注意：接口二仅在需要转换 232 与 485 的电压时需要使用，如果使用的是 RS-232 转 RS-232 螺丝端子 (有十个螺丝)，则不需要使用此接口，直接连接即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;开始调试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开始调试&#34;&gt;#&lt;/a&gt; 开始调试&lt;/h3&gt;
+&lt;h4 id=&#34;方案一xshell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案一xshell&#34;&gt;#&lt;/a&gt; 方案一 (Xshell)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;电脑安装有 xshell，点击文件，新建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择如下图所示红框中的协议&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162351.png&#34; alt=&#34;image-20250711162350937&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后点击左侧串口选项，将常规配置的选项配置为服务器的 minicom 相同的配置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162530.png&#34; alt=&#34;image-20250711162530375&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在服务器使用 root 用户输入 minicom 来启动 minicom；在 xshell 中点击连接&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162821.png&#34; alt=&#34;image-20250711162821459&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;之后在两边终端中各输入  &lt;code&gt;test1&lt;/code&gt;  和  &lt;code&gt;test2&lt;/code&gt;  后如下图所示，两边都有对端输入的字符&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163139.png&#34; alt=&#34;image-20250711163139610&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果结果不是上面图中所示内容请检查接线以及串口的配置参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方案二mobaxterm&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案二mobaxterm&#34;&gt;#&lt;/a&gt; 方案二 (Mobaxterm)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;同方案一&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方案三串口调试助手&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案三串口调试助手&#34;&gt;#&lt;/a&gt; 方案三 (串口调试助手)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在微软商店下载一个串口调试助手&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开串口调试助手，将参数配置为与服务器 minicom 相同&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163442.png&#34; alt=&#34;image-20250711163442350&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击打开&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同方案一第五步骤&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163719.png&#34; alt=&#34;image-20250711163719671&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果都有显示则串口通信没有问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;问题汇总&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题汇总&#34;&gt;#&lt;/a&gt; 问题汇总&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对于调试过程中出现的 &lt;strong&gt;无法在此设备上加载驱动程序&lt;/strong&gt; 警告弹窗参考以下方法解决&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️该方法所有步骤仅通过 &lt;code&gt;windows11&lt;/code&gt;  执行， &lt;code&gt;windows10&lt;/code&gt;  用户请参考使用&lt;/p&gt;
+&lt;p&gt;该方法执行完成后需要重启电脑才能生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 win+x 打开如图选项框，点击设置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103039.png&#34; alt=&#34;image-20250709103032922&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入设置先点击 &lt;code&gt;隐私和安全性&lt;/code&gt; ，然后点击 &lt;code&gt;windows安全中心&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103319.png&#34; alt=&#34;image-20250709103318752&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击设备安全性&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103400.png&#34; alt=&#34;image-20250709103359846&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在安全中心点击内核隔离详细信息&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103457.png&#34; alt=&#34;image-20250709103457253&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击关闭内核隔离&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103536.png&#34; alt=&#34;image-20250709103536230&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>

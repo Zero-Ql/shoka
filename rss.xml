@@ -2,19 +2,18 @@
 <rss version="2.0">
     <channel>
         <title>上善若水</title>
-        <link>http://yunyat.cloud</link>
+        <link>https://yunyat.cloud</link>
         <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
         <language>zh-CN</language>
-        <pubDate>Sat, 08 Mar 2025 18:30:10 +0800</pubDate>
-        <lastBuildDate>Sat, 08 Mar 2025 18:30:10 +0800</lastBuildDate>
-        <category>markdown</category>
-        <category>mermaid</category>
-        <category>测试</category>
-        <category>hexo</category>
-        <category>原创</category>
+        <pubDate>Fri, 11 Jul 2025 14:18:55 +0800</pubDate>
+        <lastBuildDate>Fri, 11 Jul 2025 14:18:55 +0800</lastBuildDate>
         <category>Linux</category>
+        <category>原创</category>
         <category>电脑技术</category>
         <category>SSH</category>
+        <category>RS232</category>
+        <category>RS485</category>
+        <category>硬件</category>
         <category>可道云</category>
         <category>Docker</category>
         <category>harbor</category>
@@ -22,54 +21,363 @@
         <category>年度总结</category>
         <category>记录</category>
         <category>暑假工</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>hexo</category>
         <category>游戏</category>
         <category>我的世界</category>
         <category>java</category>
         <category>junit</category>
-        <category>shell</category>
         <category>python</category>
         <category>selenium</category>
-        <category>Hexo</category>
-        <category>教程</category>
         <category>MySQL</category>
+        <category>shell</category>
         <category>Git</category>
         <category>maven</category>
         <category>cAdvisor</category>
         <category>Prometheus</category>
         <category>Grafana</category>
+        <category>frp</category>
         <category>破解</category>
         <category>Typora</category>
         <category>xmind</category>
         <category>思维导图</category>
         <category>Ubuntu</category>
-        <category>frp</category>
         <category>分享</category>
         <category>计算机</category>
         <category>GitHub</category>
+        <category>Hexo</category>
+        <category>教程</category>
         <category>数据结构</category>
         <category>算法</category>
-        <category>HTML</category>
-        <category>JavaScript</category>
         <category>lambda表达式</category>
-        <category>JSON</category>
-        <category>java线程</category>
-        <category>javafx</category>
-        <category>集合</category>
         <category>Java</category>
         <category>servlet</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>集合</category>
+        <category>HTML</category>
         <category>springmvc</category>
         <category>spring</category>
         <category>spring注解</category>
-        <category>ResponseEntity</category>
+        <category>springboot</category>
+        <category>异常处理</category>
         <category>mybatis</category>
         <category>mybatisplus</category>
         <category>问题解决</category>
-        <category>springboot</category>
-        <category>异常处理</category>
+        <category>ResponseEntity</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</guid>
+            <title>RS232与RS485串口调试方案</title>
+            <link>https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</link>
+            <category>原创</category>
+            <category>RS232</category>
+            <category>RS485</category>
+            <category>硬件</category>
+            <pubDate>Fri, 11 Jul 2025 14:18:55 +0800</pubDate>
+            <description><![CDATA[ &lt;h3 id=&#34;连接串口-安装驱动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#连接串口-安装驱动&#34;&gt;#&lt;/a&gt; 连接串口 &amp;amp; 安装驱动&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡tips : 检查服务器上有几个串口，以及是公口还是母口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;确认螺丝端子是 232 转 232，还是 232 转 485&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;插入串口，如果一切顺利，那么应该会显示如下图所示的 &lt;code&gt;USB xxx(COMn)&lt;/code&gt; (n 为数字)；如果没有，请检查驱动是否正确安装 or 接线是否正确&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709114420.png&#34; alt=&#34;image-20250709114413848&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装minicom-设置minicom&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装minicom-设置minicom&#34;&gt;#&lt;/a&gt; 安装 minicom &amp;amp; 设置 minicom&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将  &lt;code&gt;minicom_packages.zip&lt;/code&gt;  包上传到服务器上并解压  &lt;code&gt;minicom_packages.zip&lt;/code&gt;  包&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 解压&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; minicom_packages.zip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 给予可执行权限&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x install_centos.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 执行安装脚本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./install_centos.shh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置  &lt;code&gt;minicom&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️警告：以下操作需要在 root 用户下执行，否则保存配置不生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输入  &lt;code&gt;minicom -s&lt;/code&gt;  打开   &lt;code&gt;minicom&lt;/code&gt;  设置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134020.png&#34; alt=&#34;image-20250709134020176&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择  &lt;code&gt;Serial port setup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134728.png&#34; alt=&#34;image-20250709134727862&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;A - Serial Device&lt;/code&gt;  :  &lt;code&gt;/dev/modem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;指定用于通信的串行设备文件路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;C - Callin Program&lt;/code&gt;  :&lt;/p&gt;
+&lt;p&gt;用于指定调制解调器来电执行的脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;D - Callout Program&lt;/code&gt;  :&lt;/p&gt;
+&lt;p&gt;用于指定调制解调器拨出电话执行的脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;E - Bps/Par/Bits&lt;/code&gt;  :  &lt;code&gt;115200 8N1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;定义串行通信的基本参数&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Bps(Bits per second)&lt;/code&gt;  : 波特率，即每秒传输的数据位数。此处默认为每秒传输 115200 个数据位.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Data Bits&lt;/code&gt;  : 数据位数，表示每个字符由 8 个数据位组成.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Parity&lt;/code&gt;  : 校验方式， &lt;code&gt;E&lt;/code&gt;  (Even, 偶校验).  &lt;code&gt;O&lt;/code&gt;  (Odd, 奇校验).  &lt;code&gt;N&lt;/code&gt;  (None, 不校验)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Stop Bits&lt;/code&gt;  : 停止位数，表示每个字符后有一个停止位.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;F - Hardware Flow Control&lt;/code&gt;  : Yes&lt;/p&gt;
+&lt;p&gt;硬件流控制是否启用&lt;/p&gt;
+&lt;p&gt;通常通过  &lt;code&gt;RTS/CTS&lt;/code&gt;  信号线 (信号线参见下文) 实现，用于防止数据溢出和丢失&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;G - Software Flow Control&lt;/code&gt;  : No&lt;/p&gt;
+&lt;p&gt;软件流控制是否启用&lt;/p&gt;
+&lt;p&gt;通常通过  &lt;code&gt;XON/XOFF&lt;/code&gt;  字符实现，用于控制数据流的暂停和回复&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过输入选项前面的字母来更改对应的设置项，使用  &lt;code&gt;esc&lt;/code&gt;  返回 (不保存); 使用  &lt;code&gt;enter(回车)&lt;/code&gt;  保存并返回&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在按 E 后显示 Comm Parameters 界面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current 行：该行为当前设置的参数&lt;/li&gt;
+&lt;li&gt;Speed 列：用于设置波特率，使用指定选项选择对应的频率&lt;/li&gt;
+&lt;li&gt;Parity 列：用于设置当前校验方式&lt;/li&gt;
+&lt;li&gt;Data 列：用于设置数据位数&lt;/li&gt;
+&lt;li&gt;Stopbits 列：用于设置停止位的数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在全部设置完成后选择  &lt;code&gt;Save setup as dfl&lt;/code&gt;  保存为默认设置或选择  &lt;code&gt;Save setup as ..&lt;/code&gt;  并指定一个名称来保存当前设置&lt;/p&gt;
+&lt;p&gt;设置文件默认保存在  &lt;code&gt;/etc/minirc.dfl&lt;/code&gt;  文件中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保存完成后选择  &lt;code&gt;Exit from Minicom&lt;/code&gt;  退出&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;串口基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#串口基础知识&#34;&gt;#&lt;/a&gt; 串口基础知识&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;串口常用的分为 RS-232 以及 RS-485&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RS-232 :&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该接口通常使用 DB9 针接口 (只有 9 个针脚) or DB25 (25 个针脚)；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-232 使用单端信号传输方式 (即一根针脚&lt;strong&gt;传输&lt;/strong&gt;一根针脚&lt;strong&gt;接收&lt;/strong&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS485 :&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该接口不需要特定类型的连接器，它可能使用各种类型的连接器，包括 RJ45、螺丝端子 (如下图接口一所示) 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-485 使用半双工 (两根导线) 或全双工 (四根导线) 进行通信&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;rs-232接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rs-232接口&#34;&gt;#&lt;/a&gt; RS-232 接口&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;公头 or 母头&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;有针脚的为公头&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150407.jpeg&#34; alt=&#34;公头&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;没有的为母头&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150428.jpeg&#34; alt=&#34;母头&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709145106.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;针脚解释&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;引脚&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;简写&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;载波侦测 (Carrier Detect)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RXD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;接收数据 (Receive)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;TXD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;发送数据 (Transmit)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DTR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据终端准备 (Data Terminal Ready)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;GND&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;地线 (Ground)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DSR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据准备好 (Data Set Ready)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;请求发送 (Request To Send)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清除发送 (Clear To Send)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RI&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;振铃指示 (Ring Indicator)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一般只用到 2、3、5 三个引脚；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS232 是全双工；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS232 限于 15 米以内，理论传输距离是 10 米；&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdndWNoYW8vYXJ0aWNsZS9kZXRhaWxzLzEyODQ3OTEwNg==&#34;&gt;参考文献&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;rs-485接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rs-485接口&#34;&gt;#&lt;/a&gt; RS-485 接口&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;如下图螺丝端子接口中的 &lt;code&gt;T/R+&lt;/code&gt; 、 &lt;code&gt;T/R-&lt;/code&gt; 、 &lt;code&gt;GND&lt;/code&gt;  等，下图接口一为半双工螺丝端子，全双工需要再加两根接线端子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-485 使用差分信号传输，通过一对导线 (网线等) 上的电压差来传输数据。当  &lt;code&gt;T/R+&lt;/code&gt;  比  &lt;code&gt;T/R-&lt;/code&gt;  高时代表 &lt;code&gt;1&lt;/code&gt; ，反之代表逻辑 &lt;code&gt;0&lt;/code&gt; ； &lt;code&gt;GND&lt;/code&gt;  为接地线，可以接也可以不接&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711152645.jpeg&#34; alt=&#34;rs232转rs485母口&amp;amp;rs232电压转rs485电压&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如图所示 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接口一为 RS-232 转 RS-485 (只有 4 个螺丝口）&lt;/li&gt;
+&lt;li&gt;接口二为 RS-232 电压 与 RS-485 电压 互转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️注意：接口二仅在需要转换 232 与 485 的电压时需要使用，如果使用的是 RS-232 转 RS-232 螺丝端子 (有十个螺丝)，则不需要使用此接口，直接连接即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;开始调试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开始调试&#34;&gt;#&lt;/a&gt; 开始调试&lt;/h3&gt;
+&lt;h4 id=&#34;方案一xshell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案一xshell&#34;&gt;#&lt;/a&gt; 方案一 (Xshell)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;电脑安装有 xshell，点击文件，新建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择如下图所示红框中的协议&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162351.png&#34; alt=&#34;image-20250711162350937&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后点击左侧串口选项，将常规配置的选项配置为服务器的 minicom 相同的配置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162530.png&#34; alt=&#34;image-20250711162530375&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在服务器使用 root 用户输入 minicom 来启动 minicom；在 xshell 中点击连接&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162821.png&#34; alt=&#34;image-20250711162821459&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;之后在两边终端中各输入  &lt;code&gt;test1&lt;/code&gt;  和  &lt;code&gt;test2&lt;/code&gt;  后如下图所示，两边都有对端输入的字符&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163139.png&#34; alt=&#34;image-20250711163139610&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果结果不是上面图中所示内容请检查接线以及串口的配置参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方案二mobaxterm&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案二mobaxterm&#34;&gt;#&lt;/a&gt; 方案二 (Mobaxterm)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;同方案一&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方案三串口调试助手&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案三串口调试助手&#34;&gt;#&lt;/a&gt; 方案三 (串口调试助手)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在微软商店下载一个串口调试助手&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开串口调试助手，将参数配置为与服务器 minicom 相同&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163442.png&#34; alt=&#34;image-20250711163442350&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击打开&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同方案一第五步骤&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163719.png&#34; alt=&#34;image-20250711163719671&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果都有显示则串口通信没有问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;问题汇总&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题汇总&#34;&gt;#&lt;/a&gt; 问题汇总&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对于调试过程中出现的 &lt;strong&gt;无法在此设备上加载驱动程序&lt;/strong&gt; 警告弹窗参考以下方法解决&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️该方法所有步骤仅通过 &lt;code&gt;windows11&lt;/code&gt;  执行， &lt;code&gt;windows10&lt;/code&gt;  用户请参考使用&lt;/p&gt;
+&lt;p&gt;该方法执行完成后需要重启电脑才能生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 win+x 打开如图选项框，点击设置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103039.png&#34; alt=&#34;image-20250709103032922&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入设置先点击 &lt;code&gt;隐私和安全性&lt;/code&gt; ，然后点击 &lt;code&gt;windows安全中心&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103319.png&#34; alt=&#34;image-20250709103318752&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击设备安全性&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103400.png&#34; alt=&#34;image-20250709103359846&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在安全中心点击内核隔离详细信息&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103457.png&#34; alt=&#34;image-20250709103457253&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击关闭内核隔离&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103536.png&#34; alt=&#34;image-20250709103536230&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</guid>
             <title>设置代理解决GitHub连接问题</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/</link>
             <category>SSH</category>
             <category>GitHub</category>
             <pubDate>Sat, 08 Mar 2025 18:30:10 +0800</pubDate>
@@ -96,9 +404,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
             <title>二叉树之打印二叉树</title>
-            <link>http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+            <link>https://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
             <category>原创</category>
             <category>数据结构</category>
             <category>算法</category>
@@ -217,9 +525,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</guid>
             <title>HTML - 2</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</link>
             <category>原创</category>
             <category>HTML</category>
             <pubDate>Fri, 08 Nov 2024 16:59:39 +0800</pubDate>
@@ -524,9 +832,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</guid>
             <title>HTML - 1</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</link>
             <category>原创</category>
             <category>HTML</category>
             <pubDate>Fri, 08 Nov 2024 16:57:57 +0800</pubDate>
@@ -672,9 +980,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</guid>
             <title>JavaScript - 3</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <pubDate>Fri, 08 Nov 2024 16:56:18 +0800</pubDate>
@@ -687,9 +995,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</guid>
             <title>JavaScript - 2</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <pubDate>Fri, 08 Nov 2024 16:54:37 +0800</pubDate>
@@ -819,9 +1127,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</guid>
             <title>MyBatisPlus疑难杂症</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -846,9 +1154,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</guid>
             <title>MyBatisPlus-3</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -1840,9 +2148,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</guid>
             <title>MyBatisPlus-2</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -1991,9 +2299,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/</guid>
             <title>Mod开发指南 - 方块篇</title>
-            <link>http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/</link>
+            <link>https://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97-%E6%96%B9%E5%9D%97%E7%AF%87/</link>
             <category>游戏</category>
             <category>我的世界</category>
             <pubDate>Tue, 05 Nov 2024 23:07:57 +0800</pubDate>
@@ -2017,9 +2325,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</guid>
             <title>Mod开发指南 - 物品篇</title>
-            <link>http://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</link>
+            <link>https://yunyat.cloud/game/Minecraft/NeoForge/Mod%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/</link>
             <category>游戏</category>
             <category>我的世界</category>
             <pubDate>Tue, 05 Nov 2024 12:05:42 +0800</pubDate>
@@ -2079,9 +2387,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/SSH-Agent/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/SSH-Agent/</guid>
             <title>SSH Agent</title>
-            <link>http://yunyat.cloud/linux/SSH-Agent/</link>
+            <link>https://yunyat.cloud/linux/SSH-Agent/</link>
             <category>原创</category>
             <category>电脑技术</category>
             <category>SSH</category>
@@ -2148,9 +2456,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/</guid>
             <title>Screen使用</title>
-            <link>http://yunyat.cloud/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/game/Minecraft/Screen%E4%BD%BF%E7%94%A8/</link>
             <category>游戏</category>
             <category>我的世界</category>
             <pubDate>Sun, 01 Sep 2024 16:40:26 +0800</pubDate>
@@ -2185,9 +2493,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/</guid>
             <title>搭建问题集合</title>
-            <link>http://yunyat.cloud/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/</link>
+            <link>https://yunyat.cloud/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/</link>
             <category>游戏</category>
             <category>我的世界</category>
             <pubDate>Mon, 22 Jul 2024 18:09:33 +0800</pubDate>
@@ -2223,9 +2531,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
             <title>服务器搭建教程</title>
-            <link>http://yunyat.cloud/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+            <link>https://yunyat.cloud/game/Minecraft/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
             <category>游戏</category>
             <category>我的世界</category>
             <pubDate>Mon, 22 Jul 2024 17:48:54 +0800</pubDate>
@@ -2257,9 +2565,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</guid>
             <title>Yum安装失败</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/Yum%E5%AE%89%E8%A3%85%E5%A4%B1%E8%B4%A5%EF%BC%8C%E7%BC%BA%E5%B0%91%E4%BE%9D%E8%B5%96%E9%97%AE%E9%A2%98/</link>
             <category>Linux</category>
             <category>Ubuntu</category>
             <pubDate>Mon, 24 Jun 2024 16:18:25 +0800</pubDate>
@@ -2277,18 +2585,18 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/game/Minecraft/Minecraft/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/game/Minecraft/Minecraft/</guid>
             <title>Minecraft</title>
-            <link>http://yunyat.cloud/game/Minecraft/Minecraft/</link>
+            <link>https://yunyat.cloud/game/Minecraft/Minecraft/</link>
             <category>游戏</category>
             <category>我的世界</category>
             <pubDate>Sat, 22 Jun 2024 16:00:44 +0800</pubDate>
             <description><![CDATA[  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/hexo/hello-world/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/hexo/hello-world/</guid>
             <title>Hello World</title>
-            <link>http://yunyat.cloud/hexo/hello-world/</link>
+            <link>https://yunyat.cloud/hexo/hello-world/</link>
             <pubDate>Sat, 22 Jun 2024 13:49:38 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
@@ -2303,9 +2611,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/test/Test/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/test/Test/</guid>
             <title>Test</title>
-            <link>http://yunyat.cloud/test/Test/</link>
+            <link>https://yunyat.cloud/test/Test/</link>
             <category>测试</category>
             <pubDate>Sat, 15 Jun 2024 15:32:45 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;​	测试&lt;/p&gt;
@@ -2313,9 +2621,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</guid>
             <title>MyBatisPlus-1</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -2386,9 +2694,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-5/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-5/</guid>
             <title>MySQL-5</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-5/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-5/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Tue, 14 May 2024 15:48:52 +0800</pubDate>
@@ -2424,9 +2732,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-4/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-4/</guid>
             <title>MySQL-4</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-4/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-4/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Mon, 13 May 2024 16:24:45 +0800</pubDate>
@@ -2671,9 +2979,9 @@ rollback;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-3/</guid>
             <title>MySQL-3</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-3/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Thu, 09 May 2024 15:03:42 +0800</pubDate>
@@ -2845,9 +3153,9 @@ select * from user as u where u.id regexp &#39;^[1*]&#39;;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-2/</guid>
             <title>MySQL-2</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-2/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Mon, 06 May 2024 15:12:40 +0800</pubDate>
@@ -3130,9 +3438,9 @@ WHERE condition;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-1/</guid>
             <title>MySQL-1</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-1/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Mon, 06 May 2024 15:09:43 +0800</pubDate>
@@ -3487,9 +3795,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
             <title>springboot全局异常处理</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
             <category>原创</category>
             <category>java</category>
             <category>springboot</category>
@@ -3507,9 +3815,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</guid>
             <title>springboot多模块开发</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</link>
             <category>原创</category>
             <category>java</category>
             <category>springboot</category>
@@ -3553,9 +3861,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</guid>
             <title>Spring-ResponseEntity</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring</category>
@@ -3579,9 +3887,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</guid>
             <title>SpringMVC</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</link>
             <category>原创</category>
             <category>java</category>
             <category>springmvc</category>
@@ -3604,9 +3912,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
             <title>SpringFramework基础</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring</category>
@@ -3699,9 +4007,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</guid>
             <title>SpringBoot基础</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</link>
             <category>原创</category>
             <category>java</category>
             <category>springboot</category>
@@ -3812,9 +4120,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</guid>
             <title>JavaWeb</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</link>
             <category>原创</category>
             <category>Java</category>
             <category>servlet</category>
@@ -4083,9 +4391,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</guid>
             <title>spring开发注解集合</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring注解</category>
@@ -4317,9 +4625,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Setter&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Getter&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Service&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; username&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt; age&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; password&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;/login&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;User&lt;/span&gt; user&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// 直接传入实体类的对象&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;user&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;getUsername&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;//...&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ok&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</guid>
             <title>JSON</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <category>JSON</category>
@@ -4363,9 +4671,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</guid>
             <title>JUnit</title>
-            <link>http://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</link>
+            <link>https://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</link>
             <category>原创</category>
             <category>java</category>
             <category>junit</category>
@@ -4500,9 +4808,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Selenium 的使用</title>
-            <link>http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <category>原创</category>
             <category>python</category>
             <category>selenium</category>
@@ -4541,9 +4849,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;CSS_SELECTOR&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;input#login&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
             <title>2023年度总结</title>
-            <link>http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
+            <link>https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
             <category>原创</category>
             <category>2023</category>
             <category>年度总结</category>
@@ -4563,16 +4871,16 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</guid>
             <title>shell脚本笔记-3</title>
-            <link>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</link>
             <pubDate>Sat, 16 Dec 2023 21:32:47 +0800</pubDate>
             <description><![CDATA[  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</guid>
             <title>shell脚本笔记-1</title>
-            <link>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</link>
             <category>原创</category>
             <category>shell</category>
             <pubDate>Fri, 15 Dec 2023 15:06:21 +0800</pubDate>
@@ -4768,9 +5076,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</guid>
             <title>windows重装系统重制版</title>
-            <link>http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</link>
+            <link>https://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</link>
             <category>原创</category>
             <category>电脑技术</category>
             <pubDate>Wed, 29 Nov 2023 14:37:53 +0800</pubDate>
@@ -4844,9 +5152,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</guid>
             <title>任意版本win远程桌面使用内网穿透连接</title>
-            <link>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</link>
+            <link>https://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</link>
             <category>原创</category>
             <category>frp</category>
             <pubDate>Tue, 28 Nov 2023 22:56:44 +0800</pubDate>
@@ -4923,9 +5231,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</guid>
             <title>shell脚本笔记 - 2</title>
-            <link>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</link>
             <category>原创</category>
             <category>shell</category>
             <pubDate>Mon, 27 Nov 2023 16:59:13 +0800</pubDate>
@@ -5217,9 +5525,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</guid>
             <title>JavaScript - 1</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <pubDate>Wed, 22 Nov 2023 14:22:20 +0800</pubDate>
@@ -5413,9 +5721,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</guid>
             <title>Xmind破解</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</link>
             <category>原创</category>
             <category>破解</category>
             <category>xmind</category>
@@ -5455,11 +5763,11 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</guid>
             <title>Typora的破解</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</link>
-            <category>markdown</category>
+            <link>https://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</link>
             <category>原创</category>
+            <category>markdown</category>
             <category>破解</category>
             <category>Typora</category>
             <pubDate>Tue, 07 Nov 2023 22:40:47 +0800</pubDate>
@@ -5527,9 +5835,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Git的使用</title>
-            <link>http://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/linux/Versioning/Git%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <category>Git</category>
             <pubDate>Thu, 26 Oct 2023 19:30:24 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;git概念&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#git概念&#34;&gt;#&lt;/a&gt; Git 概念&lt;/h4&gt;
@@ -5900,9 +6208,9 @@ Fast-forward
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</guid>
             <title>Git同时部署多个仓库</title>
-            <link>http://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</link>
+            <link>https://yunyat.cloud/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/</link>
             <category>Git</category>
             <pubDate>Thu, 26 Oct 2023 11:20:32 +0800</pubDate>
             <description><![CDATA[ &lt;h4 id=&#34;私有仓库的配置&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#私有仓库的配置&#34;&gt;#&lt;/a&gt; 私有仓库的配置&lt;/h4&gt;
@@ -6006,9 +6314,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</guid>
             <title>使用cAdvisor+Prometheus+Grafana监控Docker容器</title>
-            <link>http://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</link>
+            <link>https://yunyat.cloud/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/</link>
             <category>Docker</category>
             <category>cAdvisor</category>
             <category>Prometheus</category>
@@ -6089,11 +6397,11 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</guid>
             <title>Linux2023-9-18作业</title>
-            <link>http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</link>
-            <category>原创</category>
+            <link>https://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</link>
             <category>Linux</category>
+            <category>原创</category>
             <pubDate>Mon, 18 Sep 2023 14:40:30 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;题目要求：&lt;/p&gt;
@@ -6151,9 +6459,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</guid>
             <title>谈谈看完《孤注一掷》的感想</title>
-            <link>http://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</link>
+            <link>https://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</link>
             <category>原创</category>
             <category>记录</category>
             <pubDate>Sat, 16 Sep 2023 18:29:35 +0800</pubDate>
@@ -6174,11 +6482,11 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</guid>
             <title>Linux2023.9.15作业</title>
-            <link>http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</link>
-            <category>原创</category>
+            <link>https://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</link>
             <category>Linux</category>
+            <category>原创</category>
             <pubDate>Fri, 15 Sep 2023 14:18:57 +0800</pubDate>
             <description><![CDATA[ &lt;blockquote&gt;
 &lt;p&gt;题目要求：&lt;/p&gt;
@@ -6265,9 +6573,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</guid>
             <title>Docker之nginx的负载均衡</title>
-            <link>http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
+            <link>https://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</link>
             <category>原创</category>
             <category>Docker</category>
             <pubDate>Tue, 12 Sep 2023 18:49:35 +0800</pubDate>
@@ -6342,9 +6650,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</guid>
             <title>harbor本地仓库搭建</title>
-            <link>http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</link>
+            <link>https://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</link>
             <category>原创</category>
             <category>Docker</category>
             <category>harbor</category>
@@ -6432,9 +6740,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</guid>
             <title>Docker构建镜像及使用的笔记</title>
-            <link>http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</link>
+            <link>https://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</link>
             <category>原创</category>
             <category>Docker</category>
             <pubDate>Mon, 11 Sep 2023 21:52:29 +0800</pubDate>
@@ -6453,9 +6761,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</guid>
             <title>Win至Linux的免密登录</title>
-            <link>http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</link>
+            <link>https://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</link>
             <category>原创</category>
             <category>电脑技术</category>
             <category>SSH</category>
@@ -6513,9 +6821,9 @@ IdentityFile ~/.ssh/id_rsa_gitee&lt;/p&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</guid>
             <title>可道云桌面搭建笔记</title>
-            <link>http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</link>
+            <link>https://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</link>
             <category>原创</category>
             <category>可道云</category>
             <pubDate>Fri, 08 Sep 2023 17:10:26 +0800</pubDate>
@@ -6588,9 +6896,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</guid>
             <title>Docker的使用-叁</title>
-            <link>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</link>
+            <link>https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</link>
             <category>原创</category>
             <category>Docker</category>
             <pubDate>Fri, 08 Sep 2023 15:00:14 +0800</pubDate>
@@ -6649,9 +6957,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</guid>
             <title>Docker的使用-贰</title>
-            <link>http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</link>
+            <link>https://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</link>
             <category>原创</category>
             <category>Docker</category>
             <pubDate>Tue, 05 Sep 2023 18:57:03 +0800</pubDate>
@@ -6685,9 +6993,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</guid>
             <title>Docker的使用-壹</title>
-            <link>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</link>
+            <link>https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</link>
             <category>原创</category>
             <category>Docker</category>
             <pubDate>Tue, 05 Sep 2023 09:14:52 +0800</pubDate>
@@ -6777,9 +7085,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</guid>
             <title>Docker部署</title>
-            <link>http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</link>
+            <link>https://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</link>
             <category>原创</category>
             <category>Docker</category>
             <pubDate>Mon, 04 Sep 2023 16:53:57 +0800</pubDate>
@@ -6842,9 +7150,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</guid>
             <title>Java-lambda的方法引用</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</link>
             <category>原创</category>
             <category>java</category>
             <category>lambda表达式</category>
@@ -6905,9 +7213,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 将上面的代码小改一手&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@FunctionalInterface&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Simple4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// 返回值为实现接口的类，参数就是实现类的构造方法参数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getI&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;world!&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;Simple&lt;/span&gt; simple &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//simple.test 返回的其实就是一个实现类对象&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;simple&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getI&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Maven的使用</title>
-            <link>http://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <category>java</category>
             <category>maven</category>
             <pubDate>Sat, 08 Jul 2023 23:32:50 +0800</pubDate>
@@ -7073,9 +7381,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</guid>
             <title>暑假工踩坑记</title>
-            <link>http://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
+            <link>https://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</link>
             <category>原创</category>
             <category>记录</category>
             <category>暑假工</category>
@@ -7110,9 +7418,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</guid>
             <title>湖北飞young算号器</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</link>
             <category>原创</category>
             <category>java</category>
             <category>破解</category>
@@ -7159,9 +7467,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
             <title>集合接口的继承及实现概览</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</link>
             <category>原创</category>
             <category>java</category>
             <category>集合</category>
@@ -7268,9 +7576,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
             <title>frp之内网穿透</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
             <category>原创</category>
             <category>frp</category>
             <pubDate>Mon, 08 May 2023 12:12:18 +0800</pubDate>
@@ -7366,9 +7674,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
             <title>记一次电脑启动原神蓝屏解决方案</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
             <category>原创</category>
             <category>计算机</category>
             <pubDate>Sat, 06 May 2023 00:24:25 +0800</pubDate>
@@ -7387,9 +7695,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</guid>
             <title>安利几个好用的网站</title>
-            <link>http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
+            <link>https://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</link>
             <category>原创</category>
             <category>分享</category>
             <pubDate>Tue, 02 May 2023 18:07:29 +0800</pubDate>
@@ -7482,9 +7790,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</guid>
             <title>集合-Map</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</link>
             <category>原创</category>
             <category>java</category>
             <category>集合</category>
@@ -7546,9 +7854,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</guid>
             <title>JavaFx使用Maven打包及运行</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</link>
             <category>原创</category>
             <category>java</category>
             <category>javafx</category>
@@ -7569,9 +7877,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</guid>
             <title>运算符级别比较</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</link>
             <category>原创</category>
             <category>java</category>
             <pubDate>Tue, 02 May 2023 17:50:16 +0800</pubDate>
@@ -7588,11 +7896,11 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</guid>
             <title>hexo及SSL获取</title>
-            <link>http://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</link>
-            <category>hexo</category>
+            <link>https://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</link>
             <category>原创</category>
+            <category>hexo</category>
             <pubDate>Sun, 30 Apr 2023 15:38:55 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文只记录大概过程 (具体教程百度上都有)&lt;/p&gt;
@@ -7684,9 +7992,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</guid>
             <title>Mermaid画图测试</title>
-            <link>http://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</link>
+            <link>https://yunyat.cloud/test/Mermaid%E7%94%BB%E5%9B%BE%E6%B5%8B%E8%AF%95/</link>
             <category>markdown</category>
             <category>mermaid</category>
             <pubDate>Sat, 29 Apr 2023 20:20:55 +0800</pubDate>
@@ -7715,9 +8023,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/Java/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/Java/</guid>
             <title>Java线程池</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/Java/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/Java/</link>
             <category>原创</category>
             <category>java线程</category>
             <pubDate>Fri, 28 Apr 2023 23:15:03 +0800</pubDate>
@@ -7870,9 +8178,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/hexo/shoka/special/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/hexo/shoka/special/</guid>
             <title>Step.4 主题特殊功能</title>
-            <link>http://yunyat.cloud/hexo/shoka/special/</link>
+            <link>https://yunyat.cloud/hexo/shoka/special/</link>
             <category>Hexo</category>
             <category>教程</category>
             <pubDate>Thu, 13 Aug 2020 21:45:48 +0800</pubDate>
@@ -8341,9 +8649,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
 &lt;figure class=&#34;highlight raw&#34;&gt;&lt;figcaption data-lang=&#34;&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;---&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;title: 流程图显示&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;mermaid: true&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;---&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#96;&amp;#96;&amp;#96;mermaid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;graph LR&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A [Square Rect] -- Link text --&amp;gt; B ((Circle))&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A --&amp;gt; C (Round Rect)&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    B --&amp;gt; D &amp;#123;Rhombus&amp;#125;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    C --&amp;gt; D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#96;&amp;#96;&amp;#96;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#96;&amp;#96;&amp;#96;mermaid&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;sequenceDiagram&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    loop Daily query&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        Alice-&amp;gt;&amp;gt;Bob: Hello Bob, how are you?&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        alt is sick&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&amp;gt;&amp;gt;Alice: Not so good :(&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        else is well&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&amp;gt;&amp;gt;Alice: Feeling fresh like a daisy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;23&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;24&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        opt Extra response&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;25&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob-&amp;gt;&amp;gt;Alice: Thanks for asking&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;26&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;27&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    end&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;28&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&amp;#96;&amp;#96;&amp;#96;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;graph&lt;/span&gt; LR&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A&lt;span class=&#34;token text string&#34;&gt;[Square Rect]&lt;/span&gt; &lt;span class=&#34;token inter-arrow-label&#34;&gt;&lt;span class=&#34;token arrow-head arrow operator&#34;&gt;--&lt;/span&gt; &lt;span class=&#34;token label property&#34;&gt;Link text&lt;/span&gt; &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt;&lt;/span&gt; B&lt;span class=&#34;token text string&#34;&gt;((Circle))&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    A &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt; C&lt;span class=&#34;token text string&#34;&gt;(Round Rect)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    B &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt; D&lt;span class=&#34;token text string&#34;&gt;&amp;#123;Rhombus&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    C &lt;span class=&#34;token arrow operator&#34;&gt;--&gt;&lt;/span&gt; D&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;figure class=&#34;highlight mermaid&#34;&gt;&lt;figcaption data-lang=&#34;mermaid&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;sequenceDiagram&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;loop&lt;/span&gt; Daily query&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        Alice&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;Bob&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; Hello Bob, how are you?&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;alt&lt;/span&gt; is sick&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;Alice&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; Not so good &lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;else&lt;/span&gt; is well&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;Alice&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; Feeling fresh like a daisy&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;opt&lt;/span&gt; Extra response&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;            Bob&lt;span class=&#34;token arrow operator&#34;&gt;-&gt;&gt;&lt;/span&gt;Alice&lt;span class=&#34;token operator&#34;&gt;:&lt;/span&gt; Thanks for asking&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/hexo/shoka/display/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/hexo/shoka/display/</guid>
             <title>Step.3 界面显示</title>
-            <link>http://yunyat.cloud/hexo/shoka/display/</link>
+            <link>https://yunyat.cloud/hexo/shoka/display/</link>
             <category>Hexo</category>
             <category>教程</category>
             <pubDate>Thu, 13 Aug 2020 21:12:48 +0800</pubDate>
@@ -8482,9 +8790,9 @@ c-16-25.333-24-45-24-59z&#39;/&gt;&lt;/svg&gt;&lt;/span&gt;&lt;/span&gt;&lt;/spa
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/hexo/shoka/config/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/hexo/shoka/config/</guid>
             <title>Step.2 基本配置</title>
-            <link>http://yunyat.cloud/hexo/shoka/config/</link>
+            <link>https://yunyat.cloud/hexo/shoka/config/</link>
             <category>Hexo</category>
             <category>教程</category>
             <pubDate>Thu, 13 Aug 2020 20:56:48 +0800</pubDate>
@@ -8594,9 +8902,9 @@ PS：jsDelivr 并不是实时更新，重新生成文件后需要耐心等待&lt
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/hexo/shoka/dependents/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/hexo/shoka/dependents/</guid>
             <title>Step.1 依赖插件</title>
-            <link>http://yunyat.cloud/hexo/shoka/dependents/</link>
+            <link>https://yunyat.cloud/hexo/shoka/dependents/</link>
             <category>Hexo</category>
             <category>教程</category>
             <pubDate>Thu, 13 Aug 2020 20:46:48 +0800</pubDate>

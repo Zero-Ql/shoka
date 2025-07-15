@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yunyat.cloud</id>
+    <id>https://yunyat.cloud</id>
     <title>上善若水 • Posts by &#34;mysql&#34; tag</title>
-    <link href="http://yunyat.cloud" />
+    <link href="https://yunyat.cloud" />
     <updated>2024-05-14T07:48:52.000Z</updated>
-    <category term="markdown" />
-    <category term="mermaid" />
-    <category term="测试" />
-    <category term="hexo" />
-    <category term="原创" />
     <category term="Linux" />
+    <category term="原创" />
     <category term="电脑技术" />
     <category term="SSH" />
+    <category term="RS232" />
+    <category term="RS485" />
+    <category term="硬件" />
     <category term="可道云" />
     <category term="Docker" />
     <category term="harbor" />
@@ -19,54 +18,58 @@
     <category term="年度总结" />
     <category term="记录" />
     <category term="暑假工" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="hexo" />
     <category term="游戏" />
     <category term="我的世界" />
     <category term="java" />
     <category term="junit" />
-    <category term="shell" />
     <category term="python" />
     <category term="selenium" />
-    <category term="Hexo" />
-    <category term="教程" />
     <category term="MySQL" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
+    <category term="frp" />
     <category term="破解" />
     <category term="Typora" />
     <category term="xmind" />
     <category term="思维导图" />
     <category term="Ubuntu" />
-    <category term="frp" />
     <category term="分享" />
     <category term="计算机" />
     <category term="GitHub" />
+    <category term="Hexo" />
+    <category term="教程" />
     <category term="数据结构" />
     <category term="算法" />
-    <category term="HTML" />
-    <category term="JavaScript" />
     <category term="lambda表达式" />
-    <category term="JSON" />
-    <category term="java线程" />
-    <category term="javafx" />
-    <category term="集合" />
     <category term="Java" />
     <category term="servlet" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="集合" />
+    <category term="HTML" />
     <category term="springmvc" />
     <category term="spring" />
     <category term="spring注解" />
-    <category term="ResponseEntity" />
+    <category term="springboot" />
+    <category term="异常处理" />
     <category term="mybatis" />
     <category term="mybatisplus" />
     <category term="问题解决" />
-    <category term="springboot" />
-    <category term="异常处理" />
+    <category term="ResponseEntity" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-5/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-5/</id>
         <title>MySQL-5</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-5/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-5/"/>
         <content type="html">&lt;h3 id=&#34;sql-注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sql-注入&#34;&gt;#&lt;/a&gt; &lt;em&gt;SQL&lt;/em&gt; 注入&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果您通过网页获取用户输入的数据并将其插入一个 &lt;em&gt;MySQL&lt;/em&gt; 数据库，那么就有可能发生 &lt;em&gt;SQL&lt;/em&gt; 注入安全的问题。&lt;/p&gt;
@@ -102,9 +105,9 @@
         <updated>2024-05-14T07:48:52.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-4/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-4/</id>
         <title>MySQL-4</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-4/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-4/"/>
         <content type="html">&lt;h3 id=&#34;事务&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事务&#34;&gt;#&lt;/a&gt; 事务&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;MySQL&lt;/em&gt; 中，&lt;u&gt;事务&lt;/u&gt;(&lt;em&gt; &lt;code&gt;Transaction&lt;/code&gt; &lt;/em&gt;) 是一组 &lt;em&gt;SQL&lt;/em&gt; 语句的执行，它们被视为一个单独的工作单元。这组操作要么全部成功执行，要么全部不执行，是一个 “全有或全无” 的原则. &lt;u&gt;事务&lt;/u&gt;的主要目的是为了保证数据的完整性和一致性.&lt;/p&gt;
 &lt;p&gt;基本特性 (&lt;em&gt;&lt;strong&gt;ACID&lt;/strong&gt;&lt;/em&gt; 属性)：&lt;/p&gt;
@@ -349,9 +352,9 @@ rollback;
         <updated>2024-05-13T08:24:45.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-3/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-3/</id>
         <title>MySQL-3</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-3/"/>
         <content type="html">&lt;h3 id=&#34;like-子句&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#like-子句&#34;&gt;#&lt;/a&gt; &lt;em&gt;LIKE&lt;/em&gt; 子句&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;like&lt;/em&gt; 子句用于指定 &lt;em&gt;update&lt;/em&gt; 以及 &lt;em&gt;delete&lt;/em&gt; 中的 &lt;em&gt;where&lt;/em&gt; 条件.&lt;/p&gt;
 &lt;p&gt;可以使用 &lt;em&gt; &lt;code&gt;or&lt;/code&gt; &lt;/em&gt; 或者 &lt;em&gt; &lt;code&gt;and&lt;/code&gt; &lt;/em&gt; 指定一个或者多个条件.&lt;/p&gt;
@@ -523,9 +526,9 @@ select * from user as u where u.id regexp &#39;^[1*]&#39;;
         <updated>2024-05-09T07:03:42.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-2/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-2/</id>
         <title>MySQL-2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-2/"/>
         <content type="html">&lt;h2 id=&#34;mysql-基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql-基本操作&#34;&gt;#&lt;/a&gt; MySQL 基本操作&lt;/h2&gt;
 &lt;h3 id=&#34;对数据库操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对数据库操作&#34;&gt;#&lt;/a&gt; 对数据库操作&lt;/h3&gt;
 &lt;h4 id=&#34;创建数据库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建数据库&#34;&gt;#&lt;/a&gt; 创建数据库&lt;/h4&gt;
@@ -808,9 +811,9 @@ WHERE condition;
         <updated>2024-05-06T07:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-1/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-1/</id>
         <title>MySQL-1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-1/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-1/"/>
         <content type="html">&lt;h3 id=&#34;mysql-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql-简介&#34;&gt;#&lt;/a&gt; MySQL 简介&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;MySQL&lt;/em&gt; 是一款广泛使用的关系型数据库管理系统（&lt;em&gt;RDBMS&lt;/em&gt;），由瑞典 &lt;em&gt;MySQL AB&lt;/em&gt; 公司最初开发，目前隶属于 &lt;em&gt;Oracle&lt;/em&gt; 公司。&lt;em&gt;MySQL&lt;/em&gt; 以其开源、稳定、高效、可扩展性强等特点而著名，是互联网行业中最为流行的数据库解决方案之一。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;MySQL&lt;/em&gt; 命令关键字本身是不区分大小写的，但是数据库名、表名、列名、别名等在不同的操作系统下区分大小写的情况有所不同：&lt;/p&gt;

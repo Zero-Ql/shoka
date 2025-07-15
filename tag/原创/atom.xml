@@ -1,17 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://yunyat.cloud</id>
+    <id>https://yunyat.cloud</id>
     <title>上善若水 • Posts by &#34;原创&#34; tag</title>
-    <link href="http://yunyat.cloud" />
-    <updated>2024-11-15T09:16:25.000Z</updated>
-    <category term="markdown" />
-    <category term="mermaid" />
-    <category term="测试" />
-    <category term="hexo" />
-    <category term="原创" />
+    <link href="https://yunyat.cloud" />
+    <updated>2025-07-11T06:18:55.000Z</updated>
     <category term="Linux" />
+    <category term="原创" />
     <category term="电脑技术" />
     <category term="SSH" />
+    <category term="RS232" />
+    <category term="RS485" />
+    <category term="硬件" />
     <category term="可道云" />
     <category term="Docker" />
     <category term="harbor" />
@@ -19,54 +18,363 @@
     <category term="年度总结" />
     <category term="记录" />
     <category term="暑假工" />
+    <category term="markdown" />
+    <category term="mermaid" />
+    <category term="测试" />
+    <category term="hexo" />
     <category term="游戏" />
     <category term="我的世界" />
     <category term="java" />
     <category term="junit" />
-    <category term="shell" />
     <category term="python" />
     <category term="selenium" />
-    <category term="Hexo" />
-    <category term="教程" />
     <category term="MySQL" />
+    <category term="shell" />
     <category term="Git" />
     <category term="maven" />
     <category term="cAdvisor" />
     <category term="Prometheus" />
     <category term="Grafana" />
+    <category term="frp" />
     <category term="破解" />
     <category term="Typora" />
     <category term="xmind" />
     <category term="思维导图" />
     <category term="Ubuntu" />
-    <category term="frp" />
     <category term="分享" />
     <category term="计算机" />
     <category term="GitHub" />
+    <category term="Hexo" />
+    <category term="教程" />
     <category term="数据结构" />
     <category term="算法" />
-    <category term="HTML" />
-    <category term="JavaScript" />
     <category term="lambda表达式" />
-    <category term="JSON" />
-    <category term="java线程" />
-    <category term="javafx" />
-    <category term="集合" />
     <category term="Java" />
     <category term="servlet" />
+    <category term="java线程" />
+    <category term="javafx" />
+    <category term="JavaScript" />
+    <category term="JSON" />
+    <category term="集合" />
+    <category term="HTML" />
     <category term="springmvc" />
     <category term="spring" />
     <category term="spring注解" />
-    <category term="ResponseEntity" />
+    <category term="springboot" />
+    <category term="异常处理" />
     <category term="mybatis" />
     <category term="mybatisplus" />
     <category term="问题解决" />
-    <category term="springboot" />
-    <category term="异常处理" />
+    <category term="ResponseEntity" />
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+        <id>https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</id>
+        <title>RS232与RS485串口调试方案</title>
+        <link rel="alternate" href="https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/"/>
+        <content type="html">&lt;h3 id=&#34;连接串口-安装驱动&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#连接串口-安装驱动&#34;&gt;#&lt;/a&gt; 连接串口 &amp;amp; 安装驱动&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;💡tips : 检查服务器上有几个串口，以及是公口还是母口&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;确认螺丝端子是 232 转 232，还是 232 转 485&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;插入串口，如果一切顺利，那么应该会显示如下图所示的 &lt;code&gt;USB xxx(COMn)&lt;/code&gt; (n 为数字)；如果没有，请检查驱动是否正确安装 or 接线是否正确&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709114420.png&#34; alt=&#34;image-20250709114413848&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;安装minicom-设置minicom&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#安装minicom-设置minicom&#34;&gt;#&lt;/a&gt; 安装 minicom &amp;amp; 设置 minicom&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将  &lt;code&gt;minicom_packages.zip&lt;/code&gt;  包上传到服务器上并解压  &lt;code&gt;minicom_packages.zip&lt;/code&gt;  包&lt;/p&gt;
+&lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 解压&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;unzip&lt;/span&gt; minicom_packages.zip&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 给予可执行权限&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;chmod&lt;/span&gt; +x install_centos.sh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;# 执行安装脚本&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;./install_centos.shh&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设置  &lt;code&gt;minicom&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️警告：以下操作需要在 root 用户下执行，否则保存配置不生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;输入  &lt;code&gt;minicom -s&lt;/code&gt;  打开   &lt;code&gt;minicom&lt;/code&gt;  设置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134020.png&#34; alt=&#34;image-20250709134020176&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择  &lt;code&gt;Serial port setup&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709134728.png&#34; alt=&#34;image-20250709134727862&#34;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;A - Serial Device&lt;/code&gt;  :  &lt;code&gt;/dev/modem&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;指定用于通信的串行设备文件路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;C - Callin Program&lt;/code&gt;  :&lt;/p&gt;
+&lt;p&gt;用于指定调制解调器来电执行的脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;D - Callout Program&lt;/code&gt;  :&lt;/p&gt;
+&lt;p&gt;用于指定调制解调器拨出电话执行的脚本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;E - Bps/Par/Bits&lt;/code&gt;  :  &lt;code&gt;115200 8N1&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;定义串行通信的基本参数&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Bps(Bits per second)&lt;/code&gt;  : 波特率，即每秒传输的数据位数。此处默认为每秒传输 115200 个数据位.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Data Bits&lt;/code&gt;  : 数据位数，表示每个字符由 8 个数据位组成.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Parity&lt;/code&gt;  : 校验方式， &lt;code&gt;E&lt;/code&gt;  (Even, 偶校验).  &lt;code&gt;O&lt;/code&gt;  (Odd, 奇校验).  &lt;code&gt;N&lt;/code&gt;  (None, 不校验)&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Stop Bits&lt;/code&gt;  : 停止位数，表示每个字符后有一个停止位.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;F - Hardware Flow Control&lt;/code&gt;  : Yes&lt;/p&gt;
+&lt;p&gt;硬件流控制是否启用&lt;/p&gt;
+&lt;p&gt;通常通过  &lt;code&gt;RTS/CTS&lt;/code&gt;  信号线 (信号线参见下文) 实现，用于防止数据溢出和丢失&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;G - Software Flow Control&lt;/code&gt;  : No&lt;/p&gt;
+&lt;p&gt;软件流控制是否启用&lt;/p&gt;
+&lt;p&gt;通常通过  &lt;code&gt;XON/XOFF&lt;/code&gt;  字符实现，用于控制数据流的暂停和回复&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;通过输入选项前面的字母来更改对应的设置项，使用  &lt;code&gt;esc&lt;/code&gt;  返回 (不保存); 使用  &lt;code&gt;enter(回车)&lt;/code&gt;  保存并返回&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在按 E 后显示 Comm Parameters 界面&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Current 行：该行为当前设置的参数&lt;/li&gt;
+&lt;li&gt;Speed 列：用于设置波特率，使用指定选项选择对应的频率&lt;/li&gt;
+&lt;li&gt;Parity 列：用于设置当前校验方式&lt;/li&gt;
+&lt;li&gt;Data 列：用于设置数据位数&lt;/li&gt;
+&lt;li&gt;Stopbits 列：用于设置停止位的数量&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在全部设置完成后选择  &lt;code&gt;Save setup as dfl&lt;/code&gt;  保存为默认设置或选择  &lt;code&gt;Save setup as ..&lt;/code&gt;  并指定一个名称来保存当前设置&lt;/p&gt;
+&lt;p&gt;设置文件默认保存在  &lt;code&gt;/etc/minirc.dfl&lt;/code&gt;  文件中&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保存完成后选择  &lt;code&gt;Exit from Minicom&lt;/code&gt;  退出&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;串口基础知识&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#串口基础知识&#34;&gt;#&lt;/a&gt; 串口基础知识&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;串口常用的分为 RS-232 以及 RS-485&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;RS-232 :&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该接口通常使用 DB9 针接口 (只有 9 个针脚) or DB25 (25 个针脚)；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-232 使用单端信号传输方式 (即一根针脚&lt;strong&gt;传输&lt;/strong&gt;一根针脚&lt;strong&gt;接收&lt;/strong&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS485 :&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;该接口不需要特定类型的连接器，它可能使用各种类型的连接器，包括 RJ45、螺丝端子 (如下图接口一所示) 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-485 使用半双工 (两根导线) 或全双工 (四根导线) 进行通信&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;rs-232接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rs-232接口&#34;&gt;#&lt;/a&gt; RS-232 接口&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;公头 or 母头&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;有针脚的为公头&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150407.jpeg&#34; alt=&#34;公头&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;没有的为母头&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709150428.jpeg&#34; alt=&#34;母头&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709145106.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;针脚解释&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;引脚&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;简写&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;功能说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;载波侦测 (Carrier Detect)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RXD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;接收数据 (Receive)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;TXD&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;发送数据 (Transmit)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DTR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据终端准备 (Data Terminal Ready)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;GND&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;地线 (Ground)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;DSR&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据准备好 (Data Set Ready)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;请求发送 (Request To Send)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;CTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清除发送 (Clear To Send)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;9&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;RI&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;振铃指示 (Ring Indicator)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一般只用到 2、3、5 三个引脚；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS232 是全双工；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS232 限于 15 米以内，理论传输距离是 10 米；&lt;/p&gt;
+&lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdndWNoYW8vYXJ0aWNsZS9kZXRhaWxzLzEyODQ3OTEwNg==&#34;&gt;参考文献&lt;/span&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;rs-485接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#rs-485接口&#34;&gt;#&lt;/a&gt; RS-485 接口&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;如下图螺丝端子接口中的 &lt;code&gt;T/R+&lt;/code&gt; 、 &lt;code&gt;T/R-&lt;/code&gt; 、 &lt;code&gt;GND&lt;/code&gt;  等，下图接口一为半双工螺丝端子，全双工需要再加两根接线端子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RS-485 使用差分信号传输，通过一对导线 (网线等) 上的电压差来传输数据。当  &lt;code&gt;T/R+&lt;/code&gt;  比  &lt;code&gt;T/R-&lt;/code&gt;  高时代表 &lt;code&gt;1&lt;/code&gt; ，反之代表逻辑 &lt;code&gt;0&lt;/code&gt; ； &lt;code&gt;GND&lt;/code&gt;  为接地线，可以接也可以不接&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711152645.jpeg&#34; alt=&#34;rs232转rs485母口&amp;amp;rs232电压转rs485电压&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如图所示 :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;接口一为 RS-232 转 RS-485 (只有 4 个螺丝口）&lt;/li&gt;
+&lt;li&gt;接口二为 RS-232 电压 与 RS-485 电压 互转&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️注意：接口二仅在需要转换 232 与 485 的电压时需要使用，如果使用的是 RS-232 转 RS-232 螺丝端子 (有十个螺丝)，则不需要使用此接口，直接连接即可&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;开始调试&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#开始调试&#34;&gt;#&lt;/a&gt; 开始调试&lt;/h3&gt;
+&lt;h4 id=&#34;方案一xshell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案一xshell&#34;&gt;#&lt;/a&gt; 方案一 (Xshell)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;电脑安装有 xshell，点击文件，新建&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;选择如下图所示红框中的协议&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162351.png&#34; alt=&#34;image-20250711162350937&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后点击左侧串口选项，将常规配置的选项配置为服务器的 minicom 相同的配置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162530.png&#34; alt=&#34;image-20250711162530375&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在服务器使用 root 用户输入 minicom 来启动 minicom；在 xshell 中点击连接&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711162821.png&#34; alt=&#34;image-20250711162821459&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;之后在两边终端中各输入  &lt;code&gt;test1&lt;/code&gt;  和  &lt;code&gt;test2&lt;/code&gt;  后如下图所示，两边都有对端输入的字符&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163139.png&#34; alt=&#34;image-20250711163139610&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果结果不是上面图中所示内容请检查接线以及串口的配置参数&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方案二mobaxterm&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案二mobaxterm&#34;&gt;#&lt;/a&gt; 方案二 (Mobaxterm)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;同方案一&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;方案三串口调试助手&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方案三串口调试助手&#34;&gt;#&lt;/a&gt; 方案三 (串口调试助手)&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在微软商店下载一个串口调试助手&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;打开串口调试助手，将参数配置为与服务器 minicom 相同&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163442.png&#34; alt=&#34;image-20250711163442350&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击打开&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同方案一第五步骤&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250711163719.png&#34; alt=&#34;image-20250711163719671&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果都有显示则串口通信没有问题&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;问题汇总&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#问题汇总&#34;&gt;#&lt;/a&gt; 问题汇总&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对于调试过程中出现的 &lt;strong&gt;无法在此设备上加载驱动程序&lt;/strong&gt; 警告弹窗参考以下方法解决&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;⚠️该方法所有步骤仅通过 &lt;code&gt;windows11&lt;/code&gt;  执行， &lt;code&gt;windows10&lt;/code&gt;  用户请参考使用&lt;/p&gt;
+&lt;p&gt;该方法执行完成后需要重启电脑才能生效&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用 win+x 打开如图选项框，点击设置&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103039.png&#34; alt=&#34;image-20250709103032922&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进入设置先点击 &lt;code&gt;隐私和安全性&lt;/code&gt; ，然后点击 &lt;code&gt;windows安全中心&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103319.png&#34; alt=&#34;image-20250709103318752&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击设备安全性&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103400.png&#34; alt=&#34;image-20250709103359846&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在安全中心点击内核隔离详细信息&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103457.png&#34; alt=&#34;image-20250709103457253&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;点击关闭内核隔离&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://github.com/Zero-Ql/FigureBed/tree/master/imgs/20250709103536.png&#34; alt=&#34;image-20250709103536230&#34;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <category term="原创" />
+        <category term="RS232" />
+        <category term="RS485" />
+        <category term="硬件" />
+        <updated>2025-07-11T06:18:55.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
         <title>二叉树之打印二叉树</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
         <content type="html">&lt;h2 id=&#34;打印&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#打印&#34;&gt;#&lt;/a&gt; 打印&lt;/h2&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;二叉树的遍历是指按某种顺序访问二叉树中的所有结点，使得每个节点都被访问，且仅被访问一次。&lt;/p&gt;
@@ -185,9 +493,9 @@
         <updated>2024-11-15T09:16:25.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</id>
+        <id>https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</id>
         <title>HTML - 2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/"/>
         <content type="html">&lt;h3 id=&#34;html-基础&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-基础&#34;&gt;#&lt;/a&gt; HTML 基础&lt;/h3&gt;
 &lt;h4 id=&#34;html-标题&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-标题&#34;&gt;#&lt;/a&gt; HTML 标题&lt;/h4&gt;
 &lt;p&gt;HTML 的标题 (Heading) 是通过  &lt;code&gt;&amp;lt;h1&amp;gt;&lt;/code&gt;  -  &lt;code&gt;&amp;lt;h6&amp;gt;&lt;/code&gt;  标签来定义的。&lt;/p&gt;
@@ -492,9 +800,9 @@
         <updated>2024-11-08T08:59:39.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</id>
+        <id>https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</id>
         <title>HTML - 1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/"/>
         <content type="html">&lt;h3 id=&#34;html&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html&#34;&gt;#&lt;/a&gt; HTML&lt;/h3&gt;
 &lt;h4 id=&#34;html-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#html-简介&#34;&gt;#&lt;/a&gt; HTML 简介&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -640,9 +948,9 @@
         <updated>2024-11-08T08:57:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</id>
+        <id>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</id>
         <title>JavaScript - 3</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/"/>
         <content type="html">&lt;h3 id=&#34;javascript-事件&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javascript-事件&#34;&gt;#&lt;/a&gt; JavaScript 事件&lt;/h3&gt;
 &lt;hr&gt;
 &lt;p&gt;HTML 事件是发生在 HTML 元素上的事情&lt;/p&gt;
@@ -655,9 +963,9 @@
         <updated>2024-11-08T08:56:18.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</id>
+        <id>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</id>
         <title>JavaScript - 2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/"/>
         <content type="html">&lt;h3 id=&#34;对象&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对象&#34;&gt;#&lt;/a&gt; 对象&lt;/h3&gt;
 &lt;p&gt;在 JavaScript 中，除了核心类型 —— &lt;code&gt;core object&lt;/code&gt; ，其他的一切都是对象&lt;/p&gt;
 &lt;p&gt;JavaScript 的对象可以简单的理解为  &lt;code&gt;&amp;quot;名称&amp;quot;&lt;/code&gt; —— &lt;code&gt;&amp;quot;值&amp;quot;&lt;/code&gt; (你不应将其理解为键值对，因为 JavaScript 中有比其更接近键值对的  &lt;code&gt;Map&lt;/code&gt; （映射表，于 ES 2015 加入）)，其中， &lt;code&gt;&amp;quot;名称&amp;quot;&lt;/code&gt;  是一个字符串， &lt;code&gt;&amp;quot;值&amp;quot;&lt;/code&gt;  可以是任意 JavaScript 的数据类型 (包括对象)。正因为这种特性，使得用户可以创建出极为复杂的数据结构。&lt;/p&gt;
@@ -787,9 +1095,9 @@
         <updated>2024-11-08T08:54:37.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</id>
         <title>MyBatisPlus疑难杂症</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/"/>
         <content type="html">&lt;ol&gt;
 &lt;li&gt;无效绑定&lt;/li&gt;
 &lt;/ol&gt;
@@ -814,9 +1122,9 @@
         <updated>2024-11-08T08:35:36.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</id>
         <title>MyBatisPlus-3</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/"/>
         <content type="html">&lt;h3 id=&#34;条件构造器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#条件构造器&#34;&gt;#&lt;/a&gt; 条件构造器&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;MyBatis-Plus&lt;/em&gt; 提供了条件构造器 (&lt;em&gt;Wrapper&lt;/em&gt;) 来构建复杂的数据库查询条件，简单便捷，没有额外的负担。&lt;/p&gt;
 &lt;p&gt;Wrapper 类是构建查询和更新条件的核心工具。以下是主要的 Wrapper 类及其功能：&lt;/p&gt;
@@ -1808,9 +2116,9 @@
         <updated>2024-11-08T08:32:23.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</id>
         <title>MyBatisPlus-2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/"/>
         <content type="html">&lt;h3 id=&#34;持久层接口&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#持久层接口&#34;&gt;#&lt;/a&gt; 持久层接口&lt;/h3&gt;
 &lt;h4 id=&#34;service-interface&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#service-interface&#34;&gt;#&lt;/a&gt; Service Interface&lt;/h4&gt;
 &lt;h5 id=&#34;save&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#save&#34;&gt;#&lt;/a&gt; save&lt;/h5&gt;
@@ -1959,9 +2267,9 @@
         <updated>2024-11-08T08:31:35.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/SSH-Agent/</id>
+        <id>https://yunyat.cloud/linux/SSH-Agent/</id>
         <title>SSH Agent</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/SSH-Agent/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/SSH-Agent/"/>
         <content type="html">&lt;h3 id=&#34;ssh-agent-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ssh-agent-简介&#34;&gt;#&lt;/a&gt; &lt;em&gt;SSH Agent&lt;/em&gt; 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;*SSH Agent（Secure Shell Agent）* 是一个帮助管理 &lt;em&gt;SSH&lt;/em&gt; 认证过程的守护进程。它的主要功能是存储用户的私钥，并代表用户在进行 &lt;em&gt;SSH&lt;/em&gt; 认证时向 &lt;em&gt;SSH&lt;/em&gt; 服务器提供这些私钥，从而避免频繁输入密码或私钥文件的路径。&lt;em&gt;SSH Agent&lt;/em&gt; 的设计目的是为了提高安全性、方便性和效率。&lt;/p&gt;
@@ -2028,9 +2336,9 @@
         <updated>2024-11-03T06:36:15.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</id>
         <title>MyBatisPlus-1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/"/>
         <content type="html">&lt;h3 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2Jhb21pZG91L215YmF0aXMtcGx1cw==&#34;&gt;MyBatis-Plus&lt;/span&gt; 是一个 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cubXliYXRpcy5vcmcvbXliYXRpcy0zLw==&#34;&gt;MyBatis&lt;/span&gt; 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。&lt;/p&gt;
@@ -2101,9 +2409,9 @@
         <updated>2024-05-25T17:00:09.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-5/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-5/</id>
         <title>MySQL-5</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-5/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-5/"/>
         <content type="html">&lt;h3 id=&#34;sql-注入&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#sql-注入&#34;&gt;#&lt;/a&gt; &lt;em&gt;SQL&lt;/em&gt; 注入&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;如果您通过网页获取用户输入的数据并将其插入一个 &lt;em&gt;MySQL&lt;/em&gt; 数据库，那么就有可能发生 &lt;em&gt;SQL&lt;/em&gt; 注入安全的问题。&lt;/p&gt;
@@ -2139,9 +2447,9 @@
         <updated>2024-05-14T07:48:52.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-4/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-4/</id>
         <title>MySQL-4</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-4/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-4/"/>
         <content type="html">&lt;h3 id=&#34;事务&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#事务&#34;&gt;#&lt;/a&gt; 事务&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;MySQL&lt;/em&gt; 中，&lt;u&gt;事务&lt;/u&gt;(&lt;em&gt; &lt;code&gt;Transaction&lt;/code&gt; &lt;/em&gt;) 是一组 &lt;em&gt;SQL&lt;/em&gt; 语句的执行，它们被视为一个单独的工作单元。这组操作要么全部成功执行，要么全部不执行，是一个 “全有或全无” 的原则. &lt;u&gt;事务&lt;/u&gt;的主要目的是为了保证数据的完整性和一致性.&lt;/p&gt;
 &lt;p&gt;基本特性 (&lt;em&gt;&lt;strong&gt;ACID&lt;/strong&gt;&lt;/em&gt; 属性)：&lt;/p&gt;
@@ -2386,9 +2694,9 @@ rollback;
         <updated>2024-05-13T08:24:45.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-3/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-3/</id>
         <title>MySQL-3</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-3/"/>
         <content type="html">&lt;h3 id=&#34;like-子句&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#like-子句&#34;&gt;#&lt;/a&gt; &lt;em&gt;LIKE&lt;/em&gt; 子句&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;like&lt;/em&gt; 子句用于指定 &lt;em&gt;update&lt;/em&gt; 以及 &lt;em&gt;delete&lt;/em&gt; 中的 &lt;em&gt;where&lt;/em&gt; 条件.&lt;/p&gt;
 &lt;p&gt;可以使用 &lt;em&gt; &lt;code&gt;or&lt;/code&gt; &lt;/em&gt; 或者 &lt;em&gt; &lt;code&gt;and&lt;/code&gt; &lt;/em&gt; 指定一个或者多个条件.&lt;/p&gt;
@@ -2560,9 +2868,9 @@ select * from user as u where u.id regexp &#39;^[1*]&#39;;
         <updated>2024-05-09T07:03:42.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-2/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-2/</id>
         <title>MySQL-2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-2/"/>
         <content type="html">&lt;h2 id=&#34;mysql-基本操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql-基本操作&#34;&gt;#&lt;/a&gt; MySQL 基本操作&lt;/h2&gt;
 &lt;h3 id=&#34;对数据库操作&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#对数据库操作&#34;&gt;#&lt;/a&gt; 对数据库操作&lt;/h3&gt;
 &lt;h4 id=&#34;创建数据库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建数据库&#34;&gt;#&lt;/a&gt; 创建数据库&lt;/h4&gt;
@@ -2845,9 +3153,9 @@ WHERE condition;
         <updated>2024-05-06T07:12:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/database/MySQL-1/</id>
+        <id>https://yunyat.cloud/MyCodingBook/database/MySQL-1/</id>
         <title>MySQL-1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/database/MySQL-1/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/database/MySQL-1/"/>
         <content type="html">&lt;h3 id=&#34;mysql-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#mysql-简介&#34;&gt;#&lt;/a&gt; MySQL 简介&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;MySQL&lt;/em&gt; 是一款广泛使用的关系型数据库管理系统（&lt;em&gt;RDBMS&lt;/em&gt;），由瑞典 &lt;em&gt;MySQL AB&lt;/em&gt; 公司最初开发，目前隶属于 &lt;em&gt;Oracle&lt;/em&gt; 公司。&lt;em&gt;MySQL&lt;/em&gt; 以其开源、稳定、高效、可扩展性强等特点而著名，是互联网行业中最为流行的数据库解决方案之一。&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;MySQL&lt;/em&gt; 命令关键字本身是不区分大小写的，但是数据库名、表名、列名、别名等在不同的操作系统下区分大小写的情况有所不同：&lt;/p&gt;
@@ -3202,9 +3510,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-05-06T07:09:43.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</id>
         <title>springboot全局异常处理</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
         <content type="html">&lt;h3 id=&#34;springboot-全局异常处理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot-全局异常处理&#34;&gt;#&lt;/a&gt; &lt;em&gt;SpringBoot&lt;/em&gt; 全局异常处理&lt;/h3&gt;
 &lt;p&gt;​	在写程序时总是需要处理某些异常，虽然 Java 提供了自带的异常处理，但是一个完整的项目中可能遇到千奇百怪的异常，这些异常如果都需要我们手动去进行处理，那么代码量会增多不说，程序之间的耦合还会增大不少，这并不符合 “高内聚，低耦合” 的理念。&lt;/p&gt;
 &lt;p&gt;​	&lt;em&gt;Spring&lt;/em&gt; 框架提供了 &lt;em&gt;@RestControllerAdvice&lt;/em&gt; 注解来处理全局异常，这样可以避免大量的  &lt;code&gt;try catch&lt;/code&gt;  ，也方便了异常信息的统一处理和维护。&lt;/p&gt;
@@ -3222,9 +3530,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-23T03:27:04.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</id>
         <title>springboot多模块开发</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/"/>
         <content type="html">&lt;h3 id=&#34;介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#介绍&#34;&gt;#&lt;/a&gt; 介绍&lt;/h3&gt;
 &lt;p&gt;为了解决项目越来越大的问题，使用了多模块开发来使层次更加清晰。&lt;/p&gt;
 &lt;p&gt;架构大致如下：&lt;/p&gt;
@@ -3268,9 +3576,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-22T03:50:17.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</id>
         <title>Spring-ResponseEntity</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/"/>
         <content type="html">&lt;h3 id=&#34;responseentity&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#responseentity&#34;&gt;#&lt;/a&gt; &lt;em&gt;ResponseEntity&lt;/em&gt;&lt;/h3&gt;
 &lt;p&gt;&lt;em&gt;ResponseEntity&lt;/em&gt; 是 &lt;em&gt;Spring Web MVC&lt;/em&gt; 框架中提供的一个类，用于封装 &lt;em&gt;HTTP&lt;/em&gt; 响应的详细信息。它允许开发者不仅定义返回给客户端的数据（通常作为请求处理的结果），还能够控制响应的状态码、头部信息以及主体内容的类型。&lt;/p&gt;
 &lt;h4 id=&#34;主要属性和功能&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#主要属性和功能&#34;&gt;#&lt;/a&gt; 主要属性和功能：&lt;/h4&gt;
@@ -3294,9 +3602,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-22T03:39:54.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</id>
         <title>SpringMVC</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/"/>
         <content type="html">&lt;h3 id=&#34;spring-mvc原理&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-mvc原理&#34;&gt;#&lt;/a&gt; Spring MVC 原理&lt;/h3&gt;
 &lt;h4 id=&#34;spring-mvc工作原理图&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-mvc工作原理图&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Spring MVC工作原理图&lt;/code&gt;&lt;/h4&gt;
 &lt;p&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2024/04/17/pFxTxC6.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
@@ -3319,9 +3627,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-16T04:09:09.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</id>
         <title>SpringFramework基础</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h3 id=&#34;spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-spring-mvc-spring-boot-spring-cloud&#34;&gt;#&lt;/a&gt; Spring、Spring MVC、Spring Boot、Spring Cloud&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;ol&gt;
@@ -3414,9 +3722,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-16T04:03:49.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</id>
         <title>SpringBoot基础</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/"/>
         <content type="html">&lt;h3 id=&#34;springboot-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#springboot-简介&#34;&gt;#&lt;/a&gt; &lt;em&gt;Springboot&lt;/em&gt; 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;blockquote&gt;
@@ -3527,9 +3835,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-16T04:03:49.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</id>
         <title>JavaWeb</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/"/>
         <content type="html">&lt;h3 id=&#34;域&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#域&#34;&gt;#&lt;/a&gt; 域&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -3798,9 +4106,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-16T03:46:44.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</id>
         <title>spring开发注解集合</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/"/>
         <content type="html">&lt;h3 id=&#34;spring-的常用注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#spring-的常用注解&#34;&gt;#&lt;/a&gt; Spring 的常用注解&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -4032,9 +4340,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-16T03:35:58.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</id>
+        <id>https://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</id>
         <title>JSON</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/Front/javascript/JSON/"/>
         <content type="html">&lt;h3 id=&#34;json-简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#json-简介&#34;&gt;#&lt;/a&gt; JSON 简介&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;JSON&lt;/code&gt; : &lt;strong&gt;J&lt;/strong&gt;ava&lt;strong&gt;S&lt;/strong&gt;cript &lt;strong&gt;O&lt;/strong&gt;bject &lt;strong&gt;N&lt;/strong&gt;otation(  &lt;code&gt;JavaScript&lt;/code&gt;  对象表示法)&lt;/p&gt;
@@ -4078,9 +4386,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-04-03T02:05:34.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</id>
+        <id>https://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</id>
         <title>JUnit</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/UnitTests/JUnit/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/UnitTests/JUnit/"/>
         <content type="html">&lt;h3 id=&#34;junit-介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#junit-介绍&#34;&gt;#&lt;/a&gt; JUnit 介绍&lt;/h3&gt;
 &lt;p&gt;在编写程序的过程中，我们常常需要对一个单独的模块进行测试，以判断其是否符合要求。&lt;/p&gt;
 &lt;h4 id=&#34;test-注解&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#test-注解&#34;&gt;#&lt;/a&gt;  &lt;code&gt;@Test&lt;/code&gt;  注解&lt;/h4&gt;
@@ -4215,9 +4523,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-03-11T01:02:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
+        <id>https://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</id>
         <title>Selenium 的使用</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/"/>
         <content type="html">&lt;h3 id=&#34;selenium-介绍&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#selenium-介绍&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Selenium&lt;/code&gt;  介绍&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;selenium&lt;/code&gt;  是一个广泛使用的模拟浏览器运行的库，它是一个用于  &lt;code&gt;Web&lt;/code&gt;  应用程序测试的工具。 &lt;code&gt;Selenium&lt;/code&gt;  测试直接运行在浏览器中，就像真正的用户在操作一样，并且支持大多数现代  &lt;code&gt;Web&lt;/code&gt;  浏览器。&lt;/p&gt;
 &lt;h3 id=&#34;selenium-自动化测试的八种定位方法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#selenium-自动化测试的八种定位方法&#34;&gt;#&lt;/a&gt;  &lt;code&gt;Selenium&lt;/code&gt;  自动化测试的八种定位方法&lt;/h3&gt;
@@ -4256,9 +4564,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-03-05T07:47:19.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
+        <id>https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
         <title>2023年度总结</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
         <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
 &lt;p&gt;先在这里提前祝大家新年快乐！新的一年要开开心心，顺顺利利的。🧨爆竹🎇烟花💥爆炸✨闪亮&lt;/p&gt;
 &lt;hr&gt;
@@ -4278,9 +4586,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
         <updated>2024-02-09T12:56:01.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</id>
+        <id>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</id>
         <title>shell脚本笔记-1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/"/>
         <content type="html">&lt;h3 id=&#34;shell命令解释器&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shell命令解释器&#34;&gt;#&lt;/a&gt; Shell 命令解释器&lt;/h3&gt;
 &lt;figure class=&#34;highlight shell&#34;&gt;&lt;figcaption data-lang=&#34;Bash&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token function&#34;&gt;cat&lt;/span&gt; /etc/shells&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;p&gt;shell 的命令解释器用于执行 shell 命令或 shell 脚本文件，Centos 下有四种解释器，一般用默认的 /bin/bash 即可&lt;/p&gt;
 &lt;h3 id=&#34;执行shell脚本&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#执行shell脚本&#34;&gt;#&lt;/a&gt; 执行 Shell 脚本&lt;/h3&gt;
@@ -4476,9 +4784,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-12-15T07:06:21.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</id>
+        <id>https://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/</id>
         <title>windows重装系统重制版</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/windows/windows%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F/"/>
         <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
 &lt;details class=&#34;danger&#34;&gt;&lt;summary&gt;&lt;b&gt;重要&lt;/b&gt;：在阅读本文章前请确保你已拥有这些技能：&lt;/summary&gt;&lt;div&gt;
 &lt;ul&gt;
@@ -4552,9 +4860,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-11-29T06:37:53.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>
+        <id>https://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/</id>
         <title>任意版本win远程桌面使用内网穿透连接</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/"/>
         <content type="html">&lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
 &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;&lt;b&gt;重要&lt;/b&gt;：请不要问我为什么不能访问 GitHub 网站这种问题&lt;/p&gt;
@@ -4631,9 +4939,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-11-28T14:56:44.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</id>
+        <id>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</id>
         <title>shell脚本笔记 - 2</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/"/>
         <content type="html">&lt;h3 id=&#34;shell&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#shell&#34;&gt;#&lt;/a&gt; Shell&lt;/h3&gt;
 &lt;p&gt;原生 bash 不支持简单的数学运算，但是可以通过其他命令来实现。&lt;/p&gt;
 &lt;h4 id=&#34;expr&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#expr&#34;&gt;#&lt;/a&gt;  &lt;code&gt;expr&lt;/code&gt;&lt;/h4&gt;
@@ -4925,9 +5233,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-11-27T08:59:13.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</id>
+        <id>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</id>
         <title>JavaScript - 1</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h3 id=&#34;说明&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#说明&#34;&gt;#&lt;/a&gt; 说明&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;因本人主学 &lt;code&gt;Java&lt;/code&gt; , 所以下文包括以后的笔记绝大部分都是与 Java 做对比&lt;/p&gt;
@@ -5121,9 +5429,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-11-22T06:22:20.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/</id>
         <title>Xmind破解</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/Xmind%E7%A0%B4%E8%A7%A3/"/>
         <content type="html">&lt;h4 id=&#34;下载-xmind&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#下载-xmind&#34;&gt;#&lt;/a&gt; 下载 Xmind&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;先去下载 Xmind 的最新版本&lt;/li&gt;
@@ -5163,9 +5471,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-11-09T07:43:55.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/</id>
         <title>Typora的破解</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/Typora%E7%9A%84%E7%A0%B4%E8%A7%A3/"/>
         <content type="html">&lt;h4 id=&#34;前言废话&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言废话&#34;&gt;#&lt;/a&gt; 前言（&lt;s&gt;废话&lt;/s&gt;）&lt;/h4&gt;
 &lt;p&gt;介绍一下 Typora 是什么…&lt;/p&gt;
 &lt;blockquote&gt;
@@ -5228,16 +5536,16 @@ Shell 选项:hB&lt;br&gt;
 &lt;hr&gt;
 &lt;p&gt;END&lt;/p&gt;
 </content>
-        <category term="markdown" />
         <category term="原创" />
+        <category term="markdown" />
         <category term="破解" />
         <category term="Typora" />
         <updated>2023-11-07T14:40:47.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</id>
+        <id>https://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/</id>
         <title>Linux2023-9-18作业</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/Linux2023-9-18%E4%BD%9C%E4%B8%9A/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;题目要求：&lt;/p&gt;
 &lt;p&gt;1、破解 centos7 操作系统密码为 flectrag&lt;/p&gt;
@@ -5292,14 +5600,14 @@ Shell 选项:hB&lt;br&gt;
 &lt;hr&gt;
 &lt;p&gt;END&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Linux" />
+        <category term="原创" />
         <updated>2023-09-18T06:40:30.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</id>
+        <id>https://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/</id>
         <title>谈谈看完《孤注一掷》的感想</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/"/>
         <content type="html">&lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
 &lt;p&gt;我并没有什么文采，也不懂什么高深的遣词造句，此篇如其名，只是谈一下我对看完这部电影的浅薄感想！&lt;/p&gt;
 &lt;p&gt;就这么多吧，将就着看看就成，不必当真。&lt;/p&gt;
@@ -5320,9 +5628,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-09-16T10:29:35.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</id>
+        <id>https://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/</id>
         <title>Linux2023.9.15作业</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/Linux2023-9-15%E4%BD%9C%E4%B8%9A/"/>
         <content type="html">&lt;blockquote&gt;
 &lt;p&gt;题目要求：&lt;/p&gt;
 &lt;p&gt;1、创建用户和用户组&lt;/p&gt;
@@ -5406,14 +5714,14 @@ Shell 选项:hB&lt;br&gt;
 &lt;hr&gt;
 &lt;p&gt;END&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="Linux" />
+        <category term="原创" />
         <updated>2023-09-15T06:18:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</id>
+        <id>https://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/</id>
         <title>Docker之nginx的负载均衡</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/docker/Docker%E4%B9%8Bnginx%E7%9A%84%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/"/>
         <content type="html">&lt;h4 id=&#34;使用docker部署nginx的负载均衡&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#使用docker部署nginx的负载均衡&#34;&gt;#&lt;/a&gt; 使用 docker 部署 nginx 的负载均衡&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;下载 nginx 和 tomcat 镜像&lt;/li&gt;
@@ -5488,9 +5796,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-09-12T10:49:35.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</id>
+        <id>https://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/</id>
         <title>harbor本地仓库搭建</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/harbor%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E6%90%AD%E5%BB%BA/"/>
         <content type="html">&lt;h4 id=&#34;创建-harbor-仓库&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#创建-harbor-仓库&#34;&gt;#&lt;/a&gt; 创建 Harbor 仓库&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;访问官方网站下载官方镜像源&lt;/li&gt;
@@ -5578,9 +5886,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-09-12T03:34:02.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</id>
+        <id>https://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/</id>
         <title>Docker构建镜像及使用的笔记</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/docker/Docker%E6%9E%84%E5%BB%BA%E9%95%9C%E5%83%8F%E5%8F%8A%E4%BD%BF%E7%94%A8%E7%9A%84%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
 &lt;p&gt;本文并不记录详细过程，只是为了记录一下大概构建及使用的经过（还有踩坑记录，重点！！！）&lt;/p&gt;
 &lt;hr&gt;
@@ -5599,9 +5907,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-09-11T13:52:29.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</id>
+        <id>https://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/</id>
         <title>Win至Linux的免密登录</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/"/>
         <content type="html">&lt;h4 id=&#34;配置-windows-端&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#配置-windows-端&#34;&gt;#&lt;/a&gt; 配置 Windows 端&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;先在 Windows 下生成公钥文件&lt;/li&gt;
@@ -5659,9 +5967,9 @@ Shell 选项:hB&lt;br&gt;
         <updated>2023-09-09T15:30:41.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</id>
+        <id>https://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/</id>
         <title>可道云桌面搭建笔记</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/%E5%8F%AF%E9%81%93%E4%BA%91%E6%A1%8C%E9%9D%A2%E6%90%AD%E5%BB%BA%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h4 id=&#34;可道云桌面搭建&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可道云桌面搭建&#34;&gt;#&lt;/a&gt; 可道云桌面搭建&lt;/h4&gt;
 &lt;ol&gt;
 &lt;li&gt;先创建 dockerfile-two 及 kod-two 文件夹（因为我之前搭过一遍，但是忘记截图了，所以重搭一遍，防止文件名重复所以用 -two ）&lt;/li&gt;
@@ -5734,9 +6042,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-09-08T09:10:26.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</id>
+        <id>https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/</id>
         <title>Docker的使用-叁</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/"/>
         <content type="html">&lt;h4 id=&#34;dockerfile的使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#dockerfile的使用&#34;&gt;#&lt;/a&gt; Dockerfile 的使用&lt;/h4&gt;
 &lt;p&gt;使用 Dockerfile 部署扫雷 web 程序&lt;/p&gt;
 &lt;ol&gt;
@@ -5795,9 +6103,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-09-08T07:00:14.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</id>
+        <id>https://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/</id>
         <title>Docker的使用-贰</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/"/>
         <content type="html">&lt;h4 id=&#34;docker容器的应用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker容器的应用&#34;&gt;#&lt;/a&gt; Docker 容器的应用&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言：使用 Docker 部署 nginx 站点实现外网访问&lt;/p&gt;
@@ -5831,9 +6139,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-09-05T10:57:03.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</id>
+        <id>https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/</id>
         <title>Docker的使用-壹</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/"/>
         <content type="html">&lt;h4 id=&#34;docker使用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker使用&#34;&gt;#&lt;/a&gt; Docker 使用&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;在 docker 容器内运行应用程序&lt;/li&gt;
@@ -5923,9 +6231,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-09-05T01:14:52.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</id>
+        <id>https://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/</id>
         <title>Docker部署</title>
-        <link rel="alternate" href="http://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/"/>
+        <link rel="alternate" href="https://yunyat.cloud/linux/docker/Docker%E9%83%A8%E7%BD%B2/"/>
         <content type="html">&lt;h3 id=&#34;docker部署&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#docker部署&#34;&gt;#&lt;/a&gt; Docker 部署&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言：部署 docker 要先确保 yum 源保持最新&lt;/p&gt;
@@ -5988,9 +6296,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-09-04T08:53:57.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</id>
         <title>Java-lambda的方法引用</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/"/>
         <content type="html">&lt;h5 id=&#34;方法引用&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#方法引用&#34;&gt;#&lt;/a&gt; 方法引用&lt;/h5&gt;
 &lt;p&gt;方法引用有四种引用方法&lt;/p&gt;
 &lt;table&gt;
@@ -6051,9 +6359,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-07-11T07:43:23.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</id>
+        <id>https://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/</id>
         <title>暑假工踩坑记</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/"/>
         <content type="html">&lt;p&gt;一切的不顺，全都来之于能力的不足&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
@@ -6088,9 +6396,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-06-28T09:26:18.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/</id>
         <title>湖北飞young算号器</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E6%B9%96%E5%8C%97%E9%A3%9Eyoung%E7%AE%97%E5%8F%B7%E5%99%A8/"/>
         <content type="html">&lt;hr&gt;
 &lt;h4 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h4&gt;
 &lt;ul&gt;
@@ -6137,9 +6445,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-06-13T08:24:40.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</id>
         <title>集合接口的继承及实现概览</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/"/>
         <content type="html">&lt;h5 id=&#34;map-根接口包含键和值&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map-根接口包含键和值&#34;&gt;#&lt;/a&gt; Map    -- 根接口 (包含键和值)&lt;/h5&gt;
 &lt;p&gt;直接继承的接口&lt;/p&gt;
 &lt;ul&gt;
@@ -6246,9 +6554,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-05-14T13:45:06.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
         <title>frp之内网穿透</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/frp%E4%B9%8B%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
         <content type="html">&lt;p&gt;&lt;img data-src=&#34;https://s1.ax1x.com/2023/05/01/p98QaIP.jpg&#34; alt=&#34;p98QaIP.jpg&#34;&gt;&lt;/p&gt;
 &lt;a id=&#34;more&#34;&gt;&lt;/a&gt;
 &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
@@ -6344,9 +6652,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-05-08T04:12:18.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
         <title>记一次电脑启动原神蓝屏解决方案</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E8%AE%B0%E4%B8%80%E6%AC%A1%E7%94%B5%E8%84%91%E5%90%AF%E5%8A%A8%E5%8E%9F%E7%A5%9E%E8%93%9D%E5%B1%8F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
         <content type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;原因：&lt;/p&gt;
@@ -6365,9 +6673,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-05-05T16:24:25.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
+        <id>https://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/</id>
         <title>安利几个好用的网站</title>
-        <link rel="alternate" href="http://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
+        <link rel="alternate" href="https://yunyat.cloud/miscellaneous/issues/%E5%AE%89%E5%88%A9%E5%87%A0%E4%B8%AA%E5%A5%BD%E7%94%A8%E7%9A%84%E7%BD%91%E7%AB%99/"/>
         <content type="html">&lt;h4 id=&#34;今天来分享几个十分好用的网站&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#今天来分享几个十分好用的网站&#34;&gt;#&lt;/a&gt; 今天来分享几个十分好用的网站&lt;/h4&gt;
 &lt;hr&gt;
 &lt;h5 id=&#34;游戏类&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#游戏类&#34;&gt;#&lt;/a&gt; 游戏类&lt;/h5&gt;
@@ -6460,9 +6768,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-05-02T10:07:29.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</id>
         <title>集合-Map</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/"/>
         <content type="html">&lt;h4 id=&#34;map接口双列队列&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#map接口双列队列&#34;&gt;#&lt;/a&gt; Map 接口 (双列队列)&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -6524,9 +6832,9 @@ ENTRYPOINT [&amp;quot;/bin/bash&amp;quot;,&amp;quot;/init.sh&amp;quot;]
         <updated>2023-05-02T09:58:51.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</id>
         <title>JavaFx使用Maven打包及运行</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/"/>
         <content type="html">&lt;h4 id=&#34;javafx使用maven打包依赖及运行&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#javafx使用maven打包依赖及运行&#34;&gt;#&lt;/a&gt; javafx 使用 maven 打包依赖及运行&lt;/h4&gt;
 &lt;p&gt;1. 先照图打包&lt;br&gt;
 &lt;img data-src=&#34;https://s1.ax1x.com/2023/04/07/ppTPAZ6.png&#34; alt=&#34;1&#34;&gt;&lt;br&gt;
@@ -6547,9 +6855,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
         <updated>2023-05-02T09:53:25.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</id>
         <title>运算符级别比较</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/"/>
         <content type="html">&lt;hr&gt;
 &lt;h3 id=&#34;运算符级别&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#运算符级别&#34;&gt;#&lt;/a&gt; 运算符级别&lt;/h3&gt;
 &lt;ul&gt;
@@ -6566,9 +6874,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
         <updated>2023-05-02T09:50:16.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</id>
+        <id>https://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</id>
         <title>hexo及SSL获取</title>
-        <link rel="alternate" href="http://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/"/>
+        <link rel="alternate" href="https://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/"/>
         <content type="html">&lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文只记录大概过程 (具体教程百度上都有)&lt;/p&gt;
 &lt;/div&gt;
@@ -6657,14 +6965,14 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
 </content>
-        <category term="hexo" />
         <category term="原创" />
+        <category term="hexo" />
         <updated>2023-04-30T07:38:55.000Z</updated>
     </entry>
     <entry>
-        <id>http://yunyat.cloud/MyCodingBook/backEnd/java/Java/</id>
+        <id>https://yunyat.cloud/MyCodingBook/backEnd/java/Java/</id>
         <title>Java线程池</title>
-        <link rel="alternate" href="http://yunyat.cloud/MyCodingBook/backEnd/java/Java/"/>
+        <link rel="alternate" href="https://yunyat.cloud/MyCodingBook/backEnd/java/Java/"/>
         <content type="html">&lt;h5 id=&#34;future&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#future&#34;&gt;#&lt;/a&gt; Future&lt;/h5&gt;
 &lt;p&gt;此类用于异步存储计算结果&lt;/p&gt;
 &lt;ul&gt;

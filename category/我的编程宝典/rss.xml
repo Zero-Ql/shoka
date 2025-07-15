@@ -2,19 +2,18 @@
 <rss version="2.0">
     <channel>
         <title>上善若水 • Posts by &#34;我的编程宝典&#34; category</title>
-        <link>http://yunyat.cloud</link>
+        <link>https://yunyat.cloud</link>
         <description>若能避开猛烈的欢喜，自然也不会有悲痛的来袭.</description>
         <language>zh-CN</language>
         <pubDate>Fri, 15 Nov 2024 17:16:25 +0800</pubDate>
         <lastBuildDate>Fri, 15 Nov 2024 17:16:25 +0800</lastBuildDate>
-        <category>markdown</category>
-        <category>mermaid</category>
-        <category>测试</category>
-        <category>hexo</category>
-        <category>原创</category>
         <category>Linux</category>
+        <category>原创</category>
         <category>电脑技术</category>
         <category>SSH</category>
+        <category>RS232</category>
+        <category>RS485</category>
+        <category>硬件</category>
         <category>可道云</category>
         <category>Docker</category>
         <category>harbor</category>
@@ -22,54 +21,58 @@
         <category>年度总结</category>
         <category>记录</category>
         <category>暑假工</category>
+        <category>markdown</category>
+        <category>mermaid</category>
+        <category>测试</category>
+        <category>hexo</category>
         <category>游戏</category>
         <category>我的世界</category>
         <category>java</category>
         <category>junit</category>
-        <category>shell</category>
         <category>python</category>
         <category>selenium</category>
-        <category>Hexo</category>
-        <category>教程</category>
         <category>MySQL</category>
+        <category>shell</category>
         <category>Git</category>
         <category>maven</category>
         <category>cAdvisor</category>
         <category>Prometheus</category>
         <category>Grafana</category>
+        <category>frp</category>
         <category>破解</category>
         <category>Typora</category>
         <category>xmind</category>
         <category>思维导图</category>
         <category>Ubuntu</category>
-        <category>frp</category>
         <category>分享</category>
         <category>计算机</category>
         <category>GitHub</category>
+        <category>Hexo</category>
+        <category>教程</category>
         <category>数据结构</category>
         <category>算法</category>
-        <category>HTML</category>
-        <category>JavaScript</category>
         <category>lambda表达式</category>
-        <category>JSON</category>
-        <category>java线程</category>
-        <category>javafx</category>
-        <category>集合</category>
         <category>Java</category>
         <category>servlet</category>
+        <category>java线程</category>
+        <category>javafx</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
+        <category>集合</category>
+        <category>HTML</category>
         <category>springmvc</category>
         <category>spring</category>
         <category>spring注解</category>
-        <category>ResponseEntity</category>
+        <category>springboot</category>
+        <category>异常处理</category>
         <category>mybatis</category>
         <category>mybatisplus</category>
         <category>问题解决</category>
-        <category>springboot</category>
-        <category>异常处理</category>
+        <category>ResponseEntity</category>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</guid>
             <title>二叉树之打印二叉树</title>
-            <link>http://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
+            <link>https://yunyat.cloud/MyCodingBook/DataStructure/BinaryTree/%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B9%8B%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</link>
             <category>原创</category>
             <category>数据结构</category>
             <category>算法</category>
@@ -188,9 +191,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</guid>
             <title>HTML - 2</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-2/</link>
             <category>原创</category>
             <category>HTML</category>
             <pubDate>Fri, 08 Nov 2024 16:59:39 +0800</pubDate>
@@ -495,9 +498,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</guid>
             <title>HTML - 1</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/HTML/HTML-1/</link>
             <category>原创</category>
             <category>HTML</category>
             <pubDate>Fri, 08 Nov 2024 16:57:57 +0800</pubDate>
@@ -643,9 +646,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</guid>
             <title>JavaScript - 3</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-3/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <pubDate>Fri, 08 Nov 2024 16:56:18 +0800</pubDate>
@@ -658,9 +661,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</guid>
             <title>JavaScript - 2</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript-2/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <pubDate>Fri, 08 Nov 2024 16:54:37 +0800</pubDate>
@@ -790,9 +793,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</guid>
             <title>MyBatisPlus疑难杂症</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -817,9 +820,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</guid>
             <title>MyBatisPlus-3</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-3/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -1811,9 +1814,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</guid>
             <title>MyBatisPlus-2</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-2/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -1962,9 +1965,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</guid>
             <title>MyBatisPlus-1</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot%E6%8C%81%E4%B9%85%E5%B1%82%E6%A1%86%E6%9E%B6/MyBatisPlus-1/</link>
             <category>原创</category>
             <category>java</category>
             <category>mybatis</category>
@@ -2035,9 +2038,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-5/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-5/</guid>
             <title>MySQL-5</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-5/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-5/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Tue, 14 May 2024 15:48:52 +0800</pubDate>
@@ -2073,9 +2076,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-4/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-4/</guid>
             <title>MySQL-4</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-4/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-4/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Mon, 13 May 2024 16:24:45 +0800</pubDate>
@@ -2320,9 +2323,9 @@ rollback;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-3/</guid>
             <title>MySQL-3</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-3/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Thu, 09 May 2024 15:03:42 +0800</pubDate>
@@ -2494,9 +2497,9 @@ select * from user as u where u.id regexp &#39;^[1*]&#39;;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-2/</guid>
             <title>MySQL-2</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-2/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Mon, 06 May 2024 15:12:40 +0800</pubDate>
@@ -2779,9 +2782,9 @@ WHERE condition;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/database/MySQL-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/database/MySQL-1/</guid>
             <title>MySQL-1</title>
-            <link>http://yunyat.cloud/MyCodingBook/database/MySQL-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/database/MySQL-1/</link>
             <category>原创</category>
             <category>MySQL</category>
             <pubDate>Mon, 06 May 2024 15:09:43 +0800</pubDate>
@@ -3136,9 +3139,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
             <title>springboot全局异常处理</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
             <category>原创</category>
             <category>java</category>
             <category>springboot</category>
@@ -3156,9 +3159,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</guid>
             <title>springboot多模块开发</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/springboot%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91/</link>
             <category>原创</category>
             <category>java</category>
             <category>springboot</category>
@@ -3202,9 +3205,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</guid>
             <title>Spring-ResponseEntity</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Tools/Spring-ResponseEntity/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring</category>
@@ -3228,9 +3231,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</guid>
             <title>SpringMVC</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringMVC/</link>
             <category>原创</category>
             <category>java</category>
             <category>springmvc</category>
@@ -3253,9 +3256,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</guid>
             <title>SpringFramework基础</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/Spring%E5%9F%BA%E7%A1%80/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring</category>
@@ -3348,9 +3351,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</guid>
             <title>SpringBoot基础</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/SpringBoot/SpringBoot%E5%9F%BA%E7%A1%80/</link>
             <category>原创</category>
             <category>java</category>
             <category>springboot</category>
@@ -3461,9 +3464,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</guid>
             <title>JavaWeb</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/JavaWeb/</link>
             <category>原创</category>
             <category>Java</category>
             <category>servlet</category>
@@ -3732,9 +3735,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</guid>
             <title>spring开发注解集合</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/</link>
             <category>原创</category>
             <category>java</category>
             <category>spring注解</category>
@@ -3966,9 +3969,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Setter&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Getter&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@Service&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;User&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;	&lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; username&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Integer&lt;/span&gt; age&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; password&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;/login&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;login&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;User&lt;/span&gt; user&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;span class=&#34;token comment&#34;&gt;// 直接传入实体类的对象&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;user&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;getUsername&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;//...&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token string&#34;&gt;&#34;ok&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</guid>
             <title>JSON</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JSON/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <category>JSON</category>
@@ -4012,9 +4015,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</guid>
             <title>JUnit</title>
-            <link>http://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</link>
+            <link>https://yunyat.cloud/MyCodingBook/UnitTests/JUnit/</link>
             <category>原创</category>
             <category>java</category>
             <category>junit</category>
@@ -4149,9 +4152,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
             <title>Selenium 的使用</title>
-            <link>http://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+            <link>https://yunyat.cloud/MyCodingBook/UnitTests/Selenium-%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
             <category>原创</category>
             <category>python</category>
             <category>selenium</category>
@@ -4190,16 +4193,16 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
 &lt;figure class=&#34;highlight python&#34;&gt;&lt;figcaption data-lang=&#34;python&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;driver&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;find_element&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;by&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;By&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;CSS_SELECTOR&lt;span class=&#34;token punctuation&#34;&gt;,&lt;/span&gt;value&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;input#login&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</guid>
             <title>shell脚本笔记-3</title>
-            <link>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</link>
+            <link>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-3/</link>
             <pubDate>Sat, 16 Dec 2023 21:32:47 +0800</pubDate>
             <description><![CDATA[  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</guid>
             <title>shell脚本笔记-1</title>
-            <link>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</link>
+            <link>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-1/</link>
             <category>原创</category>
             <category>shell</category>
             <pubDate>Fri, 15 Dec 2023 15:06:21 +0800</pubDate>
@@ -4395,9 +4398,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</guid>
             <title>shell脚本笔记 - 2</title>
-            <link>http://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</link>
+            <link>https://yunyat.cloud/MyCodingBook/shell/shell%E8%84%9A%E6%9C%AC%E7%AC%94%E8%AE%B0-2/</link>
             <category>原创</category>
             <category>shell</category>
             <pubDate>Mon, 27 Nov 2023 16:59:13 +0800</pubDate>
@@ -4689,9 +4692,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</guid>
             <title>JavaScript - 1</title>
-            <link>http://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</link>
+            <link>https://yunyat.cloud/MyCodingBook/Front/javascript/JavaScript%E7%AC%94%E8%AE%B0/</link>
             <category>原创</category>
             <category>JavaScript</category>
             <pubDate>Wed, 22 Nov 2023 14:22:20 +0800</pubDate>
@@ -4885,9 +4888,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</guid>
             <title>Java-lambda的方法引用</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/Java-lambda%E7%9A%84%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8/</link>
             <category>原创</category>
             <category>java</category>
             <category>lambda表达式</category>
@@ -4948,9 +4951,9 @@ Shell 选项:hB&lt;br&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;figcaption data-lang=&#34;java&#34;&gt;&lt;/figcaption&gt;&lt;table&gt;&lt;tr&gt;&lt;td data-num=&#34;1&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token comment&#34;&gt;// 将上面的代码小改一手&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;2&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token annotation punctuation&#34;&gt;@FunctionalInterface&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;3&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Simple4&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;4&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token comment&#34;&gt;// 返回值为实现接口的类，参数就是实现类的构造方法参数&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;5&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;6&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;7&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;8&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;private&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;9&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; i&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;10&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;i&lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;11&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;12&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;getI&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;13&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token keyword&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;this&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;i&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;concat&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;world!&#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;14&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;15&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;16&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;17&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;token keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;token function&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token class-name&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;]&lt;/span&gt; args&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#123;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;18&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;Simple&lt;/span&gt; simple &lt;span class=&#34;token operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;token class-name&#34;&gt;Main2&lt;/span&gt;&lt;span class=&#34;token operator&#34;&gt;::&lt;/span&gt;&lt;span class=&#34;token keyword&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;19&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token comment&#34;&gt;//simple.test 返回的其实就是一个实现类对象&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;20&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;        &lt;span class=&#34;token class-name&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;out&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;simple&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;test&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token string&#34;&gt;&#34;hello &#34;&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;token function&#34;&gt;getI&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;token punctuation&#34;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;21&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;    &lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td data-num=&#34;22&#34;&gt;&lt;/td&gt;&lt;td&gt;&lt;pre&gt;&lt;span class=&#34;token punctuation&#34;&gt;&amp;#125;&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt; ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</guid>
             <title>集合接口的继承及实现概览</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88%E7%B1%BB%E7%9A%84%E7%BB%A7%E6%89%BF%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%A6%82%E8%A7%88/</link>
             <category>原创</category>
             <category>java</category>
             <category>集合</category>
@@ -5057,9 +5060,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</guid>
             <title>集合-Map</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/%E9%9B%86%E5%90%88-Map/</link>
             <category>原创</category>
             <category>java</category>
             <category>集合</category>
@@ -5121,9 +5124,9 @@ Shell 选项:hB&lt;br&gt;
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</guid>
             <title>JavaFx使用Maven打包及运行</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/javafx%E4%BD%BF%E7%94%A8maven%E6%89%93%E5%8C%85%E5%8F%8A%E8%BF%90%E8%A1%8C/</link>
             <category>原创</category>
             <category>java</category>
             <category>javafx</category>
@@ -5144,9 +5147,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</guid>
             <title>运算符级别比较</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/%E8%BF%90%E7%AE%97%E7%AC%A6%E7%BA%A7%E5%88%AB%E6%AF%94%E8%BE%83/</link>
             <category>原创</category>
             <category>java</category>
             <pubDate>Tue, 02 May 2023 17:50:16 +0800</pubDate>
@@ -5163,9 +5166,9 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">http://yunyat.cloud/MyCodingBook/backEnd/java/Java/</guid>
+            <guid isPermalink="true">https://yunyat.cloud/MyCodingBook/backEnd/java/Java/</guid>
             <title>Java线程池</title>
-            <link>http://yunyat.cloud/MyCodingBook/backEnd/java/Java/</link>
+            <link>https://yunyat.cloud/MyCodingBook/backEnd/java/Java/</link>
             <category>原创</category>
             <category>java线程</category>
             <pubDate>Fri, 28 Apr 2023 23:15:03 +0800</pubDate>
