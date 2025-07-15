@@ -76,7 +76,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <i class="ic i-pen"></i>
     </span>
     <span class="text">本文字数</span>
-    <span>2.3k</span>
+    <span>2.6k</span>
     <span class="text">字</span>
   </span>
   <span class="item" title="阅读时长">
@@ -117,12 +117,12 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://t.mwm.moe/pc?262429"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/pc?633480"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/pc?464092"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/pc?275389"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/pc?620005"></li>
-          <li class="item" data-background-image="https://t.mwm.moe/pc?339160"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/pc?244497"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/pc?717246"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/pc?906013"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/pc?229586"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/pc?361856"></li>
+          <li class="item" data-background-image="https://t.mwm.moe/pc?441220"></li>
         </ul>
       </div>
     </header>
@@ -168,111 +168,16 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="连接串口-安装驱动"><a class="markdownIt-Anchor" href="#连接串口-安装驱动">#</a> 连接串口 &amp; 安装驱动</h3>
-<blockquote>
-<p>💡tips : 检查服务器上有几个串口，以及是公口还是母口</p>
-</blockquote>
-<ol>
-<li>确认螺丝端子是 232 转 232，还是 232 转 485</li>
-</ol>
-<p>插入串口，如果一切顺利，那么应该会显示如下图所示的 <code>USB xxx(COMn)</code> (n 为数字)；如果没有，请检查驱动是否正确安装 or 接线是否正确</p>
-<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250709114420.png" alt="image-20250709114413848"></p>
-<h3 id="安装minicom-设置minicom"><a class="markdownIt-Anchor" href="#安装minicom-设置minicom">#</a> 安装 minicom &amp; 设置 minicom</h3>
-<ol>
-<li>
-<p>将  <code>minicom_packages.zip</code>  包上传到服务器上并解压  <code>minicom_packages.zip</code>  包</p>
-<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 解压</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">unzip</span> minicom_packages.zip</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 给予可执行权限</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token function">chmod</span> +x install_centos.sh</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 执行安装脚本</span></pre></td></tr><tr><td data-num="6"></td><td><pre>./install_centos.shh</pre></td></tr></table></figure></li>
-<li>
-<p>设置  <code>minicom</code></p>
-<blockquote>
-<p>⚠️警告：以下操作需要在 root 用户下执行，否则保存配置不生效</p>
-</blockquote>
-<ol>
-<li>
-<p>输入  <code>minicom -s</code>  打开   <code>minicom</code>  设置</p>
-<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250709134020.png" alt="image-20250709134020176"></p>
-</li>
-<li>
-<p>选择  <code>Serial port setup</code></p>
-<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250709134728.png" alt="image-20250709134727862"></p>
-<ul>
-<li>
-<p><code>A - Serial Device</code>  :  <code>/dev/modem</code></p>
-<p>指定用于通信的串行设备文件路径</p>
-</li>
-<li>
-<p><code>C - Callin Program</code>  :</p>
-<p>用于指定调制解调器来电执行的脚本</p>
-</li>
-<li>
-<p><code>D - Callout Program</code>  :</p>
-<p>用于指定调制解调器拨出电话执行的脚本</p>
-</li>
-<li>
-<p><code>E - Bps/Par/Bits</code>  :  <code>115200 8N1</code></p>
-<p>定义串行通信的基本参数</p>
-<p><code>Bps(Bits per second)</code>  : 波特率，即每秒传输的数据位数。此处默认为每秒传输 115200 个数据位.</p>
-<p><code>Data Bits</code>  : 数据位数，表示每个字符由 8 个数据位组成.</p>
-<p><code>Parity</code>  : 校验方式， <code>E</code>  (Even, 偶校验).  <code>O</code>  (Odd, 奇校验).  <code>N</code>  (None, 不校验)</p>
-<p><code>Stop Bits</code>  : 停止位数，表示每个字符后有一个停止位.</p>
-</li>
-<li>
-<p><code>F - Hardware Flow Control</code>  : Yes</p>
-<p>硬件流控制是否启用</p>
-<p>通常通过  <code>RTS/CTS</code>  信号线 (信号线参见下文) 实现，用于防止数据溢出和丢失</p>
-</li>
-<li>
-<p><code>G - Software Flow Control</code>  : No</p>
-<p>软件流控制是否启用</p>
-<p>通常通过  <code>XON/XOFF</code>  字符实现，用于控制数据流的暂停和回复</p>
-</li>
-</ul>
-</li>
-<li>
-<p>通过输入选项前面的字母来更改对应的设置项，使用  <code>esc</code>  返回 (不保存); 使用  <code>enter(回车)</code>  保存并返回</p>
-</li>
-<li>
-<p>在按 E 后显示 Comm Parameters 界面</p>
-<ul>
-<li>Current 行：该行为当前设置的参数</li>
-<li>Speed 列：用于设置波特率，使用指定选项选择对应的频率</li>
-<li>Parity 列：用于设置当前校验方式</li>
-<li>Data 列：用于设置数据位数</li>
-<li>Stopbits 列：用于设置停止位的数量</li>
-</ul>
-</li>
-<li>
-<p>在全部设置完成后选择  <code>Save setup as dfl</code>  保存为默认设置或选择  <code>Save setup as ..</code>  并指定一个名称来保存当前设置</p>
-<p>设置文件默认保存在  <code>/etc/minirc.dfl</code>  文件中</p>
-</li>
-<li>
-<p>保存完成后选择  <code>Exit from Minicom</code>  退出</p>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="串口基础知识"><a class="markdownIt-Anchor" href="#串口基础知识">#</a> 串口基础知识</h3>
+    <h3 id="串口基础知识"><a class="markdownIt-Anchor" href="#串口基础知识">#</a> 串口基础知识</h3>
 <blockquote>
 <p>串口常用的分为 RS-232 以及 RS-485</p>
 <ul>
-<li>
-<p>RS-232 :</p>
-</li>
-<li>
-<p>该接口通常使用 DB9 针接口 (只有 9 个针脚) or DB25 (25 个针脚)；</p>
-</li>
-<li>
-<p>RS-232 使用单端信号传输方式 (即一根针脚<strong>传输</strong>一根针脚<strong>接收</strong>)</p>
-</li>
-<li>
-<p>RS485 :</p>
-</li>
-<li>
-<p>该接口不需要特定类型的连接器，它可能使用各种类型的连接器，包括 RJ45、螺丝端子 (如下图接口一所示) 。</p>
-</li>
-<li>
-<p>RS-485 使用半双工 (两根导线) 或全双工 (四根导线) 进行通信</p>
-</li>
+<li>RS-232 :</li>
+<li>该接口通常使用 DB9 针接口 (只有 9 个针脚) or DB25 (25 个针脚)；</li>
+<li>RS-232 使用单端信号传输方式 (即一根针脚<strong>传输</strong>一根针脚<strong>接收</strong>)</li>
+<li>RS485 :</li>
+<li>该接口不需要特定类型的连接器，它可能使用各种类型的连接器，包括 RJ45、螺丝端子 (如下图接口一所示) 。</li>
+<li>RS-485 使用半双工 (两根导线) 或全双工 (四根导线) 进行通信</li>
 </ul>
 </blockquote>
 <h4 id="rs-232接口"><a class="markdownIt-Anchor" href="#rs-232接口">#</a> RS-232 接口</h4>
@@ -358,9 +263,13 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 </li>
 <li>
 <p>RS232 限于 15 米以内，理论传输距离是 10 米；</p>
-<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdndWNoYW8vYXJ0aWNsZS9kZXRhaWxzLzEyODQ3OTEwNg==">参考文献</span></p>
+</li>
+<li>
+<p>RS232 螺丝端子</p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250715161230.jpeg" alt="de2c52333b026d94b3fc982fec653d9"></p>
 </li>
 </ol>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dhbmdndWNoYW8vYXJ0aWNsZS9kZXRhaWxzLzEyODQ3OTEwNg==">参考文献</span></p>
 <h4 id="rs-485接口"><a class="markdownIt-Anchor" href="#rs-485接口">#</a> RS-485 接口</h4>
 <ol>
 <li>
@@ -379,6 +288,117 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <blockquote>
 <p>⚠️注意：接口二仅在需要转换 232 与 485 的电压时需要使用，如果使用的是 RS-232 转 RS-232 螺丝端子 (有十个螺丝)，则不需要使用此接口，直接连接即可</p>
 </blockquote>
+<hr>
+<h3 id="连接串口-安装驱动"><a class="markdownIt-Anchor" href="#连接串口-安装驱动">#</a> 连接串口 &amp; 安装驱动</h3>
+<blockquote>
+<p>💡tips : 检查服务器上有几个串口，以及是公口还是母口（一般为公口）</p>
+</blockquote>
+<ol>
+<li>
+<p>确认螺丝端子是 232 转 232，还是 232 转 485</p>
+<ol>
+<li>
+<p>为 232 转 485 的螺丝端子则需要<strong>两个</strong>  <code>RS232</code>  &lt;=&gt;  <code>RS485</code>  互转的接口</p>
+</li>
+<li>
+<p>接线方法如图</p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250715162334.jpeg" alt="55eb6714146da2eca19300be51ab80b"></p>
+</li>
+</ol>
+</li>
+<li>
+<p>如果都是 RS232 的螺丝端子则接线如下图</p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250715162454.jpeg" alt="5e3d87230d02edb057868efdf4601e4"></p>
+</li>
+<li>
+<p>在笔记本上安装 CH341SER 串口驱动</p>
+<ol>
+<li>点击安装</li>
+</ol>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250715162741.png" alt="image-20250715162741487"></p>
+</li>
+<li>
+<p>显示驱动预安装成功即可</p>
+</li>
+<li>
+<p>插入串口，如果一切顺利，那么应该会显示如下图所示的 <code>USB xxx(COMn)</code> (n 为数字)；如果没有，请检查驱动是否正确安装 or 接线是否正确</p>
+</li>
+</ol>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250709114420.png" alt="image-20250709114413848"></p>
+<h3 id="安装minicom-设置minicom"><a class="markdownIt-Anchor" href="#安装minicom-设置minicom">#</a> 安装 minicom &amp; 设置 minicom</h3>
+<ol>
+<li>
+<p>将  <code>minicom_packages.zip</code>  包上传到服务器上并解压  <code>minicom_packages.zip</code>  包</p>
+<figure class="highlight shell"><figcaption data-lang="Bash"></figcaption><table><tr><td data-num="1"></td><td><pre><span class="token comment"># 解压</span></pre></td></tr><tr><td data-num="2"></td><td><pre><span class="token function">unzip</span> minicom_packages.zip</pre></td></tr><tr><td data-num="3"></td><td><pre><span class="token comment"># 给予可执行权限</span></pre></td></tr><tr><td data-num="4"></td><td><pre><span class="token function">chmod</span> +x install_centos.sh</pre></td></tr><tr><td data-num="5"></td><td><pre><span class="token comment"># 执行安装脚本</span></pre></td></tr><tr><td data-num="6"></td><td><pre>./install_centos.shh</pre></td></tr></table></figure></li>
+<li>
+<p>设置  <code>minicom</code></p>
+<blockquote>
+<p>⚠️警告：以下操作需要在 root 用户下执行，否则保存配置不生效</p>
+</blockquote>
+<ol>
+<li>
+<p>输入  <code>minicom -s</code>  打开   <code>minicom</code>  设置</p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250709134020.png" alt="image-20250709134020176"></p>
+</li>
+<li>
+<p>选择  <code>Serial port setup</code></p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/20250709134728.png" alt="image-20250709134727862"></p>
+<ul>
+<li>
+<p><code>A - Serial Device</code>  :  <code>/dev/modem</code></p>
+<p>指定用于通信的串行设备文件路径</p>
+</li>
+<li>
+<p><code>C - Callin Program</code>  :</p>
+<p>用于指定调制解调器来电执行的脚本</p>
+</li>
+<li>
+<p><code>D - Callout Program</code>  :</p>
+<p>用于指定调制解调器拨出电话执行的脚本</p>
+</li>
+<li>
+<p><code>E - Bps/Par/Bits</code>  :  <code>115200 8N1</code></p>
+<p>定义串行通信的基本参数</p>
+<p><code>Bps(Bits per second)</code>  : 波特率，即每秒传输的数据位数。此处默认为每秒传输 115200 个数据位.</p>
+<p><code>Data Bits</code>  : 数据位数，表示每个字符由 8 个数据位组成.</p>
+<p><code>Parity</code>  : 校验方式， <code>E</code>  (Even, 偶校验).  <code>O</code>  (Odd, 奇校验).  <code>N</code>  (None, 不校验)</p>
+<p><code>Stop Bits</code>  : 停止位数，表示每个字符后有一个停止位.</p>
+</li>
+<li>
+<p><code>F - Hardware Flow Control</code>  : Yes</p>
+<p>硬件流控制是否启用</p>
+<p>通常通过  <code>RTS/CTS</code>  信号线 (信号线参见下文) 实现，用于防止数据溢出和丢失</p>
+</li>
+<li>
+<p><code>G - Software Flow Control</code>  : No</p>
+<p>软件流控制是否启用</p>
+<p>通常通过  <code>XON/XOFF</code>  字符实现，用于控制数据流的暂停和回复</p>
+</li>
+</ul>
+</li>
+<li>
+<p>通过输入选项前面的字母来更改对应的设置项，使用  <code>esc</code>  返回 (不保存); 使用  <code>enter(回车)</code>  保存并返回</p>
+</li>
+<li>
+<p>在按 E 后显示 Comm Parameters 界面</p>
+<ul>
+<li>Current 行：该行为当前设置的参数</li>
+<li>Speed 列：用于设置波特率，使用指定选项选择对应的频率</li>
+<li>Parity 列：用于设置当前校验方式</li>
+<li>Data 列：用于设置数据位数</li>
+<li>Stopbits 列：用于设置停止位的数量</li>
+</ul>
+</li>
+<li>
+<p>在全部设置完成后选择  <code>Save setup as dfl</code>  保存为默认设置或选择  <code>Save setup as ..</code>  并指定一个名称来保存当前设置</p>
+<p>设置文件默认保存在  <code>/etc/minirc.dfl</code>  文件中</p>
+</li>
+<li>
+<p>保存完成后选择  <code>Exit from Minicom</code>  退出</p>
+</li>
+</ol>
+</li>
+</ol>
 <hr>
 <h3 id="开始调试"><a class="markdownIt-Anchor" href="#开始调试">#</a> 开始调试</h3>
 <h4 id="方案一xshell"><a class="markdownIt-Anchor" href="#方案一xshell">#</a> 方案一 (Xshell)</h4>
@@ -461,7 +481,17 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 </li>
 </ol>
 </li>
+<li>
+<p>对于不知道对应串口号的，可以使用  <code>dmesg | grep tty</code>  来查看，如下图</p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/c6571329b96b42afe09fe5424e8b12f.png" alt="c6571329b96b42afe09fe5424e8b12f"></p>
+</li>
+<li>
+<p>对于串口打不开或打开失败的情况可以使用  <code>lsof /dev/[需要查看的串口号]</code>  来查看，如果什么都没有输出则没有被任何进程使用，反之可以使用显示的 <code>PID</code>  +  <code>kill -9 [PID]</code>  来杀掉该进程</p>
+<p><img data-src="https://figurebed.yunyat.cloud/imgs/b00319bed7f7ccb4cff4c530c5f38d2.png" alt="b00319bed7f7ccb4cff4c530c5f38d2"></p>
+</li>
 </ol>
+<hr>
+<p><em>END</em></p>
 
       <div class="tags">
           <a href="/tags/%E5%8E%9F%E5%88%9B/" rel="tag"><i class="ic i-tag"></i> 原创</a>
@@ -479,7 +509,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2025-07-15 15:59:04" itemprop="dateModified" datetime="2025-07-15T15:59:04+08:00">2025-07-15</time>
+    <time title="修改时间：2025-07-15 16:58:28" itemprop="dateModified" datetime="2025-07-15T16:58:28+08:00">2025-07-15</time>
   </span>
   <span id="linux/RS232与RS485串口调试方案/" class="item leancloud_visitors" data-flag-title="RS232与RS485串口调试方案" title="阅读次数">
       <span class="icon">
@@ -542,7 +572,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
     <div class="item left">
       
 
-  <a href="/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;pc?223378" title="设置代理解决GitHub连接问题">
+  <a href="/miscellaneous/issues/%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86%E8%A7%A3%E5%86%B3GitHub%E8%BF%9E%E6%8E%A5%E9%97%AE%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;t.mwm.moe&#x2F;pc?192710" title="设置代理解决GitHub连接问题">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> Issues</span>
   <h3>设置代理解决GitHub连接问题</h3>
@@ -566,7 +596,7 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%B2%E5%8F%A3-%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text"> 连接串口 &amp; 安装驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85minicom-%E8%AE%BE%E7%BD%AEminicom"><span class="toc-number">2.</span> <span class="toc-text"> 安装 minicom &amp; 设置 minicom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E5%8F%A3%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">3.</span> <span class="toc-text"> 串口基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#rs-232%E6%8E%A5%E5%8F%A3"><span class="toc-number">3.1.</span> <span class="toc-text"> RS-232 接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rs-485%E6%8E%A5%E5%8F%A3"><span class="toc-number">3.2.</span> <span class="toc-text"> RS-485 接口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E8%B0%83%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text"> 开始调试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80xshell"><span class="toc-number">4.1.</span> <span class="toc-text"> 方案一 (Xshell)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8Cmobaxterm"><span class="toc-number">4.2.</span> <span class="toc-text"> 方案二 (Mobaxterm)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%89%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B"><span class="toc-number">4.3.</span> <span class="toc-text"> 方案三 (串口调试助手)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="toc-number">5.</span> <span class="toc-text"> 问题汇总</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%B2%E5%8F%A3%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86"><span class="toc-number">1.</span> <span class="toc-text"> 串口基础知识</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#rs-232%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.1.</span> <span class="toc-text"> RS-232 接口</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rs-485%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.2.</span> <span class="toc-text"> RS-485 接口</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E6%8E%A5%E4%B8%B2%E5%8F%A3-%E5%AE%89%E8%A3%85%E9%A9%B1%E5%8A%A8"><span class="toc-number">2.</span> <span class="toc-text"> 连接串口 &amp; 安装驱动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85minicom-%E8%AE%BE%E7%BD%AEminicom"><span class="toc-number">3.</span> <span class="toc-text"> 安装 minicom &amp; 设置 minicom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E8%B0%83%E8%AF%95"><span class="toc-number">4.</span> <span class="toc-text"> 开始调试</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80xshell"><span class="toc-number">4.1.</span> <span class="toc-text"> 方案一 (Xshell)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8Cmobaxterm"><span class="toc-number">4.2.</span> <span class="toc-text"> 方案二 (Mobaxterm)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B9%E6%A1%88%E4%B8%89%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E5%8A%A9%E6%89%8B"><span class="toc-number">4.3.</span> <span class="toc-text"> 方案三 (串口调试助手)</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%B1%87%E6%80%BB"><span class="toc-number">5.</span> <span class="toc-text"> 问题汇总</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
@@ -708,90 +738,36 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <div class="breadcrumb">
 <a href="/categories/linux/" title="分类于 Linux">Linux</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
-</div>
-
-    <span><a href="/linux/docker/Docker%E9%83%A8%E7%BD%B2/" title="Docker部署">Docker部署</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
-</div>
-
-    <span><a href="/miscellaneous/%E8%B0%88%E8%B0%88%E7%9C%8B%E5%AE%8C%E3%80%8A%E5%AD%A4%E6%B3%A8%E4%B8%80%E6%8E%B7%E3%80%8B%E7%9A%84%E6%84%9F%E6%83%B3/" title="谈谈看完《孤注一掷》的感想">谈谈看完《孤注一掷》的感想</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
-</div>
-
-    <span><a href="/miscellaneous/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%89%93%E6%9A%91%E5%81%87%E5%B7%A5%E7%9A%84%E7%BB%8F%E5%8E%86/" title="暑假工踩坑记">暑假工踩坑记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/game/" title="分类于 游戏">游戏</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/game/%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C/" title="分类于 我的世界">我的世界</a>
-</div>
-
-    <span><a href="/game/Minecraft/%E6%90%AD%E5%BB%BA%E9%97%AE%E9%A2%98%E9%9B%86%E5%90%88/" title="搭建问题集合">搭建问题集合</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
-</div>
-
-    <span><a href="/linux/docker/docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E8%B4%B0/" title="Docker的使用-贰">Docker的使用-贰</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
-</div>
-
-    <span><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%A3%B9/" title="Docker的使用-壹">Docker的使用-壹</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/miscellaneous/" title="分类于 杂项">杂项</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/miscellaneous/Windows/" title="分类于 Windows">Windows</a>
-</div>
-
-    <span><a href="/miscellaneous/windows/%E4%BB%BB%E6%84%8F%E7%89%88%E6%9C%ACwin%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E4%BD%BF%E7%94%A8%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F%E8%BF%9E%E6%8E%A5/" title="任意版本win远程桌面使用内网穿透连接">任意版本win远程桌面使用内网穿透连接</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/linux/" title="分类于 Linux">Linux</a>
-<i class="ic i-angle-right"></i>
 <a href="/categories/linux/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" title="分类于 版本控制">版本控制</a>
 </div>
 
-    <span><a href="/linux/Versioning/Git%E5%90%8C%E6%97%B6%E9%83%A8%E7%BD%B2%E5%A4%9A%E4%B8%AA%E4%BB%93%E5%BA%93/" title="Git同时部署多个仓库">Git同时部署多个仓库</a></span>
+    <span><a href="/linux/Versioning/maven%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Maven的使用">Maven的使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%89%8D%E7%AB%AF/" title="分类于 前端">前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%89%8D%E7%AB%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/MyCodingBook/Front/javascript/JavaScript-3/" title="JavaScript - 3">JavaScript - 3</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E6%95%B0%E6%8D%AE%E5%BA%93/" title="分类于 数据库">数据库</a>
+</div>
+
+    <span><a href="/MyCodingBook/database/MySQL-2/" title="MySQL-2">MySQL-2</a></span>
   </li>
 
       
@@ -803,11 +779,55 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/" title="分类于 后端">后端</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/" title="分类于 Java">Java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/MyCodingBook/%E5%90%8E%E7%AB%AF/Java/%E6%A1%86%E6%9E%B6/" title="分类于 框架">框架</a>
 </div>
 
-    <span><a href="/MyCodingBook/backEnd/java/frame/spring%E5%BC%80%E5%8F%91%E6%B3%A8%E8%A7%A3%E9%9B%86%E5%90%88/" title="spring开发注解集合">spring开发注解集合</a></span>
+    <span><a href="/MyCodingBook/backEnd/java/JavaWeb/" title="JavaWeb">JavaWeb</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/Win%E8%87%B3Linux%E7%9A%84%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/" title="Win至Linux的免密登录">Win至Linux的免密登录</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" title="分类于 单元测试">单元测试</a>
+</div>
+
+    <span><a href="/MyCodingBook/UnitTests/JUnit/" title="JUnit">JUnit</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/hexo/" title="分类于 Hexo">Hexo</a>
+</div>
+
+    <span><a href="/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/" title="hexo及SSL获取">hexo及SSL获取</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/MyCodingBook/" title="分类于 我的编程宝典">我的编程宝典</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%89%8D%E7%AB%AF/" title="分类于 前端">前端</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/MyCodingBook/%E5%89%8D%E7%AB%AF/JavaScript/" title="分类于 JavaScript">JavaScript</a>
+</div>
+
+    <span><a href="/MyCodingBook/Front/javascript/JavaScript-2/" title="JavaScript - 2">JavaScript - 2</a></span>
   </li>
 
       
@@ -819,7 +839,17 @@ QSky Yun = 上善若水 = =我真的很想喜欢你们，可是你们没有人�
 <a href="/categories/linux/Docker/" title="分类于 Docker">Docker</a>
 </div>
 
-    <span><a href="/linux/docker/%E4%BD%BF%E7%94%A8cAdvisor-Prometheus-Grafana%E7%9B%91%E6%8E%A7Docker%E5%AE%B9%E5%99%A8/" title="使用cAdvisor+Prometheus+Grafana监控Docker容器">使用cAdvisor+Prometheus+Grafana监控Docker容器</a></span>
+    <span><a href="/linux/docker/Docker%E7%9A%84%E4%BD%BF%E7%94%A8-%E5%8F%81/" title="Docker的使用-叁">Docker的使用-叁</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/linux/" title="分类于 Linux">Linux</a>
+</div>
+
+    <span><a href="/linux/SSH-Agent/" title="SSH Agent">SSH Agent</a></span>
   </li>
 
   </ul>
