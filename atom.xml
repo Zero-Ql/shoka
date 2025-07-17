@@ -4,9 +4,13 @@
     <title>上善若水</title>
     <link href="https://yunyat.cloud" />
     <updated>2025-07-11T06:18:55.000Z</updated>
-    <category term="hexo" />
+    <category term="2023" />
+    <category term="年度总结" />
     <category term="原创" />
+    <category term="记录" />
+    <category term="hexo" />
     <category term="Linux" />
+    <category term="暑假工" />
     <category term="RS232" />
     <category term="RS485" />
     <category term="硬件" />
@@ -17,26 +21,15 @@
     <category term="可道云" />
     <category term="markdown" />
     <category term="mermaid" />
-    <category term="2023" />
-    <category term="年度总结" />
-    <category term="记录" />
     <category term="测试" />
-    <category term="暑假工" />
-    <category term="Hexo" />
-    <category term="教程" />
     <category term="python" />
     <category term="selenium" />
     <category term="java" />
     <category term="junit" />
     <category term="MySQL" />
     <category term="shell" />
-    <category term="Git" />
-    <category term="maven" />
-    <category term="游戏" />
-    <category term="我的世界" />
-    <category term="cAdvisor" />
-    <category term="Prometheus" />
-    <category term="Grafana" />
+    <category term="Hexo" />
+    <category term="教程" />
     <category term="破解" />
     <category term="Typora" />
     <category term="xmind" />
@@ -46,26 +39,33 @@
     <category term="分享" />
     <category term="计算机" />
     <category term="GitHub" />
+    <category term="游戏" />
+    <category term="我的世界" />
+    <category term="cAdvisor" />
+    <category term="Prometheus" />
+    <category term="Grafana" />
+    <category term="Git" />
+    <category term="maven" />
     <category term="HTML" />
+    <category term="JavaScript" />
+    <category term="JSON" />
     <category term="数据结构" />
     <category term="算法" />
     <category term="lambda表达式" />
+    <category term="java线程" />
     <category term="Java" />
     <category term="servlet" />
-    <category term="java线程" />
     <category term="javafx" />
     <category term="集合" />
-    <category term="JavaScript" />
-    <category term="JSON" />
     <category term="springmvc" />
     <category term="spring" />
+    <category term="spring注解" />
     <category term="springboot" />
     <category term="异常处理" />
-    <category term="spring注解" />
     <category term="mybatis" />
     <category term="mybatisplus" />
-    <category term="ResponseEntity" />
     <category term="问题解决" />
+    <category term="ResponseEntity" />
     <entry>
         <id>https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</id>
         <title>RS232与RS485串口调试方案</title>
@@ -4891,9 +4891,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
 </content>
-        <category term="原创" />
         <category term="2023" />
         <category term="年度总结" />
+        <category term="原创" />
         <category term="记录" />
         <updated>2024-02-09T12:56:01.000Z</updated>
     </entry>
@@ -8014,8 +8014,8 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;END&lt;/em&gt;&lt;/p&gt;
 </content>
-        <category term="hexo" />
         <category term="原创" />
+        <category term="hexo" />
         <updated>2023-04-30T07:38:55.000Z</updated>
     </entry>
     <entry>

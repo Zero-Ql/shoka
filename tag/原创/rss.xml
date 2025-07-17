@@ -7,9 +7,13 @@
         <language>zh-CN</language>
         <pubDate>Fri, 11 Jul 2025 14:18:55 +0800</pubDate>
         <lastBuildDate>Fri, 11 Jul 2025 14:18:55 +0800</lastBuildDate>
-        <category>hexo</category>
+        <category>2023</category>
+        <category>年度总结</category>
         <category>原创</category>
+        <category>记录</category>
+        <category>hexo</category>
         <category>Linux</category>
+        <category>暑假工</category>
         <category>RS232</category>
         <category>RS485</category>
         <category>硬件</category>
@@ -20,26 +24,15 @@
         <category>可道云</category>
         <category>markdown</category>
         <category>mermaid</category>
-        <category>2023</category>
-        <category>年度总结</category>
-        <category>记录</category>
         <category>测试</category>
-        <category>暑假工</category>
-        <category>Hexo</category>
-        <category>教程</category>
         <category>python</category>
         <category>selenium</category>
         <category>java</category>
         <category>junit</category>
         <category>MySQL</category>
         <category>shell</category>
-        <category>Git</category>
-        <category>maven</category>
-        <category>游戏</category>
-        <category>我的世界</category>
-        <category>cAdvisor</category>
-        <category>Prometheus</category>
-        <category>Grafana</category>
+        <category>Hexo</category>
+        <category>教程</category>
         <category>破解</category>
         <category>Typora</category>
         <category>xmind</category>
@@ -49,26 +42,33 @@
         <category>分享</category>
         <category>计算机</category>
         <category>GitHub</category>
+        <category>游戏</category>
+        <category>我的世界</category>
+        <category>cAdvisor</category>
+        <category>Prometheus</category>
+        <category>Grafana</category>
+        <category>Git</category>
+        <category>maven</category>
         <category>HTML</category>
+        <category>JavaScript</category>
+        <category>JSON</category>
         <category>数据结构</category>
         <category>算法</category>
         <category>lambda表达式</category>
+        <category>java线程</category>
         <category>Java</category>
         <category>servlet</category>
-        <category>java线程</category>
         <category>javafx</category>
         <category>集合</category>
-        <category>JavaScript</category>
-        <category>JSON</category>
         <category>springmvc</category>
         <category>spring</category>
+        <category>spring注解</category>
         <category>springboot</category>
         <category>异常处理</category>
-        <category>spring注解</category>
         <category>mybatis</category>
         <category>mybatisplus</category>
-        <category>ResponseEntity</category>
         <category>问题解决</category>
+        <category>ResponseEntity</category>
         <item>
             <guid isPermalink="true">https://yunyat.cloud/linux/RS232%E4%B8%8ERS485%E4%B8%B2%E5%8F%A3%E8%B0%83%E8%AF%95%E6%96%B9%E6%A1%88/</guid>
             <title>RS232与RS485串口调试方案</title>
@@ -4600,9 +4600,9 @@ ALTER TABLE 表名 DROP CONSTRAINT 唯一键名;
             <guid isPermalink="true">https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</guid>
             <title>2023年度总结</title>
             <link>https://yunyat.cloud/miscellaneous/2023%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</link>
-            <category>原创</category>
             <category>2023</category>
             <category>年度总结</category>
+            <category>原创</category>
             <category>记录</category>
             <pubDate>Fri, 09 Feb 2024 20:56:01 +0800</pubDate>
             <description><![CDATA[ &lt;h3 id=&#34;前言&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#前言&#34;&gt;#&lt;/a&gt; 前言&lt;/h3&gt;
@@ -6910,8 +6910,8 @@ ws.Run &amp;quot;.\bin\app.bat&amp;quot;,0
             <guid isPermalink="true">https://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</guid>
             <title>hexo及SSL获取</title>
             <link>https://yunyat.cloud/hexo/hexo%E7%9A%84%E9%83%A8%E7%BD%B2%E5%8F%8ASSL%E5%BA%94%E7%94%A8/</link>
-            <category>hexo</category>
             <category>原创</category>
+            <category>hexo</category>
             <pubDate>Sun, 30 Apr 2023 15:38:55 +0800</pubDate>
             <description><![CDATA[ &lt;div class=&#34;note info&#34;&gt;
 &lt;p&gt;本文只记录大概过程 (具体教程百度上都有)&lt;/p&gt;
